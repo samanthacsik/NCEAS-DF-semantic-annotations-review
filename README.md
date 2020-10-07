@@ -30,6 +30,30 @@ NCEAS-DF-semantic-annotations-review
 
 ### Data
 
+*The most important (i.e. original unaltered data, or those data files used in subsequent analyses that are saved as .csv files to eliminated time-intensive processing in scripts) data files are detailed below.*
+
+#### `data/queries/query2020-10-01/fullQuery_semAnnotations2020-10-01_solr.csv`
+* `identifier`:
+* `abstract`:
+* `title`:
+* `keywords`:
+* `attributes`:
+* `semAnnotation`:
+
+#### `data/queries/query2020-10-01/fullQuery_semAnnotations2020-10-01_webscraping.csv`
+* `identifier`:
+* `entityName`:
+* `attributeName`: 
+* `attributeLabel`:  
+* `attributeDefinition`: 
+* `attributeUnit`:
+* `propertyURI`: 
+* `valueURI`: 
+* `viewURL`: 
+* `query_datetime_utc`: 
+* `prefName`: 
+* `ontoName`: 
+
 ### Software
 
 These analyses were performed in R (version 3.6.3). See [SessionInfo](https://github.com/samanthacsik/NCEAS-DF-semantic-annotations-review/blob/main/SessionInfo) for dependencies.
