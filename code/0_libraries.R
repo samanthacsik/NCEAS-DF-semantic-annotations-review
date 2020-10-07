@@ -12,5 +12,9 @@
 
 library(dataone)
 library(tidyverse)
-library(eatocsv)
+library(eatocsv) # NOTE: this is the forked/edited version downloaded at `devtools::install_github("samanthacsik/eatocsv)`
 library(svMisc)
+library(rvest)
+library(xml2)
+library(tidytext)
+
