@@ -1,16 +1,22 @@
-# title: 
+# title: Initial exploration and Webscraping for Annotation Information
 # author: "Sam Csik"
 # date created: "2020-10-02"
-# date edited: "2020-10-02"
+# date edited: "2020-10-06"
 # R version: 3.6.3
-# input: 
-# output: 
+# input: "data/queries/query2020-10-01/fullQuery_semAnnotations2020-10-01_attributes.csv"
+# output: "data/queries/query2020-10-01/fullQuery_semAnnotations2020-10-01_webscraping.csv"
 
 ##########################################################################################
 # Summary
 ##########################################################################################
 
+# 1) do some initial exploration to get an idea of how many data packages have annotations, how many annotations exist across those packages, etc.
+# 2) webscrape for preferred annotation name and ontology name for all unique valueURIs
+# 3) full_join webscraped data with`fullQuery_semAnnotations2020-10-01_attributes.csv`
 
+##########################################################################################
+# General setup
+##########################################################################################
 
 ##############################
 # Load packages
@@ -31,7 +37,7 @@ source(here::here("code", "0_functions.R"))
 extracted_attributes <- read_csv(here::here("data", "queries", "query2020-10-01", "fullQuery_semAnnotations2020-10-01_attributes.csv"))
 
 ##########################################################################################
-# General exploration
+# 1) General exploration
 ##########################################################################################
 
 ##############################
@@ -59,9 +65,9 @@ length(unique(annotated_attributes$valueURI))
 nonannotated_attributes <- extracted_attributes %>%
   anti_join(annotated_attributes)
 
-##########################################################################################
+##############################
 # determine which valueURIs come from dataone/ECSO and which don't -- this matters for web scraping (below) since the ECSO_webscraping_prefNames() won't locate prefLable and ontoLabel in other ontologies!
-##########################################################################################
+##############################
 
 # valueURIs from ECSO 
 ECSO_unique_valueURIs <- annotated_attributes %>% 
@@ -74,7 +80,7 @@ others_unique_valueURIs <- annotated_attributes %>%
   anti_join(ECSO_unique_valueURIs)
 
 ##########################################################################################
-# Web scraping for Preferred Names and Ontology Names
+# 2) Web scraping for Preferred Names and Ontology Names
 ##########################################################################################
 
 ##############################
@@ -121,9 +127,9 @@ for(row in 1:nrow(ECSO_unique_valueURIs)){
   progress(row, max.value = length(ECSO_unique_valueURIs$valueURI))
 }
 
-##############################
-# join prefNames and ontoNames with original `annotated_attributes` df; save as .csv
-##############################
+##########################################################################################
+# 3) join prefNames and ontoNames with original `annotated_attributes` df; save as .csv
+##########################################################################################
 
 annotated_attributes <- full_join(annotated_attributes, ECSO_unique_valueURIs)
 
