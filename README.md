@@ -18,6 +18,7 @@ Scripts are numbered in the order they are to be run.
 NCEAS-DF-semantic-annotations-review
   |_code
     |_old
+    |_reports
   |_data
     |_filtered_term_counts
       |_nonannotated_attributes
