@@ -286,11 +286,11 @@ filterCount_trigramTerms <- function(file_path, file_name) {
 #-----------------------------
 
 # create_frequencyByCount_plot <- function(tokens_df, df_name) {
-#   
+# 
 #   # generate plot object name
 #   plotObjectName <- gsub("Tokens", "_plot", df_name)
 #   print(plotObjectName)
-#   
+# 
 #   # create plot that displays 50 most frequent terms
 #   freq_plot <- tokens_df %>%
 #     head(50) %>%
@@ -303,9 +303,9 @@ filterCount_trigramTerms <- function(file_path, file_name) {
 #     scale_y_continuous(expand = c(0,0)) +
 #     coord_flip() +
 #     theme_linedraw()
-#   
+# 
 #   plot(freq_plot)
-#   
+# 
 #   # assign to object name in global environment
 #   assign(plotObjectName, freq_plot, envir = .GlobalEnv)
 # }
