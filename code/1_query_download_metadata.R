@@ -3,8 +3,8 @@
 # date created: "2020-10-02"
 # date edited: "2020-10-02"
 # R version: 3.6.3
-# input: "data/queries/fullQuery_semAnnotations2002-10-01.csv" 
-# output: 
+# input: "data/queries/query2020-10-01/fullQuery_semAnnotations2002-10-01.csv" 
+# output: "data/queries/query2020-10-01/xml"
 
 ##########################################################################################
 # Summary
@@ -32,7 +32,7 @@ cn <- CNode("PROD")
 adc_mn <- getMNode(cn, 'urn:node:ARCTIC')
 
 ##########################################################################################
-# query all ADC holdings (only the most recent published version) for identifiers, titles, keywords, abstracts, and attribute info
+# 1) query all ADC holdings (only the most recent published version) for identifiers, titles, keywords, abstracts, and attribute info
 ##########################################################################################
 
 # solr query
@@ -45,8 +45,7 @@ semAnnotations_query <- query(adc_mn,
 # write.csv(semAnnotations_query, file = here::here("data", "queries", "query2020-10-01", paste("fullQuery_semAnnotations", Sys.Date(),".csv", sep = "")), row.names = FALSE)
 
 ##########################################################################################
-# obtain entity-attribute metadata from multiple data packages in the Arctic Data Center
-# input: A .csv file containing a column of package identifiers (column header = "identifier")
+# 2) download metadata from the Arctic Data Center using package identifiers from solr query above
 ##########################################################################################
 
 # read in the .csv file containing the package identifiers
@@ -67,9 +66,13 @@ for (index in 1:length(clean_identifiers_df$identifier)) {
   progress(index, max.value = length(clean_identifiers_df$identifier))
 }
 
+##########################################################################################
+# 3) extract entity and attribute information, including property and valueURIs associated with any attributes
+##########################################################################################
+
 # extract attribute-level metadata from all downloaded .xml files in the working directory
 document_paths <- list.files(setwd(here::here("data", "queries", "query2020-10-01", "xml")), full.names = TRUE, pattern = "*.xml")
-attributes <- extract_ea(document_paths) 
+attributes <- extract_ea(document_paths)
 
 # make the output CSV file prefix based on the input CSV file name
 file_prefix <- basename(identifiers_file)
@@ -79,5 +82,5 @@ file_prefix <- gsub(".csv","", file_prefix)
 write.csv(attributes, file = here::here("data", "queries", "query2020-10-01", paste0(file_prefix, "_attributes.csv")), row.names = FALSE)
 print(paste0(file_prefix, "_attributes.csv created"))
 
-# view file
+# import data
 extracted_attributes <- read_csv(here::here("data", "queries", "query2020-10-01", "fullQuery_semAnnotations2020-10-01_attributes.csv"))
