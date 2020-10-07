@@ -8,9 +8,13 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 # QUESTIONS: 
-# how many datasets have annotations
-# of those annotated, how many attributes are annotated vs. not
-# which attributes aren't we annotating? do we see any commonalities across datasets?
-# do the semantic terms match the attributes well?
-# are data team interventions necessary for semantic annotaiton accuracy?
-# does semantically annotating data result in more accurate and precise searches?
+
+Basic 
+1. how many datasets have annotations - DONE
+2. of those annotated, how many attributes are annotated vs. not - DONE
+3. which attributes aren't we annotating? do we see any commonalities across datasets?
+
+More challenging to answer...
+4. do the semantic terms match the attributes well?
+5. are data team interventions necessary for semantic annotaiton accuracy?
+6. does semantically annotating data result in more accurate and precise searches?
