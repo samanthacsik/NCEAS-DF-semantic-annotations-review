@@ -82,5 +82,5 @@ file_prefix <- gsub(".csv","", file_prefix)
 write.csv(attributes, file = here::here("data", "queries", "query2020-10-01", paste0(file_prefix, "_attributes.csv")), row.names = FALSE)
 print(paste0(file_prefix, "_attributes.csv created"))
 
-# import data
+# import data to view
 extracted_attributes <- read_csv(here::here("data", "queries", "query2020-10-01", "fullQuery_semAnnotations2020-10-01_attributes.csv"))

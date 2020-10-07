@@ -10,20 +10,13 @@
 # Summary
 ##########################################################################################
 
-# QUESTIONS: 
-# how many datasets have annotations
-# of those annotated, how many attributes are annotated vs. not
-# which attributes aren't we annotating? do we see any commonalities across datasets?
-# do the semantic terms match the attributes well?
-# are data team interventions necessary for semantic annotaiton accuracy?
-# does semantically annotating data result in more accurate and precise searches?
+
 
 ##############################
 # Load packages
 ##############################
 
 source(here::here("code", "0_libraries.R"))
-
 
 ##############################
 # Load packages
@@ -49,7 +42,7 @@ extracted_attributes <- read_csv(here::here("data", "queries", "query2020-10-01"
 length(unique(extracted_attributes$identifier))
 
 ##############################
-# across those annotated packages, how many attributes are annotated?
+# across those annotated packages, how many attributes are annotated vs. not annotated?
 ##############################
 
 # 12307/14710 attributes are annotated
@@ -92,7 +85,7 @@ ECSO_unique_valueURIs$prefName <- "NA"
 ECSO_unique_valueURIs$ontoName <- "NA" 
 
 ##############################
-# try catch
+# tryCatch to webscrape for prefNames and ontoNames; will return NA if a warning or error is thrown (most common error: HTTP 404)
 ##############################
 
 for(row in 1:nrow(ECSO_unique_valueURIs)){
