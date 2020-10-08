@@ -37,6 +37,7 @@ NCEAS-DF-semantic-annotations-review
 * `2_exploration_and_webscraping`: super basic annotation exploration (number of ADC data packages with/without annotations, etc); webscrape for annotation preferred names to add to dataframes from script 1
 * `3_unnest_tokens.R`: unnest attribute information into individual words, bigrams, and trigrams; currently only done for non-annotated attributes
 * `4_filterStopWords_count_tokens.R`: filter out stop words and count number of occurrances of unnested terms; currently only done for non-annotated attributes
+* `?_semAnnotation_assessment.R` : (still needs to be numbered) plot most frequently used semantic annotations (from ECSO)
 
 ### Data
 
