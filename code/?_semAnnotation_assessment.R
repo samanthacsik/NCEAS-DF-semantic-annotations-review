@@ -1,7 +1,7 @@
-# title: 
+# title: Most commonly used semantic annotations in the ADC
 # author: "Sam Csik"
-# date created: "2020-10-02"
-# date edited: "2020-10-02"
+# date created: "2020-10-07"
+# date edited: "2020-10-07"
 # R version: 3.6.3
 # input: "data/queries/query2020-10-01/fullQuery_semAnnotations2020-10-01_webscraping.csv"
 # output: 
@@ -21,12 +21,6 @@
 ##############################
 
 source(here::here("code", "0_libraries.R"))
-
-##############################
-# Load packages
-##############################
-
-# source(here::here("code", "0_functions.R"))
 
 ##############################
 # Import data
@@ -68,12 +62,12 @@ ggsave(filename = here::here("figures", "semAnnotation_frequencies.png"), plot =
 # 
 ##########################################################################################
 
-# get unique valueURIs and convert prefNames to all lowercase
-unique_valueURIs <- annotations %>% 
-  distinct(valueURI, prefName) %>% 
-  mutate(prefName = stringr::str_to_lower(prefName))
-
-# identify topical areas
-compounds <- c("carbon", "nitrogen", "oxygen", "phosphate", "nitrate", "nitrite", "silica")
-water <- c("water")
-temperature <- c("temperature")
+# # get unique valueURIs and convert prefNames to all lowercase
+# unique_valueURIs <- annotations %>% 
+#   distinct(valueURI, prefName) %>% 
+#   mutate(prefName = stringr::str_to_lower(prefName))
+# 
+# # identify topical areas
+# compounds <- c("carbon", "nitrogen", "oxygen", "phosphate", "nitrate", "nitrite", "silica")
+# water <- c("water")
+# temperature <- c("temperature")
