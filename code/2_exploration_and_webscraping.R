@@ -1,10 +1,10 @@
 # title: Initial exploration and Webscraping for Annotation Information
 # author: "Sam Csik"
 # date created: "2020-10-02"
-# date edited: "2020-10-06"
+# date edited: "2020-10-12"
 # R version: 3.6.3
-# input: "data/queries/query2020-10-01/fullQuery_semAnnotations2020-10-01_attributes.csv"
-# output: "data/queries/query2020-10-01/fullQuery_semAnnotations2020-10-01_webscraping.csv"
+# input: "data/queries/query2020-10-12/fullQuery_semAnnotations2020-10-12_attributes.csv"
+# output: "data/queries/query2020-10-12/fullQuery_semAnnotations2020-10-12_webscraping.csv"
 
 ##########################################################################################
 # Summary
@@ -19,22 +19,17 @@
 ##########################################################################################
 
 ##############################
-# Load packages
+# Load packages & custom functions
 ##############################
 
 source(here::here("code", "0_libraries.R"))
-
-##############################
-# Load packages
-##############################
-
 source(here::here("code", "0_functions.R"))
 
 ##############################
 # Import data
 ##############################
 
-extracted_attributes <- read_csv(here::here("data", "queries", "query2020-10-01", "fullQuery_semAnnotations2020-10-01_attributes.csv"))
+extracted_attributes <- read_csv(here::here("data", "queries", "query2020-10-12", "fullQuery_semAnnotations2020-10-12_attributes.csv"))
 
 ##########################################################################################
 # 1) General exploration
@@ -44,24 +39,24 @@ extracted_attributes <- read_csv(here::here("data", "queries", "query2020-10-01"
 # how many data packages have annotations?
 ##############################
 
-# 184 data packages with annotations
+# 185 data packages with annotations
 length(unique(extracted_attributes$identifier))
 
 ##############################
 # across those annotated packages, how many attributes are annotated vs. not annotated?
 ##############################
 
-# 12307/14710 attributes are annotated
+# 12312/14718 attributes are annotated
 annotated_attributes <- extracted_attributes %>% 
   filter(valueURI != "NA")
 
 # 2 unique propertyURIs: `containsMeasurementsOfType`, `VolumetricRate`
 length(unique(annotated_attributes$propertyURI))
 
-# 978 unique valueURIs (i.e. semantic terms)
+# 979 unique valueURIs (i.e. semantic terms)
 length(unique(annotated_attributes$valueURI))
 
-# 2403/14710 are not annotated
+# 2406/14710 are not annotated
 nonannotated_attributes <- extracted_attributes %>%
   anti_join(annotated_attributes)
 
@@ -133,4 +128,7 @@ for(row in 1:nrow(ECSO_unique_valueURIs)){
 
 annotated_attributes <- full_join(annotated_attributes, ECSO_unique_valueURIs)
 
-# write_csv(annotated_attributes, here::here("data", "queries", "query2020-10-01", "fullQuery_semAnnotations2020-10-01_webscraping.csv"))
+# write_csv(annotated_attributes, here::here("data", "queries", "query2020-10-12", "fullQuery_semAnnotations2020-10-12_webscraping.csv"))
+
+# read back in data
+# annotated_attributes2 <- read_csv(here::here("data", "queries", "query2020-10-12", "fullQuery_semAnnotations2020-10-12_webscraping.csv"))
