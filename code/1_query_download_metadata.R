@@ -40,7 +40,7 @@ adc_mn <- getMNode(cn, 'urn:node:ARCTIC')
 # solr query
 semAnnotations_query <- query(adc_mn, 
                               list(q = "documents:* AND obsolete:(*:* NOT obsoletedBy:*)",
-                                   fl = "identifier, dateUploaded, datePublished, pubDate, title, keywords, abstract, attribute, sem_annotates, sem_annotation, sem_annotated_by, sem_comment",
+                                   fl = "identifier, dateUploaded, datePublished, pubDate, author, title, keywords, abstract, attribute, sem_annotates, sem_annotation, sem_annotated_by, sem_comment",
                                    rows = "7000"),
                               as = "data.frame")
 
