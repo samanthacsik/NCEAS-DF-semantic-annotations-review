@@ -1,1355 +1,1355 @@
-identifier,word1,word2,word3
-doi:10.18739/A20000081,NA,NA,NA
-doi:10.18739/A20000151,timestamp,flow,NA
-doi:10.18739/A20000151,flow,rate,NA
-doi:10.18739/A20000151,rate,timestamp,NA
-doi:10.18739/A20000151,timestamp,flow,NA
-doi:10.18739/A20000151,flow,setting,NA
-doi:10.18739/A20000151,setting,datetime,NA
-doi:10.18739/A20000151,datetime,air,NA
-doi:10.18739/A20000151,air,temperature,NA
-doi:10.18739/A20000151,temperature,dew,NA
-doi:10.18739/A20000151,dew,point,NA
-doi:10.18739/A20000151,point,temperature,NA
-doi:10.18739/A20000151,temperature,relative,NA
-doi:10.18739/A20000151,relative,humidity,NA
-doi:10.18739/A20000151,humidity,with,NA
-doi:10.18739/A20000151,with,respect,NA
-doi:10.18739/A20000151,respect,to,NA
-doi:10.18739/A20000151,to,ice,NA
-doi:10.18739/A20000151,ice,temperature,NA
-doi:10.18739/A20000151,temperature,effect,NA
-doi:10.18739/A20000151,effect,residual,NA
-doi:10.18739/A20000151,residual,of,NA
-doi:10.18739/A20000151,of,d18o,NA
-doi:10.18739/A20000151,d18o,hourly,NA
-doi:10.18739/A20000151,hourly,timeblock,NA
-doi:10.18739/A20000151,timeblock,date,NA
-doi:10.18739/A20000151,date,of,NA
-doi:10.18739/A20000151,of,observation,NA
-doi:10.18739/A20000151,observation,month,NA
-doi:10.18739/A20000151,month,season,NA
-doi:10.18739/A20000151,season,datetime,NA
-doi:10.18739/A20000151,datetime,wind,NA
-doi:10.18739/A20000151,wind,azimuth,NA
-doi:10.18739/A20000151,azimuth,katabatic,NA
-doi:10.18739/A20000151,katabatic,deviation,NA
-doi:10.18739/A20000151,deviation,wind,NA
-doi:10.18739/A20000151,wind,speed,NA
-doi:10.18739/A20000151,speed,air,NA
-doi:10.18739/A20000151,air,temperature,NA
-doi:10.18739/A20000151,temperature,dew,NA
-doi:10.18739/A20000151,dew,point,NA
-doi:10.18739/A20000151,point,temperature,NA
-doi:10.18739/A20000151,temperature,relative,NA
-doi:10.18739/A20000151,relative,humidity,NA
-doi:10.18739/A20000151,humidity,with,NA
-doi:10.18739/A20000151,with,respect,NA
-doi:10.18739/A20000151,respect,to,NA
-doi:10.18739/A20000151,to,ice,NA
-doi:10.18739/A20000151,ice,temperature,NA
-doi:10.18739/A20000151,temperature,effect,NA
-doi:10.18739/A20000151,effect,residual,NA
-doi:10.18739/A20000151,residual,of,NA
-doi:10.18739/A20000151,of,d18o,NA
-doi:10.18739/A20000151,d18o,month,NA
-doi:10.18739/A20000151,month,season,NA
-doi:10.18739/A20000151,season,date,NA
-doi:10.18739/A20000151,date,wind,NA
-doi:10.18739/A20000151,wind,azimuth,NA
-doi:10.18739/A20000151,azimuth,katabatic,NA
-doi:10.18739/A20000151,katabatic,deviation,NA
-doi:10.18739/A20000151,deviation,wind,NA
-doi:10.18739/A20000151,wind,speed,NA
-doi:10.18739/A20000151,speed,air,NA
-doi:10.18739/A20000151,air,temperature,NA
-doi:10.18739/A20000151,temperature,dew,NA
-doi:10.18739/A20000151,dew,point,NA
-doi:10.18739/A20000151,point,temperature,NA
-doi:10.18739/A20000151,temperature,relative,NA
-doi:10.18739/A20000151,relative,humidity,NA
-doi:10.18739/A20000151,humidity,with,NA
-doi:10.18739/A20000151,with,respect,NA
-doi:10.18739/A20000151,respect,to,NA
-doi:10.18739/A20000151,to,ice,NA
-doi:10.18739/A20000151,ice,residual,NA
-doi:10.18739/A20000151,residual,of,NA
-doi:10.18739/A20000151,of,the,NA
-doi:10.18739/A20000151,the,temperature,NA
-doi:10.18739/A20000151,temperature,effect,NA
-doi:10.18739/A20000151,effect,of,NA
-doi:10.18739/A20000151,of,d18o,NA
-doi:10.18739/A20000151,d18o,nao,NA
-doi:10.18739/A20000151,nao,index,NA
-doi:10.18739/A20000151,index,ao,NA
-doi:10.18739/A20000151,ao,index,NA
-doi:10.18739/A20000151,index,aao,NA
-doi:10.18739/A20000151,aao,index,NA
-doi:10.18739/A20000151,index,pna,NA
-doi:10.18739/A20000151,pna,index,NA
-doi:10.18739/A20000151,index,sea,NA
-doi:10.18739/A20000151,sea,ice,NA
-doi:10.18739/A20000151,ice,extent,NA
-doi:10.18739/A20000151,extent,month,NA
-doi:10.18739/A20000151,month,season,NA
-doi:10.18739/A2086356K,depth_n,depth_n,NA
-doi:10.18739/A2086356K,depth_n,surfacetype,NA
-doi:10.18739/A20V89H5P,NA,NA,NA
-doi:10.18739/A20V89J2P,methane,stable,NA
-doi:10.18739/A20V89J2P,stable,carbon,NA
-doi:10.18739/A20V89J2P,carbon,isotope,NA
-doi:10.18739/A20V89J2P,isotope,standard,NA
-doi:10.18739/A20V89J2P,standard,deviation,NA
-doi:10.18739/A20V89J2P,deviation,of,NA
-doi:10.18739/A20V89J2P,of,methane,NA
-doi:10.18739/A20V89J2P,methane,stable,NA
-doi:10.18739/A20V89J2P,stable,isotope,NA
-doi:10.18739/A20V89J2P,isotope,measurement,NA
-doi:10.18739/A20V89J2P,measurement,light,NA
-doi:10.18739/A20V89J2P,light,level,NA
-doi:10.18739/A21834279,NA,NA,NA
-doi:10.18739/A21G0HV2P,NA,NA,NA
-doi:10.18739/A21J9776B,NA,NA,NA
-doi:10.18739/A2251FK3B,date,of,NA
-doi:10.18739/A2251FK3B,of,acquired,NA
-doi:10.18739/A2251FK3B,acquired,data,NA
-doi:10.18739/A2251FK3B,data,precipitation,NA
-doi:10.18739/A2251FK3B,precipitation,year,NA
-doi:10.18739/A2251FK3B,year,potential,NA
-doi:10.18739/A2251FK3B,potential,evaoptranspiration,NA
-doi:10.18739/A23B5W79P,NA,NA,NA
-doi:10.18739/A23B5W875,NA,NA,NA
-doi:10.18739/A23R0PT35,NA,NA,NA
-doi:10.18739/A23R0PV05,NA,NA,NA
-doi:10.18739/A2416T00Z,NA,NA,NA
-doi:10.18739/A24746R6K,NA,NA,NA
-doi:10.18739/A24B2X49X,NA,NA,NA
-doi:10.18739/A24M91B6T,methane,carbon,NA
-doi:10.18739/A24M91B6T,carbon,stable,NA
-doi:10.18739/A24M91B6T,stable,isotope,NA
-doi:10.18739/A24M91B6T,isotope,composition,NA
-doi:10.18739/A24M91B6T,composition,standard,NA
-doi:10.18739/A24M91B6T,standard,deviation,NA
-doi:10.18739/A24M91B6T,deviation,of,NA
-doi:10.18739/A24M91B6T,of,methane,NA
-doi:10.18739/A24M91B6T,methane,stable,NA
-doi:10.18739/A24M91B6T,stable,isotope,NA
-doi:10.18739/A24M91B6T,isotope,composition,NA
-doi:10.18739/A24M91B6T,composition,light,NA
-doi:10.18739/A24Q7QR0V,NA,NA,NA
-doi:10.18739/A2513TW18,NA,NA,NA
-doi:10.18739/A25M6275K,NA,NA,NA
-doi:10.18739/A25Q4RM2M,NA,NA,NA
-doi:10.18739/A2610VS8W,NA,NA,NA
-doi:10.18739/A26H4CQ6K,NA,NA,NA
-doi:10.18739/A26Q1SH2V,ramet,year,NA
-doi:10.18739/A26Q1SH2V,year,fence,NA
-doi:10.18739/A26Q1SH2V,fence,vegetation,NA
-doi:10.18739/A26Q1SH2V,vegetation,type,NA
-doi:10.18739/A26Q1SH2V,type,treatment,NA
-doi:10.18739/A26Q1SH2V,treatment,species,NA
-doi:10.18739/A26Q1SH2V,species,ramet,NA
-doi:10.18739/A26Q1SH2V,ramet,mother,NA
-doi:10.18739/A26Q1SH2V,mother,weight,NA
-doi:10.18739/A26Q1SH2V,weight,daughter,NA
-doi:10.18739/A26Q1SH2V,daughter,1,NA
-doi:10.18739/A26Q1SH2V,1,weight,NA
-doi:10.18739/A26Q1SH2V,weight,daughter,NA
-doi:10.18739/A26Q1SH2V,daughter,2,NA
-doi:10.18739/A26Q1SH2V,2,weight,NA
-doi:10.18739/A26Q1SH2V,weight,daughter,NA
-doi:10.18739/A26Q1SH2V,daughter,3,NA
-doi:10.18739/A26Q1SH2V,3,weight,NA
-doi:10.18739/A26Q1SH2V,weight,daughter,NA
-doi:10.18739/A26Q1SH2V,daughter,4,NA
-doi:10.18739/A26Q1SH2V,4,weight,NA
-doi:10.18739/A26Q1SH2V,weight,daughter,NA
-doi:10.18739/A26Q1SH2V,daughter,5,NA
-doi:10.18739/A26Q1SH2V,5,weight,NA
-doi:10.18739/A26Q1SH2V,weight,daughter,NA
-doi:10.18739/A26Q1SH2V,daughter,6,NA
-doi:10.18739/A26Q1SH2V,6,weight,NA
-doi:10.18739/A26Q1SH2V,weight,mother,NA
-doi:10.18739/A26Q1SH2V,mother,leaf,NA
-doi:10.18739/A26Q1SH2V,leaf,area,NA
-doi:10.18739/A26Q1SH2V,area,daughter,NA
-doi:10.18739/A26Q1SH2V,daughter,1,NA
-doi:10.18739/A26Q1SH2V,1,leaf,NA
-doi:10.18739/A26Q1SH2V,leaf,area,NA
-doi:10.18739/A26Q1SH2V,area,daughter,NA
-doi:10.18739/A26Q1SH2V,daughter,2,NA
-doi:10.18739/A26Q1SH2V,2,leaf,NA
-doi:10.18739/A26Q1SH2V,leaf,area,NA
-doi:10.18739/A26Q1SH2V,area,daughter,NA
-doi:10.18739/A26Q1SH2V,daughter,3,NA
-doi:10.18739/A26Q1SH2V,3,leaf,NA
-doi:10.18739/A26Q1SH2V,leaf,area,NA
-doi:10.18739/A26Q1SH2V,area,daughter,NA
-doi:10.18739/A26Q1SH2V,daughter,4,NA
-doi:10.18739/A26Q1SH2V,4,leaf,NA
-doi:10.18739/A26Q1SH2V,leaf,area,NA
-doi:10.18739/A26Q1SH2V,area,daughter,NA
-doi:10.18739/A26Q1SH2V,daughter,5,NA
-doi:10.18739/A26Q1SH2V,5,leaf,NA
-doi:10.18739/A26Q1SH2V,leaf,area,NA
-doi:10.18739/A26Q1SH2V,area,daughter,NA
-doi:10.18739/A26Q1SH2V,daughter,6,NA
-doi:10.18739/A26Q1SH2V,6,la,NA
-doi:10.18739/A26Q1SH2V,la,mother,NA
-doi:10.18739/A26Q1SH2V,mother,number,NA
-doi:10.18739/A26Q1SH2V,number,daughter,NA
-doi:10.18739/A26Q1SH2V,daughter,1,NA
-doi:10.18739/A26Q1SH2V,1,number,NA
-doi:10.18739/A26Q1SH2V,number,daughter,NA
-doi:10.18739/A26Q1SH2V,daughter,2,NA
-doi:10.18739/A26Q1SH2V,2,number,NA
-doi:10.18739/A26Q1SH2V,number,daughter,NA
-doi:10.18739/A26Q1SH2V,daughter,3,NA
-doi:10.18739/A26Q1SH2V,3,number,NA
-doi:10.18739/A26Q1SH2V,number,daughter,NA
-doi:10.18739/A26Q1SH2V,daughter,4,NA
-doi:10.18739/A26Q1SH2V,4,number,NA
-doi:10.18739/A26Q1SH2V,number,daughter,NA
-doi:10.18739/A26Q1SH2V,daughter,5,NA
-doi:10.18739/A26Q1SH2V,5,number,NA
-doi:10.18739/A26Q1SH2V,number,daughter,NA
-doi:10.18739/A26Q1SH2V,daughter,6,NA
-doi:10.18739/A26Q1SH2V,6,number,NA
-doi:10.18739/A26T0GX06,NA,NA,NA
-doi:10.18739/A26T0GX1P,NA,NA,NA
-doi:10.18739/A2707WP0Q,NA,NA,NA
-doi:10.18739/A2736M31X,day,of,NA
-doi:10.18739/A2736M31X,of,year,NA
-doi:10.18739/A2736M31X,year,for,NA
-doi:10.18739/A2736M31X,for,observation,NA
-doi:10.18739/A2736M31X,observation,year,NA
-doi:10.18739/A2736M31X,year,height,NA
-doi:10.18739/A2736M31X,height,of,NA
-doi:10.18739/A2736M31X,of,sensor,NA
-doi:10.18739/A2736M31X,sensor,site,NA
-doi:10.18739/A2736M31X,site,unique,NA
-doi:10.18739/A2736M31X,unique,identifier,NA
-doi:10.18739/A2736M31X,identifier,vegetation,NA
-doi:10.18739/A2736M31X,vegetation,class,NA
-doi:10.18739/A2736M31X,class,unique,NA
-doi:10.18739/A2736M31X,unique,identifier,NA
-doi:10.18739/A2736M31X,identifier,name,NA
-doi:10.18739/A2736M31X,name,of,NA
-doi:10.18739/A2736M31X,of,vegetation,NA
-doi:10.18739/A2736M31X,vegetation,classification,NA
-doi:10.18739/A2736M31X,classification,description,NA
-doi:10.18739/A2736M31X,description,of,NA
-doi:10.18739/A2736M31X,of,criteria,NA
-doi:10.18739/A2736M31X,criteria,for,NA
-doi:10.18739/A2736M31X,for,vegetation,NA
-doi:10.18739/A2736M31X,vegetation,classification,NA
-doi:10.18739/A2736M31X,classification,unique,NA
-doi:10.18739/A2736M31X,unique,identifier,NA
-doi:10.18739/A2736M31X,identifier,of,NA
-doi:10.18739/A2736M31X,of,the,NA
-doi:10.18739/A2736M31X,the,study,NA
-doi:10.18739/A2736M31X,study,location,NA
-doi:10.18739/A2736M31X,location,vegetation,NA
-doi:10.18739/A2736M31X,vegetation,classification,NA
-doi:10.18739/A2736M31X,classification,unique,NA
-doi:10.18739/A2736M31X,unique,idenfier,NA
-doi:10.18739/A2736M31X,idenfier,day,NA
-doi:10.18739/A2736M31X,day,of,NA
-doi:10.18739/A2736M31X,of,year,NA
-doi:10.18739/A2736M31X,year,for,NA
-doi:10.18739/A2736M31X,for,observation,NA
-doi:10.18739/A2736M31X,observation,year,NA
-doi:10.18739/A2736M31X,year,of,NA
-doi:10.18739/A2736M31X,of,observation,NA
-doi:10.18739/A2736M31X,observation,depth,NA
-doi:10.18739/A2736M31X,depth,of,NA
-doi:10.18739/A2736M31X,of,soil,NA
-doi:10.18739/A2736M31X,soil,sensor,NA
-doi:10.18739/A2736M31X,sensor,unique,NA
-doi:10.18739/A2736M31X,unique,site,NA
-doi:10.18739/A2736M31X,site,identifier,NA
-doi:10.18739/A2736M31X,identifier,unique,NA
-doi:10.18739/A2736M31X,unique,identifier,NA
-doi:10.18739/A2736M31X,identifier,for,NA
-doi:10.18739/A2736M31X,for,each,NA
-doi:10.18739/A2736M31X,each,soil,NA
-doi:10.18739/A2736M31X,soil,temperature,NA
-doi:10.18739/A2736M31X,temperature,measurement,NA
-doi:10.18739/A2736M31X,measurement,entry,NA
-doi:10.18739/A2736M31X,entry,unique,NA
-doi:10.18739/A2736M31X,unique,site,NA
-doi:10.18739/A2736M31X,site,identifier,NA
-doi:10.18739/A2736M31X,identifier,latitude,NA
-doi:10.18739/A2736M31X,latitude,longitude,NA
-doi:10.18739/A2736M31X,longitude,unique,NA
-doi:10.18739/A2736M31X,unique,identifier,NA
-doi:10.18739/A2736M31X,identifier,for,NA
-doi:10.18739/A2736M31X,for,contributor,NA
-doi:10.18739/A2736M31X,contributor,contributor,NA
-doi:10.18739/A2736M31X,contributor,identifier,NA
-doi:10.18739/A2736M31X,identifier,citation,NA
-doi:10.18739/A2736M31X,citation,information,NA
-doi:10.18739/A27P8TD2J,NA,NA,NA
-doi:10.18739/A27S7HS4C,sitetype,conditionnote,NA
-doi:10.18739/A2833MZ38,NA,NA,NA
-doi:10.18739/A28911R88,NA,NA,NA
-doi:10.18739/A28G8FH70,NA,NA,NA
-doi:10.18739/A28K74X6T,NA,NA,NA
-doi:10.18739/A2930NV40,NA,NA,NA
-doi:10.18739/A29882N5H,NA,NA,NA
-doi:10.18739/A29G5GD6R,NA,NA,NA
-doi:10.18739/A29S1KM2B,NA,NA,NA
-doi:10.18739/A2BG2H960,NA,NA,NA
-doi:10.18739/A2BK16Q5T,NA,NA,NA
-doi:10.18739/A2BR8MG4J,bone,element,NA
-doi:10.18739/A2BR8MG4J,element,notes,NA
-doi:10.18739/A2BR8MG4J,notes,for,NA
-doi:10.18739/A2BR8MG4J,for,locality,NA
-doi:10.18739/A2BR8MG4J,locality,fraction,NA
-doi:10.18739/A2BR8MG4J,fraction,of,NA
-doi:10.18739/A2BR8MG4J,of,collagen,NA
-doi:10.18739/A2BR8MG4J,collagen,more,NA
-doi:10.18739/A2BR8MG4J,more,than,NA
-doi:10.18739/A2BR8MG4J,than,30kda,NA
-doi:10.18739/A2CJ87K8H,NA,NA,NA
-doi:10.18739/A2CN6Z02Z,NA,NA,NA
-doi:10.18739/A2CN6Z10F,NA,NA,NA
-doi:10.18739/A2CV4BR73,NA,NA,NA
-doi:10.18739/A2D21RJ45,NA,NA,NA
-doi:10.18739/A2DF6K36X,NA,NA,NA
-doi:10.18739/A2DJ58H67,NA,NA,NA
-doi:10.18739/A2FJ29C9G,NA,NA,NA
-doi:10.18739/A2G15TB43,NA,NA,NA
-doi:10.18739/A2GB1XH9K,NA,NA,NA
-doi:10.18739/A2GM81P1M,iodine,mole,NA
-doi:10.18739/A2GM81P1M,mole,fraction,NA
-doi:10.18739/A2GM81P1M,fraction,iodine,NA
-doi:10.18739/A2GM81P1M,iodine,monobromide,NA
-doi:10.18739/A2GM81P1M,monobromide,hypobromous,NA
-doi:10.18739/A2GM81P1M,hypobromous,acid,NA
-doi:10.18739/A2GM81P1M,acid,signal,NA
-doi:10.18739/A2GM81P1M,signal,of,NA
-doi:10.18739/A2GM81P1M,of,m,NA
-doi:10.18739/A2GM81P1M,m,z,NA
-doi:10.18739/A2GM81P1M,z,223,NA
-doi:10.18739/A2GM81P1M,223,signal,NA
-doi:10.18739/A2GM81P1M,signal,of,NA
-doi:10.18739/A2GM81P1M,of,m,NA
-doi:10.18739/A2GM81P1M,m,z,NA
-doi:10.18739/A2GM81P1M,z,223,NA
-doi:10.18739/A2GM81P1M,223,signal,NA
-doi:10.18739/A2GM81P1M,signal,of,NA
-doi:10.18739/A2GM81P1M,of,m,NA
-doi:10.18739/A2GM81P1M,m,z,NA
-doi:10.18739/A2GM81P1M,z,179,NA
-doi:10.18739/A2GM81P1M,179,signal,NA
-doi:10.18739/A2GM81P1M,signal,of,NA
-doi:10.18739/A2GM81P1M,of,m,NA
-doi:10.18739/A2GM81P1M,m,z,NA
-doi:10.18739/A2GM81P1M,z,181,NA
-doi:10.18739/A2GM81P1M,181,signal,NA
-doi:10.18739/A2GM81P1M,signal,of,NA
-doi:10.18739/A2GM81P1M,of,m,NA
-doi:10.18739/A2GM81P1M,m,z,NA
-doi:10.18739/A2GM81P1M,z,271,NA
-doi:10.18739/A2GM81P1M,271,iodine,NA
-doi:10.18739/A2GM81P1M,iodine,mole,NA
-doi:10.18739/A2GM81P1M,mole,fraction,NA
-doi:10.18739/A2H12V75T,NA,NA,NA
-doi:10.18739/A2H41JM7N,node,station,NA
-doi:10.18739/A2H41JM7N,station,type,NA
-doi:10.18739/A2H41JM7N,type,category,NA
-doi:10.18739/A2HT2GC50,NA,NA,NA
-doi:10.18739/A2J09W45H,core,identification,NA
-doi:10.18739/A2J09W45H,identification,top,NA
-doi:10.18739/A2J09W45H,top,depth,NA
-doi:10.18739/A2J09W45H,depth,bottom,NA
-doi:10.18739/A2J09W45H,bottom,depth,NA
-doi:10.18739/A2J09W45H,depth,gas,NA
-doi:10.18739/A2J09W45H,gas,age,NA
-doi:10.18739/A2J09W45H,age,ethane,NA
-doi:10.18739/A2J09W45H,ethane,error,NA
-doi:10.18739/A2J09W45H,error,ice,NA
-doi:10.18739/A2J09W45H,ice,core,NA
-doi:10.18739/A2J09W45H,core,site,NA
-doi:10.18739/A2J09W45H,site,top,NA
-doi:10.18739/A2J09W45H,top,depth,NA
-doi:10.18739/A2J09W45H,depth,bottom,NA
-doi:10.18739/A2J09W45H,bottom,depth,NA
-doi:10.18739/A2J09W45H,depth,gas,NA
-doi:10.18739/A2J09W45H,gas,age,NA
-doi:10.18739/A2J09W45H,age,of,NA
-doi:10.18739/A2J09W45H,of,sample,NA
-doi:10.18739/A2J09W45H,sample,gas,NA
-doi:10.18739/A2J09W45H,gas,age,NA
-doi:10.18739/A2J09W45H,age,in,NA
-doi:10.18739/A2J09W45H,in,calendar,NA
-doi:10.18739/A2J09W45H,calendar,year,NA
-doi:10.18739/A2J09W45H,year,ethane,NA
-doi:10.18739/A2J09W45H,ethane,mixing,NA
-doi:10.18739/A2J09W45H,mixing,ratio,NA
-doi:10.18739/A2J09W45H,ratio,acetylene,NA
-doi:10.18739/A2J09W45H,acetylene,mixing,NA
-doi:10.18739/A2J09W45H,mixing,ratio,NA
-doi:10.18739/A2J09W45H,ratio,acetylene,NA
-doi:10.18739/A2J09W45H,acetylene,mixing,NA
-doi:10.18739/A2J09W45H,mixing,ratio,NA
-doi:10.18739/A2J09W45H,ratio,error,NA
-doi:10.18739/A2J09W45H,error,ethane,NA
-doi:10.18739/A2J09W45H,ethane,mixing,NA
-doi:10.18739/A2J09W45H,mixing,ratio,NA
-doi:10.18739/A2J09W45H,ratio,error,NA
-doi:10.18739/A2J09W45H,error,solubility,NA
-doi:10.18739/A2J09W45H,solubility,corrected,NA
-doi:10.18739/A2J09W45H,corrected,acetylene,NA
-doi:10.18739/A2J09W45H,acetylene,mixing,NA
-doi:10.18739/A2J09W45H,mixing,ratio,NA
-doi:10.18739/A2J09W45H,ratio,core,NA
-doi:10.18739/A2J09W45H,core,identification,NA
-doi:10.18739/A2J09W45H,identification,top,NA
-doi:10.18739/A2J09W45H,top,depth,NA
-doi:10.18739/A2J09W45H,depth,bottom,NA
-doi:10.18739/A2J09W45H,bottom,depth,NA
-doi:10.18739/A2J09W45H,depth,gas,NA
-doi:10.18739/A2J09W45H,gas,age,NA
-doi:10.18739/A2J09W45H,age,ethane,NA
-doi:10.18739/A2J09W45H,ethane,error,NA
-doi:10.18739/A2J09W45H,error,ice,NA
-doi:10.18739/A2J09W45H,ice,core,NA
-doi:10.18739/A2J09W45H,core,site,NA
-doi:10.18739/A2J09W45H,site,top,NA
-doi:10.18739/A2J09W45H,top,depth,NA
-doi:10.18739/A2J09W45H,depth,bottom,NA
-doi:10.18739/A2J09W45H,bottom,depth,NA
-doi:10.18739/A2J09W45H,depth,gas,NA
-doi:10.18739/A2J09W45H,gas,age,NA
-doi:10.18739/A2J09W45H,age,of,NA
-doi:10.18739/A2J09W45H,of,sample,NA
-doi:10.18739/A2J09W45H,sample,gas,NA
-doi:10.18739/A2J09W45H,gas,age,NA
-doi:10.18739/A2J09W45H,age,in,NA
-doi:10.18739/A2J09W45H,in,calendar,NA
-doi:10.18739/A2J09W45H,calendar,year,NA
-doi:10.18739/A2J09W45H,year,ethane,NA
-doi:10.18739/A2J09W45H,ethane,mixing,NA
-doi:10.18739/A2J09W45H,mixing,ratio,NA
-doi:10.18739/A2J09W45H,ratio,acetylene,NA
-doi:10.18739/A2J09W45H,acetylene,mixing,NA
-doi:10.18739/A2J09W45H,mixing,ratio,NA
-doi:10.18739/A2J09W45H,ratio,acetylene,NA
-doi:10.18739/A2J09W45H,acetylene,mixing,NA
-doi:10.18739/A2J09W45H,mixing,ratio,NA
-doi:10.18739/A2J09W45H,ratio,error,NA
-doi:10.18739/A2J09W45H,error,ethane,NA
-doi:10.18739/A2J09W45H,ethane,mixing,NA
-doi:10.18739/A2J09W45H,mixing,ratio,NA
-doi:10.18739/A2J09W45H,ratio,error,NA
-doi:10.18739/A2J09W45H,error,solubility,NA
-doi:10.18739/A2J09W45H,solubility,corrected,NA
-doi:10.18739/A2J09W45H,corrected,acetylene,NA
-doi:10.18739/A2J09W45H,acetylene,mixing,NA
-doi:10.18739/A2J09W45H,mixing,ratio,NA
-doi:10.18739/A2J09W45H,ratio,core,NA
-doi:10.18739/A2J09W45H,core,identification,NA
-doi:10.18739/A2J09W45H,identification,top,NA
-doi:10.18739/A2J09W45H,top,depth,NA
-doi:10.18739/A2J09W45H,depth,bottom,NA
-doi:10.18739/A2J09W45H,bottom,depth,NA
-doi:10.18739/A2J09W45H,depth,gas,NA
-doi:10.18739/A2J09W45H,gas,age,NA
-doi:10.18739/A2J09W45H,age,ethane,NA
-doi:10.18739/A2J09W45H,ethane,error,NA
-doi:10.18739/A2J09W45H,error,ice,NA
-doi:10.18739/A2J09W45H,ice,core,NA
-doi:10.18739/A2J09W45H,core,site,NA
-doi:10.18739/A2J09W45H,site,top,NA
-doi:10.18739/A2J09W45H,top,depth,NA
-doi:10.18739/A2J09W45H,depth,bottom,NA
-doi:10.18739/A2J09W45H,bottom,depth,NA
-doi:10.18739/A2J09W45H,depth,gas,NA
-doi:10.18739/A2J09W45H,gas,age,NA
-doi:10.18739/A2J09W45H,age,of,NA
-doi:10.18739/A2J09W45H,of,sample,NA
-doi:10.18739/A2J09W45H,sample,gas,NA
-doi:10.18739/A2J09W45H,gas,age,NA
-doi:10.18739/A2J09W45H,age,in,NA
-doi:10.18739/A2J09W45H,in,calendar,NA
-doi:10.18739/A2J09W45H,calendar,year,NA
-doi:10.18739/A2J09W45H,year,ethane,NA
-doi:10.18739/A2J09W45H,ethane,mixing,NA
-doi:10.18739/A2J09W45H,mixing,ratio,NA
-doi:10.18739/A2J09W45H,ratio,acetylene,NA
-doi:10.18739/A2J09W45H,acetylene,mixing,NA
-doi:10.18739/A2J09W45H,mixing,ratio,NA
-doi:10.18739/A2J09W45H,ratio,acetylene,NA
-doi:10.18739/A2J09W45H,acetylene,mixing,NA
-doi:10.18739/A2J09W45H,mixing,ratio,NA
-doi:10.18739/A2J09W45H,ratio,error,NA
-doi:10.18739/A2J09W45H,error,ethane,NA
-doi:10.18739/A2J09W45H,ethane,mixing,NA
-doi:10.18739/A2J09W45H,mixing,ratio,NA
-doi:10.18739/A2J09W45H,ratio,error,NA
-doi:10.18739/A2J09W45H,error,solubility,NA
-doi:10.18739/A2J09W45H,solubility,corrected,NA
-doi:10.18739/A2J09W45H,corrected,acetylene,NA
-doi:10.18739/A2J09W45H,acetylene,mixing,NA
-doi:10.18739/A2J09W45H,mixing,ratio,NA
-doi:10.18739/A2J09W45H,ratio,core,NA
-doi:10.18739/A2J09W45H,core,identification,NA
-doi:10.18739/A2J09W45H,identification,top,NA
-doi:10.18739/A2J09W45H,top,depth,NA
-doi:10.18739/A2J09W45H,depth,bottom,NA
-doi:10.18739/A2J09W45H,bottom,depth,NA
-doi:10.18739/A2J09W45H,depth,gas,NA
-doi:10.18739/A2J09W45H,gas,age,NA
-doi:10.18739/A2J09W45H,age,ethane,NA
-doi:10.18739/A2J09W45H,ethane,error,NA
-doi:10.18739/A2J09W45H,error,ice,NA
-doi:10.18739/A2J09W45H,ice,core,NA
-doi:10.18739/A2J09W45H,core,site,NA
-doi:10.18739/A2J09W45H,site,top,NA
-doi:10.18739/A2J09W45H,top,depth,NA
-doi:10.18739/A2J09W45H,depth,bottom,NA
-doi:10.18739/A2J09W45H,bottom,depth,NA
-doi:10.18739/A2J09W45H,depth,gas,NA
-doi:10.18739/A2J09W45H,gas,age,NA
-doi:10.18739/A2J09W45H,age,of,NA
-doi:10.18739/A2J09W45H,of,sample,NA
-doi:10.18739/A2J09W45H,sample,gas,NA
-doi:10.18739/A2J09W45H,gas,age,NA
-doi:10.18739/A2J09W45H,age,in,NA
-doi:10.18739/A2J09W45H,in,calendar,NA
-doi:10.18739/A2J09W45H,calendar,year,NA
-doi:10.18739/A2J09W45H,year,ethane,NA
-doi:10.18739/A2J09W45H,ethane,mixing,NA
-doi:10.18739/A2J09W45H,mixing,ratio,NA
-doi:10.18739/A2J09W45H,ratio,acetylene,NA
-doi:10.18739/A2J09W45H,acetylene,mixing,NA
-doi:10.18739/A2J09W45H,mixing,ratio,NA
-doi:10.18739/A2J09W45H,ratio,acetylene,NA
-doi:10.18739/A2J09W45H,acetylene,mixing,NA
-doi:10.18739/A2J09W45H,mixing,ratio,NA
-doi:10.18739/A2J09W45H,ratio,error,NA
-doi:10.18739/A2J09W45H,error,ethane,NA
-doi:10.18739/A2J09W45H,ethane,mixing,NA
-doi:10.18739/A2J09W45H,mixing,ratio,NA
-doi:10.18739/A2J09W45H,ratio,error,NA
-doi:10.18739/A2J09W45H,error,solubility,NA
-doi:10.18739/A2J09W45H,solubility,corrected,NA
-doi:10.18739/A2J09W45H,corrected,acetylene,NA
-doi:10.18739/A2J09W45H,acetylene,mixing,NA
-doi:10.18739/A2J09W45H,mixing,ratio,NA
-doi:10.18739/A2J09W45H,ratio,core,NA
-doi:10.18739/A2J09W45H,core,identification,NA
-doi:10.18739/A2J09W45H,identification,top,NA
-doi:10.18739/A2J09W45H,top,depth,NA
-doi:10.18739/A2J09W45H,depth,bottom,NA
-doi:10.18739/A2J09W45H,bottom,depth,NA
-doi:10.18739/A2J09W45H,depth,gas,NA
-doi:10.18739/A2J09W45H,gas,age,NA
-doi:10.18739/A2J09W45H,age,ethane,NA
-doi:10.18739/A2J09W45H,ethane,error,NA
-doi:10.18739/A2J09W45H,error,ice,NA
-doi:10.18739/A2J09W45H,ice,core,NA
-doi:10.18739/A2J09W45H,core,site,NA
-doi:10.18739/A2J09W45H,site,top,NA
-doi:10.18739/A2J09W45H,top,depth,NA
-doi:10.18739/A2J09W45H,depth,bottom,NA
-doi:10.18739/A2J09W45H,bottom,depth,NA
-doi:10.18739/A2J09W45H,depth,gas,NA
-doi:10.18739/A2J09W45H,gas,age,NA
-doi:10.18739/A2J09W45H,age,of,NA
-doi:10.18739/A2J09W45H,of,sample,NA
-doi:10.18739/A2J09W45H,sample,gas,NA
-doi:10.18739/A2J09W45H,gas,age,NA
-doi:10.18739/A2J09W45H,age,in,NA
-doi:10.18739/A2J09W45H,in,calendar,NA
-doi:10.18739/A2J09W45H,calendar,year,NA
-doi:10.18739/A2J09W45H,year,ethane,NA
-doi:10.18739/A2J09W45H,ethane,mixing,NA
-doi:10.18739/A2J09W45H,mixing,ratio,NA
-doi:10.18739/A2J09W45H,ratio,acetylene,NA
-doi:10.18739/A2J09W45H,acetylene,mixing,NA
-doi:10.18739/A2J09W45H,mixing,ratio,NA
-doi:10.18739/A2J09W45H,ratio,acetylene,NA
-doi:10.18739/A2J09W45H,acetylene,mixing,NA
-doi:10.18739/A2J09W45H,mixing,ratio,NA
-doi:10.18739/A2J09W45H,ratio,error,NA
-doi:10.18739/A2J09W45H,error,ethane,NA
-doi:10.18739/A2J09W45H,ethane,mixing,NA
-doi:10.18739/A2J09W45H,mixing,ratio,NA
-doi:10.18739/A2J09W45H,ratio,error,NA
-doi:10.18739/A2J09W45H,error,solubility,NA
-doi:10.18739/A2J09W45H,solubility,corrected,NA
-doi:10.18739/A2J09W45H,corrected,acetylene,NA
-doi:10.18739/A2J09W45H,acetylene,mixing,NA
-doi:10.18739/A2J09W45H,mixing,ratio,NA
-doi:10.18739/A2J960B1G,NA,NA,NA
-doi:10.18739/A2K35MD63,NA,NA,NA
-doi:10.18739/A2KW57J2B,NA,NA,NA
-doi:10.18739/A2KW57J9Q,NA,NA,NA
-doi:10.18739/A2M32N96B,NA,NA,NA
-doi:10.18739/A2M32NB3B,NA,NA,NA
-doi:10.18739/A2M61BQ8M,NA,NA,NA
-doi:10.18739/A2NC5SC63,NA,NA,NA
-doi:10.18739/A2NK36594,NA,NA,NA
-doi:10.18739/A2NV99B09,NA,NA,NA
-doi:10.18739/A2P26Q37R,NA,NA,NA
-doi:10.18739/A2P26Q457,NA,NA,NA
-doi:10.18739/A2P843X00,NA,NA,NA
-doi:10.18739/A2PN8XF6V,NA,NA,NA
-doi:10.18739/A2PN8XG4B,NA,NA,NA
-doi:10.18739/A2PV6B70J,NA,NA,NA
-doi:10.18739/A2Q814T07,NA,NA,NA
-doi:10.18739/A2QJ77Z3R,NA,NA,NA
-doi:10.18739/A2QJ77Z9N,NA,NA,NA
-doi:10.18739/A2QV3C48N,NA,NA,NA
-doi:10.18739/A2QZ22H33,geographic,area,NA
-doi:10.18739/A2QZ22H33,area,generic,NA
-doi:10.18739/A2QZ22H33,generic,name,NA
-doi:10.18739/A2QZ22H33,name,for,NA
-doi:10.18739/A2QZ22H33,for,several,NA
-doi:10.18739/A2QZ22H33,several,devices,NA
-doi:10.18739/A2RB6W338,NA,NA,NA
-doi:10.18739/A2RJ48V2H,NA,NA,NA
-doi:10.18739/A2RN30757,NA,NA,NA
-doi:10.18739/A2RV0D11H,NA,NA,NA
-doi:10.18739/A2S46H60V,ship,identification,NA
-doi:10.18739/A2S46H60V,identification,ice,NA
-doi:10.18739/A2S46H60V,ice,terms,NA
-doi:10.18739/A2S46H60V,terms,nav,NA
-doi:10.18739/A2S46H60V,nav,terms,NA
-doi:10.18739/A2S46H60V,terms,url,NA
-doi:10.18739/A2S46H68Q,NA,NA,NA
-doi:10.18739/A2T14TQ57,basal,melt,NA
-doi:10.18739/A2T14TQ57,melt,rate,NA
-doi:10.18739/A2T14TQ57,rate,uncertainty,NA
-doi:10.18739/A2T14TQ57,uncertainty,surface,NA
-doi:10.18739/A2T14TQ57,surface,melt,NA
-doi:10.18739/A2T14TQ57,melt,rate,NA
-doi:10.18739/A2T14TQ57,rate,uncertainty,NA
-doi:10.18739/A2T14TQ57,uncertainty,apres,NA
-doi:10.18739/A2T14TQ57,apres,derived,NA
-doi:10.18739/A2T14TQ57,derived,basal,NA
-doi:10.18739/A2T14TQ57,basal,melt,NA
-doi:10.18739/A2T14TQ57,melt,rate,NA
-doi:10.18739/A2T14TQ57,rate,uncertainty,NA
-doi:10.18739/A2TB0XV7T,nitric,acid,NA
-doi:10.18739/A2TB0XV7T,acid,concentration,NA
-doi:10.18739/A2TB0XV7T,concentration,ammonia,NA
-doi:10.18739/A2TB0XV7T,ammonia,concentration,NA
-doi:10.18739/A2TB0XV7T,concentration,ammonia,NA
-doi:10.18739/A2TB0XV7T,ammonia,concentration,NA
-doi:10.18739/A2TB0XV7T,concentration,nitric,NA
-doi:10.18739/A2TB0XV7T,nitric,acid,NA
-doi:10.18739/A2TB0XV7T,acid,concentration,NA
-doi:10.18739/A2TD9N79H,NA,NA,NA
-doi:10.18739/A2TM72155,NA,NA,NA
-doi:10.18739/A2TQ5RD9K,NA,NA,NA
-doi:10.18739/A2V97ZR7H,NA,NA,NA
-doi:10.18739/A2VD6P49R,fid,zone,NA
-doi:10.18739/A2VD6P49R,zone,catch_id,NA
-doi:10.18739/A2VD6P49R,catch_id,area,NA
-doi:10.18739/A2VD6P49R,area,perimeter,NA
-doi:10.18739/A2VD6P49R,perimeter,totallakes,NA
-doi:10.18739/A2VD6P49R,totallakes,up_conn,NA
-doi:10.18739/A2VD6P49R,up_conn,down_conn,NA
-doi:10.18739/A2VD6P49R,down_conn,total_conn,NA
-doi:10.18739/A2VD6P49R,total_conn,surf_geol,NA
-doi:10.18739/A2VD6P49R,surf_geol,hydconn,NA
-doi:10.18739/A2VD6P49R,hydconn,fid,NA
-doi:10.18739/A2VD6P49R,fid,zone,NA
-doi:10.18739/A2VD6P49R,zone,catch_id,NA
-doi:10.18739/A2VD6P49R,catch_id,area,NA
-doi:10.18739/A2VD6P49R,area,perimeter,NA
-doi:10.18739/A2VD6P49R,perimeter,totallakes,NA
-doi:10.18739/A2VD6P49R,totallakes,pctlakeare,NA
-doi:10.18739/A2VD6P49R,pctlakeare,up_conn,NA
-doi:10.18739/A2VD6P49R,up_conn,down_conn,NA
-doi:10.18739/A2VD6P49R,down_conn,total_conn,NA
-doi:10.18739/A2VD6P49R,total_conn,surf_geol,NA
-doi:10.18739/A2VD6P49R,surf_geol,hydconn,NA
-doi:10.18739/A2VD6P49R,hydconn,fid,NA
-doi:10.18739/A2VD6P49R,fid,zone,NA
-doi:10.18739/A2VD6P49R,zone,catch_id,NA
-doi:10.18739/A2VD6P49R,catch_id,area,NA
-doi:10.18739/A2VD6P49R,area,perimeter,NA
-doi:10.18739/A2VD6P49R,perimeter,totallakes,NA
-doi:10.18739/A2VD6P49R,totallakes,pctlakeare,NA
-doi:10.18739/A2VD6P49R,pctlakeare,up_conn,NA
-doi:10.18739/A2VD6P49R,up_conn,down_conn,NA
-doi:10.18739/A2VD6P49R,down_conn,total_conn,NA
-doi:10.18739/A2VD6P49R,total_conn,surf_geol,NA
-doi:10.18739/A2VD6P49R,surf_geol,hydconn,NA
-doi:10.18739/A2VM42X50,NA,NA,NA
-doi:10.18739/A2VM42Z20,NA,NA,NA
-doi:10.18739/A2VX06340,NA,NA,NA
-doi:10.18739/A2W37KW70,NA,NA,NA
-doi:10.18739/A2WH2DF2X,modal,size,NA
-doi:10.18739/A2WP9T67J,NA,NA,NA
-doi:10.18739/A2X63B542,redox,mv,NA
-doi:10.18739/A2XD0QX8B,modal,size,NA
-doi:10.18739/A2ZP3W08H,modal,size,NA
-doi:10.18739/A2ZS2KD7B,NA,NA,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,year,habitat,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,habitat,freshwater,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,freshwater,or,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,or,saline,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,saline,site,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,site,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,station,latitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,latitude,longitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,longitude,water,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,water,column,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,column,position,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,position,julian,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,julian,day,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,day,week,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,week,of,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,of,the,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,the,year,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,year,dissolved,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,dissolved,organic,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,organic,carbon,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,carbon,gas,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,gas,transfer,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,transfer,co,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,co,efficient,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,efficient,site,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,site,description,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,description,and,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,and,bounding,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,bounding,boxes,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,boxes,site,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,site,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,station,latitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,latitude,longitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,longitude,date,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,date,and,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,and,time,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,time,latitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,latitude,longitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,longitude,year,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,year,hour,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,hour,julian,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,julian,day,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,day,total,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,total,daily,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,daily,rainfall,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,rainfall,latitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,latitude,longitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,longitude,year,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,year,julian,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,julian,day,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,day,water,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,water,temperature,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,temperature,net,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,net,ecosystem,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,ecosystem,production,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,station,node,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,node,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,station,lagoon,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,lagoon,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,station,sampling,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,sampling,season,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,season,date,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,date,collected,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,collected,water,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,water,column,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,column,position,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,position,carbon,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,carbon,data,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,data,flag,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,flag,nitrogen,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,nitrogen,data,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,data,flag,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,flag,collection,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,collection,method,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,method,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,station,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,name,latitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,latitude,longitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,longitude,habitat,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,habitat,type,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,type,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,station,sampling,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,sampling,priority,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,priority,data,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,data,package,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,package,id,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,id,given,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,given,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,name,middle,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,middle,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,name,surname,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,surname,role,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,role,begin,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,begin,year,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,year,end,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,end,year,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,year,orcid,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,station,node,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,node,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,station,lagoon,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,lagoon,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,station,sampling,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,sampling,season,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,season,date,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,date,collected,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,collected,pigment,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,pigment,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,name,flag,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,flag,for,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,for,samples,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,samples,with,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,with,lost,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,lost,porewater,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,porewater,volume,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,volume,data,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,data,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,station,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,name,latitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,latitude,longitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,longitude,habitat,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,habitat,type,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,type,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,station,sampling,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,sampling,priority,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,priority,data,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,data,package,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,package,id,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,id,given,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,given,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,name,middle,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,middle,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,name,surname,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,surname,role,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,role,begin,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,begin,year,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,year,end,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,end,year,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,year,orcid,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,station,node,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,node,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,station,lagoon,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,lagoon,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,station,sampling,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,sampling,season,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,season,date,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,date,collected,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,collected,water,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,water,column,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,column,position,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,position,collection,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,collection,method,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,method,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,station,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,name,latitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,latitude,longitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,longitude,habitat,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,habitat,type,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,type,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,station,sampling,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,sampling,priority,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,priority,data,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,data,package,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,package,id,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,id,given,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,given,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,name,middle,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,middle,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,name,surname,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,surname,role,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,role,begin,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,begin,year,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,year,end,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,end,year,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,year,orcid,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,station,node,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,node,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,station,lagoon,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,lagoon,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,station,sampling,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,sampling,season,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,season,date,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,date,collected,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,collected,water,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,water,column,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,column,position,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,position,flag,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,flag,for,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,for,ammonia,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,ammonia,concentration,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,concentration,flag,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,flag,for,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,for,phosphate,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,phosphate,concentration,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,concentration,flag,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,flag,for,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,for,silicate,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,silicate,concentration,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,concentration,flag,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,flag,for,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,for,nitrate,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,nitrate,nitrite,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,nitrite,concentration,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,concentration,collection,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,collection,method,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,method,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,station,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,name,latitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,latitude,longitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,longitude,habitat,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,habitat,type,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,type,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,station,sampling,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,sampling,priority,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,priority,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,station,node,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,node,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,station,lagoon,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,lagoon,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,station,sampling,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,sampling,season,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,season,date,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,date,collected,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,collected,flag,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,flag,for,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,for,ammonia,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,ammonia,concentration,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,concentration,flag,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,flag,for,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,for,phosphate,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,phosphate,concentration,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,concentration,flag,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,flag,for,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,for,silicate,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,silicate,concentration,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,concentration,flag,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,flag,for,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,for,nitrate,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,nitrate,nitrite,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,nitrite,concentration,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,concentration,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,station,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,name,latitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,latitude,longitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,longitude,habitat,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,habitat,type,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,type,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,station,sampling,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,sampling,priority,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,priority,chemistry,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,chemistry,unit,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,unit,reaction,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,reaction,wavelength,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,wavelength,detection,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,detection,limit,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,limit,applicable,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,applicable,range,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,range,sample,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,sample,precision,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,precision,data,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,data,package,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,package,id,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,id,given,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,given,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,name,middle,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,middle,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,name,surname,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,surname,role,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,role,begin,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,begin,year,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,year,end,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,end,year,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,year,orcid,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,station,node,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,node,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,station,lagoon,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,lagoon,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,station,sampling,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,sampling,season,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,season,date,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,date,collected,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,collected,water,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,water,column,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,column,position,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,position,collection,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,collection,method,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,method,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,station,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,name,latitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,latitude,longitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,longitude,habitat,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,habitat,type,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,type,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,station,sampling,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,sampling,priority,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,priority,data,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,data,package,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,package,id,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,id,given,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,given,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,name,middle,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,middle,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,name,surname,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,surname,role,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,role,begin,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,begin,year,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,year,end,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,end,year,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,year,orcid,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,station,date,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,date,time,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,time,recorded,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,recorded,instrument,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,instrument,used,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,used,whether,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,whether,data,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,data,was,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,was,calibrated,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,calibrated,pressure,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,pressure,depth,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,depth,speed,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,speed,of,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,of,sound,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,sound,specific,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,specific,conductivity,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,conductivity,conductivity,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,conductivity,salinity,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,salinity,data,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,data,flag,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,flag,temperature,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,temperature,data,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,data,flag,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,flag,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,station,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,name,latitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,latitude,longitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,longitude,habitat,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,habitat,type,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,type,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,station,date,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,date,time,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,time,recorded,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,recorded,current,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,current,speed,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,speed,current,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,current,heading,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,heading,northward,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,northward,velocity,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,velocity,eastward,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,eastward,velocity,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,velocity,speed,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,speed,velocity,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,velocity,data,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,data,flag,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,flag,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,station,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,name,latitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,latitude,longitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,longitude,habitat,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,habitat,type,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,type,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,station,node,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,node,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,station,lagoon,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,lagoon,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,station,sampling,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,sampling,season,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,season,date,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,date,time,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,time,recorded,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,recorded,water,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,water,column,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,column,position,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,position,depth,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,depth,phycoerythrin,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,phycoerythrin,concentration,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,concentration,salinity,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,salinity,specific,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,specific,conductivity,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,conductivity,temperature,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,temperature,notes,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,notes,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,station,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,name,latitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,latitude,longitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,longitude,habitat,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,habitat,type,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,type,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,station,sampling,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,sampling,priority,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,priority,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,station,date,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,date,time,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,time,recorded,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,recorded,pressure,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,pressure,depth,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,depth,speed,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,speed,of,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,of,sound,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,sound,specific,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,specific,conductivity,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,conductivity,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,station,date,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,date,time,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,time,recorded,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,recorded,speed,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,speed,of,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,of,sound,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,sound,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,station,date,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,date,time,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,time,recorded,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,recorded,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,station,date,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,date,time,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,time,recorded,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,recorded,current,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,current,speed,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,speed,current,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,current,heading,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,heading,northward,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,northward,velocity,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,velocity,eastward,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,eastward,velocity,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,velocity,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,station,date,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,date,time,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,time,recorded,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,recorded,data,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,data,package,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,package,id,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,id,given,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,given,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,name,middle,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,middle,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,name,surname,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,surname,role,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,role,begin,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,begin,year,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,year,end,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,end,year,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,year,orcid,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,station,node,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,node,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,station,lagoon,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,lagoon,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,station,sampling,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,sampling,season,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,season,date,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,date,collected,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,collected,water,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,water,column,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,column,position,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,position,delta,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,delta,oxygen,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,oxygen,18,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,18,notes,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,notes,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,station,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,name,latitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,latitude,longitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,longitude,habitat,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,habitat,type,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,type,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,station,sampling,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,sampling,priority,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,priority,data,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,data,package,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,package,id,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,id,given,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,given,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,name,middle,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,middle,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,name,surname,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,surname,role,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,role,begin,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,begin,year,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,year,end,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,end,year,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,year,orcid,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,date,latitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,latitude,longitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,longitude,month,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,month,latitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,latitude,longitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,longitude,month,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,month,latitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,latitude,longitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,longitude,date,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,date,latitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,latitude,longitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,longitude,soil,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,soil,depth,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,depth,ghaas,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,ghaas,river,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,river,basin,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,basin,id,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,id,date,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,date,ease,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,ease,grid,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,grid,row,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,row,ease,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,ease,grid,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,grid,column,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,column,latitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,latitude,longitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,longitude,ghaas,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,ghaas,river,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,river,basin,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,basin,id,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,id,latitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,latitude,longitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,longitude,ghaas,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,ghaas,river,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,river,basin,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,basin,id,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,id,basin,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,basin,area,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,area,basin,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,basin,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,station,latitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,latitude,longitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,longitude,date,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,date,time,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,time,tidal,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,tidal,slope,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,slope,notes,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,notes,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,station,latitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,latitude,longitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,longitude,date,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,date,time,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,time,depth,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,depth,significant,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,significant,wave,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,wave,period,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,period,1,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,1,10,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,10,wave,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,wave,period,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,period,average,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,average,wave,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,wave,height,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,height,wave,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,wave,energy,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,energy,notes,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,notes,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,station,latitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,latitude,longitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,longitude,date,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,date,time,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,time,bearing,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,bearing,notes,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,notes,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,station,latitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,latitude,longitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,longitude,date,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,date,time,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,time,deployed,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,deployed,date,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,date,time,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,time,retrieved,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,retrieved,rbr,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,rbr,serial,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,serial,number,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,number,tcm,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,tcm,serial,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,serial,number,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,station,date,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,date,and,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,and,time,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,time,collected,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,collected,raw,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,raw,voltage,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,voltage,station,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,station,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,name,latitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,latitude,longitude,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,longitude,habitat,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,habitat,type,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,type,data,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,data,package,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,package,id,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,id,given,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,given,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,name,middle,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,middle,name,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,name,surname,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,surname,role,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,role,begin,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,begin,year,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,year,end,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,end,year,NA
-https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,year,orcid,NA
-urn:uuid:1f3f702f-9594-4293-8cbd-07932e54e8ed,NA,NA,NA
-urn:uuid:69a40625-277a-4793-aa10-f148332d2456,NA,NA,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,date,latitude,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,latitude,longitude,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,longitude,month,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,month,latitude,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,latitude,longitude,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,longitude,month,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,month,latitude,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,latitude,longitude,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,longitude,date,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,date,latitude,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,latitude,longitude,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,longitude,soil,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,soil,depth,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,depth,ghaas,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,ghaas,river,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,river,basin,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,basin,id,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,id,date,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,date,ease,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,ease,grid,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,grid,row,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,row,ease,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,ease,grid,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,grid,column,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,column,latitude,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,latitude,longitude,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,longitude,ghaas,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,ghaas,river,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,river,basin,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,basin,id,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,id,latitude,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,latitude,longitude,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,longitude,ghaas,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,ghaas,river,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,river,basin,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,basin,id,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,id,basin,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,basin,area,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,area,basin,NA
-urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,basin,name,NA
-urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,station,date,NA
-urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,date,collected,NA
-urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,collected,water,NA
-urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,water,column,NA
-urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,column,position,NA
-urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,position,collection,NA
-urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,collection,method,NA
-urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,method,habitat,NA
-urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,habitat,type,NA
-urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,type,longitude,NA
-urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,longitude,latitude,NA
-urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,latitude,station,NA
-urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,station,name,NA
-urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,name,data,NA
-urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,data,package,NA
-urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,package,id,NA
-urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,id,given,NA
-urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,given,name,NA
-urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,name,middle,NA
-urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,middle,name,NA
-urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,name,surname,NA
-urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,surname,role,NA
-urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,role,begin,NA
-urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,begin,year,NA
-urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,year,end,NA
-urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,end,year,NA
-urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,year,orcid,NA
+identifier,author,word1,word2,word3
+doi:10.18739/A20000081,Lee W. Cooper,NA,NA,NA
+doi:10.18739/A20000151,Pete D. Akers,timestamp,flow,NA
+doi:10.18739/A20000151,Pete D. Akers,flow,rate,NA
+doi:10.18739/A20000151,Pete D. Akers,rate,timestamp,NA
+doi:10.18739/A20000151,Pete D. Akers,timestamp,flow,NA
+doi:10.18739/A20000151,Pete D. Akers,flow,setting,NA
+doi:10.18739/A20000151,Pete D. Akers,setting,datetime,NA
+doi:10.18739/A20000151,Pete D. Akers,datetime,air,NA
+doi:10.18739/A20000151,Pete D. Akers,air,temperature,NA
+doi:10.18739/A20000151,Pete D. Akers,temperature,dew,NA
+doi:10.18739/A20000151,Pete D. Akers,dew,point,NA
+doi:10.18739/A20000151,Pete D. Akers,point,temperature,NA
+doi:10.18739/A20000151,Pete D. Akers,temperature,relative,NA
+doi:10.18739/A20000151,Pete D. Akers,relative,humidity,NA
+doi:10.18739/A20000151,Pete D. Akers,humidity,with,NA
+doi:10.18739/A20000151,Pete D. Akers,with,respect,NA
+doi:10.18739/A20000151,Pete D. Akers,respect,to,NA
+doi:10.18739/A20000151,Pete D. Akers,to,ice,NA
+doi:10.18739/A20000151,Pete D. Akers,ice,temperature,NA
+doi:10.18739/A20000151,Pete D. Akers,temperature,effect,NA
+doi:10.18739/A20000151,Pete D. Akers,effect,residual,NA
+doi:10.18739/A20000151,Pete D. Akers,residual,of,NA
+doi:10.18739/A20000151,Pete D. Akers,of,d18o,NA
+doi:10.18739/A20000151,Pete D. Akers,d18o,hourly,NA
+doi:10.18739/A20000151,Pete D. Akers,hourly,timeblock,NA
+doi:10.18739/A20000151,Pete D. Akers,timeblock,date,NA
+doi:10.18739/A20000151,Pete D. Akers,date,of,NA
+doi:10.18739/A20000151,Pete D. Akers,of,observation,NA
+doi:10.18739/A20000151,Pete D. Akers,observation,month,NA
+doi:10.18739/A20000151,Pete D. Akers,month,season,NA
+doi:10.18739/A20000151,Pete D. Akers,season,datetime,NA
+doi:10.18739/A20000151,Pete D. Akers,datetime,wind,NA
+doi:10.18739/A20000151,Pete D. Akers,wind,azimuth,NA
+doi:10.18739/A20000151,Pete D. Akers,azimuth,katabatic,NA
+doi:10.18739/A20000151,Pete D. Akers,katabatic,deviation,NA
+doi:10.18739/A20000151,Pete D. Akers,deviation,wind,NA
+doi:10.18739/A20000151,Pete D. Akers,wind,speed,NA
+doi:10.18739/A20000151,Pete D. Akers,speed,air,NA
+doi:10.18739/A20000151,Pete D. Akers,air,temperature,NA
+doi:10.18739/A20000151,Pete D. Akers,temperature,dew,NA
+doi:10.18739/A20000151,Pete D. Akers,dew,point,NA
+doi:10.18739/A20000151,Pete D. Akers,point,temperature,NA
+doi:10.18739/A20000151,Pete D. Akers,temperature,relative,NA
+doi:10.18739/A20000151,Pete D. Akers,relative,humidity,NA
+doi:10.18739/A20000151,Pete D. Akers,humidity,with,NA
+doi:10.18739/A20000151,Pete D. Akers,with,respect,NA
+doi:10.18739/A20000151,Pete D. Akers,respect,to,NA
+doi:10.18739/A20000151,Pete D. Akers,to,ice,NA
+doi:10.18739/A20000151,Pete D. Akers,ice,temperature,NA
+doi:10.18739/A20000151,Pete D. Akers,temperature,effect,NA
+doi:10.18739/A20000151,Pete D. Akers,effect,residual,NA
+doi:10.18739/A20000151,Pete D. Akers,residual,of,NA
+doi:10.18739/A20000151,Pete D. Akers,of,d18o,NA
+doi:10.18739/A20000151,Pete D. Akers,d18o,month,NA
+doi:10.18739/A20000151,Pete D. Akers,month,season,NA
+doi:10.18739/A20000151,Pete D. Akers,season,date,NA
+doi:10.18739/A20000151,Pete D. Akers,date,wind,NA
+doi:10.18739/A20000151,Pete D. Akers,wind,azimuth,NA
+doi:10.18739/A20000151,Pete D. Akers,azimuth,katabatic,NA
+doi:10.18739/A20000151,Pete D. Akers,katabatic,deviation,NA
+doi:10.18739/A20000151,Pete D. Akers,deviation,wind,NA
+doi:10.18739/A20000151,Pete D. Akers,wind,speed,NA
+doi:10.18739/A20000151,Pete D. Akers,speed,air,NA
+doi:10.18739/A20000151,Pete D. Akers,air,temperature,NA
+doi:10.18739/A20000151,Pete D. Akers,temperature,dew,NA
+doi:10.18739/A20000151,Pete D. Akers,dew,point,NA
+doi:10.18739/A20000151,Pete D. Akers,point,temperature,NA
+doi:10.18739/A20000151,Pete D. Akers,temperature,relative,NA
+doi:10.18739/A20000151,Pete D. Akers,relative,humidity,NA
+doi:10.18739/A20000151,Pete D. Akers,humidity,with,NA
+doi:10.18739/A20000151,Pete D. Akers,with,respect,NA
+doi:10.18739/A20000151,Pete D. Akers,respect,to,NA
+doi:10.18739/A20000151,Pete D. Akers,to,ice,NA
+doi:10.18739/A20000151,Pete D. Akers,ice,residual,NA
+doi:10.18739/A20000151,Pete D. Akers,residual,of,NA
+doi:10.18739/A20000151,Pete D. Akers,of,the,NA
+doi:10.18739/A20000151,Pete D. Akers,the,temperature,NA
+doi:10.18739/A20000151,Pete D. Akers,temperature,effect,NA
+doi:10.18739/A20000151,Pete D. Akers,effect,of,NA
+doi:10.18739/A20000151,Pete D. Akers,of,d18o,NA
+doi:10.18739/A20000151,Pete D. Akers,d18o,nao,NA
+doi:10.18739/A20000151,Pete D. Akers,nao,index,NA
+doi:10.18739/A20000151,Pete D. Akers,index,ao,NA
+doi:10.18739/A20000151,Pete D. Akers,ao,index,NA
+doi:10.18739/A20000151,Pete D. Akers,index,aao,NA
+doi:10.18739/A20000151,Pete D. Akers,aao,index,NA
+doi:10.18739/A20000151,Pete D. Akers,index,pna,NA
+doi:10.18739/A20000151,Pete D. Akers,pna,index,NA
+doi:10.18739/A20000151,Pete D. Akers,index,sea,NA
+doi:10.18739/A20000151,Pete D. Akers,sea,ice,NA
+doi:10.18739/A20000151,Pete D. Akers,ice,extent,NA
+doi:10.18739/A20000151,Pete D. Akers,extent,month,NA
+doi:10.18739/A20000151,Pete D. Akers,month,season,NA
+doi:10.18739/A2086356K,Christopher Arp,depth_n,depth_n,NA
+doi:10.18739/A2086356K,Christopher Arp,depth_n,surfacetype,NA
+doi:10.18739/A20V89H5P,Julie McKnight,NA,NA,NA
+doi:10.18739/A20V89J2P,Beth Orcutt,methane,stable,NA
+doi:10.18739/A20V89J2P,Beth Orcutt,stable,carbon,NA
+doi:10.18739/A20V89J2P,Beth Orcutt,carbon,isotope,NA
+doi:10.18739/A20V89J2P,Beth Orcutt,isotope,standard,NA
+doi:10.18739/A20V89J2P,Beth Orcutt,standard,deviation,NA
+doi:10.18739/A20V89J2P,Beth Orcutt,deviation,of,NA
+doi:10.18739/A20V89J2P,Beth Orcutt,of,methane,NA
+doi:10.18739/A20V89J2P,Beth Orcutt,methane,stable,NA
+doi:10.18739/A20V89J2P,Beth Orcutt,stable,isotope,NA
+doi:10.18739/A20V89J2P,Beth Orcutt,isotope,measurement,NA
+doi:10.18739/A20V89J2P,Beth Orcutt,measurement,light,NA
+doi:10.18739/A20V89J2P,Beth Orcutt,light,level,NA
+doi:10.18739/A21834279,Michael Lomas,NA,NA,NA
+doi:10.18739/A21G0HV2P,Anna Liljedahl,NA,NA,NA
+doi:10.18739/A21J9776B,Philip Camill,NA,NA,NA
+doi:10.18739/A2251FK3B,Rebecca Finger Higgens,date,of,NA
+doi:10.18739/A2251FK3B,Rebecca Finger Higgens,of,acquired,NA
+doi:10.18739/A2251FK3B,Rebecca Finger Higgens,acquired,data,NA
+doi:10.18739/A2251FK3B,Rebecca Finger Higgens,data,precipitation,NA
+doi:10.18739/A2251FK3B,Rebecca Finger Higgens,precipitation,year,NA
+doi:10.18739/A2251FK3B,Rebecca Finger Higgens,year,potential,NA
+doi:10.18739/A2251FK3B,Rebecca Finger Higgens,potential,evaoptranspiration,NA
+doi:10.18739/A23B5W79P,Jeff M. Welker,NA,NA,NA
+doi:10.18739/A23B5W875,Lee W. Cooper,NA,NA,NA
+doi:10.18739/A23R0PT35,Richard Lanctot,NA,NA,NA
+doi:10.18739/A23R0PV05,Pamela Groves,NA,NA,NA
+doi:10.18739/A2416T00Z,Lauren Andrews,NA,NA,NA
+doi:10.18739/A24746R6K,Matthew Wooller,NA,NA,NA
+doi:10.18739/A24B2X49X,Sarah E. Hobbie,NA,NA,NA
+doi:10.18739/A24M91B6T,Beth Orcutt,methane,carbon,NA
+doi:10.18739/A24M91B6T,Beth Orcutt,carbon,stable,NA
+doi:10.18739/A24M91B6T,Beth Orcutt,stable,isotope,NA
+doi:10.18739/A24M91B6T,Beth Orcutt,isotope,composition,NA
+doi:10.18739/A24M91B6T,Beth Orcutt,composition,standard,NA
+doi:10.18739/A24M91B6T,Beth Orcutt,standard,deviation,NA
+doi:10.18739/A24M91B6T,Beth Orcutt,deviation,of,NA
+doi:10.18739/A24M91B6T,Beth Orcutt,of,methane,NA
+doi:10.18739/A24M91B6T,Beth Orcutt,methane,stable,NA
+doi:10.18739/A24M91B6T,Beth Orcutt,stable,isotope,NA
+doi:10.18739/A24M91B6T,Beth Orcutt,isotope,composition,NA
+doi:10.18739/A24M91B6T,Beth Orcutt,composition,light,NA
+doi:10.18739/A24Q7QR0V,Kenneth Dunton,NA,NA,NA
+doi:10.18739/A2513TW18,Sean Birkel,NA,NA,NA
+doi:10.18739/A25M6275K,Steven F. Oberbauer,NA,NA,NA
+doi:10.18739/A25Q4RM2M,Sue Moore,NA,NA,NA
+doi:10.18739/A2610VS8W,Gabriel Lewis,NA,NA,NA
+doi:10.18739/A26H4CQ6K,Hajo Eicken,NA,NA,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,ramet,year,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,year,fence,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,fence,vegetation,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,vegetation,type,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,type,treatment,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,treatment,species,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,species,ramet,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,ramet,mother,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,mother,weight,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,weight,daughter,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,daughter,1,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,1,weight,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,weight,daughter,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,daughter,2,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,2,weight,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,weight,daughter,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,daughter,3,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,3,weight,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,weight,daughter,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,daughter,4,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,4,weight,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,weight,daughter,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,daughter,5,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,5,weight,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,weight,daughter,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,daughter,6,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,6,weight,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,weight,mother,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,mother,leaf,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,leaf,area,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,area,daughter,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,daughter,1,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,1,leaf,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,leaf,area,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,area,daughter,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,daughter,2,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,2,leaf,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,leaf,area,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,area,daughter,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,daughter,3,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,3,leaf,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,leaf,area,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,area,daughter,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,daughter,4,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,4,leaf,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,leaf,area,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,area,daughter,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,daughter,5,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,5,leaf,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,leaf,area,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,area,daughter,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,daughter,6,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,6,la,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,la,mother,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,mother,number,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,number,daughter,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,daughter,1,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,1,number,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,number,daughter,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,daughter,2,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,2,number,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,number,daughter,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,daughter,3,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,3,number,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,number,daughter,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,daughter,4,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,4,number,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,number,daughter,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,daughter,5,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,5,number,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,number,daughter,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,daughter,6,NA
+doi:10.18739/A26Q1SH2V,Claire Addis,6,number,NA
+doi:10.18739/A26T0GX06,Kathleen Stafford,NA,NA,NA
+doi:10.18739/A26T0GX1P,Cameron McMillan,NA,NA,NA
+doi:10.18739/A2707WP0Q,Daniel Mann,NA,NA,NA
+doi:10.18739/A2736M31X,Heather Kropp,day,of,NA
+doi:10.18739/A2736M31X,Heather Kropp,of,year,NA
+doi:10.18739/A2736M31X,Heather Kropp,year,for,NA
+doi:10.18739/A2736M31X,Heather Kropp,for,observation,NA
+doi:10.18739/A2736M31X,Heather Kropp,observation,year,NA
+doi:10.18739/A2736M31X,Heather Kropp,year,height,NA
+doi:10.18739/A2736M31X,Heather Kropp,height,of,NA
+doi:10.18739/A2736M31X,Heather Kropp,of,sensor,NA
+doi:10.18739/A2736M31X,Heather Kropp,sensor,site,NA
+doi:10.18739/A2736M31X,Heather Kropp,site,unique,NA
+doi:10.18739/A2736M31X,Heather Kropp,unique,identifier,NA
+doi:10.18739/A2736M31X,Heather Kropp,identifier,vegetation,NA
+doi:10.18739/A2736M31X,Heather Kropp,vegetation,class,NA
+doi:10.18739/A2736M31X,Heather Kropp,class,unique,NA
+doi:10.18739/A2736M31X,Heather Kropp,unique,identifier,NA
+doi:10.18739/A2736M31X,Heather Kropp,identifier,name,NA
+doi:10.18739/A2736M31X,Heather Kropp,name,of,NA
+doi:10.18739/A2736M31X,Heather Kropp,of,vegetation,NA
+doi:10.18739/A2736M31X,Heather Kropp,vegetation,classification,NA
+doi:10.18739/A2736M31X,Heather Kropp,classification,description,NA
+doi:10.18739/A2736M31X,Heather Kropp,description,of,NA
+doi:10.18739/A2736M31X,Heather Kropp,of,criteria,NA
+doi:10.18739/A2736M31X,Heather Kropp,criteria,for,NA
+doi:10.18739/A2736M31X,Heather Kropp,for,vegetation,NA
+doi:10.18739/A2736M31X,Heather Kropp,vegetation,classification,NA
+doi:10.18739/A2736M31X,Heather Kropp,classification,unique,NA
+doi:10.18739/A2736M31X,Heather Kropp,unique,identifier,NA
+doi:10.18739/A2736M31X,Heather Kropp,identifier,of,NA
+doi:10.18739/A2736M31X,Heather Kropp,of,the,NA
+doi:10.18739/A2736M31X,Heather Kropp,the,study,NA
+doi:10.18739/A2736M31X,Heather Kropp,study,location,NA
+doi:10.18739/A2736M31X,Heather Kropp,location,vegetation,NA
+doi:10.18739/A2736M31X,Heather Kropp,vegetation,classification,NA
+doi:10.18739/A2736M31X,Heather Kropp,classification,unique,NA
+doi:10.18739/A2736M31X,Heather Kropp,unique,idenfier,NA
+doi:10.18739/A2736M31X,Heather Kropp,idenfier,day,NA
+doi:10.18739/A2736M31X,Heather Kropp,day,of,NA
+doi:10.18739/A2736M31X,Heather Kropp,of,year,NA
+doi:10.18739/A2736M31X,Heather Kropp,year,for,NA
+doi:10.18739/A2736M31X,Heather Kropp,for,observation,NA
+doi:10.18739/A2736M31X,Heather Kropp,observation,year,NA
+doi:10.18739/A2736M31X,Heather Kropp,year,of,NA
+doi:10.18739/A2736M31X,Heather Kropp,of,observation,NA
+doi:10.18739/A2736M31X,Heather Kropp,observation,depth,NA
+doi:10.18739/A2736M31X,Heather Kropp,depth,of,NA
+doi:10.18739/A2736M31X,Heather Kropp,of,soil,NA
+doi:10.18739/A2736M31X,Heather Kropp,soil,sensor,NA
+doi:10.18739/A2736M31X,Heather Kropp,sensor,unique,NA
+doi:10.18739/A2736M31X,Heather Kropp,unique,site,NA
+doi:10.18739/A2736M31X,Heather Kropp,site,identifier,NA
+doi:10.18739/A2736M31X,Heather Kropp,identifier,unique,NA
+doi:10.18739/A2736M31X,Heather Kropp,unique,identifier,NA
+doi:10.18739/A2736M31X,Heather Kropp,identifier,for,NA
+doi:10.18739/A2736M31X,Heather Kropp,for,each,NA
+doi:10.18739/A2736M31X,Heather Kropp,each,soil,NA
+doi:10.18739/A2736M31X,Heather Kropp,soil,temperature,NA
+doi:10.18739/A2736M31X,Heather Kropp,temperature,measurement,NA
+doi:10.18739/A2736M31X,Heather Kropp,measurement,entry,NA
+doi:10.18739/A2736M31X,Heather Kropp,entry,unique,NA
+doi:10.18739/A2736M31X,Heather Kropp,unique,site,NA
+doi:10.18739/A2736M31X,Heather Kropp,site,identifier,NA
+doi:10.18739/A2736M31X,Heather Kropp,identifier,latitude,NA
+doi:10.18739/A2736M31X,Heather Kropp,latitude,longitude,NA
+doi:10.18739/A2736M31X,Heather Kropp,longitude,unique,NA
+doi:10.18739/A2736M31X,Heather Kropp,unique,identifier,NA
+doi:10.18739/A2736M31X,Heather Kropp,identifier,for,NA
+doi:10.18739/A2736M31X,Heather Kropp,for,contributor,NA
+doi:10.18739/A2736M31X,Heather Kropp,contributor,contributor,NA
+doi:10.18739/A2736M31X,Heather Kropp,contributor,identifier,NA
+doi:10.18739/A2736M31X,Heather Kropp,identifier,citation,NA
+doi:10.18739/A2736M31X,Heather Kropp,citation,information,NA
+doi:10.18739/A27P8TD2J,Sue Moore,NA,NA,NA
+doi:10.18739/A27S7HS4C,Michael Bilello,sitetype,conditionnote,NA
+doi:10.18739/A2833MZ38,Anna Prentiss,NA,NA,NA
+doi:10.18739/A28911R88,Beth Orcutt,NA,NA,NA
+doi:10.18739/A28G8FH70,Katey Walter Anthony,NA,NA,NA
+doi:10.18739/A28K74X6T,Donald A. Walker,NA,NA,NA
+doi:10.18739/A2930NV40,Brittany Berdy,NA,NA,NA
+doi:10.18739/A29882N5H,William Simpson,NA,NA,NA
+doi:10.18739/A29G5GD6R,Walter C. Oechel,NA,NA,NA
+doi:10.18739/A29S1KM2B,Jennifer Schmidt,NA,NA,NA
+doi:10.18739/A2BG2H960,Jeff M. Welker,NA,NA,NA
+doi:10.18739/A2BK16Q5T,Christopher Gerbi,NA,NA,NA
+doi:10.18739/A2BR8MG4J,Alisa Vershinina,bone,element,NA
+doi:10.18739/A2BR8MG4J,Alisa Vershinina,element,notes,NA
+doi:10.18739/A2BR8MG4J,Alisa Vershinina,notes,for,NA
+doi:10.18739/A2BR8MG4J,Alisa Vershinina,for,locality,NA
+doi:10.18739/A2BR8MG4J,Alisa Vershinina,locality,fraction,NA
+doi:10.18739/A2BR8MG4J,Alisa Vershinina,fraction,of,NA
+doi:10.18739/A2BR8MG4J,Alisa Vershinina,of,collagen,NA
+doi:10.18739/A2BR8MG4J,Alisa Vershinina,collagen,more,NA
+doi:10.18739/A2BR8MG4J,Alisa Vershinina,more,than,NA
+doi:10.18739/A2BR8MG4J,Alisa Vershinina,than,30kda,NA
+doi:10.18739/A2CJ87K8H,Melanie Engram,NA,NA,NA
+doi:10.18739/A2CN6Z02Z,Jason Beringer,NA,NA,NA
+doi:10.18739/A2CN6Z10F,Kenneth Dunton,NA,NA,NA
+doi:10.18739/A2CV4BR73,Dr. Matt Nolan,NA,NA,NA
+doi:10.18739/A2D21RJ45,Eric Post,NA,NA,NA
+doi:10.18739/A2DF6K36X,DETLEV HELMIG,NA,NA,NA
+doi:10.18739/A2DJ58H67,Kenneth Dunton,NA,NA,NA
+doi:10.18739/A2FJ29C9G,John Kessler,NA,NA,NA
+doi:10.18739/A2G15TB43,Gerald Frost,NA,NA,NA
+doi:10.18739/A2GB1XH9K,Christopher Gerbi,NA,NA,NA
+doi:10.18739/A2GM81P1M,John Halfacre,iodine,mole,NA
+doi:10.18739/A2GM81P1M,John Halfacre,mole,fraction,NA
+doi:10.18739/A2GM81P1M,John Halfacre,fraction,iodine,NA
+doi:10.18739/A2GM81P1M,John Halfacre,iodine,monobromide,NA
+doi:10.18739/A2GM81P1M,John Halfacre,monobromide,hypobromous,NA
+doi:10.18739/A2GM81P1M,John Halfacre,hypobromous,acid,NA
+doi:10.18739/A2GM81P1M,John Halfacre,acid,signal,NA
+doi:10.18739/A2GM81P1M,John Halfacre,signal,of,NA
+doi:10.18739/A2GM81P1M,John Halfacre,of,m,NA
+doi:10.18739/A2GM81P1M,John Halfacre,m,z,NA
+doi:10.18739/A2GM81P1M,John Halfacre,z,223,NA
+doi:10.18739/A2GM81P1M,John Halfacre,223,signal,NA
+doi:10.18739/A2GM81P1M,John Halfacre,signal,of,NA
+doi:10.18739/A2GM81P1M,John Halfacre,of,m,NA
+doi:10.18739/A2GM81P1M,John Halfacre,m,z,NA
+doi:10.18739/A2GM81P1M,John Halfacre,z,223,NA
+doi:10.18739/A2GM81P1M,John Halfacre,223,signal,NA
+doi:10.18739/A2GM81P1M,John Halfacre,signal,of,NA
+doi:10.18739/A2GM81P1M,John Halfacre,of,m,NA
+doi:10.18739/A2GM81P1M,John Halfacre,m,z,NA
+doi:10.18739/A2GM81P1M,John Halfacre,z,179,NA
+doi:10.18739/A2GM81P1M,John Halfacre,179,signal,NA
+doi:10.18739/A2GM81P1M,John Halfacre,signal,of,NA
+doi:10.18739/A2GM81P1M,John Halfacre,of,m,NA
+doi:10.18739/A2GM81P1M,John Halfacre,m,z,NA
+doi:10.18739/A2GM81P1M,John Halfacre,z,181,NA
+doi:10.18739/A2GM81P1M,John Halfacre,181,signal,NA
+doi:10.18739/A2GM81P1M,John Halfacre,signal,of,NA
+doi:10.18739/A2GM81P1M,John Halfacre,of,m,NA
+doi:10.18739/A2GM81P1M,John Halfacre,m,z,NA
+doi:10.18739/A2GM81P1M,John Halfacre,z,271,NA
+doi:10.18739/A2GM81P1M,John Halfacre,271,iodine,NA
+doi:10.18739/A2GM81P1M,John Halfacre,iodine,mole,NA
+doi:10.18739/A2GM81P1M,John Halfacre,mole,fraction,NA
+doi:10.18739/A2H12V75T,Jeff M. Welker,NA,NA,NA
+doi:10.18739/A2H41JM7N,Karen Frey,node,station,NA
+doi:10.18739/A2H41JM7N,Karen Frey,station,type,NA
+doi:10.18739/A2H41JM7N,Karen Frey,type,category,NA
+doi:10.18739/A2HT2GC50,Beth Orcutt,NA,NA,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,core,identification,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,identification,top,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,top,depth,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,depth,bottom,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,bottom,depth,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,depth,gas,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,gas,age,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,age,ethane,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ethane,error,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,error,ice,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ice,core,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,core,site,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,site,top,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,top,depth,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,depth,bottom,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,bottom,depth,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,depth,gas,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,gas,age,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,age,of,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,of,sample,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,sample,gas,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,gas,age,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,age,in,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,in,calendar,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,calendar,year,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,year,ethane,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ethane,mixing,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,mixing,ratio,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ratio,acetylene,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,acetylene,mixing,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,mixing,ratio,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ratio,acetylene,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,acetylene,mixing,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,mixing,ratio,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ratio,error,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,error,ethane,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ethane,mixing,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,mixing,ratio,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ratio,error,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,error,solubility,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,solubility,corrected,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,corrected,acetylene,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,acetylene,mixing,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,mixing,ratio,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ratio,core,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,core,identification,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,identification,top,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,top,depth,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,depth,bottom,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,bottom,depth,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,depth,gas,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,gas,age,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,age,ethane,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ethane,error,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,error,ice,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ice,core,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,core,site,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,site,top,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,top,depth,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,depth,bottom,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,bottom,depth,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,depth,gas,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,gas,age,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,age,of,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,of,sample,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,sample,gas,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,gas,age,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,age,in,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,in,calendar,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,calendar,year,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,year,ethane,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ethane,mixing,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,mixing,ratio,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ratio,acetylene,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,acetylene,mixing,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,mixing,ratio,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ratio,acetylene,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,acetylene,mixing,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,mixing,ratio,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ratio,error,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,error,ethane,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ethane,mixing,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,mixing,ratio,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ratio,error,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,error,solubility,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,solubility,corrected,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,corrected,acetylene,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,acetylene,mixing,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,mixing,ratio,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ratio,core,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,core,identification,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,identification,top,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,top,depth,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,depth,bottom,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,bottom,depth,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,depth,gas,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,gas,age,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,age,ethane,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ethane,error,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,error,ice,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ice,core,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,core,site,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,site,top,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,top,depth,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,depth,bottom,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,bottom,depth,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,depth,gas,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,gas,age,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,age,of,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,of,sample,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,sample,gas,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,gas,age,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,age,in,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,in,calendar,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,calendar,year,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,year,ethane,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ethane,mixing,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,mixing,ratio,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ratio,acetylene,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,acetylene,mixing,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,mixing,ratio,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ratio,acetylene,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,acetylene,mixing,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,mixing,ratio,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ratio,error,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,error,ethane,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ethane,mixing,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,mixing,ratio,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ratio,error,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,error,solubility,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,solubility,corrected,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,corrected,acetylene,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,acetylene,mixing,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,mixing,ratio,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ratio,core,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,core,identification,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,identification,top,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,top,depth,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,depth,bottom,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,bottom,depth,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,depth,gas,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,gas,age,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,age,ethane,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ethane,error,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,error,ice,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ice,core,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,core,site,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,site,top,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,top,depth,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,depth,bottom,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,bottom,depth,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,depth,gas,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,gas,age,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,age,of,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,of,sample,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,sample,gas,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,gas,age,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,age,in,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,in,calendar,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,calendar,year,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,year,ethane,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ethane,mixing,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,mixing,ratio,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ratio,acetylene,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,acetylene,mixing,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,mixing,ratio,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ratio,acetylene,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,acetylene,mixing,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,mixing,ratio,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ratio,error,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,error,ethane,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ethane,mixing,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,mixing,ratio,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ratio,error,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,error,solubility,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,solubility,corrected,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,corrected,acetylene,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,acetylene,mixing,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,mixing,ratio,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ratio,core,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,core,identification,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,identification,top,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,top,depth,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,depth,bottom,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,bottom,depth,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,depth,gas,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,gas,age,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,age,ethane,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ethane,error,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,error,ice,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ice,core,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,core,site,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,site,top,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,top,depth,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,depth,bottom,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,bottom,depth,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,depth,gas,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,gas,age,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,age,of,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,of,sample,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,sample,gas,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,gas,age,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,age,in,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,in,calendar,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,calendar,year,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,year,ethane,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ethane,mixing,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,mixing,ratio,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ratio,acetylene,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,acetylene,mixing,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,mixing,ratio,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ratio,acetylene,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,acetylene,mixing,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,mixing,ratio,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ratio,error,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,error,ethane,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ethane,mixing,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,mixing,ratio,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,ratio,error,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,error,solubility,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,solubility,corrected,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,corrected,acetylene,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,acetylene,mixing,NA
+doi:10.18739/A2J09W45H,Melinda Nicewonger,mixing,ratio,NA
+doi:10.18739/A2J960B1G,Kenneth Dunton,NA,NA,NA
+doi:10.18739/A2K35MD63,Timothy Bartholomaus,NA,NA,NA
+doi:10.18739/A2KW57J2B,Dr. Matt Nolan,NA,NA,NA
+doi:10.18739/A2KW57J9Q,Leah McRaven,NA,NA,NA
+doi:10.18739/A2M32N96B,Peter Peterson,NA,NA,NA
+doi:10.18739/A2M32NB3B,Christopher Gerbi,NA,NA,NA
+doi:10.18739/A2M61BQ8M,Donald A. Walker,NA,NA,NA
+doi:10.18739/A2NC5SC63,Nathan Thorp,NA,NA,NA
+doi:10.18739/A2NK36594,Beth Orcutt,NA,NA,NA
+doi:10.18739/A2NV99B09,Kathleen Stafford,NA,NA,NA
+doi:10.18739/A2P26Q37R,Yongsong Huang,NA,NA,NA
+doi:10.18739/A2P26Q457,Kenneth Dunton,NA,NA,NA
+doi:10.18739/A2P843X00,Lee W. Cooper,NA,NA,NA
+doi:10.18739/A2PN8XF6V,Claire Pettersen,NA,NA,NA
+doi:10.18739/A2PN8XG4B,HONGYUAN ZHENG,NA,NA,NA
+doi:10.18739/A2PV6B70J,Brice Loose,NA,NA,NA
+doi:10.18739/A2Q814T07,Christina Bonsell,NA,NA,NA
+doi:10.18739/A2QJ77Z3R,Cort Anastasio,NA,NA,NA
+doi:10.18739/A2QJ77Z9N,Leah McRaven,NA,NA,NA
+doi:10.18739/A2QV3C48N,Blanca Rodriguez,NA,NA,NA
+doi:10.18739/A2QZ22H33,Lloyd Keigwin,geographic,area,NA
+doi:10.18739/A2QZ22H33,Lloyd Keigwin,area,generic,NA
+doi:10.18739/A2QZ22H33,Lloyd Keigwin,generic,name,NA
+doi:10.18739/A2QZ22H33,Lloyd Keigwin,name,for,NA
+doi:10.18739/A2QZ22H33,Lloyd Keigwin,for,several,NA
+doi:10.18739/A2QZ22H33,Lloyd Keigwin,several,devices,NA
+doi:10.18739/A2RB6W338,Beth Orcutt,NA,NA,NA
+doi:10.18739/A2RJ48V2H,Leah McRaven,NA,NA,NA
+doi:10.18739/A2RN30757,Anne Jennings,NA,NA,NA
+doi:10.18739/A2RV0D11H,Ute Kaden,NA,NA,NA
+doi:10.18739/A2S46H60V,Kevin Wood,ship,identification,NA
+doi:10.18739/A2S46H60V,Kevin Wood,identification,ice,NA
+doi:10.18739/A2S46H60V,Kevin Wood,ice,terms,NA
+doi:10.18739/A2S46H60V,Kevin Wood,terms,nav,NA
+doi:10.18739/A2S46H60V,Kevin Wood,nav,terms,NA
+doi:10.18739/A2S46H60V,Kevin Wood,terms,url,NA
+doi:10.18739/A2S46H68Q,Ina Timling,NA,NA,NA
+doi:10.18739/A2T14TQ57,Keith Nicholls,basal,melt,NA
+doi:10.18739/A2T14TQ57,Keith Nicholls,melt,rate,NA
+doi:10.18739/A2T14TQ57,Keith Nicholls,rate,uncertainty,NA
+doi:10.18739/A2T14TQ57,Keith Nicholls,uncertainty,surface,NA
+doi:10.18739/A2T14TQ57,Keith Nicholls,surface,melt,NA
+doi:10.18739/A2T14TQ57,Keith Nicholls,melt,rate,NA
+doi:10.18739/A2T14TQ57,Keith Nicholls,rate,uncertainty,NA
+doi:10.18739/A2T14TQ57,Keith Nicholls,uncertainty,apres,NA
+doi:10.18739/A2T14TQ57,Keith Nicholls,apres,derived,NA
+doi:10.18739/A2T14TQ57,Keith Nicholls,derived,basal,NA
+doi:10.18739/A2T14TQ57,Keith Nicholls,basal,melt,NA
+doi:10.18739/A2T14TQ57,Keith Nicholls,melt,rate,NA
+doi:10.18739/A2T14TQ57,Keith Nicholls,rate,uncertainty,NA
+doi:10.18739/A2TB0XV7T,Sarah Das,nitric,acid,NA
+doi:10.18739/A2TB0XV7T,Sarah Das,acid,concentration,NA
+doi:10.18739/A2TB0XV7T,Sarah Das,concentration,ammonia,NA
+doi:10.18739/A2TB0XV7T,Sarah Das,ammonia,concentration,NA
+doi:10.18739/A2TB0XV7T,Sarah Das,concentration,ammonia,NA
+doi:10.18739/A2TB0XV7T,Sarah Das,ammonia,concentration,NA
+doi:10.18739/A2TB0XV7T,Sarah Das,concentration,nitric,NA
+doi:10.18739/A2TB0XV7T,Sarah Das,nitric,acid,NA
+doi:10.18739/A2TB0XV7T,Sarah Das,acid,concentration,NA
+doi:10.18739/A2TD9N79H,Jeff M. Welker,NA,NA,NA
+doi:10.18739/A2TM72155,David Kadko,NA,NA,NA
+doi:10.18739/A2TQ5RD9K,Sarah Ludwig,NA,NA,NA
+doi:10.18739/A2V97ZR7H,Rainer Amon,NA,NA,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,fid,zone,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,zone,catch_id,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,catch_id,area,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,area,perimeter,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,perimeter,totallakes,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,totallakes,up_conn,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,up_conn,down_conn,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,down_conn,total_conn,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,total_conn,surf_geol,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,surf_geol,hydconn,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,hydconn,fid,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,fid,zone,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,zone,catch_id,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,catch_id,area,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,area,perimeter,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,perimeter,totallakes,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,totallakes,pctlakeare,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,pctlakeare,up_conn,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,up_conn,down_conn,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,down_conn,total_conn,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,total_conn,surf_geol,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,surf_geol,hydconn,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,hydconn,fid,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,fid,zone,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,zone,catch_id,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,catch_id,area,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,area,perimeter,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,perimeter,totallakes,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,totallakes,pctlakeare,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,pctlakeare,up_conn,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,up_conn,down_conn,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,down_conn,total_conn,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,total_conn,surf_geol,NA
+doi:10.18739/A2VD6P49R,Taylor Johaneman,surf_geol,hydconn,NA
+doi:10.18739/A2VM42X50,Christopher Arp,NA,NA,NA
+doi:10.18739/A2VM42Z20,Donald A. Walker,NA,NA,NA
+doi:10.18739/A2VX06340,Brook Nunn,NA,NA,NA
+doi:10.18739/A2W37KW70,Beth Orcutt,NA,NA,NA
+doi:10.18739/A2WH2DF2X,Jacqueline M. Grebmeier,modal,size,NA
+doi:10.18739/A2WP9T67J,Mark Skidmore,NA,NA,NA
+doi:10.18739/A2X63B542,Matti Ruuskanen,redox,mv,NA
+doi:10.18739/A2XD0QX8B,Jacqueline M. Grebmeier,modal,size,NA
+doi:10.18739/A2ZP3W08H,Jacqueline M. Grebmeier,modal,size,NA
+doi:10.18739/A2ZS2KD7B,Christina Bonsell,NA,NA,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,year,habitat,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,habitat,freshwater,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,freshwater,or,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,or,saline,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,saline,site,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,site,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,station,latitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,latitude,longitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,longitude,water,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,water,column,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,column,position,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,position,julian,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,julian,day,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,day,week,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,week,of,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,of,the,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,the,year,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,year,dissolved,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,dissolved,organic,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,organic,carbon,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,carbon,gas,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,gas,transfer,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,transfer,co,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,co,efficient,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,efficient,site,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,site,description,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,description,and,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,and,bounding,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,bounding,boxes,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,boxes,site,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,site,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,station,latitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,latitude,longitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,longitude,date,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,date,and,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,and,time,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,time,latitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,latitude,longitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,longitude,year,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,year,hour,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,hour,julian,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,julian,day,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,day,total,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,total,daily,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,daily,rainfall,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,rainfall,latitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,latitude,longitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,longitude,year,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,year,julian,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,julian,day,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,day,water,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,water,temperature,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,temperature,net,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,net,ecosystem,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/1/7,Vanessa L Lougheed,ecosystem,production,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,station,node,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,node,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,station,lagoon,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,lagoon,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,station,sampling,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,sampling,season,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,season,date,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,date,collected,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,collected,water,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,water,column,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,column,position,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,position,carbon,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,carbon,data,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,data,flag,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,flag,nitrogen,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,nitrogen,data,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,data,flag,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,flag,collection,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,collection,method,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,method,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,station,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,name,latitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,latitude,longitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,longitude,habitat,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,habitat,type,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,type,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,station,sampling,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,sampling,priority,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,priority,data,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,data,package,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,package,id,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,id,given,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,given,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,name,middle,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,middle,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,name,surname,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,surname,role,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,role,begin,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,begin,year,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,year,end,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,end,year,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/11/1,NA,year,orcid,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,station,node,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,node,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,station,lagoon,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,lagoon,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,station,sampling,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,sampling,season,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,season,date,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,date,collected,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,collected,pigment,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,pigment,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,name,flag,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,flag,for,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,for,samples,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,samples,with,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,with,lost,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,lost,porewater,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,porewater,volume,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,volume,data,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,data,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,station,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,name,latitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,latitude,longitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,longitude,habitat,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,habitat,type,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,type,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,station,sampling,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,sampling,priority,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,priority,data,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,data,package,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,package,id,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,id,given,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,given,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,name,middle,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,middle,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,name,surname,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,surname,role,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,role,begin,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,begin,year,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,year,end,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,end,year,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/12/1,NA,year,orcid,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,station,node,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,node,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,station,lagoon,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,lagoon,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,station,sampling,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,sampling,season,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,season,date,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,date,collected,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,collected,water,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,water,column,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,column,position,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,position,collection,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,collection,method,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,method,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,station,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,name,latitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,latitude,longitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,longitude,habitat,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,habitat,type,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,type,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,station,sampling,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,sampling,priority,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,priority,data,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,data,package,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,package,id,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,id,given,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,given,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,name,middle,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,middle,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,name,surname,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,surname,role,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,role,begin,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,begin,year,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,year,end,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,end,year,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/13/1,NA,year,orcid,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,station,node,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,node,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,station,lagoon,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,lagoon,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,station,sampling,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,sampling,season,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,season,date,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,date,collected,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,collected,water,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,water,column,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,column,position,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,position,flag,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,flag,for,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,for,ammonia,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,ammonia,concentration,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,concentration,flag,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,flag,for,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,for,phosphate,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,phosphate,concentration,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,concentration,flag,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,flag,for,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,for,silicate,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,silicate,concentration,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,concentration,flag,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,flag,for,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,for,nitrate,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,nitrate,nitrite,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,nitrite,concentration,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,concentration,collection,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,collection,method,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,method,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,station,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,name,latitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,latitude,longitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,longitude,habitat,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,habitat,type,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,type,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,station,sampling,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,sampling,priority,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,priority,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,station,node,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,node,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,station,lagoon,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,lagoon,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,station,sampling,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,sampling,season,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,season,date,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,date,collected,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,collected,flag,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,flag,for,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,for,ammonia,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,ammonia,concentration,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,concentration,flag,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,flag,for,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,for,phosphate,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,phosphate,concentration,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,concentration,flag,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,flag,for,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,for,silicate,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,silicate,concentration,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,concentration,flag,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,flag,for,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,for,nitrate,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,nitrate,nitrite,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,nitrite,concentration,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,concentration,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,station,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,name,latitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,latitude,longitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,longitude,habitat,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,habitat,type,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,type,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,station,sampling,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,sampling,priority,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,priority,chemistry,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,chemistry,unit,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,unit,reaction,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,reaction,wavelength,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,wavelength,detection,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,detection,limit,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,limit,applicable,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,applicable,range,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,range,sample,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,sample,precision,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,precision,data,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,data,package,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,package,id,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,id,given,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,given,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,name,middle,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,middle,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,name,surname,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,surname,role,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,role,begin,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,begin,year,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,year,end,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,end,year,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/14/2,NA,year,orcid,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,station,node,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,node,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,station,lagoon,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,lagoon,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,station,sampling,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,sampling,season,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,season,date,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,date,collected,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,collected,water,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,water,column,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,column,position,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,position,collection,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,collection,method,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,method,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,station,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,name,latitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,latitude,longitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,longitude,habitat,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,habitat,type,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,type,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,station,sampling,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,sampling,priority,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,priority,data,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,data,package,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,package,id,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,id,given,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,given,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,name,middle,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,middle,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,name,surname,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,surname,role,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,role,begin,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,begin,year,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,year,end,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,end,year,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/2/4,NA,year,orcid,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,station,date,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,date,time,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,time,recorded,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,recorded,instrument,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,instrument,used,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,used,whether,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,whether,data,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,data,was,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,was,calibrated,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,calibrated,pressure,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,pressure,depth,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,depth,speed,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,speed,of,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,of,sound,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,sound,specific,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,specific,conductivity,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,conductivity,conductivity,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,conductivity,salinity,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,salinity,data,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,data,flag,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,flag,temperature,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,temperature,data,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,data,flag,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,flag,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,station,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,name,latitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,latitude,longitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,longitude,habitat,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,habitat,type,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,type,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,station,date,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,date,time,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,time,recorded,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,recorded,current,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,current,speed,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,speed,current,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,current,heading,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,heading,northward,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,northward,velocity,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,velocity,eastward,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,eastward,velocity,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,velocity,speed,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,speed,velocity,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,velocity,data,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,data,flag,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,flag,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,station,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,name,latitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,latitude,longitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,longitude,habitat,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,habitat,type,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,type,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,station,node,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,node,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,station,lagoon,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,lagoon,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,station,sampling,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,sampling,season,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,season,date,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,date,time,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,time,recorded,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,recorded,water,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,water,column,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,column,position,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,position,depth,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,depth,phycoerythrin,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,phycoerythrin,concentration,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,concentration,salinity,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,salinity,specific,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,specific,conductivity,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,conductivity,temperature,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,temperature,notes,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,notes,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,station,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,name,latitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,latitude,longitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,longitude,habitat,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,habitat,type,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,type,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,station,sampling,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,sampling,priority,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,priority,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,station,date,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,date,time,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,time,recorded,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,recorded,pressure,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,pressure,depth,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,depth,speed,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,speed,of,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,of,sound,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,sound,specific,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,specific,conductivity,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,conductivity,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,station,date,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,date,time,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,time,recorded,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,recorded,speed,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,speed,of,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,of,sound,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,sound,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,station,date,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,date,time,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,time,recorded,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,recorded,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,station,date,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,date,time,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,time,recorded,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,recorded,current,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,current,speed,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,speed,current,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,current,heading,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,heading,northward,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,northward,velocity,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,velocity,eastward,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,eastward,velocity,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,velocity,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,station,date,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,date,time,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,time,recorded,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,recorded,data,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,data,package,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,package,id,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,id,given,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,given,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,name,middle,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,middle,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,name,surname,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,surname,role,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,role,begin,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,begin,year,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,year,end,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,end,year,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/3/1,NA,year,orcid,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,station,node,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,node,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,station,lagoon,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,lagoon,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,station,sampling,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,sampling,season,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,season,date,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,date,collected,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,collected,water,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,water,column,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,column,position,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,position,delta,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,delta,oxygen,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,oxygen,18,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,18,notes,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,notes,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,station,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,name,latitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,latitude,longitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,longitude,habitat,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,habitat,type,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,type,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,station,sampling,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,sampling,priority,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,priority,data,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,data,package,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,package,id,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,id,given,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,given,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,name,middle,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,middle,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,name,surname,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,surname,role,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,role,begin,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,begin,year,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,year,end,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,end,year,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/4/1,NA,year,orcid,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,date,latitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,latitude,longitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,longitude,month,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,month,latitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,latitude,longitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,longitude,month,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,month,latitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,latitude,longitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,longitude,date,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,date,latitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,latitude,longitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,longitude,soil,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,soil,depth,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,depth,ghaas,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,ghaas,river,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,river,basin,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,basin,id,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,id,date,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,date,ease,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,ease,grid,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,grid,row,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,row,ease,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,ease,grid,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,grid,column,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,column,latitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,latitude,longitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,longitude,ghaas,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,ghaas,river,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,river,basin,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,basin,id,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,id,latitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,latitude,longitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,longitude,ghaas,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,ghaas,river,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,river,basin,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,basin,id,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,id,basin,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,basin,area,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,area,basin,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/5/2,Michael Rawlins,basin,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,station,latitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,latitude,longitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,longitude,date,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,date,time,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,time,tidal,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,tidal,slope,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,slope,notes,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,notes,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,station,latitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,latitude,longitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,longitude,date,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,date,time,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,time,depth,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,depth,significant,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,significant,wave,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,wave,period,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,period,1,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,1,10,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,10,wave,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,wave,period,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,period,average,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,average,wave,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,wave,height,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,height,wave,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,wave,energy,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,energy,notes,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,notes,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,station,latitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,latitude,longitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,longitude,date,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,date,time,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,time,bearing,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,bearing,notes,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,notes,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,station,latitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,latitude,longitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,longitude,date,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,date,time,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,time,deployed,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,deployed,date,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,date,time,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,time,retrieved,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,retrieved,rbr,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,rbr,serial,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,serial,number,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,number,tcm,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,tcm,serial,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/7/1,Jeremy L Kasper,serial,number,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,NA,station,date,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,NA,date,and,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,NA,and,time,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,NA,time,collected,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,NA,collected,raw,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,NA,raw,voltage,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,NA,voltage,station,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,NA,station,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,NA,name,latitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,NA,latitude,longitude,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,NA,longitude,habitat,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,NA,habitat,type,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,NA,type,data,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,NA,data,package,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,NA,package,id,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,NA,id,given,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,NA,given,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,NA,name,middle,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,NA,middle,name,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,NA,name,surname,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,NA,surname,role,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,NA,role,begin,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,NA,begin,year,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,NA,year,end,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,NA,end,year,NA
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-ble/9/1,NA,year,orcid,NA
+urn:uuid:1f3f702f-9594-4293-8cbd-07932e54e8ed,David Holland,NA,NA,NA
+urn:uuid:69a40625-277a-4793-aa10-f148332d2456,Alexei I. Pinchuk,NA,NA,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,date,latitude,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,latitude,longitude,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,longitude,month,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,month,latitude,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,latitude,longitude,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,longitude,month,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,month,latitude,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,latitude,longitude,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,longitude,date,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,date,latitude,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,latitude,longitude,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,longitude,soil,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,soil,depth,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,depth,ghaas,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,ghaas,river,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,river,basin,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,basin,id,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,id,date,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,date,ease,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,ease,grid,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,grid,row,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,row,ease,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,ease,grid,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,grid,column,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,column,latitude,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,latitude,longitude,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,longitude,ghaas,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,ghaas,river,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,river,basin,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,basin,id,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,id,latitude,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,latitude,longitude,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,longitude,ghaas,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,ghaas,river,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,river,basin,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,basin,id,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,id,basin,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,basin,area,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,area,basin,NA
+urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec,Beaufort Lagoon Ecosystems LTER,basin,name,NA
+urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,NA,station,date,NA
+urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,NA,date,collected,NA
+urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,NA,collected,water,NA
+urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,NA,water,column,NA
+urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,NA,column,position,NA
+urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,NA,position,collection,NA
+urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,NA,collection,method,NA
+urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,NA,method,habitat,NA
+urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,NA,habitat,type,NA
+urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,NA,type,longitude,NA
+urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,NA,longitude,latitude,NA
+urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,NA,latitude,station,NA
+urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,NA,station,name,NA
+urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,NA,name,data,NA
+urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,NA,data,package,NA
+urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,NA,package,id,NA
+urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,NA,id,given,NA
+urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,NA,given,name,NA
+urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,NA,name,middle,NA
+urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,NA,middle,name,NA
+urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,NA,name,surname,NA
+urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,NA,surname,role,NA
+urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,NA,role,begin,NA
+urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,NA,begin,year,NA
+urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,NA,year,end,NA
+urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,NA,end,year,NA
+urn:uuid:fc2541a0-2669-4f16-aeb6-4022ca56928d,NA,year,orcid,NA
