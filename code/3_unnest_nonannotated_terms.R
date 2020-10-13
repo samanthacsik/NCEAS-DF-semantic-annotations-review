@@ -25,7 +25,15 @@ source(here::here("code", "0_functions.R"))
 # Import data
 ##############################
 
+solr_query <- read_csv(here::here("data", "queries", "query2020-10-12", "fullQuery_semAnnotations2020-10-12_solr.csv"))
 extracted_attributes <- read_csv(here::here("data", "queries", "query2020-10-12", "fullQuery_semAnnotations2020-10-12_attributes.csv"))
+
+##############################
+# Add `author` field from `solr_query` to `attributes` df
+##############################
+
+authors_ids <- solr_query %>% select(identifier, author)
+extracted_attributes <- inner_join(extracted_attributes, authors_ids)
 
 ##########################################################################################
 # Unnest tokens
