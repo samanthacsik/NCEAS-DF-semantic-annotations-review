@@ -222,6 +222,20 @@ filterCount_trigramTerms <- function(file_path, file_name) {
 }
 
 #-----------------------------
+# used in script: "_____________"
+# function to save a df from the global environment whose name matches your specified pattern as a .csv to your specified directory
+  # takes arguments:
+    # data: data object
+    # name: name of object, as character string
+    # file path: where you'd like to save the .csv file(s)
+#-----------------------------
+
+# function to write as .csv files to appropriate subdirectory
+output_csv <- function(data, names, file_path){
+  write_csv(data, here::here(file_path, paste0(names, ".csv")))
+}
+
+#-----------------------------
 # used in script: "_________________________"
 # function to import filtered token count dfs generated in script 3 
   # takes arguments:
