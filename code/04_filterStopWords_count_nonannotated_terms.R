@@ -1,10 +1,10 @@
 # title: Remove stop words and calculate term frequncies for NONANNOTATED attributes
 # author: "Sam Csik"
 # date created: "2020-10-02"
-# date edited: "2020-10-12"
+# date edited: "2020-10-15"
 # R version: 3.6.3
-# input: 
-# output: 
+# input: "data/unnested_terms/nonannotated_attributes2020-10-12/*"
+# output: "data/filtered_term_counts/nonannotated_attributes2020-10-12/*"
 
 ##########################################################################################
 # Summary
@@ -79,15 +79,3 @@ for (i in 1:length(df_list)){
   file_path <- "data/filtered_term_counts/nonannotated_attributes2020-10-12"
   output_csv(data, names, file_path)
 }
-
-# # get list of new dfs
-# df_list <- mget(ls(pattern = "filteredCounts_"))
-# 
-# # function to write as .csv files to appropriate subdirectory
-# output_csv <- function(data, names){
-#   write_csv(data, here::here("data", "filtered_term_counts", "nonannotated_attributes", paste0(names, ".csv")))
-# }
-# 
-# # write each df as .csv file
-# list(data = df_list, names = names(df_list)) %>%
-#   purrr::pmap(output_csv) 
