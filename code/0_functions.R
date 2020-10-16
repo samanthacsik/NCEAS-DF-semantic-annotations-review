@@ -42,7 +42,7 @@ ECSO_webscraping_prefNames <- function(df, valueURI, row){
 
 tidyTerms_unnest <- function(my_data, my_input, split) {
   my_data %>%
-    select(identifier, my_input) %>% # author
+    select(identifier, author, my_input) %>% # author
     unnest_tokens(output = ngram, input = !!my_input, token = "ngrams", n = split) %>% 
     separate(ngram, into = c("word1", "word2", "word3"), sep = " ")
 }
@@ -107,19 +107,19 @@ filterCount_indivTerms <- function(file_path, file_name) {
     summarise(unique_ids = n_distinct(identifier)) %>% 
     arrange(-unique_ids)
   
-  # # unique ID counts for each token
-  # uniqueAuthor_counts <- read_csv(here::here(file_path, file_name)) %>% 
-  #   rename(token = word1) %>% 
-  #   select(author, token) %>% 
-  #   filter(!token %in% stop_words$word, token != "NA") %>% 
-  #   group_by(token) %>% 
-  #   summarise(unique_authors = n_distinct(author)) %>% 
-  #   arrange(-unique_authors)
+  # unique ID counts for each token
+  uniqueAuthor_counts <- read_csv(here::here(file_path, file_name)) %>%
+    rename(token = word1) %>%
+    select(author, token) %>%
+    filter(!token %in% stop_words$word, token != "NA") %>%
+    group_by(token) %>%
+    summarise(unique_authors = n_distinct(author)) %>%
+    arrange(-unique_authors)
   
   # full_join dfs by token -- first token_counts and uniqueID_counts
   my_file <- full_join(token_counts, uniqueID_counts)
-  # # then uniqueAuthor_counts
-  # my_file <- full_join(my_file, uniqueAuthor_counts)
+  # then uniqueAuthor_counts
+  my_file <- full_join(my_file, uniqueAuthor_counts)
   
   # save as object_name
   assign(object_name, my_file, envir = .GlobalEnv)
@@ -152,22 +152,22 @@ filterCount_bigramTerms <- function(file_path, file_name) {
     summarise(unique_ids = n_distinct(identifier)) %>% 
     arrange(-unique_ids)
   
-  # # unique ID counts for each token
-  # uniqueAuthor_counts <- read_csv(here::here(file_path, file_name)) %>% 
-  #   select(author, word1, word2) %>% 
-  #   filter(!word1 %in% stop_words$word, !word2 %in% stop_words$word) %>% 
-  #   filter(word1 != "NA", word2 != "NA") %>% 
-  #   unite(col = "token", word1, word2, sep = " ") %>% 
-  #   group_by(token) %>% 
-  #   summarise(unique_authors = n_distinct(author)) %>% 
-  #   arrange(-unique_authors)
+  # unique ID counts for each token
+  uniqueAuthor_counts <- read_csv(here::here(file_path, file_name)) %>%
+    select(author, word1, word2) %>%
+    filter(!word1 %in% stop_words$word, !word2 %in% stop_words$word) %>%
+    filter(word1 != "NA", word2 != "NA") %>%
+    unite(col = "token", word1, word2, sep = " ") %>%
+    group_by(token) %>%
+    summarise(unique_authors = n_distinct(author)) %>%
+    arrange(-unique_authors)
   
   # full_join dfs by token -- first token_counts and uniqueID_counts
   my_file <- full_join(token_counts, uniqueID_counts) %>% 
     separate(token, into = c("word1", "word2"), sep = " ")
-  # # then uniqueAuthor_counts
-  # my_file <- full_join(my_file, uniqueAuthor_counts) %>% 
-  #   separate(token, into = c("word1", "word2"), sep = " ")
+  # then uniqueAuthor_counts
+  my_file <- full_join(my_file, uniqueAuthor_counts) %>%
+    separate(token, into = c("word1", "word2"), sep = " ")
 
   # save as object_name
   assign(object_name, my_file, envir = .GlobalEnv)
@@ -199,26 +199,40 @@ filterCount_trigramTerms <- function(file_path, file_name) {
     group_by(token) %>% 
     summarise(unique_ids = n_distinct(identifier)) %>% 
     arrange(-unique_ids)
-  
-  # # unique ID counts for each token
-  # uniqueAuthor_counts <- read_csv(here::here(file_path, file_name)) %>% 
-  #   select(author, word1, word2, word3) %>% 
-  #   filter(!word1 %in% stop_words$word, !word2 %in% stop_words$word, !word3 %in% stop_words$word) %>% 
-  #   filter(word1 != "NA", word2 != "NA", word3 != "NA") %>% 
-  #   unite(col = "token", word1, word2, word3, sep = " ") %>% 
-  #   group_by(token) %>% 
-  #   summarise(unique_authors = n_distinct(author)) %>% 
-  #   arrange(-unique_authors)
+
+  # unique ID counts for each token
+  uniqueAuthor_counts <- read_csv(here::here(file_path, file_name)) %>%
+    select(author, word1, word2, word3) %>%
+    filter(!word1 %in% stop_words$word, !word2 %in% stop_words$word, !word3 %in% stop_words$word) %>%
+    filter(word1 != "NA", word2 != "NA", word3 != "NA") %>%
+    unite(col = "token", word1, word2, word3, sep = " ") %>%
+    group_by(token) %>%
+    summarise(unique_authors = n_distinct(author)) %>%
+    arrange(-unique_authors)
 
   # full_join dfs by token -- first token_counts and uniqueID_counts
   my_file <- full_join(token_counts, uniqueID_counts) %>% 
     separate(token, into = c("word1", "word2", "word3"), sep = " ")
-  # # then uniqueAuthor_counts
-  # my_file <- full_join(my_file, uniqueAuthor_counts) %>% 
-  #   separate(token, into = c("word1", "word2", "word3"), sep = " ")
-  
+  # then uniqueAuthor_counts
+  my_file <- full_join(my_file, uniqueAuthor_counts) %>%
+    separate(token, into = c("word1", "word2", "word3"), sep = " ")
+
   # save as object_name
   assign(object_name, my_file, envir = .GlobalEnv)
+}
+
+#-----------------------------
+# used in script: "_____________"
+# function to save a df from the global environment whose name matches your specified pattern as a .csv to your specified directory
+  # takes arguments:
+    # data: data object
+    # name: name of object, as character string
+    # file path: where you'd like to save the .csv file(s)
+#-----------------------------
+
+# function to write as .csv files to appropriate subdirectory
+output_csv <- function(data, names, file_path){
+  write_csv(data, here::here(file_path, paste0(names, ".csv")))
 }
 
 #-----------------------------
