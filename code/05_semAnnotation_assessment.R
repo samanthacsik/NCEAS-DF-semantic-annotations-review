@@ -54,15 +54,17 @@ semAnnotation_freq_plot <- annotation_counts %>%
   ggplot(aes(prefName, Counts)) +
   geom_col() +
   labs(title = "Semantic Annotations Used >20 Times Across All ADC Holdings",
-       subtitle = "As of 2020-10-01, 184 unique ADC identifiers have (at least one) semantically-annotated attributes",
+       subtitle = "As of 2020-10-12, 185 unique ADC identifiers have (at least one) semantically-annotated attributes",
        caption = "`NA`s represent annotations from non-ECSO ontologies",
        x = "Semantic Annotation (preferred name)") +
   scale_y_continuous(expand = c(0,0)) +
   coord_flip() +
   theme_linedraw() +
   theme(
-    plot.title = element_text(face = "bold"),
-    plot.caption = element_text(size = 12, hjust = 1, color = "darkgray", face = "italic"))
+    axis.title = element_text(face = "bold", size = 16),
+    plot.title = element_text(face = "bold", size = 20),
+    plot.subtitle = element_text(size = 16),
+    plot.caption = element_text(size = 16, hjust = 1, color = "darkgray", face = "italic"))
 
 ggsave(filename = here::here("figures", "semAnnotation_frequencies.png"), plot = semAnnotation_freq_plot, height = 15, width = 15)
 
@@ -96,39 +98,50 @@ postAug2020 <- annotations %>%
 
 # before August 1, 2020
 preAug2020_freq_plot <- preAug2020 %>%
-  filter(n > 20) %>% 
+  filter(n > 15) %>% 
   mutate(prefName = reorder(prefName, n)) %>%
   rename(Counts = n) %>%
   ggplot(aes(prefName, Counts)) +
   geom_col() +
-  labs(title = "Semantic Annotations Used >20 Times in Data Packages Uploaded Prior to 2020-08-01",
-       subtitle = "139/185 data packages containing annotations were uploaded prior to 2020-08-01",
-       caption = "`NA`s represent annotations from non-ECSO ontologies",
-       x = "Semantic Annotation (preferred name)") +
+  labs(x = "Semantic Annotation (preferred name)") +
   scale_y_continuous(expand = c(0,0)) +
   coord_flip() +
   theme_linedraw() +
-  theme(
-    plot.title = element_text(face = "bold"),
-    plot.caption = element_text(size = 12, hjust = 1, color = "darkgray", face = "italic"))
+  theme(axis.text = element_text(size = 14),
+        axis.title = element_text(size = 16, face = "bold"))
+  # theme(
+  #   plot.title = element_text(face = "bold"),
+  #   plot.caption = element_text(size = 12, hjust = 1, color = "darkgray", face = "italic"))
 
 # after August 1, 2020
 postAug2020_freq_plot <- postAug2020 %>%
-  filter(n > 10) %>% 
+  filter(n > 15) %>% 
   mutate(prefName = reorder(prefName, n)) %>%
   rename(Counts = n) %>%
   ggplot(aes(prefName, Counts)) +
   geom_col() +
-  labs(title = "Semantic Annotations Used >10 Times in Data Packages Uploaded On/After 2020-08-01",
-       subtitle = "46/185 data packages containing annotations have been uploaded since 2020-08-01",
-       caption = "`NA`s represent annotations from non-ECSO ontologies",
-       x = "Semantic Annotation (preferred name)") +
+  labs(x = "Semantic Annotation (preferred name)") +
   scale_y_continuous(expand = c(0,0)) +
   coord_flip() +
   theme_linedraw() +
-  theme(
-    plot.title = element_text(face = "bold"),
-    plot.caption = element_text(size = 12, hjust = 1, color = "darkgray", face = "italic"))
+  theme(axis.text = element_text(size = 14),
+        axis.title = element_text(size = 16, face = "bold"))
+  # theme(
+  #   plot.title = element_text(face = "bold"),
+  #   plot.caption = element_text(size = 12, hjust = 1, color = "darkgray", face = "italic"))
+
+prepostAug2020_freq_plot <- preAug2020_freq_plot + postAug2020_freq_plot +
+  plot_annotation(
+    title = "Semantic Annotations Used >15 Times in Data Packages Uploaded (a) Prior to 2020-08-01 and (b) On/After 2020-08-01",
+    subtitle  = "185 data packages containing annotations have been uploaded to the ADC, as of 2020-08-12 (139 prior & 46 post August 1, 2020)",
+    caption = "`NA`s represent annotations from non-ECSO ontologies",
+    tag_levels = "a",
+    theme = theme(plot.title = element_text(size = 20, face = "bold"),
+                  plot.subtitle = element_text(size = 15), 
+                  plot.caption = element_text(size = 16, face = "italic", color = "darkgray"))
+  ) 
+
+ggsave(filename = here::here("figures", "semAnnotation_prepostAug2020_frequencies.png"), plot = prepostAug2020_freq_plot, height = 15, width = 25)
 
 ##############################
 # number of datasets uploaded pre- vs. post-Aug2020
@@ -153,36 +166,5 @@ postAug2020_freq_plot <- postAug2020 %>%
 ##########################################################################################
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# # get unique valueURIs and convert prefNames to all lowercase
-# unique_valueURIs <- annotations %>% 
-#   distinct(valueURI, prefName) %>% 
-#   mutate(prefName = stringr::str_to_lower(prefName))
-# 
-# # identify topical areas
-# compounds <- c("carbon", "nitrogen", "oxygen", "phosphate", "nitrate", "nitrite", "silica")
-# water <- c("water")
-# temperature <- c("temperature")
+annotations2 <- annotations %>% 
+  filter(prefName == NA)

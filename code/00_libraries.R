@@ -12,9 +12,10 @@
 
 library(dataone)
 library(tidyverse)
-library(eatocsv) # NOTE: B.Mecum merged my changes to `extract_ea()` into master on 10/6/2020; if that doesn't work for some reason, re-download at`devtools::install_github("samanthacsik/eatocsv")`
+library(eatocsv) 
 library(svMisc)
 library(rvest)
 library(xml2)
 library(tidytext)
+library(patchwork)
 
