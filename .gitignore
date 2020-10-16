@@ -44,3 +44,4 @@ vignettes/*.pdf
 
 # add .xml files
 data/queries/query2020-10-01/xml/*
+.Rproj.user
