@@ -82,7 +82,7 @@ process_df <- function(df, item) {
     # file_name: name of .csv file saved to "data/text_mining/unnested_tokens/*"
 #-----------------------------
 
-###### individual tokens ###### 
+###### individual terms ###### 
 filterCount_indivTerms <- function(file_path, file_name) {
   
   # create object name
@@ -125,7 +125,7 @@ filterCount_indivTerms <- function(file_path, file_name) {
   assign(object_name, my_file, envir = .GlobalEnv)
 }
 
-######  bigrams ###### 
+###### bigrams ###### 
 filterCount_bigramTerms <- function(file_path, file_name) {
   
   # create object name
@@ -163,8 +163,7 @@ filterCount_bigramTerms <- function(file_path, file_name) {
     arrange(-unique_authors)
   
   # full_join dfs by token -- first token_counts and uniqueID_counts
-  my_file <- full_join(token_counts, uniqueID_counts) %>% 
-    separate(token, into = c("word1", "word2"), sep = " ")
+  my_file <- full_join(token_counts, uniqueID_counts) 
   # then uniqueAuthor_counts
   my_file <- full_join(my_file, uniqueAuthor_counts) %>%
     separate(token, into = c("word1", "word2"), sep = " ")
@@ -173,7 +172,7 @@ filterCount_bigramTerms <- function(file_path, file_name) {
   assign(object_name, my_file, envir = .GlobalEnv)
 }
 
-######trigrams ###### 
+###### trigrams ###### 
 filterCount_trigramTerms <- function(file_path, file_name) {
   
   # create object name
@@ -211,8 +210,7 @@ filterCount_trigramTerms <- function(file_path, file_name) {
     arrange(-unique_authors)
 
   # full_join dfs by token -- first token_counts and uniqueID_counts
-  my_file <- full_join(token_counts, uniqueID_counts) %>% 
-    separate(token, into = c("word1", "word2", "word3"), sep = " ")
+  my_file <- full_join(token_counts, uniqueID_counts)
   # then uniqueAuthor_counts
   my_file <- full_join(my_file, uniqueAuthor_counts) %>%
     separate(token, into = c("word1", "word2", "word3"), sep = " ")
@@ -242,24 +240,21 @@ output_csv <- function(data, names, file_path){
     # file_name: name of .csv file located at "data/text_mining/filtered_token_counts/*"
 #-----------------------------
 
-# import_filteredTermCounts <- function(file_name) {
-#   
-#   # create object name
-#   object_name <- tools::file_path_sans_ext(all_files[i])
-#   print(object_name)
-#   object_name <- gsub("2020.*", "", object_name) 
-#   print(object_name)
-#   # object_name <- gsub("2020-09-21.csv", "", object_name)
-#   # object_name <- gsub("2020-09-13.csv", "", object_name) # for attributeNames & Definitions (have different date than rest)
-#   object_name <- gsub("filteredCounts_", "", object_name)
-#   print(object_name)
-#   
-#   # read in data
-#   my_file <- read_csv(here::here("data", "text_mining", "filtered_token_counts", file_name)) 
-#   
-#   # save as object_name
-#   assign(object_name, my_file, envir = .GlobalEnv)
-# }
+import_filteredTermCounts <- function(file_name) {
+
+  # create object name
+  object_name <- tools::file_path_sans_ext(all_files[i])
+  object_name <- gsub(".csv", "", object_name)
+  object_name <- gsub("filteredCounts_", "", object_name)
+  object_name <- gsub("2020.*", "", object_name)
+  print(object_name)
+
+  # read in data
+  my_file <- read_csv(here::here("data", "filtered_term_counts", "nonannotated_attributes2020-10-12", file_name))
+
+  # save as object_name
+  assign(object_name, my_file, envir = .GlobalEnv)
+}
 
 #-----------------------------
 # used in script: "___________________________"
@@ -270,26 +265,26 @@ output_csv <- function(data, names, file_path){
 #-----------------------------
 
 ######  bigrams ###### 
-# combine_bigrams <- function(object, object_name){
-#   
-#   # unite separate token cols
-#   new_table <- object %>%
-#     unite(col = token, word1, word2, sep = " ")
-#   
-#   # updated existing objects
-#   assign(object_name, new_table, envir = .GlobalEnv) 
-# }
+combine_bigrams <- function(object, object_name){
+
+  # unite separate token cols
+  new_table <- object %>%
+    unite(col = token, word1, word2, sep = " ")
+
+  # updated existing objects
+  assign(object_name, new_table, envir = .GlobalEnv)
+}
 
 ###### trigrams ###### 
-# combine_trigrams <- function(object, object_name){
-#   
-#   # unite separate token cols
-#   new_table <- object %>%
-#     unite(col = token, word1, word2, word3, sep = " ")
-#   
-#   # updated existing objects
-#   assign(object_name, new_table, envir = .GlobalEnv) 
-# }
+combine_trigrams <- function(object, object_name){
+
+  # unite separate token cols
+  new_table <- object %>%
+    unite(col = token, word1, word2, word3, sep = " ")
+
+  # updated existing objects
+  assign(object_name, new_table, envir = .GlobalEnv)
+}
 
 #-----------------------------
 # used in script: "______________________"
@@ -299,30 +294,31 @@ output_csv <- function(data, names, file_path){
     # df_name: *Tokens object name in global environment which has had ngrams combined into a single column, as class `character`
 #-----------------------------
 
-# create_frequencyByCount_plot <- function(tokens_df, df_name) {
-# 
-#   # generate plot object name
-#   plotObjectName <- gsub("Tokens", "_plot", df_name)
-#   print(plotObjectName)
-# 
-#   # create plot that displays 50 most frequent terms
-#   freq_plot <- tokens_df %>%
-#     head(50) %>%
-#     mutate(token = reorder(token, n)) %>%
-#     rename(Counts = n) %>%
-#     ggplot(aes(token, Counts)) +
-#     geom_col() +
-#     ggtitle(df_name) +
-#     xlab(NULL) +
-#     scale_y_continuous(expand = c(0,0)) +
-#     coord_flip() +
-#     theme_linedraw()
-# 
-#   plot(freq_plot)
-# 
-#   # assign to object name in global environment
-#   assign(plotObjectName, freq_plot, envir = .GlobalEnv)
-# }
+create_frequencyByCount_plot <- function(tokens_df, df_name) {
+
+  # generate plot object name
+  plotObjectName <- gsub("Tokens", "_plot", df_name)
+  print(plotObjectName)
+
+  # create plot that displays 50 most frequent terms
+  freq_plot <- tokens_df %>%
+    #head(50) %>%
+    filter(n > 15) %>% 
+    mutate(token = reorder(token, n)) %>%
+    rename(Counts = n) %>%
+    ggplot(aes(token, Counts)) +
+    geom_col() +
+    # ggtitle(df_name) +
+    xlab(NULL) +
+    scale_y_continuous(expand = c(0,0)) +
+    coord_flip() +
+    theme_linedraw()
+
+  plot(freq_plot)
+
+  # assign to object name in global environment
+  assign(plotObjectName, freq_plot, envir = .GlobalEnv)
+}
 
 #-----------------------------
 # used in script: "_____________________"
