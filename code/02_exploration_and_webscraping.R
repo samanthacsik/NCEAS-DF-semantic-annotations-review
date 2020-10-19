@@ -103,7 +103,6 @@ for(row in 1:nrow(ECSO_unique_valueURIs)){
   
   # if warning, print NA
   warning = function(w){
-    
     message(paste("valueURI caused a warning:", valueURI))
     ECSO_webscraping_prefNames(df = ECSO_unique_valueURIs, valueURI = valueURI, row = row)
     return(NA)
