@@ -43,7 +43,9 @@ annotations <- inner_join(annotations, dateUploaded)
 # calculate frequencies
 annotation_counts <- annotations %>% 
   mutate(prefName = stringr::str_to_lower(prefName)) %>% 
-  count(prefName, sort = TRUE)
+  count(prefName, valueURI, sort = TRUE)
+
+# write.csv(annotation_counts, here::here("data", "outputs", paste("all_semAnnotation_counts", Sys.Date(), ".csv", sep = "_")))
 
 # plot 
 semAnnotation_freq_plot <- annotation_counts %>%
@@ -66,7 +68,10 @@ semAnnotation_freq_plot <- annotation_counts %>%
     plot.subtitle = element_text(size = 16),
     plot.caption = element_text(size = 16, hjust = 1, color = "darkgray", face = "italic"))
 
-ggsave(filename = here::here("figures", "semAnnotation_frequencies.png"), plot = semAnnotation_freq_plot, height = 15, width = 15)
+# ggsave(filename = here::here("figures", "semAnnotation_frequencies.png"), plot = semAnnotation_freq_plot, height = 15, width = 15)
+
+semAnnotation_freq_plot <- semAnnotation_freq_plot +
+  plot_annotation(tag_levels = "1", tag_prefix = "Fig.")
 
 ##########################################################################################
 # 2) plot most used semantic annotations pre-2020 and post-Aug2020
@@ -82,7 +87,12 @@ preAug2020 <- annotations %>%
   filter(date < "2020-08-01") %>% 
   unite(col = dateUploaded, date, time, sep = " ") %>% 
   mutate(prefName = stringr::str_to_lower(prefName)) %>% 
-  count(prefName, sort = TRUE)
+  count(prefName, valueURI, sort = TRUE)
+
+# for RMarkdown
+tot_num_annotations_preAug2020 <- sum(preAug2020$n)
+
+# write.csv(annotation_counts, here::here("data", "outputs", paste("preAug2020_semAnnotation_counts", Sys.Date(), ".csv", sep = "_")))
 
 # before August 1, 2020
 postAug2020 <- annotations %>% 
@@ -90,7 +100,11 @@ postAug2020 <- annotations %>%
   filter(date >= "2020-08-01") %>% 
   unite(col = dateUploaded, date, time, sep = " ") %>% 
   mutate(prefName = stringr::str_to_lower(prefName)) %>% 
-  count(prefName, sort = TRUE)
+  count(prefName, valueURI, sort = TRUE)
+
+# for RMarkdown
+tot_num_annotations_postAug2020 <- sum(postAug2020$n)
+# write.csv(annotation_counts, here::here("data", "outputs", paste("postAug2020_semAnnotation_counts", Sys.Date(), ".csv", sep = "_")))
 
 ##############################
 # plot
@@ -109,9 +123,6 @@ preAug2020_freq_plot <- preAug2020 %>%
   theme_linedraw() +
   theme(axis.text = element_text(size = 14),
         axis.title = element_text(size = 16, face = "bold"))
-  # theme(
-  #   plot.title = element_text(face = "bold"),
-  #   plot.caption = element_text(size = 12, hjust = 1, color = "darkgray", face = "italic"))
 
 # after August 1, 2020
 postAug2020_freq_plot <- postAug2020 %>%
@@ -126,22 +137,39 @@ postAug2020_freq_plot <- postAug2020 %>%
   theme_linedraw() +
   theme(axis.text = element_text(size = 14),
         axis.title = element_text(size = 16, face = "bold"))
-  # theme(
-  #   plot.title = element_text(face = "bold"),
-  #   plot.caption = element_text(size = 12, hjust = 1, color = "darkgray", face = "italic"))
-
+ 
+# together
 prepostAug2020_freq_plot <- preAug2020_freq_plot + postAug2020_freq_plot +
   plot_annotation(
     title = "Semantic Annotations Used >15 Times in Data Packages Uploaded (a) Prior to 2020-08-01 and (b) On/After 2020-08-01",
     subtitle  = "185 data packages containing annotations have been uploaded to the ADC, as of 2020-08-12 (139 prior & 46 post August 1, 2020)",
     caption = "`NA`s represent annotations from non-ECSO ontologies",
-    tag_levels = "a",
+    tag_levels = "a", tag_prefix = "Fig. 2",
     theme = theme(plot.title = element_text(size = 20, face = "bold"),
                   plot.subtitle = element_text(size = 15), 
                   plot.caption = element_text(size = 16, face = "italic", color = "darkgray"))
   ) 
 
-ggsave(filename = here::here("figures", "semAnnotation_prepostAug2020_frequencies.png"), plot = prepostAug2020_freq_plot, height = 15, width = 25)
+# ggsave(filename = here::here("figures", "semAnnotation_prepostAug2020_frequencies.png"), plot = prepostAug2020_freq_plot, height = 15, width = 25)
+
+##############################
+# data for report
+##############################
+
+annotations_new <- annotation_counts %>% 
+  rename(total_n = n)
+
+pre_new <- preAug2020 %>% 
+  rename(preAug_n = n)
+
+annotation_counts_new <- full_join(annotations_new, pre_new)
+
+post_new <- postAug2020 %>% 
+  rename(postAug_n = n)
+
+annotation_counts_NEW <- inner_join(annotation_counts_new, post_new)
+
+# write.csv(annotation_counts_NEW, here::here("data", "outputs", "semAnnotation_counts.csv"))
 
 ##############################
 # number of datasets uploaded pre- vs. post-Aug2020
@@ -165,6 +193,5 @@ ggsave(filename = here::here("figures", "semAnnotation_prepostAug2020_frequencie
 # 3) identify which data packages the top 5 most frequent semantic terms are coming from
 ##########################################################################################
 
-
-annotations2 <- annotations %>% 
-  filter(prefName == NA)
+# annotations2 <- annotations %>% 
+#   filter(prefName == NA)

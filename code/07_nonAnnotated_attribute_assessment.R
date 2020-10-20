@@ -111,27 +111,27 @@ attributeNameIndivTokens <- attributeNameIndivTokens %>%
   filter(n > 15) %>% 
   mutate(
     color = case_when(
-      token == "position" ~ "location_terms",
-      token == "latitude" ~ "location_terms",
-      token == "longitude" ~ "location_terms",
-      token == "top" ~ "location_terms",
-      token == "bottom" ~ "location_terms",
-      token == "station" ~ "location_terms",
-      token == "plot" ~ "location_terms",
-      token == "location" ~ "location_terms",
-      token == "site" ~ "location_terms",
-      token == "date" ~ "time_terms",
-      token == "phase" ~ "time_terms",
-      token == "5yrs" ~ "time_terms",
-      token == "soil" ~ "unusual",
-      token == "snow" ~ "unusual",
-      token == "ice" ~ "unusual",
-      token == "quality" ~ "qc_terms",
-      token == "confidence" ~ "qc_terms",
-      token == "depth" ~ "meaurement_terms",
-      token == "intensity" ~ "meaurement_terms",
-      token == "distance" ~ "meaurement_terms",
-      token == "height" ~ "meaurement_terms"
+      token == "position" ~ "location terms",
+      token == "latitude" ~ "location terms",
+      token == "longitude" ~ "location terms",
+      token == "top" ~ "location terms",
+      token == "bottom" ~ "location terms",
+      token == "station" ~ "location terms",
+      token == "plot" ~ "location terms",
+      token == "location" ~ "location terms",
+      token == "site" ~ "location terms",
+      token == "date" ~ "temporal terms",
+      token == "phase" ~ "temporal terms",
+      token == "5yrs" ~ "temporal terms",
+      token == "soil" ~ "environmental materials",
+      token == "snow" ~ "environmental materials",
+      token == "ice" ~ "environmental materials",
+      token == "quality" ~ "QC/confidence terms",
+      token == "confidence" ~ "QC/confidence terms",
+      token == "depth" ~ "meaurement terms",
+      token == "intensity" ~ "meaurement terms",
+      token == "distance" ~ "meaurement terms",
+      token == "height" ~ "meaurement terms"
       ),
     str_replace_na(color, replacement = "NA")
   ) 
@@ -154,8 +154,7 @@ attributeName_pretty <- attributeNameIndivTokens %>%
   theme(plot.title = element_text(size = 15, face = "bold", margin = margin(10,0,10,0)),
         plot.subtitle = element_text(size = 13, margin = margin(0,0,10,0)),
         axis.title = element_text(size = 11, face = "bold"),
-        axis.text = element_text(size = 10),
-        legend.position = "none")
+        axis.text = element_text(size = 10))
 
-ggsave(filename = here::here("figures", "nonAnnotated_attributeName_COLORED_frequencies.png"), plot = attributeName_pretty, height = 15, width = 15)
+# ggsave(filename = here::here("figures", "nonAnnotated_attributeName_COLORED_frequencies.png"), plot = attributeName_pretty, height = 15, width = 15)
 
