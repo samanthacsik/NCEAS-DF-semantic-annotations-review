@@ -3,10 +3,152 @@ title: "ADC Semantic Annotation Review 2020"
 author: "Sam Csik"
 date: "10/19/2020"
 output: html_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-this will be the review of data exploration so far
+```{r, echo = FALSE, warning = FALSE, message = FALSE, results = 'hide'}
+##############################
+# load packages
+##############################
+
+source(here::here("code", "00_libraries.R"))
+
+##############################
+# load previous analyses
+##############################
+
+source(here::here("code", "02_exploration.R"))
+source(here::here("code", "06_semAnnotation_assessment.R"))
+source(here::here("code", "07_nonAnnotated_attribute_assessment.R"))
+```
+
+## **Outline:**
+
+  1. ADC semantic annotation overview/goals
+  2. Summary of annotations efforts, to date
+  3. Summary of most commonly used semantic annotations
+  4. Summary of attributes that are not being annotated
+
+------
+
+### **1. Overview**
+
+In order to improve data discoverablity within the Arctic Data Center (ADC), the datateam is beginning to incorporate the addition of semantic annotations into the data curation process. Doing so offers a way to standardize the diverse descriptions of data used by researchers across disciplines by attaching terms from controlled vocabularies. The use of semantic annotations provides not only definitions of concepts, but also shows the relationships between different terminology. 
+
+Dr. Steven Chong led the first major effort to implement semantic search within the ADC, beginning in 2017, by building out ontological terms pertaining to carbon cycling. You can read more about Dr. Chong's efforts, the ADC's semantic search product, and its vision moving forward in [this blog post](https://arcticdata.io/blog/2019/12/improving-information-retrieval-the-arctic-data-center-unveils-new-semantic-search-product/). More recently (as of about August 1, 2020), the datateam began making a second push to add semantic annotations to attributes for all incoming data packages to the ADC.
+    
+The ADC datateam is currently instructed to add annotations from four main ontologies (the following text was borrowed from the [NCEAS Datateam Training](https://nceas.github.io/datateam-training/training/editing-eml.html#semantic-annotations)):
+
+* [The Ecosystem Ontology (ECSO)](http://bioportal.bioontology.org/ontologies/ECSO/?p=summary)
+    * this was developed at NCEAS, and has many terms that are relevant to ecosystem processes, especially those involving carbon and nutrient cycling
+* [The Environment Ontology (ENVO)](http://bioportal.bioontology.org/ontologies/ENVO/?p=summary)
+    * this is an ontology for the concise, controlled description of environments
+* [National Center for Biotechnology Information (NCBI) Organismal Classification (NCBITAXON)](http://bioportal.bioontology.org/ontologies/NCBITAXON/?p=summary)
+    * The NCBI Taxonomy Database is a curated classification and nomenclature for all of the organisms in the public sequence databases.
+* [Information Artifact Ontology (IAO)](http://bioportal.bioontology.org/ontologies/IAO/?p=summary)
+    * this ontology contains terms related to information entities (eg: journals, articles, datasets, identifiers)
+    
+Here, I explore the current ADC corpus to summarize our progress in implementing semantic search and identify areas for improvement/further consideration.
+
+------
+
+### **2. Summary of annotation efforts**
+
+**How many datapackages have annotations?**
+
+* As of October 12, 2020, the Arctic Data Center contains **`r num_total_datapackages`** data packages (NOTE: a data package consists of a publically-available metadata record, which may be packaged with one or more data files). Of those, **`r num_datapackages_with_attributes`** contain data file types that have associated attributes (i.e. variables). Currently, **`r num_datapackages_with_annotations`** data packages have at least one semantically-annotated attribute.
+
+**How many attributes have been annotated, and when were these added?**
+
+* The majority of attributes in those **`r num_datapackages_with_annotations`** datapackages are annotated (**`r tot_num_annotated_attributes`/`r tot_num_attributes`**), most of which were added during Dr. Chong's tenure at the ADC (**`r tot_num_annotations_preAug2020`/`r tot_num_annotated_attributes`**, as compared to the **`r tot_num_annotations_postAug2020`/`r tot_num_annotated_attributes`** that have been added by the datateam since August 2020).
+
+**Which ontology(ies) are the majority of annotations coming from?**
+
+* The *vast* majority of semantic annotations come from The Ecosystem Ontology ([ECSO](https://bioportal.bioontology.org/ontologies/ECSO)) (**`r tot_ECSO_annotations`/`r tot_num_annotated_attributes`**, or **`r perc_ECSO`%**). The remaining come from [CHEBI](https://bioportal.bioontology.org/ontologies/CHEBI), [ENVO](https://bioportal.bioontology.org/ontologies/ENVO), and [Wikipedia](https://en.wikipedia.org/wiki/Main_Page). See details in table below.
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.height = 20, fig.width = 20}
+datatable(nonECSO_annotations_table,
+          class = 'cell-border stripe',
+          colnames = c("Ontology/Source", "Total # of Annotations", "# of Unique Annotations"),
+          caption = htmltools::tags$caption(
+            style = 'caption-side: top; text-align: left;', 'Table 1: ', 
+            htmltools::em('Sources of non-ECSO annotations present in ADC datapackages')),
+          options = list(pageLength = 5, autoWidth = TRUE))
+```
+
+**Which annotations are non-resolvable?**
+
+* Notice that 110 annotations in the ADC corpus have non-resolvable valueURIs. Among those are only three unique valueURIs, listed here:
+    * [http://www.purl.dataone.org/odo/ECSO_00010077](http://www.purl.dataone.org/odo/ECSO_00010077)
+    * [http://www.purl.dataone.org/odo/ECSO_00010114](http://www.purl.dataone.org/odo/ECSO_00010114)
+    * [http://www.purl.dataone.org/odo/ECSO_00010076](http://www.purl.dataone.org/odo/ECSO_00010076)
+
+See additional details regarding these three non-resolvable URIs in Table 2, below:    
+```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.height = 20, fig.width = 20}
+datatable(nonResolve_annotations,
+          class = 'cell-border stripe',
+          colnames = c("Persistent Identifier", "valueURI", "attributeName", "attributeDefinition"),
+          caption = htmltools::tags$caption(
+            style = 'caption-side: top; text-align: left;', 
+            htmltools::em('Table 2: Attribute information associated with non-resolvable URIs')),
+          filter = 'top', options = list(pageLength = 5, autoWidth = TRUE))
+```
+**NOTE:** You can download **Table 2** as a .csv file [here](https://drive.google.com/file/d/1pub4pc3JaJwyYD3nHx1nl9XyZ-9Trand/view?usp=sharing)
+
+------
+
+### **3. Which semantic annotations are most commonly used at the attribute level?**
+
+The most common semantic annotations used across all ACD metadata records are visualized in **Figure 1**, below (for sake of space, only terms used more than 20 times are included in Fig.1). These include terms such as *soil temperature* (used a total of 439 times), *relative species abundance* (used 305 times), and *air temperature* (used 283 times). You can explore (and download) the associated data file containing *all* semantic annotations (not just those used >20 times) currently included in ADC metadata records in **Table 3**. Dropping the valueURI into your web browswer will take you to the semantic annotation, where you can learn more about its description and relationship to other terms.
+```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.height = 10, fig.width = 12}
+##############################
+# FIGURE 1: all semantic annotations added to attributes (>20 n)
+##############################
+
+ggplotly(semAnnotation_freq_plot)
+```
+
+
+NOTICE THAT SOME ANNOTATIONS GOT MORE ATTENTION BEFOER/AFTER AUG.....
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.height = 15, fig.width = 20}
+##############################
+# FIGURE: 
+##############################
+
+prepostAug2020_freq_plot
+```
+
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.height = 20, fig.width = 20}
+##############################
+# TABLE 1: all semantic annotations added to attributes
+##############################
+
+datatable(annotation_counts_NEW, 
+          class = 'cell-border stripe',
+          colnames = c("semantic annotation (preferred name)", "semantic annotation (valueURI)", "total counts", "pre-2020-08-01 counts", "post-2020-08-01 counts"),
+          caption = htmltools::tags$caption(
+            style = 'caption-side: top; text-align: left;', 'Table 3: ', 
+            htmltools::em('Most common semantic terms used to annotate ADC data package attributes.')),
+          filter = 'top', options = list(pageLength = 5, autoWidth = TRUE))
+```
+**NOTE:** You can download **Table 3** as a .csv file [here](https://drive.google.com/file/d/1bTitU9xKJKM8S8tJoDZ3Qs-32QJlQ5CJ/view?usp=sharing).
+
+-----
+
+### **4. Which attributes are not getting annotated? Why?**
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.height = 15, fig.width = 20}
+##############################
+# FIGURE: 
+##############################
+
+attributeName_pretty
+```
+
