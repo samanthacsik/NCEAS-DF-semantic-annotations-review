@@ -18,4 +18,5 @@ library(rvest)
 library(xml2)
 library(tidytext)
 library(patchwork)
-
+library(DT)
+library(plotly)

@@ -314,7 +314,7 @@ create_frequencyByCount_plot <- function(tokens_df, df_name) {
     coord_flip() +
     theme_linedraw()
 
-  plot(freq_plot)
+  #plot(freq_plot)
 
   # assign to object name in global environment
   assign(plotObjectName, freq_plot, envir = .GlobalEnv)
