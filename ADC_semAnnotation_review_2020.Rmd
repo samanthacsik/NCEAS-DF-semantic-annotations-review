@@ -1,5 +1,5 @@
 ---
-title: "ADC Semantic Annotation Review 2020"
+title: "Arctic Data Center Semantic Annotation Review, 2020"
 author: "Sam Csik"
 date: "10/19/2020"
 output: html_document
@@ -33,6 +33,7 @@ source(here::here("code", "07_nonAnnotated_attribute_assessment.R"))
   2. Summary of annotations efforts, to date
   3. Summary of most commonly used semantic annotations
   4. Summary of attributes that are not being annotated
+  5. Raw data & code
 
 ------
 
@@ -71,7 +72,7 @@ Here, I explore the current ADC corpus to summarize our progress in implementing
 
 * The *vast* majority of semantic annotations come from The Ecosystem Ontology ([ECSO](https://bioportal.bioontology.org/ontologies/ECSO)) (**`r tot_ECSO_annotations`/`r tot_num_annotated_attributes`**, or **`r perc_ECSO`%**). The remaining come from [CHEBI](https://bioportal.bioontology.org/ontologies/CHEBI), [ENVO](https://bioportal.bioontology.org/ontologies/ENVO), and [Wikipedia](https://en.wikipedia.org/wiki/Main_Page). See details in table below.
 
-```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.height = 20, fig.width = 20}
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
 datatable(nonECSO_annotations_table,
           class = 'cell-border stripe',
           colnames = c("Ontology/Source", "Total # of Annotations", "# of Unique Annotations"),
@@ -83,16 +84,16 @@ datatable(nonECSO_annotations_table,
 
 **Which annotations are non-resolvable?**
 
-* Notice that 110 annotations in the ADC corpus have non-resolvable valueURIs. Among those are only three unique valueURIs, listed here:
+* Notice that 110 annotated attributes in the ADC corpus have non-resolvable valueURIs. Among those are only three unique valueURIs, listed here:
     * [http://www.purl.dataone.org/odo/ECSO_00010077](http://www.purl.dataone.org/odo/ECSO_00010077)
     * [http://www.purl.dataone.org/odo/ECSO_00010114](http://www.purl.dataone.org/odo/ECSO_00010114)
     * [http://www.purl.dataone.org/odo/ECSO_00010076](http://www.purl.dataone.org/odo/ECSO_00010076)
 
-See additional details regarding these three non-resolvable URIs in Table 2, below:    
-```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.height = 20, fig.width = 20}
+See additional details regarding these three non-resolvable URIs in **Table 2**, below:    
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
 datatable(nonResolve_annotations,
           class = 'cell-border stripe',
-          colnames = c("Persistent Identifier", "valueURI", "attributeName", "attributeDefinition"),
+          colnames = c("Identifier", "valueURI", "attributeName", "attributeDefinition"),
           caption = htmltools::tags$caption(
             style = 'caption-side: top; text-align: left;', 
             htmltools::em('Table 2: Attribute information associated with non-resolvable URIs')),
@@ -104,19 +105,18 @@ datatable(nonResolve_annotations,
 
 ### **3. Which semantic annotations are most commonly used at the attribute level?**
 
-The most common semantic annotations used across all ACD metadata records are visualized in **Figure 1**, below (for sake of space, only terms used more than 20 times are included in Fig.1). These include terms such as *soil temperature* (used a total of 439 times), *relative species abundance* (used 305 times), and *air temperature* (used 283 times). You can explore (and download) the associated data file containing *all* semantic annotations (not just those used >20 times) currently included in ADC metadata records in **Table 3**. Dropping the valueURI into your web browswer will take you to the semantic annotation, where you can learn more about its description and relationship to other terms.
-```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.height = 10, fig.width = 12}
+The most common semantic annotations used across all ACD metadata records are visualized in **Figure 1**, below (for sake of space, only terms used more than 20 times are included in Fig.1). These include terms such as *soil temperature* (used a total of 439 times), *relative species abundance* (used 305 times), and *air temperature* (used 283 times). You can explore (and download) the associated data file containing *all* semantic annotations (i.e. not just those used >20 times) currently included in ADC metadata records in **Table 3**. Dropping the valueURI into your web browswer will take you to the semantic annotation, where you can learn more about its description and relationship to other terms.
+```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.height = 16, fig.width = 12}
 ##############################
 # FIGURE 1: all semantic annotations added to attributes (>20 n)
 ##############################
 
-ggplotly(semAnnotation_freq_plot)
+semAnnotation_freq_plot
 ```
 
+I've broken this down a bit further into annotations added prior to August 1, 2020 (i.e. those that were added as a part of Dr. Chong's efforts; **Fig.2a**) vs. those added on or after August 1, 2020 (i.e. the more recent additions made by the ADC datateam since incorporating annotations into the data curation workflow; **Fig.2b**). For example, *soil temperature* (the most frequently used annotation overall; see **Fig.1**), was primarily assigned to attributes during Dr. Chong's efforts and has been used less frequently in the more recent annotation efforts. You can find these corresponding values in **Table 3**, in the `pre-2020-08-01 counts` and `post-2020-08-01 counts` columns.
 
-NOTICE THAT SOME ANNOTATIONS GOT MORE ATTENTION BEFOER/AFTER AUG.....
-
-```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.height = 15, fig.width = 20}
+```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.height = 16, fig.width = 20}
 ##############################
 # FIGURE: 
 ##############################
@@ -124,8 +124,7 @@ NOTICE THAT SOME ANNOTATIONS GOT MORE ATTENTION BEFOER/AFTER AUG.....
 prepostAug2020_freq_plot
 ```
 
-
-```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.height = 20, fig.width = 20}
+```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.height = 24, fig.width = 20}
 ##############################
 # TABLE 1: all semantic annotations added to attributes
 ##############################
@@ -144,11 +143,46 @@ datatable(annotation_counts_NEW,
 
 ### **4. Which attributes are not getting annotated? Why?**
 
+While annotating each and every attribute within a data package is an ultimate goal, it is currently a time-intensive process for the datateam. As such, datateam members target the most "semantically-important" attributes to annotate and leave "less-important" attributes (terms that are less likely to be searched on; e.g. datetime, latitude, longitude) unannotated. 
+
+Recall that there are **`r num_datapackages_with_annotations`** ADC data packages containing annotations, and across those packages, a total of **`r tot_num_attributes`** attributes. While part 3 explores the **`r tot_num_annotated_attributes`** attributes that have been semantically annotated, here I summarize the remaining **`r tot_num_nonannotated_attributes`** attributes that did not receive annotations.
+
+A goal is to assess if these unannotated attributes are (a) terms that datateam members are intentionally skipping for sake of time (e.g. "less-important" attributes), (b) terms that really should have an annotation and got skipped accidentally, or (c) terms that got skipped because there is currently no appropriate semantic annotation to describe them.
+
+The most common non-annotated attributeNames (individual tokens) are vizualized in **Figure 3** and explored in **Table 4** below. **IMPORTANT NOTE: the attributeNames on the y-axis are actually unnested individual tokens (singular words), meaning all attributeNames were separated into individual words (e.g. `sep = " "`) during the text mining process. For example, "depth" (the second most common term; counts = 71), may exist in the ADC corpus as attributeName = "depth", "soil depth", "snow depth", etc. Parsing these will require some further analyses.**
+
+I've manually assigned terms to some general categories (see legend) -- location terms (colored green; e.g. "position", "latitude", "top", "site", etc.), temporal terms (colored pink; e.g. "data", "phase"), and QC/Confidence terms (colored yellow) are likely being intentionally skipped for sake of time (see instructions in [Data Team Training Part 4.8.2 #1](https://nceas.github.io/datateam-training/training/editing-eml.html#semantic-annotations)), whereas measurements (colored orange; e.g. "depth", "height") and environmental materials (colored blue; e.g. "soil", "snow", "ice") likely have an appropriate annotation match (ECSO & ENVO) and could be annotated. 
+
 ```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.height = 15, fig.width = 20}
 ##############################
 # FIGURE: 
 ##############################
 
 attributeName_pretty
+
+##############################
+# table
+##############################
+
+datatable(attributeNameIndivTokens,
+          class = 'cell-border stripe',
+          colnames = c("individual attributeName tokens (single, unnested terms)", "counts", "unique IDs", "unique authors"),
+          caption = htmltools::tags$caption(
+            style = 'caption-side: top; text-align: left;', 'Table 4: ', 
+            htmltools::em('Most common indiviudal attributeName tokens (terms) left unannotated. In addition to the total counts of each token, the number of unique package identifiers that that term is found in & the number of unique authors who used that term are also included. These data may be important for determining which tokens are (i) being broadly used many times (e.g. "date") used many times (ii) being used many times but in just a few different data packages (e.g. "position") or (iii) used many times by only one author across many data packages (possibly indicative on nested datapackages; e.g. "habitat_type)')),
+          filter = 'top', options = list(pageLength = 5, autoWidth = TRUE))
 ```
+**NOTE:** You can download **Table 4** as a .csv file [here](https://drive.google.com/file/d/1z7ODVyh_mgC7ze1LlpRa6Ly70CJICwvM/view?usp=sharing).
+
+Additionally, I've asked the datateam to add any attributes that they cannot find an appropriate annotation for to this [GoogleDrive Sheet](https://docs.google.com/spreadsheets/d/1ULEwESDbepuPs2xGKrZMyWYW7BHOLmGi4C8luPgbsrQ/edit?usp=sharing). They're accumulating *very slowly* (which is hopefully a good sign that most attributes have an appropriate annotation match).
+
+-----
+
+### **5. Raw data & code**
+
+* Raw data (extracted attribute information) from the 2020-10-01 solr query can be downloaded [here](https://drive.google.com/file/d/1X59s65_pZOt2e_Z8g4ch-tUyrcJzim28/view?usp=sharing)
+* GitHub Repository with associated code and additional data: [samanthacsik/NCEAS-DF-semantic-annoations-review](https://github.com/samanthacsik/NCEAS-DF-semantic-annotations-review)
+
+
+
 
