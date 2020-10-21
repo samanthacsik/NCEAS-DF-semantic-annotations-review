@@ -6,7 +6,7 @@ Overview of currently annotated data packages within the Arctic Data Center in p
 
 ### Overview
 
-In order to improve data discoverablity within the [Arctic Data Center](https://arcticdata.io/) (ADC), the datateam is working to implement semantic search within the respository. Here, we explore progress to date (Oct 2020). Data and analyses are detailed below. For a summarized report, see [here]().
+In order to improve data discoverablity within the [Arctic Data Center](https://arcticdata.io/) (ADC), the datateam is working to implement semantic search within the respository. Here, we explore progress to date (Oct 2020). Data and analyses are detailed below. For a summarized report, see [here](https://samanthacsik.github.io/NCEAS-DF-semantic-annotations-review/).
 
 ### Getting Started
 
