@@ -18,15 +18,17 @@ Scripts are numbered in the order of analyses.
 NCEAS-DF-semantic-annotations-review
   |_code
     |_old
-    |_reports
   |_data
     |_filtered_term_counts
-      |_nonannotated_attributes
+    |_outputs
+      |_nonannotated_attributes2020-10-01
+      |_nonannotated_attributes2020-10-12
     |_queries
       |_query2020-10-01
-        |_xml
+       |_query2020-10-12
     |_unnested_tokens
-      |_nonannotated_attributes
+      |_nonannotated_attributes2020-10-01
+      |_nonannotated_attributes2020-10-12
 ```
 
 ### Code
