@@ -171,28 +171,3 @@ post_new <- postAug2020 %>%
 annotation_counts_NEW <- inner_join(annotation_counts_new, post_new)
 
 # write.csv(annotation_counts_NEW, here::here("data", "outputs", "semAnnotation_counts.csv"))
-
-##############################
-# number of datasets uploaded pre- vs. post-Aug2020
-##############################
-
-# postAug2020test <- annotations %>% 
-#   separate(dateUploaded, into = c("date", "time"), sep = " ") %>% 
-#   filter(date >= "2020-08-01") %>% 
-#   unite(col = dateUploaded, date, time, sep = " ")
-# 
-# length(unique(postAug2020test$identifier)) # 46
-# 
-# preAug2020test <- annotations %>% 
-#   separate(dateUploaded, into = c("date", "time"), sep = " ") %>% 
-#   filter(date < "2020-08-01") %>% 
-#   unite(col = dateUploaded, date, time, sep = " ")
-# 
-# length(unique(preAug2020test$identifier)) # 139
-
-##########################################################################################
-# 3) identify which data packages the top 5 most frequent semantic terms are coming from
-##########################################################################################
-
-# annotations2 <- annotations %>% 
-#   filter(prefName == NA)
