@@ -156,7 +156,7 @@ attributeName_pretty <- attributeNameIndivTokens2 %>%
 # modify with patchwork for consistency with previous scripts
 attributeName_pretty  <- attributeName_pretty  +
   plot_annotation(
-    title = "Non-annotated attributeNames Used >15 Times in ADC Data Packages Containing at Least One Annotated Attribute",
+    title = "Non-annotated attributeNames (individual tokens) Used >15 Times in ADC Data Packages Containing at Least One Annotated Attribute",
     tag_prefix = "Fig. 3", 
     theme = theme(plot.title = element_text(size = 21, face = "bold"))
   )
