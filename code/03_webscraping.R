@@ -23,7 +23,6 @@
 
 source(here::here("code", "00_libraries.R"))
 source(here::here("code", "00_functions.R"))
-source(here::here("code", ".R"))
 
 ##############################
 # Import data

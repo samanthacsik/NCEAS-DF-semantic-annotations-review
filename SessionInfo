@@ -1,42 +1,38 @@
-# LAST UPDATED 2020-10-20 @ 22:07 #
+# LAST UPDATED 2020-10-20 @ 22:12 #
 
 R version 3.6.3 (2020-02-29)
-Platform: x86_64-apple-darwin15.6.0 (64-bit)
-Running under: macOS Mojave 10.14.6
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 18.04.5 LTS
 
 Matrix products: default
-BLAS:   /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
-LAPACK: /Library/Frameworks/R.framework/Versions/3.6/Resources/lib/libRlapack.dylib
+BLAS:   /usr/lib/x86_64-linux-gnu/openblas/libblas.so.3
+LAPACK: /usr/lib/x86_64-linux-gnu/libopenblasp-r0.2.20.so
 
 locale:
-[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C               LC_TIME=en_US.UTF-8       
+ [4] LC_COLLATE=en_US.UTF-8     LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                  LC_ADDRESS=C              
+[10] LC_TELEPHONE=C             LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
 
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
- [1] calecopal_0.1.0 plotly_4.9.2.1  DT_0.13         patchwork_1.0.0 tidytext_0.2.6  rvest_0.3.5    
- [7] xml2_1.3.2      svMisc_1.1.0    eatocsv_0.1.0   forcats_0.5.0   stringr_1.4.0   dplyr_1.0.0    
-[13] purrr_0.3.4     readr_1.3.1     tidyr_1.1.0     tibble_3.0.3    ggplot2_3.3.2   tidyverse_1.3.0
-[19] dataone_2.1.4   shiny_1.5.0    
+ [1] DT_0.13         patchwork_1.0.1 tidytext_0.2.5  rvest_0.3.6     xml2_1.3.2      svMisc_1.1.0   
+ [7] eatocsv_0.1.0   forcats_0.5.0   stringr_1.4.0   dplyr_1.0.1     purrr_0.3.4     readr_1.3.1    
+[13] tidyr_1.1.1     tibble_3.0.3    ggplot2_3.3.0   tidyverse_1.3.0 dataone_2.1.4  
 
 loaded via a namespace (and not attached):
- [1] colorspace_1.4-1  ellipsis_0.3.1    rprojroot_1.3-2   base64enc_0.1-3   fs_1.4.1         
- [6] rstudioapi_0.11   roxygen2_7.1.1    farver_2.0.3      remotes_2.1.1     SnowballC_0.7.0  
-[11] hash_2.2.6.1      fansi_0.4.1       lubridate_1.7.8   knitr_1.30        datapack_1.3.2   
-[16] pkgload_1.1.0     jsonlite_1.7.1    broom_0.5.5       dbplyr_1.4.2      compiler_3.6.3   
-[21] httr_1.4.2        backports_1.1.10  assertthat_0.2.1  Matrix_1.2-18     fastmap_1.0.1    
-[26] lazyeval_0.2.2    cli_2.0.2         later_1.0.0       htmltools_0.5.0   prettyunits_1.1.1
-[31] tools_3.6.3       gtable_0.3.0      glue_1.4.2        Rcpp_1.0.5        cellranger_1.1.0 
-[36] vctrs_0.3.4       nlme_3.1-144      crosstalk_1.1.0.1 xfun_0.18         ps_1.4.0         
-[41] testthat_2.3.2    mime_0.9          parsedate_1.2.0   lifecycle_0.2.0   devtools_2.3.0   
-[46] XML_3.99-0.3      scales_1.1.1      hms_0.5.3         promises_1.1.0    yaml_2.2.1       
-[51] curl_4.3          memoise_1.1.0     stringi_1.5.3     tokenizers_0.2.1  desc_1.2.0       
-[56] redland_1.0.17-12 pkgbuild_1.1.0    rlang_0.4.7       pkgconfig_2.0.3   evaluate_0.14    
-[61] lattice_0.20-38   htmlwidgets_1.5.1 labeling_0.3      tidyselect_1.1.0  processx_3.4.4   
-[66] here_0.1          plyr_1.8.6        magrittr_1.5      R6_2.4.1          generics_0.0.2   
-[71] DBI_1.1.0         pillar_1.4.6      haven_2.2.0       withr_2.3.0       janeaustenr_0.1.5
-[76] modelr_0.1.6      crayon_1.3.4      uuid_0.1-4        rmarkdown_2.1     usethis_1.6.0    
-[81] grid_3.6.3        readxl_1.3.1      data.table_1.12.8 callr_3.4.4       reprex_0.3.0     
-[86] digest_0.6.25     xtable_1.8-4      httpuv_1.5.2      munsell_0.5.0     viridisLite_0.3.0
-[91] sessioninfo_1.1.1
+ [1] Rcpp_1.0.5        lubridate_1.7.9   here_0.1          lattice_0.20-38   assertthat_0.2.1 
+ [6] rprojroot_1.3-2   digest_0.6.25     R6_2.4.1          cellranger_1.1.0  plyr_1.8.6       
+[11] backports_1.1.10  reprex_0.3.0      evaluate_0.14     httr_1.4.2        pillar_1.4.6     
+[16] rlang_0.4.7       uuid_0.1-4        readxl_1.3.1      rstudioapi_0.11   blob_1.2.1       
+[21] Matrix_1.2-18     hash_2.2.6.1      rmarkdown_2.3     htmlwidgets_1.5.1 munsell_0.5.0    
+[26] broom_0.7.0       janeaustenr_0.1.5 compiler_3.6.3    modelr_0.1.8      xfun_0.18        
+[31] pkgconfig_2.0.3   base64enc_0.1-3   htmltools_0.5.0   redland_1.0.17-12 tidyselect_1.1.0 
+[36] roxygen2_7.1.1    XML_3.99-0.3      fansi_0.4.1       crayon_1.3.4      dbplyr_1.4.4     
+[41] withr_2.3.0       SnowballC_0.7.0   grid_3.6.3        jsonlite_1.7.1    gtable_0.3.0     
+[46] lifecycle_0.2.0   DBI_1.1.0         magrittr_1.5      tokenizers_0.2.1  scales_1.1.0     
+[51] datapack_1.3.2    cli_2.0.2         stringi_1.5.3     fs_1.5.0          parsedate_1.2.0  
+[56] ellipsis_0.3.1    generics_0.0.2    vctrs_0.3.4       tools_3.6.3       glue_1.4.2       
+[61] hms_0.5.3         yaml_2.2.1        colorspace_1.4-1  knitr_1.30        haven_2.3.1    
