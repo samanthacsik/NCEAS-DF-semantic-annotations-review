@@ -10,7 +10,7 @@
 # Summary
 ##########################################################################################
 
-# 
+# exploring nonannotated attributes, in particular attributeNames (individual tokens)
 
 ##########################################################################################
 # General setup
@@ -98,63 +98,67 @@ for(i in 1:length(wrangledTokens_list)){
 # combine figure panels and save
 ##############################
 
+# print for report
+# write.csv(attributeNameIndivTokens, here::here("data", "outputs", "attributeNameIndivTokens.csv"))
+
 # not too much gained from including bigrams & trigrams
-attributeName_plots <- attributeNameIndiv_plot + attributeNameBigram_plot + attributeNameTrigram_plot
+# attributeName_plots <- attributeNameIndiv_plot + attributeNameBigram_plot + attributeNameTrigram_plot
 
-location_terms <- c("position", "depth", "latitude", "logitude", "top", "bottom", "station", "plot", "location", "site", "height")
-time_terms <- c("date", "phase", "5yrs")
-unusual <- c("soil", "snow", "ice")
-qc_terms <- c("quality", "confidence")
-measurement_terms <- c("depth", "intensity", "distance", "height")
-
-attributeNameIndivTokens <- attributeNameIndivTokens %>% 
+attributeNameIndivTokens2 <- attributeNameIndivTokens %>% 
   filter(n > 15) %>% 
   mutate(
-    color = case_when(
-      token == "position" ~ "location terms",
-      token == "latitude" ~ "location terms",
-      token == "longitude" ~ "location terms",
-      token == "top" ~ "location terms",
-      token == "bottom" ~ "location terms",
-      token == "station" ~ "location terms",
-      token == "plot" ~ "location terms",
-      token == "location" ~ "location terms",
-      token == "site" ~ "location terms",
-      token == "date" ~ "temporal terms",
-      token == "phase" ~ "temporal terms",
-      token == "5yrs" ~ "temporal terms",
+    `Term Category` = case_when(
+      token == "position" ~ "location",
+      token == "latitude" ~ "location",
+      token == "longitude" ~ "location",
+      token == "top" ~ "location",
+      token == "bottom" ~ "location",
+      token == "station" ~ "location",
+      token == "plot" ~ "location",
+      token == "location" ~ "location",
+      token == "site" ~ "location",
+      token == "date" ~ "temporal",
+      token == "phase" ~ "temporal",
+      token == "5yrs" ~ "temporal",
       token == "soil" ~ "environmental materials",
       token == "snow" ~ "environmental materials",
       token == "ice" ~ "environmental materials",
-      token == "quality" ~ "QC/confidence terms",
-      token == "confidence" ~ "QC/confidence terms",
-      token == "depth" ~ "meaurement terms",
-      token == "intensity" ~ "meaurement terms",
-      token == "distance" ~ "meaurement terms",
-      token == "height" ~ "meaurement terms"
+      token == "quality" ~ "QC/Confidence",
+      token == "confidence" ~ "QC/Confidence",
+      token == "depth" ~ "measurement",
+      token == "intensity" ~ "measurement",
+      token == "distance" ~ "measurement",
+      token == "height" ~ "measurement"
       ),
-    str_replace_na(color, replacement = "NA")
-  ) 
+    `Term Category` = str_replace_na(`Term Category`, "other")
+  ) %>% 
+  mutate(`Term Category` = fct_relevel(`Term Category`, c("location", "temporal", "QC/Confidence", "environmental materials", "measurement", "NA"))) 
   
-
 # specifically focus on attributeName individual tokens
-attributeName_pretty <- attributeNameIndivTokens %>%
+attributeName_pretty <- attributeNameIndivTokens2 %>%
   mutate(token = reorder(token, n)) %>%
   rename(Counts = n) %>%
-  ggplot(aes(token, Counts, fill = color)) +
+  ggplot(aes(token, Counts, fill = `Term Category`)) +
   geom_col() +
-  labs(title = "Non-annotated attributeNames Used >15 Times in ADC Data Packages Containing at Least One Annotated Attribute",
-       subtitle = "As of 2020-10-12, 185 unique ADC identifiers have (at least one) semantically-annotated attributes",
-       x = "attributeName",
+  labs(x = "attributeName (unnested, individual terms)",
        y = "Counts") +
   scale_y_continuous(expand = c(0,0)) +
+  scale_fill_manual(values = c("#009E73", "#CC79A7", "#F0E442", "#56B4E9", "#E69F00", "#999999")) +
   coord_flip() +
   theme_linedraw() +
   theme_bw(base_size=12,base_family="Helvetica") +
-  theme(plot.title = element_text(size = 15, face = "bold", margin = margin(10,0,10,0)),
-        plot.subtitle = element_text(size = 13, margin = margin(0,0,10,0)),
-        axis.title = element_text(size = 11, face = "bold"),
-        axis.text = element_text(size = 10))
+  theme(axis.title = element_text(size = 17, face = "bold"),
+        axis.text = element_text(size = 16),
+        legend.title = element_text(size = 20, face = "bold"),
+        legend.text = element_text(size = 16),
+        legend.position = "bottom")
+
+# modify with patchwork for consistency with previous scripts
+attributeName_pretty  <- attributeName_pretty  +
+  plot_annotation(
+    title = "Non-annotated attributeNames Used >15 Times in ADC Data Packages Containing at Least One Annotated Attribute",
+    tag_prefix = "Fig. 3", 
+    theme = theme(plot.title = element_text(size = 21, face = "bold"))
+  )
 
 # ggsave(filename = here::here("figures", "nonAnnotated_attributeName_COLORED_frequencies.png"), plot = attributeName_pretty, height = 15, width = 15)
-

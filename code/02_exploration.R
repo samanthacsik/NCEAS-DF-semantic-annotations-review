@@ -77,6 +77,10 @@ uniqueValueURI <- length(unique(annotated_attributes$valueURI))
 nonannotated_attributes <- extracted_attributes %>%
   anti_join(annotated_attributes)
 
+# for RMarkdown
+tot_num_nonannotated_attributes <- length(nonannotated_attributes$attributeName)
+
+
 ##############################
 # determine which valueURIs come from dataone/ECSO and which don't -- this matters for web scraping (below) since the ECSO_webscraping_prefNames() won't locate prefLable and ontoLabel in other ontologies!
 ##############################
