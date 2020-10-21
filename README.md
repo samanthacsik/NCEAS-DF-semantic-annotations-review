@@ -6,11 +6,11 @@ Overview of currently annotated data packages within the Arctic Data Center in p
 
 ### Overview
 
-...
+In order to improve data discoverablity within the [Arctic Data Center](https://arcticdata.io/) (ADC), the datateam is working to implement semantic search within the respository. Here, we explore progress to date (Oct 2020). Data and analyses are detailed below. For a summarized report, see [here]().
 
 ### Getting Started
 
-Scripts are numbered in the order they are to be run.
+Scripts are numbered in the order of analyses.
 
 ### Repository Structure
 
@@ -31,17 +31,19 @@ NCEAS-DF-semantic-annotations-review
 
 ### Code
 
-* `0_libraries.R`: packages required in subsequent scripts
-* `0_functions.R`: custom functions for data wrangling & plotting; information regarding function purpose and arguments is included in the script 
-* `1_query_download_metadata.R`: uses solr query to extract package identifiers; use `eatocsv` package to parse associated xml files to tidy attribute information (including semantic annotations, if applicable)
-* `2_exploration_and_webscraping`: super basic annotation exploration (number of ADC data packages with/without annotations, etc); webscrape for annotation preferred names to add to dataframes from script 1
-* `3_unnest_tokens.R`: unnest attribute information into individual words, bigrams, and trigrams; currently only done for non-annotated attributes
-* `4_filterStopWords_count_tokens.R`: filter out stop words and count number of occurrances of unnested terms; currently only done for non-annotated attributes
-* `?_semAnnotation_assessment.R` : (still needs to be numbered) plot most frequently used semantic annotations (from ECSO)
+* `00_libraries.R`: packages required in subsequent scripts
+* `00_functions.R`: custom functions for data wrangling & plotting; information regarding function purpose and arguments is included in the script 
+* `01_query_download_metadata.R`: uses solr query to extract package identifiers; use `eatocsv` package to parse associated xml files to tidy attribute information (including semantic annotations, if applicable)
+* `02_exploration`: super basic annotation exploration (number of ADC data packages with/without annotations, etc. 
+* `03_webscraping.R` : webscrape for annotation preferred names to add to dataframes from script 01
+* `04_unnest_nonannotated_terms.R`: unnest attribute information into individual words, bigrams, and trigrams; currently only done for non-annotated attributes
+* `05_filterStopWords_count_nonannotated_terms.R`: filter out stop words and count number of occurrances of unnested terms; currently only done for non-annotated attributes
+* `06_semAnnotation_assessment.R` : exploration of the most frequently used semantic annotations (from ECSO)
+* `07_nonAnnotated_attribute_assessment.R` : exploration of non-annotated attributes
 
 ### Data
 
-*The most important data files (i.e. original unaltered data, or those data files used in subsequent analyses that are saved as .csv files to eliminated time-intensive processing in scripts) are detailed below.*
+*The most important data files (i.e. original unaltered data, or those data files used in subsequent analyses that are saved as .csv files to eliminated time-intensive processing in scripts) are detailed below. All others are derivations of the following described datasets.*
 
 #### `data/queries/query2020-10-01/fullQuery_semAnnotations2020-10-01_solr.csv`
 * `identifier`: unique persistent identifier assigned to each ADC data package (in most cases, this is a DOI)
@@ -53,7 +55,7 @@ NCEAS-DF-semantic-annotations-review
 
 #### `data/queries/query2020-10-01/fullQuery_semAnnotations2020-10-01_webscraping.csv`
 * `identifier`: unique persistent identifier assigned to each ADC data package (in most cases, this is a DOI)
-* `entityName`:
+* `entityName`: The name of an entity (e.g. dataTable, spatialVector, etc.)
 * `attributeName`: The name of an attribute, as listed in a .csv file
 * `attributeLabel`: A descriptive label that can be used to display the name of an attribute
 * `attributeDefinition`: Longer description of the attribute, including the required context for interpreting the `attributeName`
