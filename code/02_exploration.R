@@ -80,7 +80,6 @@ nonannotated_attributes <- extracted_attributes %>%
 # for RMarkdown
 tot_num_nonannotated_attributes <- length(nonannotated_attributes$attributeName)
 
-
 ##############################
 # determine which valueURIs come from dataone/ECSO and which don't -- this matters for web scraping (below) since the ECSO_webscraping_prefNames() won't locate prefLable and ontoLabel in other ontologies!
 ##############################
@@ -95,37 +94,23 @@ others_unique_valueURIs <- annotated_attributes %>%
   distinct(valueURI) %>% 
   anti_join(ECSO_unique_valueURIs)
 
-# for RMarkdown
-total_ECSO_unique_valueURIs <- length(ECSO_unique_valueURIs$valueURI)
+##########################################################################################
+# for RMarkdown report
+##########################################################################################
 
-# for RMarkdown
+# ----------- annotations by group -----------
+
+# For RMarkdown - get all ECSO annotations (12155)
 all_ECSO_annotations <- annotated_attributes %>% 
   filter(str_detect(valueURI,"^http://purl.dataone.org/odo/ECSO_"))
-
-# for RMarkdown
-tot_ECSO_annotations <- length(all_ECSO_annotations$attributeName)
-
-# for RMarkdown
-perc_ECSO <- round(((tot_ECSO_annotations/tot_num_annotated_attributes) * 100), 1)
-
-##############################
-# separate nonECSO annotations
-##############################
 
 # for RMarkdown -- get all nonECSO annotations (total 156)
 nonECSO_annotations <- annotated_attributes %>% 
   anti_join(all_ECSO_annotations) %>% 
   select(identifier, valueURI, attributeName, attributeDefinition)
 
-# ----------- nonECSO annotations by group -----------
-
-# suspected non-resolving annotations (110)
-nonResolve_annotations <- nonECSO_annotations %>% 
-  filter(str_detect(valueURI,"^http://www.purl.dataone.org/odo/ECSO_"))
-
-# write.csv(nonResolve_annotations, here::here("data", "outputs", "nonResolvable_annotations.csv"))
-
-tot_nonResolve <- length(nonResolve_annotations$valueURI)
+tot_ECSO_annotations <- length(all_ECSO_annotations$attributeName)
+perc_ECSO <- round(((tot_ECSO_annotations/tot_num_annotated_attributes) * 100), 1)
 
 # for RMarkdown -- get all CHEBI annotations (24)
 CHEBI_annotations <- nonECSO_annotations %>% 
@@ -145,13 +130,17 @@ WIKI_annotations <- nonECSO_annotations %>%
 
 tot_WIKI <- length(WIKI_annotations$valueURI)
 
+# suspected non-resolving annotations (110)
+nonResolve_annotations <- nonECSO_annotations %>% 
+  filter(str_detect(valueURI,"^http://www.purl.dataone.org/odo/ECSO_"))
+# write.csv(nonResolve_annotations, here::here("data", "outputs", "nonResolvable_annotations.csv"))
+
+tot_nonResolve <- length(nonResolve_annotations$valueURI)
+
 # ----------- unique valueURIs -----------
 
-# for RMarkdown - actual unique nonResolvers
-unique_nonResolve_annotations <- nonResolve_annotations %>% 
-  distinct(valueURI)
-
-length_nonResolve <- length(unique_nonResolve_annotations$valueURI)
+# for RMarkdown - actual unique ECSO
+total_ECSO_unique_valueURIs <- length(ECSO_unique_valueURIs$valueURI)
 
 # for RMarkdown - actual unique nonResolvers
 unique_CHEBI_annotations <- CHEBI_annotations %>% 
@@ -171,9 +160,17 @@ unique_WIKI_annotations <- WIKI_annotations %>%
 
 length_WIKI <- length(unique_WIKI_annotations$valueURI)
 
+# for RMarkdown - actual unique nonResolvers
+unique_nonResolve_annotations <- nonResolve_annotations %>% 
+  distinct(valueURI)
+
+length_nonResolve <- length(unique_nonResolve_annotations$valueURI)
+
+tot_unique_annotations <- sum(length_ENVO, length_CHEBI, length_WIKI, length_nonResolve, total_ECSO_unique_valueURIs)
+
 
 # ----------- make table for RMarkdown -----------
 
-nonECSO_annotations_table <- data.frame("ontology/origin" = c("CHEBI", "ENVO", "WIKI", "non-resolvable"), 
-                   "total_num_annotations" = c(tot_CHEBI, tot_ENVO, tot_WIKI, tot_nonResolve),
-                   "num_unique_valueURIs" = c(length_CHEBI, length_ENVO, length_WIKI, length_nonResolve))
+Table1_annotations_counts <- data.frame("ontology/origin" = c("ECSO", "CHEBI", "ENVO", "WIKI", "non-resolvable", "TOTAL"), 
+                   "total_num_annotations" = c(tot_ECSO_annotations, tot_CHEBI, tot_ENVO, tot_WIKI, tot_nonResolve, tot_num_annotated_attributes),
+                   "num_unique_valueURIs" = c(total_ECSO_unique_valueURIs, length_CHEBI, length_ENVO, length_WIKI, length_nonResolve, tot_unique_annotations))

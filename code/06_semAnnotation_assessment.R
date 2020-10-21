@@ -168,6 +168,6 @@ annotation_counts_new <- full_join(annotations_new, pre_new)
 post_new <- postAug2020 %>% 
   rename(postAug_n = n)
 
-annotation_counts_NEW <- inner_join(annotation_counts_new, post_new)
+Table3_annotation_counts <- inner_join(annotation_counts_new, post_new)
 
 # write.csv(annotation_counts_NEW, here::here("data", "outputs", "semAnnotation_counts.csv"))

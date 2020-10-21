@@ -78,12 +78,12 @@ Here, I explore the current ADC corpus to summarize our progress in implementing
 * The *vast* majority of semantic annotations come from The Ecosystem Ontology ([ECSO](https://bioportal.bioontology.org/ontologies/ECSO)) (**`r tot_ECSO_annotations`/`r tot_num_annotated_attributes`**, or **`r perc_ECSO`%**). The remaining come from [CHEBI](https://bioportal.bioontology.org/ontologies/CHEBI), [ENVO](https://bioportal.bioontology.org/ontologies/ENVO), and [Wikipedia](https://en.wikipedia.org/wiki/Main_Page). See details in table below.
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
-datatable(nonECSO_annotations_table,
+datatable(Table1_annotations_counts,
           class = 'cell-border stripe',
           colnames = c("Ontology/Source", "Total # of Annotations", "# of Unique Annotations"),
           caption = htmltools::tags$caption(
             style = 'caption-side: top; text-align: left;', 'Table 1: ', 
-            htmltools::em('Sources of non-ECSO annotations present in ADC datapackages')),
+            htmltools::em('Ontologies/sources of attribute-level annotations present in the ADC corpus. Total annotation counts and counts of unique annotations are listed for each source.')),
           options = list(pageLength = 5, autoWidth = TRUE))
 ```
 
@@ -101,7 +101,7 @@ datatable(nonResolve_annotations,
           colnames = c("Identifier", "valueURI", "attributeName", "attributeDefinition"),
           caption = htmltools::tags$caption(
             style = 'caption-side: top; text-align: left;', 
-            htmltools::em('Table 2: Attribute information associated with non-resolvable URIs')),
+            htmltools::em('Table 2: Attribute information associated with non-resolvable valueURIs')),
           filter = 'top', options = list(pageLength = 5, autoWidth = TRUE))
 ```
 **NOTE:** You can download **Table 2** as a .csv file [here](https://drive.google.com/file/d/1pub4pc3JaJwyYD3nHx1nl9XyZ-9Trand/view?usp=sharing)
@@ -131,15 +131,15 @@ prepostAug2020_freq_plot
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.height = 24, fig.width = 20}
 ##############################
-# TABLE 1: all semantic annotations added to attributes
+# TABLE 3: all semantic annotations added to attributes
 ##############################
 
-datatable(annotation_counts_NEW, 
+datatable(Table3_annotation_counts, 
           class = 'cell-border stripe',
           colnames = c("semantic annotation (preferred name)", "semantic annotation (valueURI)", "total counts", "pre-2020-08-01 counts", "post-2020-08-01 counts"),
           caption = htmltools::tags$caption(
             style = 'caption-side: top; text-align: left;', 'Table 3: ', 
-            htmltools::em('Most common semantic terms used to annotate ADC data package attributes.')),
+            htmltools::em('Most common semantic terms used to annotate datapackage attributes in the ADC corpus.')),
           filter = 'top', options = list(pageLength = 5, autoWidth = TRUE))
 ```
 **NOTE:** You can download **Table 3** as a .csv file [here](https://drive.google.com/file/d/1bTitU9xKJKM8S8tJoDZ3Qs-32QJlQ5CJ/view?usp=sharing).
@@ -152,7 +152,7 @@ While annotating each and every attribute within a data package is an ultimate g
 
 Recall that there are **`r num_datapackages_with_annotations`** ADC data packages containing annotations, and across those packages, a total of **`r tot_num_attributes`** attributes. While part 3 explores the **`r tot_num_annotated_attributes`** attributes that have been semantically annotated, here I summarize the remaining **`r tot_num_nonannotated_attributes`** attributes that did not receive annotations.
 
-A goal is to assess if these unannotated attributes are (a) terms that datateam members are intentionally skipping for sake of time (e.g. "less-important" attributes), (b) terms that really should have an annotation and got skipped accidentally, or (c) terms that got skipped because there is currently no appropriate semantic annotation to describe them.
+A goal is to assess if these non-annotated attributes are (a) terms that datateam members are intentionally skipping for sake of time (e.g. "less semantically important" attributes), (b) terms that really should have an annotation and got skipped accidentally, or (c) terms that got skipped because there is currently no appropriate semantic annotation to describe them.
 
 The most common non-annotated attributeNames (individual tokens) are vizualized in **Figure 3** and explored in **Table 4** below. **IMPORTANT NOTE: the attributeNames on the y-axis are actually unnested individual tokens (singular words), meaning all attributeNames were separated into individual words (e.g. `sep = " "`) during the text mining process. For example, "depth" (the second most common term; counts = 71), may exist in the ADC corpus as attributeName = "depth", "soil depth", "snow depth", etc. Parsing these will require some further analyses.**
 
@@ -187,7 +187,3 @@ Additionally, I've asked the datateam to add any attributes that they cannot fin
 
 * Raw data (extracted attribute information) from the 2020-10-01 solr query can be downloaded [here](https://drive.google.com/file/d/1X59s65_pZOt2e_Z8g4ch-tUyrcJzim28/view?usp=sharing)
 * GitHub Repository with associated code and additional data: [samanthacsik/NCEAS-DF-semantic-annoations-review](https://github.com/samanthacsik/NCEAS-DF-semantic-annotations-review)
-
-
-
-
