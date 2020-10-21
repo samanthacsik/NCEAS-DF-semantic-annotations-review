@@ -139,7 +139,7 @@ datatable(Table3_annotation_counts,
           colnames = c("semantic annotation (preferred name)", "semantic annotation (valueURI)", "total counts", "pre-2020-08-01 counts", "post-2020-08-01 counts"),
           caption = htmltools::tags$caption(
             style = 'caption-side: top; text-align: left;', 'Table 3: ', 
-            htmltools::em('Most common semantic terms used to annotate datapackage attributes in the ADC corpus.')),
+            htmltools::em('Most common semantic terms used to annotate datapackage attributes in the ADC corpus. Column 1 (semantic annotation (preferred name)) will appear blank if the annotation is from an ontology/source other than ECSO.')),
           filter = 'top', options = list(pageLength = 5, autoWidth = TRUE))
 ```
 **NOTE:** You can download **Table 3** as a .csv file [here](https://drive.google.com/file/d/1bTitU9xKJKM8S8tJoDZ3Qs-32QJlQ5CJ/view?usp=sharing).
@@ -156,7 +156,7 @@ A goal is to assess if these non-annotated attributes are (a) terms that datatea
 
 The most common non-annotated attributeNames (individual tokens) are vizualized in **Figure 3** and explored in **Table 4** below. **IMPORTANT NOTE: the attributeNames on the y-axis are actually unnested individual tokens (singular words), meaning all attributeNames were separated into individual words (e.g. `sep = " "`) during the text mining process. For example, "depth" (the second most common term; counts = 71), may exist in the ADC corpus as attributeName = "depth", "soil depth", "snow depth", etc. Parsing these will require some further analyses.**
 
-I've manually assigned terms to some general categories (see legend) -- location terms (colored green; e.g. "position", "latitude", "top", "site", etc.), temporal terms (colored pink; e.g. "data", "phase"), and QC/Confidence terms (colored yellow) are likely being intentionally skipped for sake of time (see instructions in [Data Team Training Part 4.8.2 #1](https://nceas.github.io/datateam-training/training/editing-eml.html#semantic-annotations)), whereas measurements (colored orange; e.g. "depth", "height") and environmental materials (colored blue; e.g. "soil", "snow", "ice") likely have an appropriate annotation match (ECSO & ENVO) and could be annotated. 
+I've manually assigned terms to some general categories (see legend) -- <span style="color: #009E73;">location terms</span> (e.g. "position", "latitude", "top", "site", etc.), <span style="color: #CC79A7;">temporal terms</span> (e.g. "data", "phase"), and <span style="color: #F0E442;">QC/Confidence terms</span> are likely being intentionally skipped for sake of time (see instructions in [Data Team Training Part 4.8.2 #1](https://nceas.github.io/datateam-training/training/editing-eml.html#semantic-annotations)), whereas <span style="color: #E69F00;">measurements</span> (e.g. "depth", "height") and <span style="color: #56B4E9;">environmental materials</span> (e.g. "soil", "snow", "ice") likely have an appropriate annotation match (ECSO & ENVO) and could be annotated. 
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.height = 15, fig.width = 20}
 ##############################
