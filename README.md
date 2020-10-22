@@ -20,9 +20,9 @@ NCEAS-DF-semantic-annotations-review
     |_old
   |_data
     |_filtered_term_counts
-    |_outputs
       |_nonannotated_attributes2020-10-01
       |_nonannotated_attributes2020-10-12
+    |_outputs
     |_queries
       |_query2020-10-01
        |_query2020-10-12
