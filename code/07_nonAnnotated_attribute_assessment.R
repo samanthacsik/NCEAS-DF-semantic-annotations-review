@@ -75,7 +75,7 @@ for(i in 1:length(trigram_list)){
 ##########################################################################################
 # 2) Create token frequency plots (arranged by Counts)
   # a) create separate plots
-  # b) combine plots into single, multi-panel plot using the patchwork package
+  # b) clean up for RMarkdown report
 ##########################################################################################
 
 ##############################
