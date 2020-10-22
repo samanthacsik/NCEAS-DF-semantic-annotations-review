@@ -20,7 +20,7 @@
 # Load packages
 ##############################
 
-source(here::here("code", "0_libraries.R"))
+source(here::here("code", "00_libraries.R"))
 
 ##############################
 # set nodes & get token
@@ -52,7 +52,7 @@ semAnnotations_query <- query(adc_mn,
 
 # read in the .csv file containing the package identifiers
 identifiers_file <- list.files(path = here::here("data", "queries", "query2020-10-12"), full.names = TRUE, pattern = "*.csv")
-identifiers_df <- read.csv(here::here("data", "queries", "query2020-10-12", "fullQuery_semAnnotations2020-10-12.csv"), stringsAsFactors = FALSE)
+identifiers_df <- read.csv(here::here("data", "queries", "query2020-10-12", "fullQuery_semAnnotations2020-10-12_solr.csv"), stringsAsFactors = FALSE)
 
 # filter out any data packages that don't have semantic annotations
 clean_identifiers_df <- identifiers_df %>% 
