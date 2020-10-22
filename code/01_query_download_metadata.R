@@ -3,7 +3,7 @@
 # date created: "2020-10-02"
 # date edited: "2020-10-12"
 # R version: 3.6.3
-# input: --
+# input: NA
 # output: "data/queries/*", "data/queries/*"
 
 ##########################################################################################

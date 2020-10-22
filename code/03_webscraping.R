@@ -85,5 +85,5 @@ annotated_attributes <- full_join(annotated_attributes, ECSO_unique_valueURIs)
 
 # write_csv(annotated_attributes, here::here("data", "queries", "query2020-10-12", "fullQuery_semAnnotations2020-10-12_webscraping.csv"))
 
-# read back in data
+# read back in data to check 
 # annotated_attributes2 <- read_csv(here::here("data", "queries", "query2020-10-12", "fullQuery_semAnnotations2020-10-12_webscraping.csv"))

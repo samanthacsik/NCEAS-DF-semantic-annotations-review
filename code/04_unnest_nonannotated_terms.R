@@ -12,7 +12,7 @@
 
 # This script uses the tidytext package to unnest (i.e. separate into individual columns) tokens (i.e. words) into various ngrams (where n = 1, 2, or 3)
 # Specifically, we unnest titles, keywords, abstracts, attributeNames, attributeLabels, attributeDescriptions
-# These unnested tokens are saved as .csv files for use in later scripts
+# These unnested tokens (i.e. terms) are saved as .csv files for use in later scripts
 
 ##############################
 # Load packages & custom functions
@@ -59,7 +59,7 @@ unnest_these <- tribble(
   ~my_input,  
   "attributeName",    
   "attributeLabel",     
-  "attributeDefinition", 
+  "attributeDefinition" 
 )
 
 ##############################

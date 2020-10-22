@@ -2,15 +2,14 @@
 # author: "Sam Csik"
 # date created: "2020-10-05"
 # date edited: "2020-10-05"
-# packages updated: __
-# R version: __
+# R version: 3.6.3
 # input: NA
 # output: NA
 
 source(here::here("code", "00_libraries.R"))
 
 #-----------------------------
-# used in script "02_exploration.R"
+# used in script "02_webscraping.R"
 # function to scrape the "preferred name" and "ontology name" for a given valueURI
   # takes arguments:
     # df: dataframe consisting of 3 columns: valueURI (valueURIs as character strings), prefName (containing "NA"s as character strings), ontoName (containing "NA"s as character strings)
@@ -32,7 +31,7 @@ ECSO_webscraping_prefNames <- function(df, valueURI, row){
 }
 
 #-----------------------------
-# used in script "2_unnest_tokens.R"
+# used in script "-"
 # function to unnest individual tokens and separates ngrams into multiple columns
   # takes arguments:
     # my_data: a df of solr query results
@@ -48,7 +47,7 @@ tidyTerms_unnest <- function(my_data, my_input, split) {
 }
 
 #-----------------------------
-# used in script "2_unnest_tokens.R"
+# used in script "04_unnest_nonannotated_terms.R"
 # function that applies the tidyTokens_unnest() to all specified items within a df, and saves as data objects
 # takes arguments:
   # df: a df of solr query results
@@ -76,7 +75,7 @@ process_df <- function(df, item) {
 }
 
 #-----------------------------
-# used in script: "3_filterStopWords_count_terms.R"
+# used in script: "05_filterStopWords_count_nonannotated_terms.R"
 # functions filter out tidytext::data(stop_words), count unnested tokens, and count number of unique identifiers and unique authors for each unique token (separate functions for individual tokens, bigrams, trigrams)
   # takes arguments:
     # file_name: name of .csv file saved to "data/text_mining/unnested_tokens/*"
@@ -220,7 +219,7 @@ filterCount_trigramTerms <- function(file_path, file_name) {
 }
 
 #-----------------------------
-# used in script: "_____________"
+# used in script: "04_unnest_nonannotated_terms.R", "05_filterStopWords_count_nonannotated_terms.R"
 # function to save a df from the global environment whose name matches your specified pattern as a .csv to your specified directory
   # takes arguments:
     # data: data object
@@ -234,7 +233,7 @@ output_csv <- function(data, names, file_path){
 }
 
 #-----------------------------
-# used in script: "_________________________"
+# used in script: "07_nonAnnotated_attribute_assessment.R"
 # function to import filtered token count dfs generated in script 3 
   # takes arguments:
     # file_name: name of .csv file located at "data/text_mining/filtered_token_counts/*"
@@ -257,7 +256,7 @@ import_filteredTermCounts <- function(file_name) {
 }
 
 #-----------------------------
-# used in script: "___________________________"
+# used in script: "07_nonAnnotated_attribute_assessment.R"
 # function to combine separate term columns for bigram or trigram dfs into single "token" column
   # takes arguments:
     # object: *BigramTokens or *TrigramTokens object in global environment, as class `data.frame`
@@ -287,7 +286,7 @@ combine_trigrams <- function(object, object_name){
 }
 
 #-----------------------------
-# used in script: "______________________"
+# used in script: "07_nonAnnotated_attribute_assessment.R"
 # function to create frequency plots, where terms are arranged by Counts
   # takes arguments:
     # tokens_df: *Tokens object in global environment which has had ngrams combined into a single column, as class `data.frame`

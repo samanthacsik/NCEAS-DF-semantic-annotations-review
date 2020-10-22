@@ -23,9 +23,9 @@
 source(here::here("code", "00_libraries.R"))
 source(here::here("code", "00_functions.R"))
 
-##########################################################################################
+##############################
 #  Import Data
-##########################################################################################
+##############################
 
 # isolate filtered_token_counts
 all_files <- list.files(path = here::here("data", "filtered_term_counts", "nonannotated_attributes2020-10-12"), pattern = glob2rx("filteredCounts_*"))
@@ -37,13 +37,13 @@ for(i in 1:length(all_files)){
 }
 
 ##########################################################################################
-# Get data into appropriate format for plotting
-# 1) combine bigrams into single column for plotting
-# 2) combine trigrams into single column for plotting
+# 1) Get data into appropriate format for plotting
+  # a) combine bigrams into single column for plotting
+  # b) combine trigrams into single column for plotting
 ##########################################################################################
 
 ##############################
-# 1) combine bigrams
+# a) combine bigrams
 ##############################
 
 # get lists of bigram dfs
@@ -58,7 +58,7 @@ for(i in 1:length(bigram_list)){
 }
 
 ##############################
-# 2) combine trigrams
+# b) combine trigrams
 ##############################
 
 # get list of trigram dfs
@@ -73,13 +73,13 @@ for(i in 1:length(trigram_list)){
 }
 
 ##########################################################################################
-# Create token frequency plots (arranged by Counts)
-# 1) create separate plots
-# 2) combine plots into single, multi-panel plot using the patchwork package
+# 2) Create token frequency plots (arranged by Counts)
+  # a) create separate plots
+  # b) combine plots into single, multi-panel plot using the patchwork package
 ##########################################################################################
 
 ##############################
-# create plots & save to global environment
+# a) create plots & save to global environment
 ##############################
 
 # get updated list of all dfs
@@ -95,7 +95,7 @@ for(i in 1:length(wrangledTokens_list)){
 }
 
 ##############################
-# combine figure panels and save
+# b) clean up for inclusion in RMarkdown report
 ##############################
 
 # print for report

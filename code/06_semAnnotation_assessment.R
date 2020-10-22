@@ -10,7 +10,10 @@
 # Summary
 ##########################################################################################
 
-# ...
+# This script explores current semantic annotation frequencies in the ADC corpus
+  # 1) plot most commonly used annotations for ALL ADC
+  # 2) plot most commonly used annotations, grouped by time period (pre vs post-Aug 2020)
+  # 3) generate some objects for inline text to use in RMarkdown report
 
 ##########################################################################################
 # General setup
@@ -153,9 +156,9 @@ prepostAug2020_freq_plot <- preAug2020_freq_plot + postAug2020_freq_plot +
 
 # ggsave(filename = here::here("figures", "semAnnotation_prepostAug2020_frequencies.png"), plot = prepostAug2020_freq_plot, height = 15, width = 25)
 
-##############################
-# data for report
-##############################
+##########################################################################################
+# 3) data for RMarkdown report
+##########################################################################################
 
 annotations_new <- annotation_counts %>% 
   rename(total_n = n)

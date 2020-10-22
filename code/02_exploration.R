@@ -1,7 +1,7 @@
 # title: Initial exploration and Webscraping for Annotation Information
 # author: "Sam Csik"
 # date created: "2020-10-19"
-# date edited: "2020-10-19"
+# date edited: "2020-10-21"
 # R version: 3.6.3
 # input: "data/queries/query2020-10-12/fullQuery_semAnnotations2020-10-12_attributes.csv"
 # output: "data/queries/query2020-10-12/fullQuery_semAnnotations2020-10-12_webscraping.csv"
@@ -11,8 +11,7 @@
 ##########################################################################################
 
 # 1) do some initial exploration to get an idea of how many data packages have annotations, how many annotations exist across those packages, etc.
-# 2) webscrape for preferred annotation name and ontology name for all unique valueURIs
-# 3) full_join webscraped data with`fullQuery_semAnnotations2020-10-01_attributes.csv`
+# 2) create objects for inline text values to be used in RMarkdown report
 
 ##########################################################################################
 # General setup
@@ -95,7 +94,7 @@ others_unique_valueURIs <- annotated_attributes %>%
   anti_join(ECSO_unique_valueURIs)
 
 ##########################################################################################
-# for RMarkdown report
+# 2) for RMarkdown report
 ##########################################################################################
 
 # ----------- annotations by group -----------
