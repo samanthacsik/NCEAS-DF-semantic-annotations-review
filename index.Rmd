@@ -6,7 +6,7 @@ knit: (function(input_file, encoding) {
  encoding=encoding,
  output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
 author: "Sam Csik"
-date: "10/19/2020"
+date: "10/12/2020"
 output: html_document
 editor_options: 
   chunk_output_type: console
@@ -104,7 +104,7 @@ datatable(nonResolve_annotations,
             htmltools::em('Table 2: Attribute information associated with non-resolvable valueURIs')),
           filter = 'top', options = list(pageLength = 5, autoWidth = TRUE))
 ```
-**NOTE:** You can download **Table 2** as a .csv file [here](https://drive.google.com/file/d/1pub4pc3JaJwyYD3nHx1nl9XyZ-9Trand/view?usp=sharing)
+<span style="color: darkred;">**NOTE:**</span> You can download **Table 2** as a .csv file [here](https://drive.google.com/file/d/1pub4pc3JaJwyYD3nHx1nl9XyZ-9Trand/view?usp=sharing)
 
 ------
 
@@ -142,7 +142,7 @@ datatable(Table3_annotation_counts,
             htmltools::em('Most common semantic terms used to annotate datapackage attributes in the ADC corpus. Column 1 (semantic annotation (preferred name)) will appear blank if the annotation is from an ontology/source other than ECSO.')),
           filter = 'top', options = list(pageLength = 5, autoWidth = TRUE))
 ```
-**NOTE:** You can download **Table 3** as a .csv file [here](https://drive.google.com/file/d/1bTitU9xKJKM8S8tJoDZ3Qs-32QJlQ5CJ/view?usp=sharing).
+<span style="color: darkred;">**NOTE:**</span> You can download **Table 3** as a .csv file [here](https://drive.google.com/file/d/1bTitU9xKJKM8S8tJoDZ3Qs-32QJlQ5CJ/view?usp=sharing).
 
 -----
 
@@ -177,7 +177,7 @@ datatable(attributeNameIndivTokens,
             htmltools::em('Most common indiviudal attributeName tokens left unannotated (NOTE: a token may be a standalone attributeName (e.g. "depth") or may have been a part of a multi-word attributeName (e.g. "snow depth")). In addition to the total counts of each token, the number of unique package identifers that that token is found in & the number of unique authors who used that token in an attributeName are also included. These data may be important for determining which tokens are (i) being broadly used many times (e.g. "date"), (ii) being used many times but in just a few different data packages (e.g. "position") or (iii) used many times by only one author across many data packages (possibly indicative on nested data packages; e.g. "habitat_type")')),
           filter = 'top', options = list(pageLength = 5, autoWidth = TRUE))
 ```
-**NOTE:** You can download **Table 4** as a .csv file [here](https://drive.google.com/file/d/1z7ODVyh_mgC7ze1LlpRa6Ly70CJICwvM/view?usp=sharing).
+<span style="color: darkred;">**NOTE:**</span> You can download **Table 4** as a .csv file [here](https://drive.google.com/file/d/1z7ODVyh_mgC7ze1LlpRa6Ly70CJICwvM/view?usp=sharing).
 
 Additionally, I've asked the datateam to add any attributes that they cannot find an appropriate annotation for to this [GoogleDrive Sheet](https://docs.google.com/spreadsheets/d/1ULEwESDbepuPs2xGKrZMyWYW7BHOLmGi4C8luPgbsrQ/edit?usp=sharing). They're accumulating *very slowly* (which is hopefully a good sign that most attributes have an appropriate annotation match).
 
@@ -185,5 +185,5 @@ Additionally, I've asked the datateam to add any attributes that they cannot fin
 
 ### **5. Raw data & code**
 
-* Raw data (extracted attribute information) from the 2020-10-01 solr query can be downloaded [here](https://drive.google.com/file/d/1X59s65_pZOt2e_Z8g4ch-tUyrcJzim28/view?usp=sharing)
+* Raw data (extracted attribute information) from the 2020-10-12 solr query can be downloaded [here](https://drive.google.com/file/d/1X59s65_pZOt2e_Z8g4ch-tUyrcJzim28/view?usp=sharing)
 * GitHub Repository with associated code and additional data: [samanthacsik/NCEAS-DF-semantic-annoations-review](https://github.com/samanthacsik/NCEAS-DF-semantic-annotations-review)
