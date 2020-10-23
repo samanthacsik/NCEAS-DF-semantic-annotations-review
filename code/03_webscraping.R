@@ -34,6 +34,12 @@ extracted_attributes <- read_csv(here::here("data", "queries", "query2020-10-12"
 # 1) Web scraping for Preferred Names and Ontology Names
 ##########################################################################################
 
+# valueURIs from ECSO 
+ECSO_unique_valueURIs <- extracted_attributes %>% 
+  filter(valueURI != "NA") %>% 
+  distinct(valueURI) %>% 
+  filter(str_detect(valueURI,"^http://purl.dataone.org/odo/ECSO_"))
+
 ##############################
 # add columns for prefName & ontoName
 ##############################
@@ -81,9 +87,12 @@ for(row in 1:nrow(ECSO_unique_valueURIs)){
 # 2) join prefNames and ontoNames with original `annotated_attributes` df; save as .csv
 ##########################################################################################
 
-annotated_attributes <- full_join(annotated_attributes, ECSO_unique_valueURIs)
+ALL_attributesAndAnnotations <- full_join(extracted_attributes, ECSO_unique_valueURIs)
+# write_csv(ALL_attributesAndAnnotations , here::here("data", "queries", "query2020-10-12", "fullQuery_semAnnotations2020-10-12_webscraping_allAttributes.csv"))
 
-# write_csv(annotated_attributes, here::here("data", "queries", "query2020-10-12", "fullQuery_semAnnotations2020-10-12_webscraping.csv"))
+annotated_attributes_ONLY <- ALL_attributesAndAnnotations %>% 
+  filter(!is.na(valueURI))
+# write_csv(annotated_attributes_ONLY, here::here("data", "queries", "query2020-10-12", "fullQuery_semAnnotations2020-10-12_webscraping_annotatedAttributesONLY.csv"))
 
 # read back in data to check 
 annotated_attributes2 <- read_csv(here::here("data", "queries", "query2020-10-12", "fullQuery_semAnnotations2020-10-12_webscraping.csv"))

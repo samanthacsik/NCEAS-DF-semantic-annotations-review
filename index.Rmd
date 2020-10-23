@@ -199,6 +199,5 @@ Additionally, I've asked the datateam to add any attributes that they cannot fin
 
 * Raw data:
     * solr query (2020-10-12) is downloadable [here](https://drive.google.com/file/d/1jQCcfYIDTD8FID40x77ga-2F5MbbPUO1/view?usp=sharing)
-    * tidied attribute information extracted from 2020-10-12 solr query is downloadable [here](https://drive.google.com/file/d/1LUxt2lTdYnc6IDkknSbjZH_AyRE3team/view?usp=sharing)
-    * annotated attributes and their associated valueURIs and prefNames (webscraped) are downloadable [here](https://drive.google.com/file/d/1wvcSvXWj0xoDU1DFEiKRx_jnkjxrRQaz/view?usp=sharing)
+    * tidied attribute/annotation information extracted from 2020-10-12 solr query is downloadable [here](https://drive.google.com/file/d/1HE8aD1KJll0xJJc8M7y3LHVBHYm4tixG/view?usp=sharing)
 * GitHub Repository with associated code, analyses, and data (this also includes analyses and data not explicitly covered in this report): [samanthacsik/NCEAS-DF-semantic-annoations-review](https://github.com/samanthacsik/NCEAS-DF-semantic-annotations-review)
