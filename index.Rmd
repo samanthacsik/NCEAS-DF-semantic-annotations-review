@@ -7,7 +7,10 @@ knit: (function(input_file, encoding) {
  output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
 author: "Sam Csik"
 date: "10/12/2020"
-output: html_document
+output: 
+  html_document:
+    toc: true
+    toc_float: true
 editor_options: 
   chunk_output_type: console
 ---
@@ -51,7 +54,7 @@ source(here::here("code", "07_nonAnnotated_attribute_assessment.R"))
 
 ------
 
-### **1. Overview**
+## **1. Overview**
 
 In order to improve data discoverablity within the Arctic Data Center (ADC), the datateam is beginning to incorporate the addition of semantic annotations into the data curation process. Doing so offers a way to standardize the diverse descriptions of data used by researchers across disciplines by attaching terms from controlled vocabularies. The use of semantic annotations provides not only definitions of concepts, but also shows the relationships between different terminology. 
 
@@ -72,7 +75,7 @@ Here, I explore the current ADC corpus to summarize our progress in implementing
 
 ------
 
-### **2. Summary of annotation efforts**
+## **2. Summary of annotation efforts**
 
 **How many datapackages have annotations?**
 
@@ -117,7 +120,7 @@ datatable(nonResolve_annotations,
 
 ------
 
-### **3. Which semantic annotations are most commonly used at the attribute level?**
+## **3. Which semantic annotations are most commonly used at the attribute level?**
 
 The most common semantic annotations used across all ACD metadata records are visualized in **Figure 1**, below (for sake of space, only terms used more than 20 times are included in Fig.1). These include terms such as *soil temperature* (used a total of 439 times), *relative species abundance* (used 305 times), and *air temperature* (used 283 times). You can explore (and download) the associated data file containing *all* semantic annotations (i.e. not just those used >20 times) currently included in ADC metadata records in **Table 3**. Dropping the valueURI into your web browswer will take you to the semantic annotation, where you can learn more about its description and relationship to other terms.
 ```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.height = 16, fig.width = 12}
@@ -155,7 +158,7 @@ datatable(Table3_annotation_counts,
 
 -----
 
-### **4. Which attributes are not getting annotated? Why?**
+## **4. Which attributes are not getting annotated?**
 
 While annotating each and every attribute within a data package is an ultimate goal, it is currently a time-intensive process for the datateam. As such, datateam members target the most "semantically-important" attributes to annotate and leave "less-important" attributes (terms that are less likely to be searched on; e.g. datetime, latitude, longitude) unannotated. 
 
@@ -192,7 +195,7 @@ Additionally, I've asked the datateam to add any attributes that they cannot fin
 
 -----
 
-### **5. Raw data & code**
+## **5. Raw data & code**
 
 * Raw data:
     * solr query (2020-10-12) is downloadable [here](https://drive.google.com/file/d/1jQCcfYIDTD8FID40x77ga-2F5MbbPUO1/view?usp=sharing)
