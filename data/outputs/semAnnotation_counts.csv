@@ -1,244 +1,980 @@
-"","prefName","valueURI","total_n","preAug_n","postAug_n"
-"1","soil temperature","http://purl.dataone.org/odo/ECSO_00001230",497,469,28
-"2","plant cover percentage","http://purl.dataone.org/odo/ECSO_00001197",398,6,392
-"3","air temperature","http://purl.dataone.org/odo/ECSO_00001225",304,283,21
-"4","ground heat flux","http://purl.dataone.org/odo/ECSO_00001216",291,281,10
-"5","relative humidity","http://purl.dataone.org/odo/ECSO_00001545",256,246,10
-"6","latitude coordinate","http://purl.dataone.org/odo/ECSO_00002130",253,240,13
-"7","longitude coordinate","http://purl.dataone.org/odo/ECSO_00002132",253,240,13
-"8","wind speed","http://purl.dataone.org/odo/ECSO_00001233",229,217,12
-"9","angle measurement type","http://purl.dataone.org/odo/ECSO_00002726",177,NA,177
-"10","braun-blanquet cover abundance scale","http://purl.dataone.org/odo/ECSO_00002379",164,NA,164
-"11","date and time of measurement","http://purl.dataone.org/odo/ECSO_00002043",163,74,89
-"12","incoming shortwave radiation","http://purl.dataone.org/odo/ECSO_00001860",160,149,11
-"13","net radiation","http://purl.dataone.org/odo/ECSO_00001950",148,137,11
-"14","date","http://purl.dataone.org/odo/ECSO_00002051",147,141,6
-"15","time of measurement","http://purl.dataone.org/odo/ECSO_00002040",130,124,6
-"16","data quality flag","http://purl.dataone.org/odo/ECSO_00001720",124,122,2
-"17","carbon dioxide flux","http://purl.dataone.org/odo/ECSO_00000536",103,81,22
-"18","elevation","http://purl.dataone.org/odo/ECSO_00001567",102,95,7
-"19","photosynthetically active radiation","http://purl.dataone.org/odo/ECSO_00001573",89,78,11
-"20","wind direction measurement type","http://purl.dataone.org/odo/ECSO_00001712",85,74,11
-"21","year of measurement","http://purl.dataone.org/odo/ECSO_00002050",82,76,6
-"22","volumetric water content","http://purl.dataone.org/odo/ECSO_00001662",80,59,21
-"23","air pressure","http://purl.dataone.org/odo/ECSO_00001186",72,57,15
-"24","friction velocity","http://purl.dataone.org/odo/ECSO_00001546",67,56,11
-"25","soil moisture percentage","http://purl.dataone.org/odo/ECSO_00000517",51,50,1
-"26","water salinity","http://purl.dataone.org/odo/ECSO_00001164",51,35,16
-"27","temperature measurement type","http://purl.dataone.org/odo/ECSO_00001104",46,12,34
-"28","seawater temperature","http://purl.dataone.org/odo/ECSO_00001226",45,28,17
-"29","voltage raw data","http://purl.dataone.org/odo/ECSO_00001570",45,41,4
-"30","shrub cover percentage","http://purl.dataone.org/odo/ECSO_00001608",43,3,40
-"31","measurement end time","http://purl.dataone.org/odo/ECSO_00002045",42,31,11
-"32","monin-obukhov stability parameter","http://purl.dataone.org/odo/ECSO_00002252",41,31,10
-"33","outgoing longwave radiation","http://purl.dataone.org/odo/ECSO_00001902",37,26,11
-"34","ice core length","http://purl.dataone.org/odo/ECSO_00002656",36,1,35
-"35","water depth","http://purl.dataone.org/odo/ECSO_00001203",33,11,22
-"36","station identifier","http://purl.dataone.org/odo/ECSO_00002393",31,27,4
-"37","net ecosystem exchange carbon flux","http://purl.dataone.org/odo/ECSO_00000014",29,18,11
-"38","pressure measurement type","http://purl.dataone.org/odo/ECSO_00001185",28,21,7
-"39","study location identifier","http://purl.dataone.org/odo/ECSO_00002767",27,19,8
-"40","incoming longwave radiation","http://purl.dataone.org/odo/ECSO_00001899",26,15,11
-"41","station name","http://purl.dataone.org/odo/ECSO_00002392",26,22,4
-"42","snow accumulation","http://purl.dataone.org/odo/ECSO_00001859",25,NA,25
-"43","dissolved oxygen concentration","http://purl.dataone.org/odo/ECSO_00001669",24,15,9
-"44","distributed biological observatory region identifier","http://purl.dataone.org/odo/ECSO_00002617",24,22,2
-"45","precipitation height","http://purl.dataone.org/odo/ECSO_00001223",24,11,13
-"46","study location name","http://purl.dataone.org/odo/ECSO_00002768",24,23,1
-"47",NA,"http://purl.obolibrary.org/obo/CHEBI_36683",24,NA,24
-"48","incoming photosynthetically active radiation","http://purl.dataone.org/odo/ECSO_00001581",23,2,21
-"49","mole fraction of carbon dioxide","http://purl.dataone.org/odo/ECSO_00000613",23,2,21
-"50","vapor pressure deficit","http://purl.dataone.org/odo/ECSO_00001972",23,13,10
-"51","depth","http://purl.dataone.org/odo/ECSO_00000515",22,NA,22
-"52","monin-obukhov length","http://purl.dataone.org/odo/ECSO_00002251",22,21,1
-"53","sodium concentration","http://purl.dataone.org/odo/ECSO_00001804",21,5,16
-"54","outgoing shortwave radiation","http://purl.dataone.org/odo/ECSO_00001903",20,9,11
-"55","thickness of melt layer","http://purl.dataone.org/odo/ECSO_00002845",20,4,16
-"56","chromophoric dissolved organic matter absorbance ratio","http://purl.dataone.org/odo/ECSO_00001501",19,9,10
-"57","ice density","http://purl.dataone.org/odo/ECSO_00002959",19,3,16
-"58","magnesium concentration","http://purl.dataone.org/odo/ECSO_00001790",19,3,16
-"59","snow depth","http://purl.dataone.org/odo/ECSO_00001205",19,8,11
-"60","ammonium concentration","http://purl.dataone.org/odo/ECSO_00001116",18,2,16
-"61","respiration carbon flux","http://purl.dataone.org/odo/ECSO_00000016",18,7,11
-"62","tag number","http://purl.dataone.org/odo/ECSO_00001217",18,16,2
-"63",NA,"http://purl.dataone.org/odo/ECSO_00010114",18,NA,18
-"64","forb cover percentage","http://purl.dataone.org/odo/ECSO_00001611",17,1,16
-"65","graminoid cover percentage","http://purl.dataone.org/odo/ECSO_00001623",17,1,16
-"66","ice core diameter","http://purl.dataone.org/odo/ECSO_00002409",17,1,16
-"67","ice mass","http://purl.dataone.org/odo/ECSO_00002084",17,1,16
-"68","methanesulfonic acid concentration in ice","http://purl.dataone.org/odo/ECSO_00002295",17,1,16
-"69","oxygen isotope ratio","http://purl.dataone.org/odo/ECSO_00001739",17,1,16
-"70","seawater conductivity","http://purl.dataone.org/odo/ECSO_00001540",17,6,11
-"71","seawater depth","http://purl.dataone.org/odo/ECSO_00001204",17,15,2
-"72","seawater pressure","http://purl.dataone.org/odo/ECSO_00001187",17,15,2
-"73","sulfate concentration","http://purl.dataone.org/odo/ECSO_00002156",17,1,16
-"74","water sample identifier","http://purl.dataone.org/odo/ECSO_00002786",17,8,9
-"75","calcium concentration","http://purl.dataone.org/odo/ECSO_00001772",16,NA,16
-"76","chlorine concentration","http://purl.dataone.org/odo/ECSO_00001776",16,NA,16
-"77","conductivity","http://purl.dataone.org/odo/ECSO_00001534",16,NA,16
-"78","delta deuterium","http://purl.dataone.org/odo/ECSO_00001957",16,NA,16
-"79","measurement start time","http://purl.dataone.org/odo/ECSO_00002044",16,3,13
-"80","nitrate concentration","http://purl.dataone.org/odo/ECSO_00002216",16,NA,16
-"81","potassium concentation","http://purl.dataone.org/odo/ECSO_00001798",16,NA,16
-"82","sonic temperature","http://purl.dataone.org/odo/ECSO_00001524",16,15,1
-"83",NA,"http://en.wikipedia.org/wiki/Volumetric_flow_rate",16,NA,16
-"84",NA,"http://www.purl.dataone.org/odo/ECSO_00010114",16,14,2
-"85","cruise identifier","http://purl.dataone.org/odo/ECSO_00002370",15,13,2
-"86","carbon percentage","http://purl.dataone.org/odo/ECSO_00001127",14,13,1
-"87","type of vegetation","http://purl.dataone.org/odo/ECSO_00002207",14,10,4
-"88","vanadium concentration in lake water","http://purl.dataone.org/odo/ECSO_00001817",14,NA,14
-"89","d13c","http://purl.dataone.org/odo/ECSO_00000669",13,9,4
-"90","water ph","http://purl.dataone.org/odo/ECSO_00001159",13,5,8
-"91","latent heat turbulent flux","http://purl.dataone.org/odo/ECSO_00001571",12,1,11
-"92","mole fraction of water vapor","http://purl.dataone.org/odo/ECSO_00001683",12,1,11
-"93","sensible heat flux without storage correction","http://purl.dataone.org/odo/ECSO_00001717",12,1,11
-"94","absorbed fraction incoming photosynthetically active radiation","http://purl.dataone.org/odo/ECSO_00001576",11,1,10
-"95","absorbed photosynthetically active radiation","http://purl.dataone.org/odo/ECSO_00001575",11,1,10
-"96","diffuse shortwave incoming radiation","http://purl.dataone.org/odo/ECSO_00002481",11,1,10
-"97","heat storage flux in air","http://purl.dataone.org/odo/ECSO_00002268",11,1,10
-"98","laboratory identifier","http://purl.dataone.org/odo/ECSO_00002596",11,8,3
-"99","latent heat storage flux","http://purl.dataone.org/odo/ECSO_00001572",11,1,10
-"100","outgoing photosynthetically active radiation","http://purl.dataone.org/odo/ECSO_00001582",11,1,10
-"101","14c age","http://purl.dataone.org/odo/ECSO_00002163",10,6,4
-"102","data collection equipment","http://purl.dataone.org/odo/ECSO_00002527",10,6,4
-"103","snow water equivalent","http://purl.dataone.org/odo/ECSO_00001747",10,4,6
-"104","chlorophyll-a concentration","http://purl.dataone.org/odo/ECSO_00000516",9,5,4
-"105","dissolved silicate concentration in water","http://purl.dataone.org/odo/ECSO_00002082",9,2,7
-"106","methane concentration","http://purl.dataone.org/odo/ECSO_00000615",9,NA,9
-"107","name","http://purl.dataone.org/odo/ECSO_00001193",9,NA,9
-"108","sulfate concentration in water","http://purl.dataone.org/odo/ECSO_00002389",9,2,7
-"109","calcium concentration in lake water","http://purl.dataone.org/odo/ECSO_00001773",8,1,7
-"110","cast identifier","http://purl.dataone.org/odo/ECSO_00002223",8,6,2
-"111","potassium concentration in lake water","http://purl.dataone.org/odo/ECSO_00001799",8,1,7
-"112","sand percentage","http://purl.dataone.org/odo/ECSO_00002583",8,7,1
-"113","seawater bottom depth","http://purl.dataone.org/odo/ECSO_00001549",8,6,2
-"114","snow density","http://purl.dataone.org/odo/ECSO_00002917",8,2,6
-"115",NA,"http://purl.dataone.org/odo/ECSO_#Leaf_Area_Index",8,NA,8
-"116","aluminum concentration in lake water","http://purl.dataone.org/odo/ECSO_00001763",7,NA,7
-"117","arsenic concentration in lake water","http://purl.dataone.org/odo/ECSO_00001767",7,NA,7
-"118","barium concentration in lake water","http://purl.dataone.org/odo/ECSO_00001769",7,NA,7
-"119","boron concentration in lake water","http://purl.dataone.org/odo/ECSO_00001771",7,NA,7
-"120","cation concentration in lake water","http://purl.dataone.org/odo/ECSO_00001775",7,NA,7
-"121","clay percentage","http://purl.dataone.org/odo/ECSO_00002309",7,6,1
-"122","cobalt concentration in lake water","http://purl.dataone.org/odo/ECSO_00001781",7,NA,7
-"123","copper concentration in lake water","http://purl.dataone.org/odo/ECSO_00001783",7,NA,7
-"124","crustose lichen cover percentage","http://purl.dataone.org/odo/ECSO_00001605",7,NA,7
-"125","dissolved oxygen concentration in seawater","http://purl.dataone.org/odo/ECSO_00002861",7,1,6
-"126","gravimetric soil moisture percentage","http://purl.dataone.org/odo/ECSO_00001583",7,NA,7
-"127","iron concentration in water","http://purl.dataone.org/odo/ECSO_00001785",7,NA,7
-"128","lake water alkalinity","http://purl.dataone.org/odo/ECSO_00001751",7,NA,7
-"129","lake water conductivity","http://purl.dataone.org/odo/ECSO_00001537",7,NA,7
-"130","lanthanum concentration in lake water","http://purl.dataone.org/odo/ECSO_00001765",7,NA,7
-"131","lead concentration in lake water","http://purl.dataone.org/odo/ECSO_00001787",7,NA,7
-"132","lithium concentration in lake water","http://purl.dataone.org/odo/ECSO_00001789",7,NA,7
-"133","magnesium concentration in lake water","http://purl.dataone.org/odo/ECSO_00001791",7,NA,7
-"134","manganese concentration in lake water","http://purl.dataone.org/odo/ECSO_00001793",7,NA,7
-"135","molybdenum concentration in lake water","http://purl.dataone.org/odo/ECSO_00001795",7,NA,7
-"136","nickel concentration in lake water","http://purl.dataone.org/odo/ECSO_00001797",7,NA,7
-"137","shrub height","http://purl.dataone.org/odo/ECSO_00001579",7,NA,7
-"138","silt percentage","http://purl.dataone.org/odo/ECSO_00002584",7,6,1
-"139","silver concentration in lake water","http://purl.dataone.org/odo/ECSO_00001803",7,NA,7
-"140","sodium concentration in lake water","http://purl.dataone.org/odo/ECSO_00001805",7,NA,7
-"141","strontium concentration in lake water","http://purl.dataone.org/odo/ECSO_00001807",7,NA,7
-"142","thallium concentration in lake water","http://purl.dataone.org/odo/ECSO_00001811",7,NA,7
-"143","tin concentration in lake water","http://purl.dataone.org/odo/ECSO_00001813",7,NA,7
-"144","titanium concentration in lake water","http://purl.dataone.org/odo/ECSO_00001815",7,NA,7
-"145","water cover percentage","http://purl.dataone.org/odo/ECSO_00001630",7,3,4
-"146","zinc concentration in lake water","http://purl.dataone.org/odo/ECSO_00001819",7,NA,7
-"147",NA,"http://purl.obolibrary.org/obo/ENVO_09000019",7,NA,7
-"148","altitude above seafloor","http://purl.dataone.org/odo/ECSO_00001565",6,3,3
-"149","beam transmission percentage","http://purl.dataone.org/odo/ECSO_00001731",6,4,2
-"150","d18o","http://purl.dataone.org/odo/ECSO_00001677",6,4,2
-"151","ice core identifier","http://purl.dataone.org/odo/ECSO_00002938",6,2,4
-"152","site identifier","http://purl.dataone.org/odo/ECSO_00002997",6,NA,6
-"153","albedo","http://purl.dataone.org/odo/ECSO_00001694",5,4,1
-"154","bare soil cover percentage","http://purl.dataone.org/odo/ECSO_00001648",5,1,4
-"155","calculated year","http://purl.dataone.org/odo/ECSO_00002129",5,4,1
-"156","cdom absorbance at wavelength 254 nm","http://purl.dataone.org/odo/ECSO_00001506",5,3,2
-"157","cdom absorbance at wavelength 350 nm","http://purl.dataone.org/odo/ECSO_00001507",5,3,2
-"158","cdom absorbance at wavelength 365 nm","http://purl.dataone.org/odo/ECSO_00001508",5,3,2
-"159","cdom absorbance at wavelength 412 nm","http://purl.dataone.org/odo/ECSO_00001510",5,3,2
-"160","cdom absorbance at wavelength 440 nm","http://purl.dataone.org/odo/ECSO_00001511",5,3,2
-"161","count density","http://purl.dataone.org/odo/ECSO_00001160",5,NA,5
-"162","d18o in water vapor","http://purl.dataone.org/odo/ECSO_00002200",5,NA,5
-"163","delta deuterium in water vapor","http://purl.dataone.org/odo/ECSO_00002201",5,NA,5
-"164","dissolved ammonia concentration","http://purl.dataone.org/odo/ECSO_00001703",5,3,2
-"165","dissolved phosphate concentration","http://purl.dataone.org/odo/ECSO_00001897",5,3,2
-"166","distance","http://purl.dataone.org/odo/ECSO_00001710",5,4,1
-"167","foliose lichen cover percentage","http://purl.dataone.org/odo/ECSO_00001616",5,NA,5
-"168","fruticose lichen cover percentage","http://purl.dataone.org/odo/ECSO_00001633",5,NA,5
-"169","latitude degree component","http://purl.dataone.org/odo/ECSO_00002247",5,2,3
-"170","litter cover percentage","http://purl.dataone.org/odo/ECSO_00001637",5,1,4
-"171","moss cover percentage","http://purl.dataone.org/odo/ECSO_00001639",5,3,2
-"172","rock cover percentage","http://purl.dataone.org/odo/ECSO_00001627",5,1,4
-"173","soil moisture - categorical","http://purl.dataone.org/odo/ECSO_00002422",5,1,4
-"174","water vapor mixing ratio","http://purl.dataone.org/odo/ECSO_00002942",5,NA,5
-"175","water weight","http://purl.dataone.org/odo/ECSO_00002204",5,NA,5
-"176",NA,"http://purl.dataone.org/odo/ECSO_00010076",5,NA,5
-"177","14c age standard deviation","http://purl.dataone.org/odo/ECSO_00002680",4,2,2
-"178","carbon to nitrogen ratio","http://purl.dataone.org/odo/ECSO_00001138",4,3,1
-"179","cdom absorbance at wavelength 250 nm","http://purl.dataone.org/odo/ECSO_00001505",4,2,2
-"180","cdom absorbance at wavelength 375 nm","http://purl.dataone.org/odo/ECSO_00001509",4,2,2
-"181","data source","http://purl.dataone.org/odo/ECSO_00002744",4,2,2
-"182","genus name","http://purl.dataone.org/odo/ECSO_00002734",4,3,1
-"183","herbaceous plant height","http://purl.dataone.org/odo/ECSO_00001911",4,NA,4
-"184","live moss height","http://purl.dataone.org/odo/ECSO_00001912",4,NA,4
-"185","liverwort cover percentage","http://purl.dataone.org/odo/ECSO_00001661",4,NA,4
-"186","oxygen saturation percentage","http://purl.dataone.org/odo/ECSO_00001668",4,2,2
-"187","ph","http://purl.dataone.org/odo/ECSO_00001645",4,3,1
-"188","pheophytin concentration","http://purl.dataone.org/odo/ECSO_00001249",4,2,2
-"189","plant material height","http://purl.dataone.org/odo/ECSO_00001222",4,NA,4
-"190","seawater chlorophyll fluorescence","http://purl.dataone.org/odo/ECSO_00000568",4,NA,4
-"191","silica concentration in seawater","http://purl.dataone.org/odo/ECSO_00001898",4,2,2
-"192","soil bulk density","http://purl.dataone.org/odo/ECSO_00001110",4,1,3
-"193","soil ph","http://purl.dataone.org/odo/ECSO_00001646",4,3,1
-"194","surficial geomorphology code","http://purl.dataone.org/odo/ECSO_00002647",4,NA,4
-"195","d15n","http://purl.dataone.org/odo/ECSO_00001738",3,2,1
-"196","deuterium excess","http://purl.dataone.org/odo/ECSO_00002401",3,NA,3
-"197","direction measurement type","http://purl.dataone.org/odo/ECSO_00002542",3,2,1
-"198","dissolved nitrite and nitrate concentration","http://purl.dataone.org/odo/ECSO_00001895",3,1,2
-"199","gross primary production carbon flux","http://purl.dataone.org/odo/ECSO_00000020",3,2,1
-"200","identity","http://purl.dataone.org/odo/ECSO_00001157",3,NA,3
-"201","lichen cover percentage","http://purl.dataone.org/odo/ECSO_00001615",3,2,1
-"202","longitude degree component","http://purl.dataone.org/odo/ECSO_00002239",3,2,1
-"203","soil dry weight and container weight","http://purl.dataone.org/odo/ECSO_00002830",3,NA,3
-"204","soil sample length","http://purl.dataone.org/odo/ECSO_00002455",3,2,1
-"205","soil wet weight plus tare weight","http://purl.dataone.org/odo/ECSO_00002171",3,NA,3
-"206","sound velocity in seawater","http://purl.dataone.org/odo/ECSO_00002722",3,2,1
-"207","surface photosynthetically active radiation","http://purl.dataone.org/odo/ECSO_00001574",3,1,2
-"208","suspended particulate material concentration in water","http://purl.dataone.org/odo/ECSO_00002646",3,1,2
-"209","temporal rate measurement type","http://purl.dataone.org/odo/ECSO_00000519",3,NA,3
-"210","age_measurementtype","http://purl.dataone.org/odo/ECSO_00000656",2,NA,2
-"211","calcium concentration in soil","http://purl.dataone.org/odo/ECSO_00001880",2,1,1
-"212","cdom absorbance at wavelength 443 nm","http://purl.dataone.org/odo/ECSO_00001512",2,NA,2
-"213","conductivity standard deviation","http://purl.dataone.org/odo/ECSO_00001742",2,NA,2
-"214","d14c","http://purl.dataone.org/odo/ECSO_00003112",2,1,1
-"215","d18o standardized","http://purl.dataone.org/odo/ECSO_00001672",2,NA,2
-"216","depth of surface dust","http://purl.dataone.org/odo/ECSO_00001891",2,NA,2
-"217","dust layer thickness","http://purl.dataone.org/odo/ECSO_00002228",2,NA,2
-"218","fluorescence standard deviation","http://purl.dataone.org/odo/ECSO_00002677",2,NA,2
-"219","horsetail cover percentage","http://purl.dataone.org/odo/ECSO_00001634",2,NA,2
-"220","light attenuation","http://purl.dataone.org/odo/ECSO_00001733",2,NA,2
-"221","longitude second component","http://purl.dataone.org/odo/ECSO_00002250",2,NA,2
-"222","magnesium concentration in soil","http://purl.dataone.org/odo/ECSO_00001927",2,1,1
-"223","potassium concentration in soil","http://purl.dataone.org/odo/ECSO_00002340",2,1,1
-"224","sea surface salinity","http://purl.dataone.org/odo/ECSO_00001658",2,NA,2
-"225","seawater velocity","http://purl.dataone.org/odo/ECSO_00001235",2,NA,2
-"226","sodium concentration in soil","http://purl.dataone.org/odo/ECSO_00002420",2,1,1
-"227","soil dry weight","http://purl.dataone.org/odo/ECSO_00001241",2,NA,2
-"228","soil mass","http://purl.dataone.org/odo/ECSO_00002578",2,1,1
-"229","soil wet weight","http://purl.dataone.org/odo/ECSO_00001178",2,NA,2
-"230","temperature standard deviation","http://purl.dataone.org/odo/ECSO_00001743",2,NA,2
-"231","tree diameter at breast height","http://purl.dataone.org/odo/ECSO_00000549",2,NA,2
-"232","wind velocity standard deviation","http://purl.dataone.org/odo/ECSO_00002678",2,NA,2
-"233","air moisture percentage","http://purl.dataone.org/odo/ECSO_00001163",1,NA,1
-"234","algae cover percentage","http://purl.dataone.org/odo/ECSO_00001647",1,NA,1
-"235","beam transmission ratio standard deviation","http://purl.dataone.org/odo/ECSO_00001745",1,NA,1
-"236","growth","http://purl.dataone.org/odo/ECSO_00000540",1,NA,1
-"237","height","http://purl.dataone.org/odo/ECSO_00000511",1,NA,1
-"238","momentum flux","http://purl.dataone.org/odo/ECSO_00001107",1,NA,1
-"239","organic carbon","http://purl.dataone.org/odo/ECSO_00000329",1,NA,1
-"240","oxygen concentration","http://purl.dataone.org/odo/ECSO_00001246",1,NA,1
-"241","soil active layer depth","http://purl.dataone.org/odo/ECSO_00001210",1,NA,1
-"242","speed measurement type","http://purl.dataone.org/odo/ECSO_00002721",1,NA,1
-"243","total nitrogen percentage in soil","http://purl.dataone.org/odo/ECSO_00002855",1,NA,1
+"prefName","valueURI","n","preAug_n","postAug_n","unique_ids","unique_authors"
+"soil temperature","http://purl.dataone.org/odo/ECSO_00001230",497,"469","28",30,22
+"plant cover percentage","http://purl.dataone.org/odo/ECSO_00001197",398,"6","392",5,4
+"relative species abundance","http://purl.dataone.org/odo/ECSO_00002822",305,"305","0",3,3
+"air temperature","http://purl.dataone.org/odo/ECSO_00001225",304,"283","21",34,26
+"ground heat flux","http://purl.dataone.org/odo/ECSO_00001216",291,"281","10",21,11
+"relative humidity","http://purl.dataone.org/odo/ECSO_00001545",256,"246","10",22,16
+"latitude coordinate","http://purl.dataone.org/odo/ECSO_00002130",253,"240","13",60,43
+"longitude coordinate","http://purl.dataone.org/odo/ECSO_00002132",253,"240","13",60,43
+"wind speed","http://purl.dataone.org/odo/ECSO_00001233",229,"217","12",26,19
+"bird count","http://purl.dataone.org/odo/ECSO_00002685",200,"200","0",1,1
+"ice depth","http://purl.dataone.org/odo/ECSO_00001555",179,"179","0",8,8
+"angle measurement type","http://purl.dataone.org/odo/ECSO_00002726",177,"0","177",1,1
+"ice regime classification","http://purl.dataone.org/odo/ECSO_00002522",166,"166","0",1,1
+"braun-blanquet cover abundance scale","http://purl.dataone.org/odo/ECSO_00002379",164,"0","164",2,1
+"date and time of measurement","http://purl.dataone.org/odo/ECSO_00002043",163,"74","89",36,21
+"day of year","http://purl.dataone.org/odo/ECSO_00002058",160,"160","0",10,8
+"incoming shortwave radiation","http://purl.dataone.org/odo/ECSO_00001860",160,"149","11",16,11
+"percentage of lake pixels above threshold","http://purl.dataone.org/odo/ECSO_00002520",160,"160","0",1,1
+"percentage of lake pixels below threshold","http://purl.dataone.org/odo/ECSO_00002521",160,"160","0",1,1
+"hours elapsed","http://purl.dataone.org/odo/ECSO_00002067",149,"149","0",2,2
+"net radiation","http://purl.dataone.org/odo/ECSO_00001950",148,"137","11",24,13
+"date","http://purl.dataone.org/odo/ECSO_00002051",147,"141","6",50,35
+"precipitation rate","http://purl.dataone.org/odo/ECSO_00001162",131,"131","0",1,1
+"terrain pixel classification","http://purl.dataone.org/odo/ECSO_00002835",131,"131","0",1,1
+"time of measurement","http://purl.dataone.org/odo/ECSO_00002040",130,"124","6",14,12
+"data quality flag","http://purl.dataone.org/odo/ECSO_00001720",124,"122","2",9,5
+"mineral species percentage","http://purl.dataone.org/odo/ECSO_00002848",116,"116","0",1,1
+"carbon dioxide flux","http://purl.dataone.org/odo/ECSO_00000536",103,"81","22",26,16
+"elevation","http://purl.dataone.org/odo/ECSO_00001567",102,"95","7",9,9
+"NA","http://www.purl.dataone.org/odo/ECSO_00010077",93,"93","0",19,11
+"photosynthetically active radiation","http://purl.dataone.org/odo/ECSO_00001573",89,"78","11",17,13
+"utm northing coordinate","http://purl.dataone.org/odo/ECSO_00002625",86,"86","0",3,3
+"latent heat flux","http://purl.dataone.org/odo/ECSO_00001219",85,"85","0",11,5
+"sensible heat flux","http://purl.dataone.org/odo/ECSO_00001716",85,"85","0",11,5
+"utm easting coordinate","http://purl.dataone.org/odo/ECSO_00002626",85,"85","0",2,2
+"wind direction measurement type","http://purl.dataone.org/odo/ECSO_00001712",85,"74","11",23,17
+"elevation correction","http://purl.dataone.org/odo/ECSO_00002628",84,"84","0",1,1
+"iceberg draft","http://purl.dataone.org/odo/ECSO_00003059",84,"84","0",1,1
+"iceberg submerged area","http://purl.dataone.org/odo/ECSO_00002502",84,"84","0",1,1
+"iceberg surface area","http://purl.dataone.org/odo/ECSO_00002469",84,"84","0",1,1
+"dry bulb temperature","http://purl.dataone.org/odo/ECSO_00001521",83,"83","0",3,2
+"wet bulb temperature","http://purl.dataone.org/odo/ECSO_00001522",83,"83","0",3,2
+"year of measurement","http://purl.dataone.org/odo/ECSO_00002050",82,"76","6",25,20
+"volumetric water content","http://purl.dataone.org/odo/ECSO_00001662",80,"59","21",17,12
+"air pressure","http://purl.dataone.org/odo/ECSO_00001186",72,"57","15",18,13
+"friction velocity","http://purl.dataone.org/odo/ECSO_00001546",67,"56","11",23,12
+"fractional day of year","http://purl.dataone.org/odo/ECSO_00002061",52,"52","0",4,4
+"soil moisture percentage","http://purl.dataone.org/odo/ECSO_00000517",51,"50","1",5,4
+"water salinity","http://purl.dataone.org/odo/ECSO_00001164",51,"35","16",19,13
+"bird banding color combination identifier","http://purl.dataone.org/odo/ECSO_00002657",46,"46","0",1,1
+"temperature measurement type","http://purl.dataone.org/odo/ECSO_00001104",46,"12","34",15,5
+"seawater temperature","http://purl.dataone.org/odo/ECSO_00001226",45,"28","17",18,13
+"voltage raw data","http://purl.dataone.org/odo/ECSO_00001570",45,"41","4",7,5
+"volume change rate","http://purl.dataone.org/odo/ECSO_00002509",44,"44","0",2,2
+"sediment core identifier","http://purl.dataone.org/odo/ECSO_00002478",43,"43","0",4,4
+"shrub cover percentage","http://purl.dataone.org/odo/ECSO_00001608",43,"3","40",3,2
+"elevation change","http://purl.dataone.org/odo/ECSO_00003058",42,"42","0",1,1
+"elevation change standard deviation","http://purl.dataone.org/odo/ECSO_00003060",42,"42","0",1,1
+"measurement end time","http://purl.dataone.org/odo/ECSO_00002045",42,"31","11",13,8
+"volume change rate uncertainty","http://purl.dataone.org/odo/ECSO_00003061",42,"42","0",1,1
+"monin-obukhov stability parameter","http://purl.dataone.org/odo/ECSO_00002252",41,"31","10",12,7
+"co2 concentration in air","http://purl.dataone.org/odo/ECSO_00000580",39,"39","0",7,3
+"water flux","http://purl.dataone.org/odo/ECSO_00001682",39,"39","0",3,3
+"carbon compound percentage","http://purl.dataone.org/odo/ECSO_00002515",38,"38","0",1,1
+"global incoming shortwave radiation","http://purl.dataone.org/odo/ECSO_00001910",37,"37","0",1,1
+"outgoing longwave radiation","http://purl.dataone.org/odo/ECSO_00001902",37,"26","11",15,10
+"dry mass density","http://purl.dataone.org/odo/ECSO_00001184",36,"36","0",1,1
+"ice core length","http://purl.dataone.org/odo/ECSO_00002656",36,"1","35",5,3
+"sonic wind direction","http://purl.dataone.org/odo/ECSO_00001714",33,"33","0",6,2
+"water depth","http://purl.dataone.org/odo/ECSO_00001203",33,"11","22",10,6
+"bird molt score","http://purl.dataone.org/odo/ECSO_00002513",31,"31","0",1,1
+"station identifier","http://purl.dataone.org/odo/ECSO_00002393",31,"27","4",24,14
+"air density calculated from virtual temperature","http://purl.dataone.org/odo/ECSO_00002037",30,"30","0",1,1
+"correction factor for carbon dioxide flux","http://purl.dataone.org/odo/ECSO_00002586",30,"30","0",1,1
+"correction factor for moisture flux","http://purl.dataone.org/odo/ECSO_00002587",30,"30","0",1,1
+"specific humidity","http://purl.dataone.org/odo/ECSO_00001547",30,"30","0",1,1
+"water conductivity","http://purl.dataone.org/odo/ECSO_00001535",30,"30","0",2,2
+"alkenone concentration","http://purl.dataone.org/odo/ECSO_00001933",29,"29","0",1,1
+"net ecosystem exchange carbon flux","http://purl.dataone.org/odo/ECSO_00000014",29,"18","11",18,10
+"pressure measurement type","http://purl.dataone.org/odo/ECSO_00001185",28,"21","7",12,2
+"study location identifier","http://purl.dataone.org/odo/ECSO_00002767",27,"19","8",11,10
+"incoming longwave radiation","http://purl.dataone.org/odo/ECSO_00001899",26,"15","11",15,10
+"station name","http://purl.dataone.org/odo/ECSO_00002392",26,"22","4",17,7
+"lake sediment top depth","http://purl.dataone.org/odo/ECSO_00001701",25,"25","0",3,3
+"snow accumulation","http://purl.dataone.org/odo/ECSO_00001859",25,"0","25",1,1
+"bacteria abundance","http://purl.dataone.org/odo/ECSO_00001693",24,"24","0",1,1
+"dissolved oxygen concentration","http://purl.dataone.org/odo/ECSO_00001669",24,"15","9",16,7
+"distributed biological observatory region identifier","http://purl.dataone.org/odo/ECSO_00002617",24,"22","2",12,5
+"precipitation height","http://purl.dataone.org/odo/ECSO_00001223",24,"11","13",15,10
+"sediment core section identifier","http://purl.dataone.org/odo/ECSO_00002899",24,"24","0",1,1
+"study location name","http://purl.dataone.org/odo/ECSO_00002768",24,"23","1",10,9
+"NA","http://purl.obolibrary.org/obo/CHEBI_36683",24,"0","24",19,11
+"hour of measurement time","http://purl.dataone.org/odo/ECSO_00002048",23,"23","0",7,6
+"incoming photosynthetically active radiation","http://purl.dataone.org/odo/ECSO_00001581",23,"2","21",12,7
+"mole fraction of carbon dioxide","http://purl.dataone.org/odo/ECSO_00000613",23,"2","21",12,7
+"species code","http://purl.dataone.org/odo/ECSO_00002490",23,"23","0",6,4
+"vapor pressure deficit","http://purl.dataone.org/odo/ECSO_00001972",23,"13","10",12,7
+"depth","http://purl.dataone.org/odo/ECSO_00000515",22,"0","22",4,3
+"monin-obukhov length","http://purl.dataone.org/odo/ECSO_00002251",22,"21","1",6,2
+"rainfall height","http://purl.dataone.org/odo/ECSO_00001730",22,"22","0",3,3
+"horizontal wind speed","http://purl.dataone.org/odo/ECSO_00001588",21,"21","0",3,3
+"lake sediment bottom depth","http://purl.dataone.org/odo/ECSO_00001562",21,"21","0",2,2
+"percent of surface sediment","http://purl.dataone.org/odo/ECSO_00002896",21,"21","0",3,1
+"sodium concentration","http://purl.dataone.org/odo/ECSO_00001804",21,"5","16",4,4
+"mammal count","http://purl.dataone.org/odo/ECSO_00002062",20,"20","0",4,2
+"outgoing shortwave radiation","http://purl.dataone.org/odo/ECSO_00001903",20,"9","11",15,10
+"thickness of melt layer","http://purl.dataone.org/odo/ECSO_00002845",20,"4","16",2,2
+"chromophoric dissolved organic matter absorbance ratio","http://purl.dataone.org/odo/ECSO_00001501",19,"9","10",4,2
+"ice density","http://purl.dataone.org/odo/ECSO_00002959",19,"3","16",3,3
+"magnesium concentration","http://purl.dataone.org/odo/ECSO_00001790",19,"3","16",3,3
+"radiative flux","http://purl.dataone.org/odo/ECSO_00001106",19,"19","0",1,1
+"snow depth","http://purl.dataone.org/odo/ECSO_00001205",19,"8","11",10,9
+"ammonium concentration","http://purl.dataone.org/odo/ECSO_00001116",18,"2","16",3,3
+"respiration carbon flux","http://purl.dataone.org/odo/ECSO_00000016",18,"7","11",18,9
+"strain rate","http://purl.dataone.org/odo/ECSO_00003095",18,"18","0",1,1
+"strain rate uncertainty","http://purl.dataone.org/odo/ECSO_00003097",18,"18","0",1,1
+"tag number","http://purl.dataone.org/odo/ECSO_00001217",18,"16","2",11,9
+"NA","http://purl.dataone.org/odo/ECSO_00010114",18,"0","18",19,11
+"forb cover percentage","http://purl.dataone.org/odo/ECSO_00001611",17,"1","16",3,2
+"graminoid cover percentage","http://purl.dataone.org/odo/ECSO_00001623",17,"1","16",3,2
+"ice core diameter","http://purl.dataone.org/odo/ECSO_00002409",17,"1","16",2,2
+"ice mass","http://purl.dataone.org/odo/ECSO_00002084",17,"1","16",2,2
+"methanesulfonic acid concentration in ice","http://purl.dataone.org/odo/ECSO_00002295",17,"1","16",2,2
+"nitrogen percentage","http://purl.dataone.org/odo/ECSO_00001145",17,"17","0",7,7
+"oxygen isotope ratio","http://purl.dataone.org/odo/ECSO_00001739",17,"1","16",2,2
+"plot identifier","http://purl.dataone.org/odo/ECSO_00002432",17,"17","0",8,8
+"seawater conductivity","http://purl.dataone.org/odo/ECSO_00001540",17,"6","11",7,4
+"seawater depth","http://purl.dataone.org/odo/ECSO_00001204",17,"15","2",13,10
+"seawater pressure","http://purl.dataone.org/odo/ECSO_00001187",17,"15","2",10,6
+"species name","http://purl.dataone.org/odo/ECSO_00002735",17,"17","0",10,6
+"sulfate concentration","http://purl.dataone.org/odo/ECSO_00002156",17,"1","16",2,2
+"water sample identifier","http://purl.dataone.org/odo/ECSO_00002786",17,"8","9",14,6
+"bird identifier","http://purl.dataone.org/odo/ECSO_00002218",16,"16","0",1,1
+"calcium concentration","http://purl.dataone.org/odo/ECSO_00001772",16,"0","16",1,1
+"chlorine concentration","http://purl.dataone.org/odo/ECSO_00001776",16,"0","16",1,1
+"conductivity","http://purl.dataone.org/odo/ECSO_00001534",16,"0","16",1,1
+"d14c","http://purl.dataone.org/odo/ECSO_00000668",16,"16","0",4,4
+"delta deuterium","http://purl.dataone.org/odo/ECSO_00001957",16,"0","16",1,1
+"measurement start time","http://purl.dataone.org/odo/ECSO_00002044",16,"3","13",16,9
+"mole fraction of ozone","http://purl.dataone.org/odo/ECSO_00002935",16,"16","0",1,1
+"nitrate concentration","http://purl.dataone.org/odo/ECSO_00002216",16,"0","16",1,1
+"potassium concentation","http://purl.dataone.org/odo/ECSO_00001798",16,"0","16",1,1
+"sonic temperature","http://purl.dataone.org/odo/ECSO_00001524",16,"15","1",3,3
+"water discharge","http://purl.dataone.org/odo/ECSO_00002410",16,"16","0",6,6
+"NA","http://en.wikipedia.org/wiki/Volumetric_flow_rate",16,"0","16",19,11
+"NA","http://www.purl.dataone.org/odo/ECSO_00010114",16,"14","2",19,11
+"cruise identifier","http://purl.dataone.org/odo/ECSO_00002370",15,"13","2",13,4
+"d13c in sediment","http://purl.dataone.org/odo/ECSO_00002876",15,"15","0",1,1
+"egg count","http://purl.dataone.org/odo/ECSO_00001692",15,"15","0",2,2
+"incoming solar radiation","http://purl.dataone.org/odo/ECSO_00001900",15,"15","0",6,5
+"water height","http://purl.dataone.org/odo/ECSO_00001175",15,"15","0",1,1
+"bird nest identifier","http://purl.dataone.org/odo/ECSO_00002382",14,"14","0",1,1
+"block identifier","http://purl.dataone.org/odo/ECSO_00002601",14,"14","0",4,4
+"carbon percentage","http://purl.dataone.org/odo/ECSO_00001127",14,"13","1",7,7
+"delta deuterium of alkanoic acid","http://purl.dataone.org/odo/ECSO_00002898",14,"14","0",1,1
+"lake sediment composite depth","http://purl.dataone.org/odo/ECSO_00001935",14,"14","0",2,2
+"type of vegetation","http://purl.dataone.org/odo/ECSO_00002207",14,"10","4",5,5
+"vanadium concentration in lake water","http://purl.dataone.org/odo/ECSO_00001817",14,"0","14",7,1
+"years elapsed","http://purl.dataone.org/odo/ECSO_00002627",14,"14","0",1,1
+"confidence in taxonomic identification","http://purl.dataone.org/odo/ECSO_00002438",13,"13","0",1,1
+"d13c","http://purl.dataone.org/odo/ECSO_00000669",13,"9","4",7,7
+"mean li-cor weight fraction of carbon dioxide","http://purl.dataone.org/odo/ECSO_00000621",13,"13","0",1,1
+"mean weight fraction of water vapor","http://purl.dataone.org/odo/ECSO_00001941",13,"13","0",1,1
+"water ph","http://purl.dataone.org/odo/ECSO_00001159",13,"5","8",8,6
+"water temperature","http://purl.dataone.org/odo/ECSO_00001227",13,"13","0",5,4
+"14c calibrated age","http://purl.dataone.org/odo/ECSO_00002165",12,"12","0",2,2
+"lake sediment composite depth from top","http://purl.dataone.org/odo/ECSO_00001936",12,"12","0",3,3
+"latent heat turbulent flux","http://purl.dataone.org/odo/ECSO_00001571",12,"1","11",12,7
+"mole fraction of water vapor","http://purl.dataone.org/odo/ECSO_00001683",12,"1","11",12,7
+"normalized signal intensity of gene","http://purl.dataone.org/odo/ECSO_00002692",12,"12","0",1,1
+"number of samples taken","http://purl.dataone.org/odo/ECSO_00002764",12,"12","0",8,3
+"sensible heat flux without storage correction","http://purl.dataone.org/odo/ECSO_00001717",12,"1","11",12,7
+"water vapor flux","http://purl.dataone.org/odo/ECSO_00001684",12,"12","0",3,2
+"absorbed fraction incoming photosynthetically active radiation","http://purl.dataone.org/odo/ECSO_00001576",11,"1","10",11,6
+"absorbed photosynthetically active radiation","http://purl.dataone.org/odo/ECSO_00001575",11,"1","10",11,6
+"diffuse shortwave incoming radiation","http://purl.dataone.org/odo/ECSO_00002481",11,"1","10",11,6
+"heat storage flux in air","http://purl.dataone.org/odo/ECSO_00002268",11,"1","10",11,6
+"itrf 2005 x-coordinate","http://purl.dataone.org/odo/ECSO_00003052",11,"11","0",1,1
+"itrf 2005 x-coordinate uncertainty","http://purl.dataone.org/odo/ECSO_00001909",11,"11","0",1,1
+"itrf 2005 y-coordinate","http://purl.dataone.org/odo/ECSO_00003053",11,"11","0",1,1
+"itrf 2005 y-coordinate uncertainty","http://purl.dataone.org/odo/ECSO_00002271",11,"11","0",1,1
+"itrf 2005 z-coordinate","http://purl.dataone.org/odo/ECSO_00003054",11,"11","0",1,1
+"itrf 2005 z-coordinate uncertainty","http://purl.dataone.org/odo/ECSO_00002287",11,"11","0",1,1
+"laboratory identifier","http://purl.dataone.org/odo/ECSO_00002596",11,"8","3",8,8
+"lake identifier","http://purl.dataone.org/odo/ECSO_00002565",11,"11","0",3,3
+"lake sediment composite depth from bottom","http://purl.dataone.org/odo/ECSO_00001937",11,"11","0",2,2
+"latent heat storage flux","http://purl.dataone.org/odo/ECSO_00001572",11,"1","10",11,6
+"outgoing photosynthetically active radiation","http://purl.dataone.org/odo/ECSO_00001582",11,"1","10",11,6
+"wind direction standard deviation","http://purl.dataone.org/odo/ECSO_00001715",11,"11","0",3,2
+"14c age","http://purl.dataone.org/odo/ECSO_00002163",10,"6","4",4,4
+"data collection equipment","http://purl.dataone.org/odo/ECSO_00002527",10,"6","4",7,3
+"delta deuterium in alkanoic acid uncertainty","http://purl.dataone.org/odo/ECSO_00001595",10,"10","0",1,1
+"snow water equivalent","http://purl.dataone.org/odo/ECSO_00001747",10,"4","6",5,5
+"calcium concentration in ice","http://purl.dataone.org/odo/ECSO_00001877",9,"9","0",6,6
+"chlorophyll-a concentration","http://purl.dataone.org/odo/ECSO_00000516",9,"5","4",6,4
+"count measurement type","http://purl.dataone.org/odo/ECSO_00001141",9,"9","0",1,1
+"dew point temperature","http://purl.dataone.org/odo/ECSO_00001657",9,"9","0",1,1
+"dissolved silicate concentration in water","http://purl.dataone.org/odo/ECSO_00002082",9,"2","7",8,2
+"ice middle depth","http://purl.dataone.org/odo/ECSO_00002851",9,"9","0",3,3
+"ice permeability","http://purl.dataone.org/odo/ECSO_00002288",9,"9","0",2,2
+"methane concentration","http://purl.dataone.org/odo/ECSO_00000615",9,"0","9",7,1
+"name","http://purl.dataone.org/odo/ECSO_00001193",9,"0","9",3,3
+"plant harvest location","http://purl.dataone.org/odo/ECSO_00002564",9,"9","0",1,1
+"sediment depth","http://purl.dataone.org/odo/ECSO_00001552",9,"9","0",3,3
+"sulfate concentration in water","http://purl.dataone.org/odo/ECSO_00002389",9,"2","7",9,3
+"taxon code","http://purl.dataone.org/odo/ECSO_00002608",9,"9","0",6,2
+"water vapor concentration in air","http://purl.dataone.org/odo/ECSO_00001940",9,"9","0",6,2
+"calcium concentration in lake water","http://purl.dataone.org/odo/ECSO_00001773",8,"1","7",8,2
+"carbon dioxide partial pressure","http://purl.dataone.org/odo/ECSO_00000636",8,"8","0",2,2
+"cast identifier","http://purl.dataone.org/odo/ECSO_00002223",8,"6","2",7,3
+"count per gram","http://purl.dataone.org/odo/ECSO_00001593",8,"8","0",1,1
+"lake sediment depth","http://purl.dataone.org/odo/ECSO_00001665",8,"8","0",2,2
+"plant material biomass","http://purl.dataone.org/odo/ECSO_00001148",8,"8","0",1,1
+"potassium concentration in lake water","http://purl.dataone.org/odo/ECSO_00001799",8,"1","7",8,2
+"river or stream code","http://purl.dataone.org/odo/ECSO_00002437",8,"8","0",1,1
+"sand percentage","http://purl.dataone.org/odo/ECSO_00002583",8,"7","1",3,2
+"seawater bottom depth","http://purl.dataone.org/odo/ECSO_00001549",8,"6","2",7,2
+"snow density","http://purl.dataone.org/odo/ECSO_00002917",8,"2","6",3,3
+"sonic wind speed","http://purl.dataone.org/odo/ECSO_00001586",8,"8","0",5,1
+"stem length","http://purl.dataone.org/odo/ECSO_00002284",8,"8","0",1,1
+"stem segment count","http://purl.dataone.org/odo/ECSO_00001556",8,"8","0",1,1
+"NA","http://purl.dataone.org/odo/ECSO_#Leaf_Area_Index",8,"0","8",19,11
+"14c calibrated age years before present (1950)","http://purl.dataone.org/odo/ECSO_00002167",7,"7","0",3,3
+"aluminum concentration in lake water","http://purl.dataone.org/odo/ECSO_00001763",7,"0","7",7,1
+"arsenic concentration in lake water","http://purl.dataone.org/odo/ECSO_00001767",7,"0","7",7,1
+"barium concentration in lake water","http://purl.dataone.org/odo/ECSO_00001769",7,"0","7",7,1
+"boron concentration in lake water","http://purl.dataone.org/odo/ECSO_00001771",7,"0","7",7,1
+"cation concentration in lake water","http://purl.dataone.org/odo/ECSO_00001775",7,"0","7",7,1
+"cell count per milliliter","http://purl.dataone.org/odo/ECSO_00002688",7,"7","0",3,3
+"clay percentage","http://purl.dataone.org/odo/ECSO_00002309",7,"6","1",3,2
+"cobalt concentration in lake water","http://purl.dataone.org/odo/ECSO_00001781",7,"0","7",7,1
+"copper concentration in lake water","http://purl.dataone.org/odo/ECSO_00001783",7,"0","7",7,1
+"crustose lichen cover percentage","http://purl.dataone.org/odo/ECSO_00001605",7,"0","7",2,1
+"dissolved oxygen concentration in seawater","http://purl.dataone.org/odo/ECSO_00002861",7,"1","6",4,3
+"gravimetric soil moisture percentage","http://purl.dataone.org/odo/ECSO_00001583",7,"0","7",2,1
+"hour and minute of measurement time","http://purl.dataone.org/odo/ECSO_00002066",7,"7","0",4,3
+"iron concentration in water","http://purl.dataone.org/odo/ECSO_00001785",7,"0","7",7,1
+"lake area","http://purl.dataone.org/odo/ECSO_00001725",7,"7","0",2,2
+"lake water alkalinity","http://purl.dataone.org/odo/ECSO_00001751",7,"0","7",7,1
+"lake water conductivity","http://purl.dataone.org/odo/ECSO_00001537",7,"0","7",7,1
+"lanthanum concentration in lake water","http://purl.dataone.org/odo/ECSO_00001765",7,"0","7",7,1
+"lead concentration in lake water","http://purl.dataone.org/odo/ECSO_00001787",7,"0","7",7,1
+"lithium concentration in lake water","http://purl.dataone.org/odo/ECSO_00001789",7,"0","7",7,1
+"magnesium concentration in lake water","http://purl.dataone.org/odo/ECSO_00001791",7,"0","7",7,1
+"manganese concentration in lake water","http://purl.dataone.org/odo/ECSO_00001793",7,"0","7",7,1
+"maximum wind speed","http://purl.dataone.org/odo/ECSO_00002133",7,"7","0",2,2
+"minute of measurement time","http://purl.dataone.org/odo/ECSO_00002069",7,"7","0",2,2
+"molybdenum concentration in lake water","http://purl.dataone.org/odo/ECSO_00001795",7,"0","7",7,1
+"nickel concentration in lake water","http://purl.dataone.org/odo/ECSO_00001797",7,"0","7",7,1
+"non-plant material biomass density","http://purl.dataone.org/odo/ECSO_00001149",7,"7","0",6,1
+"river or stream name","http://purl.dataone.org/odo/ECSO_00002772",7,"7","0",3,3
+"shortwave albedo","http://purl.dataone.org/odo/ECSO_00001696",7,"7","0",2,2
+"shrub height","http://purl.dataone.org/odo/ECSO_00001579",7,"0","7",2,1
+"silt percentage","http://purl.dataone.org/odo/ECSO_00002584",7,"6","1",3,2
+"silver concentration in lake water","http://purl.dataone.org/odo/ECSO_00001803",7,"0","7",7,1
+"snow and ice mass balance","http://purl.dataone.org/odo/ECSO_00002886",7,"7","0",1,1
+"sodium concentration in lake water","http://purl.dataone.org/odo/ECSO_00001805",7,"0","7",7,1
+"soil carbon dioxide flux","http://purl.dataone.org/odo/ECSO_00002088",7,"7","0",3,3
+"species abundance","http://purl.dataone.org/odo/ECSO_00001688",7,"7","0",6,1
+"strontium concentration in lake water","http://purl.dataone.org/odo/ECSO_00001807",7,"0","7",7,1
+"subplot identifier","http://purl.dataone.org/odo/ECSO_00002748",7,"7","0",1,1
+"taxonomic classification","http://purl.dataone.org/odo/ECSO_00002730",7,"7","0",4,4
+"thallium concentration in lake water","http://purl.dataone.org/odo/ECSO_00001811",7,"0","7",7,1
+"tin concentration in lake water","http://purl.dataone.org/odo/ECSO_00001813",7,"0","7",7,1
+"titanium concentration in lake water","http://purl.dataone.org/odo/ECSO_00001815",7,"0","7",7,1
+"treatment measurement type","http://purl.dataone.org/odo/ECSO_00002426",7,"7","0",3,3
+"water cover percentage","http://purl.dataone.org/odo/ECSO_00001630",7,"3","4",5,4
+"zinc concentration in lake water","http://purl.dataone.org/odo/ECSO_00001819",7,"0","7",7,1
+"NA","http://purl.obolibrary.org/obo/ENVO_09000019",7,"0","7",19,11
+"14c calibrated age kiloyears before present","http://purl.dataone.org/odo/ECSO_00002168",6,"6","0",1,1
+"age of dissolved organic carbon","http://purl.dataone.org/odo/ECSO_00000657",6,"6","0",1,1
+"altitude above seafloor","http://purl.dataone.org/odo/ECSO_00001565",6,"3","3",5,2
+"beam transmission percentage","http://purl.dataone.org/odo/ECSO_00001731",6,"4","2",6,3
+"chlorine concentration in ice","http://purl.dataone.org/odo/ECSO_00002034",6,"6","0",4,4
+"d18o","http://purl.dataone.org/odo/ECSO_00001677",6,"4","2",4,4
+"ice core identifier","http://purl.dataone.org/odo/ECSO_00002938",6,"2","4",6,4
+"marine sediment middle depth","http://purl.dataone.org/odo/ECSO_00002969",6,"6","0",1,1
+"mbt value","http://purl.dataone.org/odo/ECSO_00003025",6,"6","0",1,1
+"nitrogen isotope ratio","http://purl.dataone.org/odo/ECSO_00001736",6,"6","0",3,3
+"observer name","http://purl.dataone.org/odo/ECSO_00002451",6,"6","0",1,1
+"plant growth form","http://purl.dataone.org/odo/ECSO_00002562",6,"6","0",1,1
+"river classification","http://purl.dataone.org/odo/ECSO_00002221",6,"6","0",1,1
+"seawater fluorescence","http://purl.dataone.org/odo/ECSO_00001560",6,"6","0",5,3
+"site identifier","http://purl.dataone.org/odo/ECSO_00002997",6,"0","6",1,1
+"uplift","http://purl.dataone.org/odo/ECSO_00003096",6,"6","0",1,1
+"uplift rate","http://purl.dataone.org/odo/ECSO_00003094",6,"6","0",1,1
+"uplift rate uncertainty","http://purl.dataone.org/odo/ECSO_00003106",6,"6","0",1,1
+"uplift uncertainty","http://purl.dataone.org/odo/ECSO_00003107",6,"6","0",1,1
+"albedo","http://purl.dataone.org/odo/ECSO_00001694",5,"4","1",2,2
+"bare soil cover percentage","http://purl.dataone.org/odo/ECSO_00001648",5,"1","4",3,2
+"book name and page number","http://purl.dataone.org/odo/ECSO_00002907",5,"5","0",1,1
+"calculated year","http://purl.dataone.org/odo/ECSO_00002129",5,"4","1",4,4
+"carbon percentage in lake sediment","http://purl.dataone.org/odo/ECSO_00001928",5,"5","0",1,1
+"carbon to nitrogen molar ratio","http://purl.dataone.org/odo/ECSO_00000639",5,"5","0",3,3
+"cdom absorbance at wavelength 254 nm","http://purl.dataone.org/odo/ECSO_00001506",5,"3","2",5,3
+"cdom absorbance at wavelength 350 nm","http://purl.dataone.org/odo/ECSO_00001507",5,"3","2",5,3
+"cdom absorbance at wavelength 365 nm","http://purl.dataone.org/odo/ECSO_00001508",5,"3","2",5,3
+"cdom absorbance at wavelength 412 nm","http://purl.dataone.org/odo/ECSO_00001510",5,"3","2",5,3
+"cdom absorbance at wavelength 440 nm","http://purl.dataone.org/odo/ECSO_00001511",5,"3","2",5,3
+"count density","http://purl.dataone.org/odo/ECSO_00001160",5,"0","5",1,1
+"cyclization of branched tetraether index","http://purl.dataone.org/odo/ECSO_00002973",5,"5","0",1,1
+"d18o in water vapor","http://purl.dataone.org/odo/ECSO_00002200",5,"0","5",1,1
+"delta deuterium in water vapor","http://purl.dataone.org/odo/ECSO_00002201",5,"0","5",1,1
+"dissolved ammonia concentration","http://purl.dataone.org/odo/ECSO_00001703",5,"3","2",4,2
+"dissolved phosphate concentration","http://purl.dataone.org/odo/ECSO_00001897",5,"3","2",4,2
+"distance","http://purl.dataone.org/odo/ECSO_00001710",5,"4","1",5,5
+"dry weight biomass","http://purl.dataone.org/odo/ECSO_00001153",5,"5","0",5,1
+"ethane mixing ratio","http://purl.dataone.org/odo/ECSO_00002888",5,"5","0",1,1
+"foliose lichen cover percentage","http://purl.dataone.org/odo/ECSO_00001616",5,"0","5",2,1
+"fruticose lichen cover percentage","http://purl.dataone.org/odo/ECSO_00001633",5,"0","5",2,1
+"ice top depth","http://purl.dataone.org/odo/ECSO_00002802",5,"5","0",2,2
+"lake sediment temperature","http://purl.dataone.org/odo/ECSO_00001530",5,"5","0",1,1
+"latitude degree component","http://purl.dataone.org/odo/ECSO_00002247",5,"2","3",2,2
+"litter cover percentage","http://purl.dataone.org/odo/ECSO_00001637",5,"1","4",3,2
+"magnetic susceptibility","http://purl.dataone.org/odo/ECSO_00002414",5,"5","0",2,2
+"moss cover percentage","http://purl.dataone.org/odo/ECSO_00001639",5,"3","2",3,2
+"nitrogen percentage in lake sediment","http://purl.dataone.org/odo/ECSO_00002815",5,"5","0",1,1
+"operational taxonomic unit","http://purl.dataone.org/odo/ECSO_00003085",5,"5","0",1,1
+"reflectance measurement type","http://purl.dataone.org/odo/ECSO_00002193",5,"5","0",1,1
+"replicate identifier","http://purl.dataone.org/odo/ECSO_00002989",5,"5","0",4,4
+"rock cover percentage","http://purl.dataone.org/odo/ECSO_00001627",5,"1","4",3,2
+"sample size","http://purl.dataone.org/odo/ECSO_00001644",5,"5","0",5,1
+"sensor temperature","http://purl.dataone.org/odo/ECSO_00002949",5,"5","0",2,2
+"sex","http://purl.dataone.org/odo/ECSO_00002948",5,"5","0",2,2
+"soil moisture - categorical","http://purl.dataone.org/odo/ECSO_00002422",5,"1","4",3,2
+"study subject","http://purl.dataone.org/odo/ECSO_00002991",5,"5","0",1,1
+"sulfur concentration","http://purl.dataone.org/odo/ECSO_00001808",5,"5","0",3,3
+"water vapor mixing ratio","http://purl.dataone.org/odo/ECSO_00002942",5,"0","5",1,1
+"water weight","http://purl.dataone.org/odo/ECSO_00002204",5,"0","5",2,1
+"wave height","http://purl.dataone.org/odo/ECSO_00001176",5,"5","0",1,1
+"NA","http://purl.dataone.org/odo/ECSO_00010076",5,"0","5",19,11
+"14c age standard deviation","http://purl.dataone.org/odo/ECSO_00002680",4,"2","2",2,2
+"acidic soil treatment","http://purl.dataone.org/odo/ECSO_00002921",4,"4","0",1,1
+"aquatic particulate organic carbon","http://purl.dataone.org/odo/ECSO_00000578",4,"4","0",1,1
+"bird capture location relative to plot","http://purl.dataone.org/odo/ECSO_00002511",4,"4","0",1,1
+"brightness temperature","http://purl.dataone.org/odo/ECSO_00002092",4,"4","0",1,1
+"carbon to nitrogen mass ratio","http://purl.dataone.org/odo/ECSO_00000638",4,"4","0",4,2
+"carbon to nitrogen ratio","http://purl.dataone.org/odo/ECSO_00001138",4,"3","1",4,3
+"cdom absorbance at wavelength 250 nm","http://purl.dataone.org/odo/ECSO_00001505",4,"2","2",4,2
+"cdom absorbance at wavelength 375 nm","http://purl.dataone.org/odo/ECSO_00001509",4,"2","2",4,2
+"chlorophyll-a","http://purl.dataone.org/odo/ECSO_00000563",4,"4","0",3,1
+"corrected sonic temperature","http://purl.dataone.org/odo/ECSO_00001649",4,"4","0",1,1
+"d15n in sediment","http://purl.dataone.org/odo/ECSO_00002877",4,"4","0",1,1
+"d18o in atmospheric oxygen","http://purl.dataone.org/odo/ECSO_00001676",4,"4","0",1,1
+"d18o in water","http://purl.dataone.org/odo/ECSO_00001671",4,"4","0",3,3
+"data source","http://purl.dataone.org/odo/ECSO_00002744",4,"2","2",3,3
+"days elapsed","http://purl.dataone.org/odo/ECSO_00002123",4,"4","0",2,2
+"dissolved organic carbon concentration in water","http://purl.dataone.org/odo/ECSO_00002143",4,"4","0",2,2
+"ecosystem respiration chamber treatment","http://purl.dataone.org/odo/ECSO_00002434",4,"4","0",4,2
+"fraction modern","http://purl.dataone.org/odo/ECSO_00001962",4,"4","0",3,3
+"genus name","http://purl.dataone.org/odo/ECSO_00002734",4,"3","1",3,3
+"ground temperature","http://purl.dataone.org/odo/ECSO_00001229",4,"4","0",1,1
+"height above ground","http://purl.dataone.org/odo/ECSO_00002407",4,"4","0",1,1
+"herbaceous plant height","http://purl.dataone.org/odo/ECSO_00001911",4,"0","4",2,1
+"inlet valve identifier","http://purl.dataone.org/odo/ECSO_00003043",4,"4","0",2,2
+"live moss height","http://purl.dataone.org/odo/ECSO_00001912",4,"0","4",2,1
+"liverwort cover percentage","http://purl.dataone.org/odo/ECSO_00001661",4,"0","4",2,1
+"longwave albedo","http://purl.dataone.org/odo/ECSO_00001695",4,"4","0",1,1
+"month of year","http://purl.dataone.org/odo/ECSO_00002047",4,"4","0",4,4
+"nitrate concentration in ice","http://purl.dataone.org/odo/ECSO_00002852",4,"4","0",2,2
+"oxygen saturation percentage","http://purl.dataone.org/odo/ECSO_00001668",4,"2","2",4,2
+"particulate nitrogen concentration","http://purl.dataone.org/odo/ECSO_00002144",4,"4","0",1,1
+"particulate organic carbon to particulate nitrogen molar ratio","http://purl.dataone.org/odo/ECSO_00002131",4,"4","0",1,1
+"ph","http://purl.dataone.org/odo/ECSO_00001645",4,"3","1",3,3
+"pheophytin concentration","http://purl.dataone.org/odo/ECSO_00001249",4,"2","2",4,2
+"plant material height","http://purl.dataone.org/odo/ECSO_00001222",4,"0","4",2,1
+"rainfall rate","http://purl.dataone.org/odo/ECSO_00002087",4,"4","0",1,1
+"refrozen meltlayer percentage","http://purl.dataone.org/odo/ECSO_00001628",4,"4","0",1,1
+"sea surface temperature","http://purl.dataone.org/odo/ECSO_00001523",4,"4","0",1,1
+"seawater chlorophyll fluorescence","http://purl.dataone.org/odo/ECSO_00000568",4,"0","4",2,1
+"sediment bulk density","http://purl.dataone.org/odo/ECSO_00002874",4,"4","0",1,1
+"sediment grain size","http://purl.dataone.org/odo/ECSO_00001638",4,"4","0",1,1
+"silica concentration in seawater","http://purl.dataone.org/odo/ECSO_00001898",4,"2","2",4,2
+"soil bulk density","http://purl.dataone.org/odo/ECSO_00001110",4,"1","3",4,2
+"soil ph","http://purl.dataone.org/odo/ECSO_00001646",4,"3","1",4,4
+"soil surface temperature","http://purl.dataone.org/odo/ECSO_00001533",4,"4","0",1,1
+"strontium concentration in ice","http://purl.dataone.org/odo/ECSO_00002320",4,"4","0",3,3
+"surficial geomorphology code","http://purl.dataone.org/odo/ECSO_00002647",4,"0","4",2,1
+"thickness of ice","http://purl.dataone.org/odo/ECSO_00002801",4,"4","0",3,3
+"type of plant or land cover","http://purl.dataone.org/odo/ECSO_00002560",4,"4","0",1,1
+"type of plant tissue","http://purl.dataone.org/odo/ECSO_00002621",4,"4","0",1,1
+"type of soil layer","http://purl.dataone.org/odo/ECSO_00002573",4,"4","0",1,1
+"vial number","http://purl.dataone.org/odo/ECSO_00002380",4,"4","0",1,1
+"volume of blood drawn","http://purl.dataone.org/odo/ECSO_00002190",4,"4","0",1,1
+"water pressure","http://purl.dataone.org/odo/ECSO_00001568",4,"4","0",2,2
+"aspect","http://purl.dataone.org/odo/ECSO_00002212",3,"3","0",2,2
+"bird breeding stage","http://purl.dataone.org/odo/ECSO_00002512",3,"3","0",1,1
+"bird captured in same year","http://purl.dataone.org/odo/ECSO_00002537",3,"3","0",1,1
+"black carbon concentration","http://purl.dataone.org/odo/ECSO_00000654",3,"3","0",2,2
+"bromine concentration in ice","http://purl.dataone.org/odo/ECSO_00001871",3,"3","0",2,2
+"chlorophyll content","http://purl.dataone.org/odo/ECSO_00002954",3,"3","0",3,1
+"concentration of total lipids extracted","http://purl.dataone.org/odo/ECSO_00003014",3,"3","0",1,1
+"corrected dissolved oxygen concentration","http://purl.dataone.org/odo/ECSO_00001670",3,"3","0",1,1
+"d15n","http://purl.dataone.org/odo/ECSO_00001738",3,"2","1",3,3
+"deuterium excess","http://purl.dataone.org/odo/ECSO_00002401",3,"0","3",1,1
+"direction measurement type","http://purl.dataone.org/odo/ECSO_00002542",3,"2","1",2,2
+"dissolved nitrite and nitrate concentration","http://purl.dataone.org/odo/ECSO_00001895",3,"1","2",3,1
+"dissolved organic carbon","http://purl.dataone.org/odo/ECSO_00000571",3,"3","0",3,2
+"dissolved organic carbon concentration","http://purl.dataone.org/odo/ECSO_00001125",3,"3","0",1,1
+"dissolved organic carbon percentage","http://purl.dataone.org/odo/ECSO_00002285",3,"3","0",1,1
+"dissolved organic carbon proportion","http://purl.dataone.org/odo/ECSO_00002282",3,"3","0",1,1
+"file name","http://purl.dataone.org/odo/ECSO_00002763",3,"3","0",3,1
+"firn depth","http://purl.dataone.org/odo/ECSO_00001551",3,"3","0",2,2
+"gross primary production carbon flux","http://purl.dataone.org/odo/ECSO_00000020",3,"2","1",3,3
+"groundwater depth","http://purl.dataone.org/odo/ECSO_00001213",3,"3","0",2,2
+"height","http://purl.dataone.org/odo/ECSO_00001252",3,"3","0",2,2
+"hydrogen peroxide concentration in ice","http://purl.dataone.org/odo/ECSO_00001914",3,"3","0",2,2
+"identity","http://purl.dataone.org/odo/ECSO_00001157",3,"0","3",1,1
+"insoluble particles concentration in ice","http://purl.dataone.org/odo/ECSO_00001821",3,"3","0",2,2
+"iron concentration in ice","http://purl.dataone.org/odo/ECSO_00002374",3,"3","0",2,2
+"lake depth","http://purl.dataone.org/odo/ECSO_00001206",3,"3","0",3,3
+"lake sediment composite depth at middle","http://purl.dataone.org/odo/ECSO_00001938",3,"3","0",2,2
+"lake sediment water content","http://purl.dataone.org/odo/ECSO_00001666",3,"3","0",1,1
+"lemming count","http://purl.dataone.org/odo/ECSO_00002686",3,"3","0",1,1
+"lichen cover percentage","http://purl.dataone.org/odo/ECSO_00001615",3,"2","1",2,2
+"longitude degree component","http://purl.dataone.org/odo/ECSO_00002239",3,"2","1",2,2
+"magnesium percentage in leaves","http://purl.dataone.org/odo/ECSO_00002261",3,"3","0",1,1
+"measurement sequence identifier","http://purl.dataone.org/odo/ECSO_00002643",3,"3","0",2,2
+"method of age identification","http://purl.dataone.org/odo/ECSO_00001602",3,"3","0",1,1
+"net ecosystem exchange carbon flux standard error","http://purl.dataone.org/odo/ECSO_00002791",3,"3","0",3,1
+"nitrate and nitrite concentration in water","http://purl.dataone.org/odo/ECSO_00002925",3,"3","0",2,2
+"nitrogen mass","http://purl.dataone.org/odo/ECSO_00002402",3,"3","0",1,1
+"phosphorus percentage in leaves","http://purl.dataone.org/odo/ECSO_00002265",3,"3","0",1,1
+"phylum name","http://purl.dataone.org/odo/ECSO_00002740",3,"3","0",2,2
+"potassium percentage in leaves","http://purl.dataone.org/odo/ECSO_00002258",3,"3","0",1,1
+"radioactive carbon isotope decay rate","http://purl.dataone.org/odo/ECSO_00002887",3,"3","0",1,1
+"scan identifier","http://purl.dataone.org/odo/ECSO_00002500",3,"3","0",3,2
+"sea ice cover percentage","http://purl.dataone.org/odo/ECSO_00001654",3,"3","0",2,1
+"sodium concentration in ice","http://purl.dataone.org/odo/ECSO_00002319",3,"3","0",2,2
+"soil dry weight and container weight","http://purl.dataone.org/odo/ECSO_00002830",3,"0","3",1,1
+"soil horizon","http://purl.dataone.org/odo/ECSO_00002700",3,"3","0",2,2
+"soil sample length","http://purl.dataone.org/odo/ECSO_00002455",3,"2","1",3,3
+"soil wet weight plus tare weight","http://purl.dataone.org/odo/ECSO_00002171",3,"0","3",1,1
+"sound velocity in seawater","http://purl.dataone.org/odo/ECSO_00002722",3,"2","1",3,2
+"study identifier","http://purl.dataone.org/odo/ECSO_00002299",3,"3","0",3,3
+"surface photosynthetically active radiation","http://purl.dataone.org/odo/ECSO_00001574",3,"1","2",2,1
+"surface slope","http://purl.dataone.org/odo/ECSO_00002642",3,"3","0",2,2
+"suspended particulate material concentration in water","http://purl.dataone.org/odo/ECSO_00002646",3,"1","2",3,1
+"temporal rate measurement type","http://purl.dataone.org/odo/ECSO_00000519",3,"0","3",1,1
+"total organic carbon percentage","http://purl.dataone.org/odo/ECSO_00002149",3,"3","0",3,1
+"total organic nitrogen percentage","http://purl.dataone.org/odo/ECSO_00002150",3,"3","0",3,1
+"type of bird feathers collected","http://purl.dataone.org/odo/ECSO_00002541",3,"3","0",1,1
+"uncertainty in 14c age","http://purl.dataone.org/odo/ECSO_00002805",3,"3","0",2,2
+"water velocity","http://purl.dataone.org/odo/ECSO_00001234",3,"3","0",1,1
+"whale count","http://purl.dataone.org/odo/ECSO_00002160",3,"3","0",1,1
+"14c age margin of error","http://purl.dataone.org/odo/ECSO_00002307",2,"2","0",2,2
+"age of bird","http://purl.dataone.org/odo/ECSO_00002038",2,"2","0",1,1
+"age_measurementtype","http://purl.dataone.org/odo/ECSO_00000656",2,"0","2",1,1
+"alkenone unsaturation ratio","http://purl.dataone.org/odo/ECSO_00002902",2,"2","0",1,1
+"altitude","http://purl.dataone.org/odo/ECSO_00001564",2,"2","0",2,1
+"aluminum concentration in ice","http://purl.dataone.org/odo/ECSO_00001855",2,"2","0",2,2
+"aluminum concentration in lake sediment","http://purl.dataone.org/odo/ECSO_00002041",2,"2","0",1,1
+"ammonium concentration in ice","http://purl.dataone.org/odo/ECSO_00002090",2,"2","0",1,1
+"ammonium concentration in soil","http://purl.dataone.org/odo/ECSO_00001759",2,"2","0",2,2
+"average chain length of alkanoic acid","http://purl.dataone.org/odo/ECSO_00003026",2,"2","0",1,1
+"bear count","http://purl.dataone.org/odo/ECSO_00002237",2,"2","0",1,1
+"bird and container weight","http://purl.dataone.org/odo/ECSO_00002174",2,"2","0",1,1
+"bird release status","http://purl.dataone.org/odo/ECSO_00002615",2,"2","0",1,1
+"bird weight","http://purl.dataone.org/odo/ECSO_00002593",2,"2","0",1,1
+"calcium concentration in lake sediment","http://purl.dataone.org/odo/ECSO_00002042",2,"2","0",1,1
+"calcium concentration in soil","http://purl.dataone.org/odo/ECSO_00001880",2,"1","1",2,1
+"carbon biomass","http://purl.dataone.org/odo/ECSO_00001143",2,"2","0",2,2
+"carbon flux","http://purl.dataone.org/odo/ECSO_00001105",2,"2","0",1,1
+"carbon preference index","http://purl.dataone.org/odo/ECSO_00003000",2,"2","0",1,1
+"carbon stable isotope ratio","http://purl.dataone.org/odo/ECSO_00001142",2,"2","0",2,2
+"cdom absorbance at wavelength 443 nm","http://purl.dataone.org/odo/ECSO_00001512",2,"0","2",2,1
+"chick or egg identifier","http://purl.dataone.org/odo/ECSO_00002663",2,"2","0",1,1
+"chlorine concentration in water","http://purl.dataone.org/odo/ECSO_00002033",2,"2","0",2,2
+"class name","http://purl.dataone.org/odo/ECSO_00002728",2,"2","0",1,1
+"conductivity standard deviation","http://purl.dataone.org/odo/ECSO_00001742",2,"0","2",1,1
+"container weight","http://purl.dataone.org/odo/ECSO_00002175",2,"2","0",1,1
+"corrected photosynthetically active radiation","http://purl.dataone.org/odo/ECSO_00001578",2,"2","0",2,1
+"culmen length","http://purl.dataone.org/odo/ECSO_00002910",2,"2","0",1,1
+"d14c","http://purl.dataone.org/odo/ECSO_00003112",2,"1","1",4,4
+"d15n in lake sediment","http://purl.dataone.org/odo/ECSO_00002267",2,"2","0",1,1
+"d18o in ice","http://purl.dataone.org/odo/ECSO_00002863",2,"2","0",1,1
+"d18o standardized","http://purl.dataone.org/odo/ECSO_00001672",2,"0","2",2,1
+"data quality assessment measurement type","http://purl.dataone.org/odo/ECSO_00001719",2,"2","0",1,1
+"day of month","http://purl.dataone.org/odo/ECSO_00002122",2,"2","0",2,2
+"delta deuterium in ice","http://purl.dataone.org/odo/ECSO_00002850",2,"2","0",1,1
+"density anomaly","http://purl.dataone.org/odo/ECSO_00003073",2,"2","0",1,1
+"depth of surface dust","http://purl.dataone.org/odo/ECSO_00001891",2,"0","2",1,1
+"dichlorodifluoromethane concentration in ice","http://purl.dataone.org/odo/ECSO_00003049",2,"2","0",1,1
+"dissolved organic carbon amount","http://purl.dataone.org/odo/ECSO_00002281",2,"2","0",1,1
+"dissolved organic carbon concentration in soil","http://purl.dataone.org/odo/ECSO_00002146",2,"2","0",2,2
+"domain name","http://purl.dataone.org/odo/ECSO_00002999",2,"2","0",1,1
+"dust layer thickness","http://purl.dataone.org/odo/ECSO_00002228",2,"0","2",1,1
+"elapsed time","http://purl.dataone.org/odo/ECSO_00002068",2,"2","0",1,1
+"entity count","http://purl.dataone.org/odo/ECSO_00001189",2,"2","0",1,1
+"error measurementtype","http://purl.dataone.org/odo/ECSO_00000667",2,"2","0",1,1
+"estimated volumetric water content","http://purl.dataone.org/odo/ECSO_00001905",2,"2","0",1,1
+"ethane concentration in ice","http://purl.dataone.org/odo/ECSO_00003048",2,"2","0",1,1
+"ethane concentration in ice standard error","http://purl.dataone.org/odo/ECSO_00003050",2,"2","0",1,1
+"family name","http://purl.dataone.org/odo/ECSO_00002733",2,"2","0",1,1
+"film roll identifier","http://purl.dataone.org/odo/ECSO_00002524",2,"2","0",2,1
+"fluorescence standard deviation","http://purl.dataone.org/odo/ECSO_00002677",2,"0","2",1,1
+"fluorescent dissolved organic matter in seawater","http://purl.dataone.org/odo/ECSO_00002992",2,"2","0",1,1
+"fraction modern error","http://purl.dataone.org/odo/ECSO_00001619",2,"2","0",2,2
+"freshwater conductivity","http://purl.dataone.org/odo/ECSO_00001536",2,"2","0",1,1
+"freshwater temperature","http://purl.dataone.org/odo/ECSO_00001525",2,"2","0",1,1
+"gene identifier","http://purl.dataone.org/odo/ECSO_00002765",2,"2","0",1,1
+"gene subcategory","http://purl.dataone.org/odo/ECSO_00002553",2,"2","0",1,1
+"horsetail cover percentage","http://purl.dataone.org/odo/ECSO_00001634",2,"0","2",1,1
+"ice bottom depth","http://purl.dataone.org/odo/ECSO_00002803",2,"2","0",2,2
+"iron concentration in lake sediment","http://purl.dataone.org/odo/ECSO_00002119",2,"2","0",1,1
+"iron concentration in soil","http://purl.dataone.org/odo/ECSO_00001917",2,"2","0",2,2
+"lake name","http://purl.dataone.org/odo/ECSO_00002566",2,"2","0",1,1
+"land cover percentage","http://purl.dataone.org/odo/ECSO_00002665",2,"2","0",1,1
+"latitude minute component","http://purl.dataone.org/odo/ECSO_00002137",2,"2","0",1,1
+"leaf area index","http://purl.dataone.org/odo/ECSO_00001156",2,"2","0",1,1
+"life cycle stage","http://purl.dataone.org/odo/ECSO_00002189",2,"2","0",2,2
+"light attenuation","http://purl.dataone.org/odo/ECSO_00001733",2,"0","2",1,1
+"longitude minute component","http://purl.dataone.org/odo/ECSO_00002151",2,"2","0",1,1
+"longitude second component","http://purl.dataone.org/odo/ECSO_00002250",2,"0","2",1,1
+"loss on ignition percentage","http://purl.dataone.org/odo/ECSO_00002294",2,"2","0",2,2
+"lower bound snow depth","http://purl.dataone.org/odo/ECSO_00001681",2,"2","0",1,1
+"magnesium concentration in ice","http://purl.dataone.org/odo/ECSO_00001931",2,"2","0",2,2
+"magnesium concentration in soil","http://purl.dataone.org/odo/ECSO_00001927",2,"1","1",2,1
+"manganese concentration in ice","http://purl.dataone.org/odo/ECSO_00001934",2,"2","0",2,2
+"manganese concentration in lake sediment","http://purl.dataone.org/odo/ECSO_00002263",2,"2","0",1,1
+"marine sediment depth","http://purl.dataone.org/odo/ECSO_00002968",2,"2","0",1,1
+"mean species biomass density standard error","http://purl.dataone.org/odo/ECSO_00002673",2,"2","0",1,1
+"mean species biomass standard error","http://purl.dataone.org/odo/ECSO_00002672",2,"2","0",1,1
+"mean volumetric soil moisture standard error","http://purl.dataone.org/odo/ECSO_00002671",2,"2","0",1,1
+"mole fraction of chlorine","http://purl.dataone.org/odo/ECSO_00003065",2,"2","0",1,1
+"moss temperature","http://purl.dataone.org/odo/ECSO_00002847",2,"2","0",1,1
+"nickel concentration in lake sediment","http://purl.dataone.org/odo/ECSO_00002266",2,"2","0",1,1
+"nitrate concentration in snow","http://purl.dataone.org/odo/ECSO_00002375",2,"2","0",2,2
+"nitrate concentration in soil","http://purl.dataone.org/odo/ECSO_00001820",2,"2","0",2,2
+"nitrogen dioxide vertical slant column density","http://purl.dataone.org/odo/ECSO_00002978",2,"2","0",1,1
+"nitrogen oxide concentration in snow","http://purl.dataone.org/odo/ECSO_00002933",2,"2","0",1,1
+"number of quadrats","http://purl.dataone.org/odo/ECSO_00003046",2,"2","0",1,1
+"order name","http://purl.dataone.org/odo/ECSO_00002741",2,"2","0",1,1
+"oxozone differential slant column density","http://purl.dataone.org/odo/ECSO_00002980",2,"2","0",1,1
+"oxygen argon saturation ratio","http://purl.dataone.org/odo/ECSO_00002387",2,"2","0",1,1
+"ozone differential slant column density","http://purl.dataone.org/odo/ECSO_00002979",2,"2","0",1,1
+"particulate organic carbon concentration","http://purl.dataone.org/odo/ECSO_00002816",2,"2","0",2,2
+"particulate organic nitrogen concentration","http://purl.dataone.org/odo/ECSO_00002135",2,"2","0",2,2
+"peat depth","http://purl.dataone.org/odo/ECSO_00001553",2,"2","0",1,1
+"phosphorus concentration in lake sediment","http://purl.dataone.org/odo/ECSO_00002864",2,"2","0",1,1
+"phosphorus concentration in soil","http://purl.dataone.org/odo/ECSO_00001869",2,"2","0",1,1
+"photograph identifier","http://purl.dataone.org/odo/ECSO_00002684",2,"2","0",2,1
+"photograph type","http://purl.dataone.org/odo/ECSO_00002506",2,"2","0",2,1
+"point on transect","http://purl.dataone.org/odo/ECSO_00001686",2,"2","0",1,1
+"potassium concentration in soil","http://purl.dataone.org/odo/ECSO_00002340",2,"1","1",2,1
+"potential temperature","http://purl.dataone.org/odo/ECSO_00001161",2,"2","0",1,1
+"rain duration","http://purl.dataone.org/odo/ECSO_00002821",2,"2","0",1,1
+"respiration carbon flux standard error","http://purl.dataone.org/odo/ECSO_00001718",2,"2","0",2,1
+"sea surface salinity","http://purl.dataone.org/odo/ECSO_00001658",2,"0","2",1,1
+"seal count","http://purl.dataone.org/odo/ECSO_00002177",2,"2","0",1,1
+"seawater velocity","http://purl.dataone.org/odo/ECSO_00001235",2,"0","2",1,1
+"shape of primary ice structure","http://purl.dataone.org/odo/ECSO_00003017",2,"2","0",1,1
+"shortwave radiation","http://purl.dataone.org/odo/ECSO_00002947",2,"2","0",1,1
+"silicon concentration in lake sediment","http://purl.dataone.org/odo/ECSO_00002865",2,"2","0",1,1
+"size of ice structure","http://purl.dataone.org/odo/ECSO_00003032",2,"2","0",1,1
+"snow removal and heating","http://purl.dataone.org/odo/ECSO_00002484",2,"2","0",1,1
+"sodium concentration in snow","http://purl.dataone.org/odo/ECSO_00002009",2,"2","0",2,2
+"sodium concentration in soil","http://purl.dataone.org/odo/ECSO_00002420",2,"1","1",2,1
+"soil carbon concentration","http://purl.dataone.org/odo/ECSO_00000576",2,"2","0",1,1
+"soil carbon dioxide flux standard error","http://purl.dataone.org/odo/ECSO_00002779",2,"2","0",1,1
+"soil depth","http://purl.dataone.org/odo/ECSO_00001207",2,"2","0",2,2
+"soil dry weight","http://purl.dataone.org/odo/ECSO_00001241",2,"0","2",1,1
+"soil heterotrophic respiration carbon flux","http://purl.dataone.org/odo/ECSO_00000532",2,"2","0",2,2
+"soil mass","http://purl.dataone.org/odo/ECSO_00002578",2,"1","1",2,2
+"soil warming and water","http://purl.dataone.org/odo/ECSO_00002436",2,"2","0",2,2
+"soil wet weight","http://purl.dataone.org/odo/ECSO_00001178",2,"0","2",1,1
+"specific testing technique used indicator","http://purl.dataone.org/odo/ECSO_00002939",2,"2","0",1,1
+"stable oxygen isotope ratio","http://purl.dataone.org/odo/ECSO_00001740",2,"2","0",1,1
+"subsurface runoff mov","http://purl.dataone.org/odo/ECSO_00000074",2,"2","0",2,2
+"sulfur concentration in ice","http://purl.dataone.org/odo/ECSO_00002321",2,"2","0",2,2
+"surface runoff","http://purl.dataone.org/odo/ECSO_00003021",2,"2","0",2,2
+"tarsus length","http://purl.dataone.org/odo/ECSO_00001960",2,"2","0",1,1
+"temperature standard deviation","http://purl.dataone.org/odo/ECSO_00001743",2,"0","2",1,1
+"titanium concentration in lake sediment","http://purl.dataone.org/odo/ECSO_00002841",2,"2","0",1,1
+"total dissolved nitrogen concentration","http://purl.dataone.org/odo/ECSO_00002020",2,"2","0",2,1
+"total lipid extract","http://purl.dataone.org/odo/ECSO_00003015",2,"2","0",1,1
+"total soil carbon","http://purl.dataone.org/odo/ECSO_00000531",2,"2","0",1,1
+"tow identifier","http://purl.dataone.org/odo/ECSO_00002579",2,"2","0",1,1
+"tree diameter at breast height","http://purl.dataone.org/odo/ECSO_00000549",2,"0","2",1,1
+"type of blood preservative","http://purl.dataone.org/odo/ECSO_00002611",2,"2","0",1,1
+"type of capillary tube","http://purl.dataone.org/odo/ECSO_00002581",2,"2","0",1,1
+"type of ice structure","http://purl.dataone.org/odo/ECSO_00003042",2,"2","0",1,1
+"type of vegetation zone","http://purl.dataone.org/odo/ECSO_00002731",2,"2","0",2,2
+"uncertainty in 14c age of methane","http://purl.dataone.org/odo/ECSO_00000672",2,"2","0",1,1
+"upper bound snow depth","http://purl.dataone.org/odo/ECSO_00001679",2,"2","0",1,1
+"water sample volume","http://purl.dataone.org/odo/ECSO_00002225",2,"2","0",2,2
+"weasel count","http://purl.dataone.org/odo/ECSO_00002162",2,"2","0",1,1
+"were bird feathers collected","http://purl.dataone.org/odo/ECSO_00002533",2,"2","0",1,1
+"wind velocity","http://purl.dataone.org/odo/ECSO_00001544",2,"2","0",1,1
+"wind velocity standard deviation","http://purl.dataone.org/odo/ECSO_00002678",2,"0","2",1,1
+"wing length","http://purl.dataone.org/odo/ECSO_00001939",2,"2","0",1,1
+"'uncertainty of adenosine triphosphate (atp) molar concentration in water'","http://purl.dataone.org/odo/ECSO_00000680",1,"1","0",1,1
+"14c age of methane","http://purl.dataone.org/odo/ECSO_00000671",1,"1","0",1,1
+"14c age one sigma margin of error","http://purl.dataone.org/odo/ECSO_00002666",1,"1","0",1,1
+"14c calibrated age years before present (current year)","http://purl.dataone.org/odo/ECSO_00002166",1,"1","0",1,1
+"14c mean calibrated age one standard error","http://purl.dataone.org/odo/ECSO_00002208",1,"1","0",1,1
+"14c mean calibrated years before present","http://purl.dataone.org/odo/ECSO_00002367",1,"1","0",1,1
+"14c uncalibrated age","http://purl.dataone.org/odo/ECSO_00002300",1,"1","0",1,1
+"adenosine triphosphate (atp) molar concentration in water","http://purl.dataone.org/odo/ECSO_00000673",1,"1","0",1,1
+"age of gas","http://purl.dataone.org/odo/ECSO_00002940",1,"1","0",1,1
+"age of ice","http://purl.dataone.org/odo/ECSO_00002406",1,"1","0",1,1
+"age of nest","http://purl.dataone.org/odo/ECSO_00001603",1,"1","0",1,1
+"age of reindeer","http://purl.dataone.org/odo/ECSO_00002039",1,"1","0",1,1
+"air moisture percentage","http://purl.dataone.org/odo/ECSO_00001163",1,"0","1",1,1
+"algae cover percentage","http://purl.dataone.org/odo/ECSO_00001647",1,"0","1",1,1
+"altitude above mean sea level","http://purl.dataone.org/odo/ECSO_00001566",1,"1","0",1,1
+"aluminum concentration in soil","http://purl.dataone.org/odo/ECSO_00001857",1,"1","0",1,1
+"aluminum percentage in leaves","http://purl.dataone.org/odo/ECSO_00002461",1,"1","0",1,1
+"aluminum solubility in water","http://purl.dataone.org/odo/ECSO_00001823",1,"1","0",1,1
+"ammonia concentration in water","http://purl.dataone.org/odo/ECSO_00002924",1,"1","0",1,1
+"ammonium concentration in lake water","http://purl.dataone.org/odo/ECSO_00002879",1,"1","0",1,1
+"anthracene concentration","http://purl.dataone.org/odo/ECSO_00003005",1,"1","0",1,1
+"antimony solubility in water","http://purl.dataone.org/odo/ECSO_00001824",1,"1","0",1,1
+"apparent quantum yield of microbial respiration standard error","http://purl.dataone.org/odo/ECSO_00002676",1,"1","0",1,1
+"arsenic solubility in water","http://purl.dataone.org/odo/ECSO_00001825",1,"1","0",1,1
+"average apparent quantum yield","http://purl.dataone.org/odo/ECSO_00002192",1,"1","0",1,1
+"bacteria growth phase","http://purl.dataone.org/odo/ECSO_00003039",1,"1","0",1,1
+"barium concentration in ice","http://purl.dataone.org/odo/ECSO_00001861",1,"1","0",1,1
+"basal mineral substrate depth","http://purl.dataone.org/odo/ECSO_00001864",1,"1","0",1,1
+"bases percent soils total exchange capacity","http://purl.dataone.org/odo/ECSO_00002655",1,"1","0",1,1
+"beam transmission ratio","http://purl.dataone.org/odo/ECSO_00001744",1,"1","0",1,1
+"beam transmission ratio standard deviation","http://purl.dataone.org/odo/ECSO_00001745",1,"0","1",1,1
+"bee count","http://purl.dataone.org/odo/ECSO_00002046",1,"1","0",1,1
+"benz[a]anthracene concentration","http://purl.dataone.org/odo/ECSO_00003006",1,"1","0",1,1
+"benzo[ghi]perylene concentration","http://purl.dataone.org/odo/ECSO_00003007",1,"1","0",1,1
+"beryllium concentration in air","http://purl.dataone.org/odo/ECSO_00003100",1,"1","0",1,1
+"beryllium concentration in ice","http://purl.dataone.org/odo/ECSO_00003101",1,"1","0",1,1
+"beryllium concentration in seawater","http://purl.dataone.org/odo/ECSO_00003092",1,"1","0",1,1
+"beryllium concentration in snow","http://purl.dataone.org/odo/ECSO_00003099",1,"1","0",1,1
+"beryllium concentration in water","http://purl.dataone.org/odo/ECSO_00003098",1,"1","0",1,1
+"biomass volumetric density","http://purl.dataone.org/odo/ECSO_00001200",1,"1","0",1,1
+"bird captured in previous year","http://purl.dataone.org/odo/ECSO_00002536",1,"1","0",1,1
+"blood collected for mercury testing","http://purl.dataone.org/odo/ECSO_00002447",1,"1","0",1,1
+"body fat score","http://purl.dataone.org/odo/ECSO_00002446",1,"1","0",1,1
+"boron concentration in soil","http://purl.dataone.org/odo/ECSO_00001865",1,"1","0",1,1
+"bottle integrity","http://purl.dataone.org/odo/ECSO_00002314",1,"1","0",1,1
+"bromine concentration in water","http://purl.dataone.org/odo/ECSO_00001872",1,"1","0",1,1
+"bromine monoxide differential slant column density","http://purl.dataone.org/odo/ECSO_00002977",1,"1","0",1,1
+"bromine monoxide differential slant column density error","http://purl.dataone.org/odo/ECSO_00001606",1,"1","0",1,1
+"bulk density","http://purl.dataone.org/odo/ECSO_00002875",1,"1","0",1,1
+"cadmium concentration in ice","http://purl.dataone.org/odo/ECSO_00001876",1,"1","0",1,1
+"cadmium solubility in water","http://purl.dataone.org/odo/ECSO_00001826",1,"1","0",1,1
+"calcium concentration in water","http://purl.dataone.org/odo/ECSO_00002031",1,"1","0",1,1
+"calcium percent soils total exchange capacity","http://purl.dataone.org/odo/ECSO_00002306",1,"1","0",1,1
+"calcium percentage in dead leaves","http://purl.dataone.org/odo/ECSO_00002458",1,"1","0",1,1
+"calcium percentage in leaves","http://purl.dataone.org/odo/ECSO_00002457",1,"1","0",1,1
+"calcium percentage in live leaves","http://purl.dataone.org/odo/ECSO_00002459",1,"1","0",1,1
+"calcium retranslocation efficiency percentage","http://purl.dataone.org/odo/ECSO_00002353",1,"1","0",1,1
+"calcium solubility in water","http://purl.dataone.org/odo/ECSO_00001827",1,"1","0",1,1
+"carapace length","http://purl.dataone.org/odo/ECSO_00001923",1,"1","0",1,1
+"carbon accumulation rate","http://purl.dataone.org/odo/ECSO_00000664",1,"1","0",1,1
+"carbon dioxide mass density","http://purl.dataone.org/odo/ECSO_00000679",1,"1","0",1,1
+"carbon isotope ratio corrected for suess effect","http://purl.dataone.org/odo/ECSO_00000674",1,"1","0",1,1
+"carbon isotope ratio not corrected for suess effect","http://purl.dataone.org/odo/ECSO_00000675",1,"1","0",1,1
+"carbon monoxide concentration","http://purl.dataone.org/odo/ECSO_00000611",1,"1","0",1,1
+"carbon monoxide mixing ratio","http://purl.dataone.org/odo/ECSO_00002141",1,"1","0",1,1
+"caribou count","http://purl.dataone.org/odo/ECSO_00001918",1,"1","0",1,1
+"cause of bird nest failure","http://purl.dataone.org/odo/ECSO_00002485",1,"1","0",1,1
+"cdom absorbance at wavelength 400 nm","http://purl.dataone.org/odo/ECSO_00001542",1,"1","0",1,1
+"cell count","http://purl.dataone.org/odo/ECSO_00001532",1,"1","0",1,1
+"cell count standard deviation","http://purl.dataone.org/odo/ECSO_00002301",1,"1","0",1,1
+"cell counts per milliliter standard error","http://purl.dataone.org/odo/ECSO_00002675",1,"1","0",1,1
+"cerium concentration in ice","http://purl.dataone.org/odo/ECSO_00002032",1,"1","0",1,1
+"cerium solubility in water","http://purl.dataone.org/odo/ECSO_00001828",1,"1","0",1,1
+"cesium concentration in ice","http://purl.dataone.org/odo/ECSO_00001879",1,"1","0",1,1
+"chick count","http://purl.dataone.org/odo/ECSO_00002689",1,"1","0",1,1
+"chlorine concentration in lake water","http://purl.dataone.org/odo/ECSO_00001777",1,"1","0",1,1
+"chlorophyll relative abundance","http://purl.dataone.org/odo/ECSO_00002280",1,"1","0",1,1
+"chromium concentration in ice","http://purl.dataone.org/odo/ECSO_00002035",1,"1","0",1,1
+"chromium concentration in lake sediment","http://purl.dataone.org/odo/ECSO_00002970",1,"1","0",1,1
+"chromium solubility in water","http://purl.dataone.org/odo/ECSO_00001829",1,"1","0",1,1
+"chronology system","http://purl.dataone.org/odo/ECSO_00002487",1,"1","0",1,1
+"chrysene concentration","http://purl.dataone.org/odo/ECSO_00003008",1,"1","0",1,1
+"co2 concentration","http://purl.dataone.org/odo/ECSO_00000530",1,"1","0",1,1
+"cobalt concentration in ice","http://purl.dataone.org/odo/ECSO_00002373",1,"1","0",1,1
+"cobalt concentration in snow","http://purl.dataone.org/odo/ECSO_00001987",1,"1","0",1,1
+"cobalt solubility in water","http://purl.dataone.org/odo/ECSO_00001830",1,"1","0",1,1
+"collar treatment","http://purl.dataone.org/odo/ECSO_00002491",1,"1","0",1,1
+"common name","http://purl.dataone.org/odo/ECSO_00002729",1,"1","0",1,1
+"control or exclusion plot","http://purl.dataone.org/odo/ECSO_00002755",1,"1","0",1,1
+"copper concentration in soil","http://purl.dataone.org/odo/ECSO_00001885",1,"1","0",1,1
+"corrected wind direction","http://purl.dataone.org/odo/ECSO_00001713",1,"1","0",1,1
+"creek name","http://purl.dataone.org/odo/ECSO_00002439",1,"1","0",1,1
+"cryobot mission identifier","http://purl.dataone.org/odo/ECSO_00002644",1,"1","0",1,1
+"cryobot mission purpose","http://purl.dataone.org/odo/ECSO_00002645",1,"1","0",1,1
+"d13c error","http://purl.dataone.org/odo/ECSO_00001609",1,"1","0",1,1
+"d13c in seawater uncertainty","http://purl.dataone.org/odo/ECSO_00002951",1,"1","0",1,1
+"d14c error","http://purl.dataone.org/odo/ECSO_00001607",1,"1","0",1,1
+"delta deuterium in water","http://purl.dataone.org/odo/ECSO_00001958",1,"1","0",1,1
+"dibenz[a,h]anthracene concentration","http://purl.dataone.org/odo/ECSO_00003009",1,"1","0",1,1
+"diffuse radiation","http://purl.dataone.org/odo/ECSO_00001961",1,"1","0",1,1
+"dissolved organic nitrogen concentration","http://purl.dataone.org/odo/ECSO_00001882",1,"1","0",1,1
+"dissolved oxygen concentration in lake water","http://purl.dataone.org/odo/ECSO_00002862",1,"1","0",1,1
+"dissolved oxygen saturation","http://purl.dataone.org/odo/ECSO_00002386",1,"1","0",1,1
+"dominant vegetation","http://purl.dataone.org/odo/ECSO_00003028",1,"1","0",1,1
+"dysprosium solubility in water","http://purl.dataone.org/odo/ECSO_00001831",1,"1","0",1,1
+"egg length","http://purl.dataone.org/odo/ECSO_00001922",1,"1","0",1,1
+"egg width","http://purl.dataone.org/odo/ECSO_00001709",1,"1","0",1,1
+"elevation angle","http://purl.dataone.org/odo/ECSO_00002315",1,"1","0",1,1
+"error in bromine concentration","http://purl.dataone.org/odo/ECSO_00003066",1,"1","0",1,1
+"error in calcium concentration","http://purl.dataone.org/odo/ECSO_00003063",1,"1","0",1,1
+"error in chlorine concentration","http://purl.dataone.org/odo/ECSO_00003064",1,"1","0",1,1
+"error in magnesium concentration","http://purl.dataone.org/odo/ECSO_00003088",1,"1","0",1,1
+"error in nitrate concentration","http://purl.dataone.org/odo/ECSO_00003075",1,"1","0",1,1
+"error in potassium concentration","http://purl.dataone.org/odo/ECSO_00001888",1,"1","0",1,1
+"error in sodium concentration","http://purl.dataone.org/odo/ECSO_00003056",1,"1","0",1,1
+"error in sulfate concentration","http://purl.dataone.org/odo/ECSO_00003062",1,"1","0",1,1
+"estimated cell count","http://purl.dataone.org/odo/ECSO_00002378",1,"1","0",1,1
+"estimated snow duration","http://purl.dataone.org/odo/ECSO_00002128",1,"1","0",1,1
+"europium solubility in water","http://purl.dataone.org/odo/ECSO_00001832",1,"1","0",1,1
+"excess carbon monoxide concentration","http://purl.dataone.org/odo/ECSO_00002869",1,"1","0",1,1
+"feature identifier","http://purl.dataone.org/odo/ECSO_00002482",1,"1","0",1,1
+"fence identifier","http://purl.dataone.org/odo/ECSO_00002558",1,"1","0",1,1
+"fluoranthene concentration","http://purl.dataone.org/odo/ECSO_00003010",1,"1","0",1,1
+"fluorine concentration","http://purl.dataone.org/odo/ECSO_00002113",1,"1","0",1,1
+"fox count","http://purl.dataone.org/odo/ECSO_00002055",1,"1","0",1,1
+"gadolinium solubility in water","http://purl.dataone.org/odo/ECSO_00001833",1,"1","0",1,1
+"gas particle counts per second at wavelength 310 nm","http://purl.dataone.org/odo/ECSO_00003035",1,"1","0",1,1
+"gas particle counts per second at wavelength 340 nm","http://purl.dataone.org/odo/ECSO_00002343",1,"1","0",1,1
+"gas particle counts per second at wavelength 360.8 nm","http://purl.dataone.org/odo/ECSO_00002344",1,"1","0",1,1
+"gas particle counts per second at wavelength 397 nm","http://purl.dataone.org/odo/ECSO_00002274",1,"1","0",1,1
+"gas volume","http://purl.dataone.org/odo/ECSO_00002941",1,"1","0",1,1
+"gene category","http://purl.dataone.org/odo/ECSO_00002554",1,"1","0",1,1
+"gene copies per milliliter","http://purl.dataone.org/odo/ECSO_00002333",1,"1","0",1,1
+"gravimetric water content in sediment","http://purl.dataone.org/odo/ECSO_00002891",1,"1","0",1,1
+"gravimetric water content in soil","http://purl.dataone.org/odo/ECSO_00001667",1,"1","0",1,1
+"grayscale reflectance","http://purl.dataone.org/odo/ECSO_00002412",1,"1","0",1,1
+"gross primary production standard deviation","http://purl.dataone.org/odo/ECSO_00002629",1,"1","0",1,1
+"ground surface temperature","http://purl.dataone.org/odo/ECSO_00001527",1,"1","0",1,1
+"growth","http://purl.dataone.org/odo/ECSO_00000540",1,"0","1",1,1
+"head length","http://purl.dataone.org/odo/ECSO_00002909",1,"1","0",1,1
+"height","http://purl.dataone.org/odo/ECSO_00000511",1,"0","1",2,2
+"humic layer depth","http://purl.dataone.org/odo/ECSO_00002668",1,"1","0",1,1
+"hydrogen percent soils total exchange capacity","http://purl.dataone.org/odo/ECSO_00001916",1,"1","0",1,1
+"ice conductivity","http://purl.dataone.org/odo/ECSO_00001539",1,"1","0",1,1
+"ice permeability standard deviation","http://purl.dataone.org/odo/ECSO_00002903",1,"1","0",1,1
+"ice temperature","http://purl.dataone.org/odo/ECSO_00001558",1,"1","0",1,1
+"indeno[1,2,3‐cd]pyrene concentration","http://purl.dataone.org/odo/ECSO_00003011",1,"1","0",1,1
+"inorganic carbon percentage","http://purl.dataone.org/odo/ECSO_00002139",1,"1","0",1,1
+"inorganic electron acceptor type","http://purl.dataone.org/odo/ECSO_00002293",1,"1","0",1,1
+"invertebrate species biomass","http://purl.dataone.org/odo/ECSO_00001685",1,"1","0",1,1
+"iron solubility in water","http://purl.dataone.org/odo/ECSO_00001834",1,"1","0",1,1
+"krill dry weight","http://purl.dataone.org/odo/ECSO_00002348",1,"1","0",1,1
+"krill length","http://purl.dataone.org/odo/ECSO_00001977",1,"1","0",1,1
+"krill nitrogen weight","http://purl.dataone.org/odo/ECSO_00002297",1,"1","0",1,1
+"krill wet weight","http://purl.dataone.org/odo/ECSO_00002172",1,"1","0",1,1
+"lake classification","http://purl.dataone.org/odo/ECSO_00002742",1,"1","0",1,1
+"lake sediment middle depth","http://purl.dataone.org/odo/ECSO_00001702",1,"1","0",1,1
+"lake temperature","http://purl.dataone.org/odo/ECSO_00001231",1,"1","0",1,1
+"landform code","http://purl.dataone.org/odo/ECSO_00002494",1,"1","0",1,1
+"lanthanum concentration in ice","http://purl.dataone.org/odo/ECSO_00001920",1,"1","0",1,1
+"lanthanum solubility in water","http://purl.dataone.org/odo/ECSO_00001835",1,"1","0",1,1
+"lead concentration in ice","http://purl.dataone.org/odo/ECSO_00001921",1,"1","0",1,1
+"lead concentration in snow","http://purl.dataone.org/odo/ECSO_00001996",1,"1","0",1,1
+"lead solubility in water","http://purl.dataone.org/odo/ECSO_00001836",1,"1","0",1,1
+"leaf area","http://purl.dataone.org/odo/ECSO_00001721",1,"1","0",1,1
+"leaf biomass","http://purl.dataone.org/odo/ECSO_00002945",1,"1","0",1,1
+"leaf count","http://purl.dataone.org/odo/ECSO_00001691",1,"1","0",1,1
+"length","http://purl.dataone.org/odo/ECSO_00001253",1,"1","0",1,1
+"lepidoptera count","http://purl.dataone.org/odo/ECSO_00002159",1,"1","0",1,1
+"liquid water content","http://purl.dataone.org/odo/ECSO_00002233",1,"1","0",1,1
+"location along transect or plot","http://purl.dataone.org/odo/ECSO_00003023",1,"1","0",1,1
+"lower bound soil depth","http://purl.dataone.org/odo/ECSO_00001680",1,"1","0",1,1
+"lynx count","http://purl.dataone.org/odo/ECSO_00002060",1,"1","0",1,1
+"macrofossil remains count","http://purl.dataone.org/odo/ECSO_00002659",1,"1","0",1,1
+"magnesium concentration in snow","http://purl.dataone.org/odo/ECSO_00003087",1,"1","0",1,1
+"magnesium percent soils total exchange capacity","http://purl.dataone.org/odo/ECSO_00001930",1,"1","0",1,1
+"magnesium solubility in water","http://purl.dataone.org/odo/ECSO_00001837",1,"1","0",1,1
+"manganese concentration in soil","http://purl.dataone.org/odo/ECSO_00001932",1,"1","0",1,1
+"manganese solubility in water","http://purl.dataone.org/odo/ECSO_00001838",1,"1","0",1,1
+"mass measurement type","http://purl.dataone.org/odo/ECSO_00001242",1,"1","0",1,1
+"material phase","http://purl.dataone.org/odo/ECSO_00003016",1,"1","0",1,1
+"maximum shear rate","http://purl.dataone.org/odo/ECSO_00003072",1,"1","0",1,1
+"mercury concentration in air","http://purl.dataone.org/odo/ECSO_00002919",1,"1","0",1,1
+"methane concentration in air","http://purl.dataone.org/odo/ECSO_00002244",1,"1","0",1,1
+"methane concentration in water","http://purl.dataone.org/odo/ECSO_00000622",1,"1","0",1,1
+"methane flux","http://purl.dataone.org/odo/ECSO_00000582",1,"1","0",1,1
+"methane saturation percentage in air","http://purl.dataone.org/odo/ECSO_00002782",1,"1","0",1,1
+"methane uncertainty measurement","http://purl.dataone.org/odo/ECSO_00000677",1,"1","0",1,1
+"method of sex identification","http://purl.dataone.org/odo/ECSO_00001601",1,"1","0",1,1
+"minutes elapsed","http://purl.dataone.org/odo/ECSO_00002238",1,"1","0",1,1
+"modern carbon percentage","http://purl.dataone.org/odo/ECSO_00002278",1,"1","0",1,1
+"momentum flux","http://purl.dataone.org/odo/ECSO_00001107",1,"0","1",1,1
+"mosquito count","http://purl.dataone.org/odo/ECSO_00002064",1,"1","0",1,1
+"neodymium concentration in ice","http://purl.dataone.org/odo/ECSO_00001947",1,"1","0",1,1
+"neodymium solubility in water","http://purl.dataone.org/odo/ECSO_00001839",1,"1","0",1,1
+"net ecosystem exchange carbon flux standard deviation","http://purl.dataone.org/odo/ECSO_00002792",1,"1","0",1,1
+"niobium solubility in water","http://purl.dataone.org/odo/ECSO_00001840",1,"1","0",1,1
+"nitrate concentration in lake water","http://purl.dataone.org/odo/ECSO_00002880",1,"1","0",1,1
+"nitrate concentration in water","http://purl.dataone.org/odo/ECSO_00002255",1,"1","0",1,1
+"nitric acid concentration","http://purl.dataone.org/odo/ECSO_00002794",1,"1","0",1,1
+"nitrogen dioxide concentration in seawater","http://purl.dataone.org/odo/ECSO_00002256",1,"1","0",1,1
+"non-plant material length","http://purl.dataone.org/odo/ECSO_00001177",1,"1","0",1,1
+"normalized difference surface water index","http://purl.dataone.org/odo/ECSO_00002691",1,"1","0",1,1
+"number of gene copies standard deviation","http://purl.dataone.org/odo/ECSO_00002707",1,"1","0",1,1
+"number of observers","http://purl.dataone.org/odo/ECSO_00002580",1,"1","0",1,1
+"number of repeated treatments","http://purl.dataone.org/odo/ECSO_00001641",1,"1","0",1,1
+"number volumetric density","http://purl.dataone.org/odo/ECSO_00001201",1,"1","0",1,1
+"observation hours","http://purl.dataone.org/odo/ECSO_00002071",1,"1","0",1,1
+"observer confidence","http://purl.dataone.org/odo/ECSO_00002450",1,"1","0",1,1
+"organic carbon","http://purl.dataone.org/odo/ECSO_00000329",1,"0","1",1,1
+"organic carbon electron donor type","http://purl.dataone.org/odo/ECSO_00002292",1,"1","0",1,1
+"organic carbon percentage","http://purl.dataone.org/odo/ECSO_00000647",1,"1","0",1,1
+"organic carbon percentage in soil","http://purl.dataone.org/odo/ECSO_00000648",1,"1","0",1,1
+"oxygen concentration","http://purl.dataone.org/odo/ECSO_00001246",1,"0","1",1,1
+"ozone concentration","http://purl.dataone.org/odo/ECSO_00002934",1,"1","0",1,1
+"peat active layer depth","http://purl.dataone.org/odo/ECSO_00001554",1,"1","0",1,1
+"peat bulk density","http://purl.dataone.org/odo/ECSO_00002279",1,"1","0",1,1
+"peat sample base depth","http://purl.dataone.org/odo/ECSO_00001753",1,"1","0",1,1
+"peat sample midpoint depth","http://purl.dataone.org/odo/ECSO_00001754",1,"1","0",1,1
+"peristaltic pump rate","http://purl.dataone.org/odo/ECSO_00002368",1,"1","0",1,1
+"permafrost depth","http://purl.dataone.org/odo/ECSO_00001697",1,"1","0",1,1
+"ph standard deviation","http://purl.dataone.org/odo/ECSO_00003091",1,"1","0",1,1
+"phenanthrene concentration","http://purl.dataone.org/odo/ECSO_00003012",1,"1","0",1,1
+"phosphate concentration","http://purl.dataone.org/odo/ECSO_00002328",1,"1","0",1,1
+"phosphate concentration in water","http://purl.dataone.org/odo/ECSO_00002329",1,"1","0",1,1
+"photochemical reflectance index","http://purl.dataone.org/odo/ECSO_00002338",1,"1","0",1,1
+"plant fertilization","http://purl.dataone.org/odo/ECSO_00002435",1,"1","0",1,1
+"plant fertilization and light","http://purl.dataone.org/odo/ECSO_00001610",1,"1","0",1,1
+"potassium concentration in snow","http://purl.dataone.org/odo/ECSO_00002376",1,"1","0",1,1
+"potassium concentration in water","http://purl.dataone.org/odo/ECSO_00002339",1,"1","0",1,1
+"potassium percent soils total exchange capacity","http://purl.dataone.org/odo/ECSO_00002341",1,"1","0",1,1
+"potassium retranslocation efficiency percentage","http://purl.dataone.org/odo/ECSO_00002362",1,"1","0",1,1
+"potassium solubility in water","http://purl.dataone.org/odo/ECSO_00001841",1,"1","0",1,1
+"potential density","http://purl.dataone.org/odo/ECSO_00002403",1,"1","0",1,1
+"praseodymium solubility in water","http://purl.dataone.org/odo/ECSO_00001842",1,"1","0",1,1
+"presence of attached spermatophores","http://purl.dataone.org/odo/ECSO_00002463",1,"1","0",1,1
+"presence of photograph","http://purl.dataone.org/odo/ECSO_00002616",1,"1","0",1,1
+"primary sampling unit number","http://purl.dataone.org/odo/ECSO_00001642",1,"1","0",1,1
+"probe status","http://purl.dataone.org/odo/ECSO_00001643",1,"1","0",1,1
+"pyrene concentration","http://purl.dataone.org/odo/ECSO_00003013",1,"1","0",1,1
+"ratio measurement type","http://purl.dataone.org/odo/ECSO_00000629",1,"1","0",1,1
+"relative position","http://purl.dataone.org/odo/ECSO_00003024",1,"1","0",1,1
+"respiration standard deviation","http://purl.dataone.org/odo/ECSO_00001908",1,"1","0",1,1
+"river water conductivity","http://purl.dataone.org/odo/ECSO_00001541",1,"1","0",1,1
+"river water temperature","http://purl.dataone.org/odo/ECSO_00001528",1,"1","0",1,1
+"root biomass","http://purl.dataone.org/odo/ECSO_00002878",1,"1","0",1,1
+"rubidium concentration in ice","http://purl.dataone.org/odo/ECSO_00002318",1,"1","0",1,1
+"samarium solubility in water","http://purl.dataone.org/odo/ECSO_00001843",1,"1","0",1,1
+"sea ice extent","http://purl.dataone.org/odo/ECSO_00002654",1,"1","0",1,1
+"sea ice presence","http://purl.dataone.org/odo/ECSO_00002525",1,"1","0",1,1
+"sea level pressure","http://purl.dataone.org/odo/ECSO_00001650",1,"1","0",1,1
+"seal tag identifier","http://purl.dataone.org/odo/ECSO_00002371",1,"1","0",1,1
+"season","http://purl.dataone.org/odo/ECSO_00002366",1,"1","0",1,1
+"seawater depth - categorical","http://purl.dataone.org/odo/ECSO_00002609",1,"1","0",1,1
+"sediment composition","http://purl.dataone.org/odo/ECSO_00003027",1,"1","0",1,1
+"sediment grain size standard deviation","http://purl.dataone.org/odo/ECSO_00001640",1,"1","0",1,1
+"sediment mass","http://purl.dataone.org/odo/ECSO_00002885",1,"1","0",1,1
+"sedimentation rate","http://purl.dataone.org/odo/ECSO_00002510",1,"1","0",1,1
+"shannon index","http://purl.dataone.org/odo/ECSO_00001632",1,"1","0",1,1
+"shrew count","http://purl.dataone.org/odo/ECSO_00002860",1,"1","0",1,1
+"sigma t","http://purl.dataone.org/odo/ECSO_00002404",1,"1","0",1,1
+"silicic acid concentration in seawater","http://purl.dataone.org/odo/ECSO_00002604",1,"1","0",1,1
+"silicon solubility in water","http://purl.dataone.org/odo/ECSO_00001844",1,"1","0",1,1
+"snow accumulation and warming","http://purl.dataone.org/odo/ECSO_00002427",1,"1","0",1,1
+"snow cover percentage","http://purl.dataone.org/odo/ECSO_00001652",1,"1","0",1,1
+"snow density standard deviation","http://purl.dataone.org/odo/ECSO_00003089",1,"1","0",1,1
+"snow depth standard deviation","http://purl.dataone.org/odo/ECSO_00003090",1,"1","0",1,1
+"snowfall rate","http://purl.dataone.org/odo/ECSO_00002234",1,"1","0",1,1
+"sodium concentration in water","http://purl.dataone.org/odo/ECSO_00002419",1,"1","0",1,1
+"sodium percent soils total exchange capacity","http://purl.dataone.org/odo/ECSO_00002421",1,"1","0",1,1
+"sodium solubility in water","http://purl.dataone.org/odo/ECSO_00001845",1,"1","0",1,1
+"soil active layer depth","http://purl.dataone.org/odo/ECSO_00001210",1,"0","1",1,1
+"soil conductivity","http://purl.dataone.org/odo/ECSO_00001538",1,"1","0",1,1
+"soil core identifier","http://purl.dataone.org/odo/ECSO_00002559",1,"1","0",1,1
+"soil moisture - voltage","http://purl.dataone.org/odo/ECSO_00002479",1,"1","0",1,1
+"soil organic matter loss on ignition","http://purl.dataone.org/odo/ECSO_00002155",1,"1","0",1,1
+"soil organic matter percentage","http://purl.dataone.org/odo/ECSO_00000670",1,"1","0",1,1
+"solar azimuth angle","http://purl.dataone.org/odo/ECSO_00002724",1,"1","0",1,1
+"solar radiation","http://purl.dataone.org/odo/ECSO_00001103",1,"1","0",1,1
+"solar zenith angle","http://purl.dataone.org/odo/ECSO_00002723",1,"1","0",1,1
+"species evenness","http://purl.dataone.org/odo/ECSO_00002275",1,"1","0",1,1
+"specific leaf area","http://purl.dataone.org/odo/ECSO_00001726",1,"1","0",1,1
+"specific leaf area of dead leaves","http://purl.dataone.org/odo/ECSO_00001727",1,"1","0",1,1
+"specific leaf area of live leaves","http://purl.dataone.org/odo/ECSO_00001728",1,"1","0",1,1
+"speed measurement type","http://purl.dataone.org/odo/ECSO_00002721",1,"0","1",1,1
+"squirrel count","http://purl.dataone.org/odo/ECSO_00002059",1,"1","0",1,1
+"stable nitrogen isotope ratio","http://purl.dataone.org/odo/ECSO_00001737",1,"1","0",1,1
+"stomatal conductance","http://purl.dataone.org/odo/ECSO_00003084",1,"1","0",1,1
+"stream depth","http://purl.dataone.org/odo/ECSO_00001212",1,"1","0",1,1
+"strontium solubility in water","http://purl.dataone.org/odo/ECSO_00001846",1,"1","0",1,1
+"study site burn history","http://purl.dataone.org/odo/ECSO_00002453",1,"1","0",1,1
+"sulfate concentration in ice","http://purl.dataone.org/odo/ECSO_00002377",1,"1","0",1,1
+"sulfur concentration in soil","http://purl.dataone.org/odo/ECSO_00002391",1,"1","0",1,1
+"sulfur percentage in lake sediment","http://purl.dataone.org/odo/ECSO_00002901",1,"1","0",1,1
+"sulfur solubility in water","http://purl.dataone.org/odo/ECSO_00001847",1,"1","0",1,1
+"surface pressure","http://purl.dataone.org/odo/ECSO_00001660",1,"1","0",1,1
+"suva of cdom at wavelength 254 nm","http://purl.dataone.org/odo/ECSO_00001503",1,"1","0",1,1
+"taxonomic higher classification","http://purl.dataone.org/odo/ECSO_00002737",1,"1","0",1,1
+"telson length","http://purl.dataone.org/odo/ECSO_00001924",1,"1","0",1,1
+"thallium concentration in ice","http://purl.dataone.org/odo/ECSO_00002316",1,"1","0",1,1
+"thickness of live vegetation layer","http://purl.dataone.org/odo/ECSO_00002946",1,"1","0",1,1
+"tin solubility in water","http://purl.dataone.org/odo/ECSO_00001848",1,"1","0",1,1
+"titanium solubility in water","http://purl.dataone.org/odo/ECSO_00001849",1,"1","0",1,1
+"toe length","http://purl.dataone.org/odo/ECSO_00002908",1,"1","0",1,1
+"toluene concentration in air","http://purl.dataone.org/odo/ECSO_00002778",1,"1","0",1,1
+"total aluminum concentration in snow","http://purl.dataone.org/odo/ECSO_00001978",1,"1","0",1,1
+"total aluminum concentration in soil","http://purl.dataone.org/odo/ECSO_00002023",1,"1","0",1,1
+"total antimony concentration in snow","http://purl.dataone.org/odo/ECSO_00001980",1,"1","0",1,1
+"total arsenic concentration in snow","http://purl.dataone.org/odo/ECSO_00001981",1,"1","0",1,1
+"total cadmium concentration in snow","http://purl.dataone.org/odo/ECSO_00001982",1,"1","0",1,1
+"total calcium concentration in snow","http://purl.dataone.org/odo/ECSO_00001983",1,"1","0",1,1
+"total calcium concentration in soil","http://purl.dataone.org/odo/ECSO_00002024",1,"1","0",1,1
+"total cerium concentration in snow","http://purl.dataone.org/odo/ECSO_00001985",1,"1","0",1,1
+"total charcoal areal concentration","http://purl.dataone.org/odo/ECSO_00002277",1,"1","0",1,1
+"total chromium concentration in snow","http://purl.dataone.org/odo/ECSO_00001986",1,"1","0",1,1
+"total concentration of niobium in snow","http://purl.dataone.org/odo/ECSO_00002002",1,"1","0",1,1
+"total concentration of samarium in snow","http://purl.dataone.org/odo/ECSO_00002006",1,"1","0",1,1
+"total dissolved phosphorus concentration in water","http://purl.dataone.org/odo/ECSO_00002844",1,"1","0",1,1
+"total dysprosium concentration in snow","http://purl.dataone.org/odo/ECSO_00001989",1,"1","0",1,1
+"total europium concentration in snow","http://purl.dataone.org/odo/ECSO_00001991",1,"1","0",1,1
+"total exchange capacity","http://purl.dataone.org/odo/ECSO_00002232",1,"1","0",1,1
+"total gadolinium concentration in snow","http://purl.dataone.org/odo/ECSO_00001993",1,"1","0",1,1
+"total iron concentration in snow","http://purl.dataone.org/odo/ECSO_00001994",1,"1","0",1,1
+"total lanthanum concentration in snow","http://purl.dataone.org/odo/ECSO_00001995",1,"1","0",1,1
+"total magnesium concentration in snow","http://purl.dataone.org/odo/ECSO_00001997",1,"1","0",1,1
+"total magnesium concentration in soil","http://purl.dataone.org/odo/ECSO_00002026",1,"1","0",1,1
+"total manganese concentration in snow","http://purl.dataone.org/odo/ECSO_00001998",1,"1","0",1,1
+"total neodymium concentration in snow","http://purl.dataone.org/odo/ECSO_00002000",1,"1","0",1,1
+"total nitrogen percentage in soil","http://purl.dataone.org/odo/ECSO_00002855",1,"0","1",1,1
+"total phosphorus concentration in soil","http://purl.dataone.org/odo/ECSO_00002028",1,"1","0",1,1
+"total potassium concentration in snow","http://purl.dataone.org/odo/ECSO_00002003",1,"1","0",1,1
+"total potassium concentration in soil","http://purl.dataone.org/odo/ECSO_00002025",1,"1","0",1,1
+"total praseodymium concentration in snow","http://purl.dataone.org/odo/ECSO_00002004",1,"1","0",1,1
+"total silicon concentration in snow","http://purl.dataone.org/odo/ECSO_00002008",1,"1","0",1,1
+"total sodium concentration in soil","http://purl.dataone.org/odo/ECSO_00002027",1,"1","0",1,1
+"total soil nitrogen concentration","http://purl.dataone.org/odo/ECSO_00001144",1,"1","0",1,1
+"total strontium ion concentration in snow","http://purl.dataone.org/odo/ECSO_00002010",1,"1","0",1,1
+"total sulfur concentration in snow","http://purl.dataone.org/odo/ECSO_00002011",1,"1","0",1,1
+"total tin concentration in snow","http://purl.dataone.org/odo/ECSO_00002012",1,"1","0",1,1
+"total titanium concentration in snow","http://purl.dataone.org/odo/ECSO_00001764",1,"1","0",1,1
+"total uranium concentration in snow","http://purl.dataone.org/odo/ECSO_00002013",1,"1","0",1,1
+"total vanadium concentration in snow","http://purl.dataone.org/odo/ECSO_00002014",1,"1","0",1,1
+"total yttrium concentration in snow","http://purl.dataone.org/odo/ECSO_00002017",1,"1","0",1,1
+"total zinc concentration in snow","http://purl.dataone.org/odo/ECSO_00002015",1,"1","0",1,1
+"trace-gas bubble classification in lake","http://purl.dataone.org/odo/ECSO_00002483",1,"1","0",1,1
+"transect identifier","http://purl.dataone.org/odo/ECSO_00002213",1,"1","0",1,1
+"transect length","http://purl.dataone.org/odo/ECSO_00001943",1,"1","0",1,1
+"tree sample identifier","http://purl.dataone.org/odo/ECSO_00002302",1,"1","0",1,1
+"type of biome","http://purl.dataone.org/odo/ECSO_00002727",1,"1","0",1,1
+"type of blood collected","http://purl.dataone.org/odo/ECSO_00003045",1,"1","0",1,1
+"type of ecosystem","http://purl.dataone.org/odo/ECSO_00003033",1,"1","0",1,1
+"type of ecozone","http://purl.dataone.org/odo/ECSO_00002732",1,"1","0",1,1
+"type of habitat","http://purl.dataone.org/odo/ECSO_00002736",1,"1","0",1,1
+"type of hydrological regime","http://purl.dataone.org/odo/ECSO_00002750",1,"1","0",1,1
+"type of krill","http://purl.dataone.org/odo/ECSO_00002739",1,"1","0",1,1
+"type of material sampled","http://purl.dataone.org/odo/ECSO_00002813",1,"1","0",1,1
+"type of peat core microtopography","http://purl.dataone.org/odo/ECSO_00002622",1,"1","0",1,1
+"type of permafrost","http://purl.dataone.org/odo/ECSO_00003020",1,"1","0",1,1
+"type of plant","http://purl.dataone.org/odo/ECSO_00002576",1,"1","0",1,1
+"type of sediment core","http://purl.dataone.org/odo/ECSO_00001594",1,"1","0",1,1
+"type of snow","http://purl.dataone.org/odo/ECSO_00002956",1,"1","0",1,1
+"type of soil","http://purl.dataone.org/odo/ECSO_00002454",1,"1","0",1,1
+"type of trap","http://purl.dataone.org/odo/ECSO_00001591",1,"1","0",1,1
+"type of valley","http://purl.dataone.org/odo/ECSO_00002540",1,"1","0",1,1
+"uncertainty in 210pb age","http://purl.dataone.org/odo/ECSO_00001631",1,"1","0",1,1
+"uranium concentration in ice","http://purl.dataone.org/odo/ECSO_00001975",1,"1","0",1,1
+"uranium solubility in water","http://purl.dataone.org/odo/ECSO_00001850",1,"1","0",1,1
+"valley identifier","http://purl.dataone.org/odo/ECSO_00002548",1,"1","0",1,1
+"valley name","http://purl.dataone.org/odo/ECSO_00002547",1,"1","0",1,1
+"valley system","http://purl.dataone.org/odo/ECSO_00002546",1,"1","0",1,1
+"vanadium concentration in ice","http://purl.dataone.org/odo/ECSO_00001973",1,"1","0",1,1
+"vanadium solubility in water","http://purl.dataone.org/odo/ECSO_00001851",1,"1","0",1,1
+"view azimuth","http://purl.dataone.org/odo/ECSO_00002543",1,"1","0",1,1
+"virus like particle counts per milliliter","http://purl.dataone.org/odo/ECSO_00002206",1,"1","0",1,1
+"virus like particle counts per milliliter standard error","http://purl.dataone.org/odo/ECSO_00002674",1,"1","0",1,1
+"vole count","http://purl.dataone.org/odo/ECSO_00002057",1,"1","0",1,1
+"volumetric ice content","http://purl.dataone.org/odo/ECSO_00002173",1,"1","0",1,1
+"walrus count","http://purl.dataone.org/odo/ECSO_00002161",1,"1","0",1,1
+"water band index","http://purl.dataone.org/odo/ECSO_00002205",1,"1","0",1,1
+"water sample classification","http://purl.dataone.org/odo/ECSO_00002488",1,"1","0",1,1
+"water table height","http://purl.dataone.org/odo/ECSO_00001748",1,"1","0",1,1
+"watershed area","http://purl.dataone.org/odo/ECSO_00001729",1,"1","0",1,1
+"wavelength","http://purl.dataone.org/odo/ECSO_00002943",1,"1","0",1,1
+"year and season","http://purl.dataone.org/odo/ECSO_00002169",1,"1","0",1,1
+"yttrium solubility in water","http://purl.dataone.org/odo/ECSO_00001852",1,"1","0",1,1
+"zinc concentration in soil","http://purl.dataone.org/odo/ECSO_00002337",1,"1","0",1,1
+"zinc solubility in water","http://purl.dataone.org/odo/ECSO_00001853",1,"1","0",1,1
+"NA","http://www.purl.dataone.org/odo/ECSO_00010076",1,"1","0",19,11

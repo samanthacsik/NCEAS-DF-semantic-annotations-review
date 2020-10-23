@@ -1,7 +1,7 @@
 # title: Most commonly used semantic annotations in the ADC
 # author: "Sam Csik"
 # date created: "2020-10-07"
-# date edited: "2020-10-12"
+# date edited: "2020-10-23"
 # R version: 3.6.3
 # input: "data/queries/query2020-10-01/fullQuery_semAnnotations2020-10-01_webscraping.csv" & "fullQuery_semAnnotations2020-10-01_solr.csv"
 # output: 
@@ -13,7 +13,7 @@
 # This script explores current semantic annotation frequencies in the ADC corpus
   # 1) plot most commonly used annotations for ALL ADC
   # 2) plot most commonly used annotations, grouped by time period (pre vs post-Aug 2020)
-  # 3) generate some objects for inline text to use in RMarkdown report
+  # 3) create table for RMarkdown report with annotation counts (total, preAug, postAug) + unique IDs + unique authors
 
 ##########################################################################################
 # General setup
@@ -24,6 +24,7 @@
 ##############################
 
 source(here::here("code", "00_libraries.R"))
+source(here::here("code", "00_functions.R"))
 
 ##############################
 # Import data
@@ -33,11 +34,12 @@ solr_query <- read_csv(here::here("data", "queries", "query2020-10-12", "fullQue
 annotations <- read_csv(here::here("data", "queries", "query2020-10-12", "fullQuery_semAnnotations2020-10-12_webscraping.csv"))
 
 ##############################
-# Add `dateUploaded` field from `solr_query` to `annotations` df
+# Add `dateUploaded`, and 'author' fields from `solr_query` to `annotations` df
 ##############################
 
-dateUploaded <- solr_query %>% select(identifier, dateUploaded)
-annotations <- inner_join(annotations, dateUploaded)
+dateUploaded_author <- solr_query %>% select(identifier, dateUploaded, author) 
+annotations <- inner_join(annotations, dateUploaded_author)
+# write.csv(annotations, here::here("data", "outputs", "extracted_annotations.csv"))
 
 ##########################################################################################
 # 1) plot most used semantic annotations for ALL annotated ADC packages
@@ -160,17 +162,54 @@ prepostAug2020_freq_plot <- preAug2020_freq_plot + postAug2020_freq_plot +
 # 3) data for RMarkdown report
 ##########################################################################################
 
-annotations_new <- annotation_counts %>% 
-  rename(total_n = n)
+##############################
+# create table 4 - total counts, unique IDs, unique authors data for RMarkdown report
+##############################
 
+# total annotation counts -- copied from part 1 above
+annotation_counts 
+
+# unique ID counts for each token
+uniqueID_counts <- annotations %>% 
+  mutate(prefName = stringr::str_to_lower(prefName)) %>% 
+  group_by(prefName) %>% 
+  summarise(unique_ids = n_distinct(identifier)) %>% 
+  arrange(-unique_ids)
+
+# unique ID counts for each token
+uniqueAuthor_counts <- annotations %>% 
+  mutate(prefName = stringr::str_to_lower(prefName)) %>% 
+  group_by(prefName) %>%
+  summarise(unique_authors = n_distinct(author)) %>%
+  arrange(-unique_authors)
+
+# caluclate pre and postAug annotation counts
 pre_new <- preAug2020 %>% 
   rename(preAug_n = n)
-
-annotation_counts_new <- full_join(annotations_new, pre_new)
 
 post_new <- postAug2020 %>% 
   rename(postAug_n = n)
 
-Table3_annotation_counts <- inner_join(annotation_counts_new, post_new)
+# full_join dfs by token -- first token_counts and uniqueID_counts
+my_file <- full_join(annotation_counts, uniqueID_counts)
+# then join uniqueAuthor_counts
+my_file <- full_join(my_file, uniqueAuthor_counts)
+# then join preAug counts 
+my_file <- full_join(my_file, pre_new)
+# then postAug counts
+Table3_annotation_counts <- full_join(my_file, post_new) %>% 
+  select(prefName, valueURI, n, preAug_n, postAug_n, unique_ids, unique_authors) %>% 
+  mutate(preAug_n = replace_na(preAug_n, replace = "0")) %>% 
+  mutate(postAug_n = replace_na(postAug_n, replace = "0")) %>% 
+  mutate(prefName = replace_na(prefName, replace = "NA"))
 
-# write.csv(annotation_counts_NEW, here::here("data", "outputs", "semAnnotation_counts.csv"))
+# write.csv(Table3_annotation_counts, here::here("data", "outputs", "semAnnotation_counts.csv"), row.names = FALSE)
+
+##############################
+# Table 5: streamlined version of raw data for embedding in RMarkdown
+##############################
+
+streamlined <- annotations %>% 
+  select(identifier, attributeName, prefName, valueURI)
+
+

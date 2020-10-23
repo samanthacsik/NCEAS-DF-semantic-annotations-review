@@ -90,6 +90,11 @@ filterCount_indivTerms <- function(file_path, file_name) {
   object_name <- gsub("unnested_", "filteredCounts_", object_name)
   print(object_name)
   
+  # check to make sure all expected columsn are present in 'file_name'
+  if (!("word1" %in% names(file_name))){
+    stop("Your df appears to be formatted incorrectly. 'word1' is missing.")
+  }  
+   
   # total token counts
   token_counts <- read_csv(here::here(file_path, file_name)) %>% 
     rename(token = word1) %>% 
@@ -132,6 +137,12 @@ filterCount_bigramTerms <- function(file_path, file_name) {
   object_name <- gsub(".csv", "", object_name)
   object_name <- gsub("unnested_", "filteredCounts_", object_name)
   print(object_name)
+  
+  # check to make sure all expected columsn are present in 'file_name'
+  if (!("word1" %in% names(file_name)) |
+      !("word2" %in% names(file_name))){
+    stop("Your df appears to be formatted incorrectly. 'word1' and 'word2' are missing.")
+  }  
   
   # wrangle data
   token_counts <- read_csv(here::here(file_path, file_name)) %>% 
@@ -179,6 +190,13 @@ filterCount_trigramTerms <- function(file_path, file_name) {
   object_name <- gsub(".csv", "", object_name)
   object_name <- gsub("unnested_", "filteredCounts_", object_name)
   print(object_name)
+  
+  # check to make sure all expected columsn are present in 'file_name'
+  if (!("word1" %in% names(file_name)) |
+      !("word2" %in% names(file_name)) |
+      !("word3" %in% names(file_name))){
+    stop("Your df appears to be formatted incorrectly. 'word1', 'word2', and 'word3' are missing.")
+  }  
   
   # wrangle data
   token_counts <- read_csv(here::here(file_path, file_name)) %>% 
