@@ -194,19 +194,8 @@ Additionally, I've asked the datateam to add any attributes that they cannot fin
 
 ### **5. Raw data & code**
 
-```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.height = 15, fig.width = 20}
-##############################
-# table
-##############################
-
-# datatable(streamlined,
-#           class = 'cell-border stripe',
-#           colnames = c("package identifier", "attributeName", "semantic annotation (preferred name)", "semantic annotation (value URI)"),
-#           caption = htmltools::tags$caption(
-#             style = 'caption-side: top; text-align: left;', 'Table 5: ', 
-#             htmltools::em('Data package identifiers and their associated attributes')),
-#           filter = 'top', options = list(pageLength = 5, autoWidth = TRUE))
-```
-
-* Raw data (extracted attribute information) from the 2020-10-12 solr query can be downloaded [here](https://drive.google.com/file/d/1X59s65_pZOt2e_Z8g4ch-tUyrcJzim28/view?usp=sharing).
-* GitHub Repository with associated code and additional data: [samanthacsik/NCEAS-DF-semantic-annoations-review](https://github.com/samanthacsik/NCEAS-DF-semantic-annotations-review)
+* Raw data:
+    * solr query (2020-10-12) is downloadable [here](https://drive.google.com/file/d/1jQCcfYIDTD8FID40x77ga-2F5MbbPUO1/view?usp=sharing)
+    * tidied attribute information extracted from 2020-10-12 solr query is downloadable [here](https://drive.google.com/file/d/1LUxt2lTdYnc6IDkknSbjZH_AyRE3team/view?usp=sharing)
+    * annotated attributes and their associated valueURIs and prefNames (webscraped) are downloadable [here](https://drive.google.com/file/d/1wvcSvXWj0xoDU1DFEiKRx_jnkjxrRQaz/view?usp=sharing)
+* GitHub Repository with associated code, analyses, and data (this also includes analyses and data not explicitly covered in this report): [samanthacsik/NCEAS-DF-semantic-annoations-review](https://github.com/samanthacsik/NCEAS-DF-semantic-annotations-review)
