@@ -45,8 +45,12 @@ annotations <- inner_join(annotations, dateUploaded_author)
 # 1) plot most used semantic annotations for ALL annotated ADC packages
 ##########################################################################################
 
+# remove nonannotated attributes
+annotated_attributes <- annotations %>% 
+  filter(!is.na(propertyURI))
+
 # calculate frequencies
-annotation_counts <- annotations %>% 
+annotation_counts <- annotated_attributes %>% 
   mutate(prefName = stringr::str_to_lower(prefName)) %>% 
   count(prefName, valueURI, sort = TRUE)
 
@@ -88,7 +92,7 @@ semAnnotation_freq_plot <- semAnnotation_freq_plot +
 ##############################
 
 # before August 1, 2020
-preAug2020 <- annotations %>% 
+preAug2020 <- annotated_attributes %>% 
   separate(dateUploaded, into = c("date", "time"), sep = " ") %>% 
   filter(date < "2020-08-01") %>% 
   unite(col = dateUploaded, date, time, sep = " ") %>% 
@@ -101,7 +105,7 @@ tot_num_annotations_preAug2020 <- sum(preAug2020$n)
 # write.csv(annotation_counts, here::here("data", "outputs", paste("preAug2020_semAnnotation_counts", Sys.Date(), ".csv", sep = "_")))
 
 # before August 1, 2020
-postAug2020 <- annotations %>% 
+postAug2020 <- annotated_attributes %>% 
   separate(dateUploaded, into = c("date", "time"), sep = " ") %>% 
   filter(date >= "2020-08-01") %>% 
   unite(col = dateUploaded, date, time, sep = " ") %>% 
