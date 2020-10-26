@@ -31,7 +31,7 @@ source(here::here("code", "00_functions.R"))
 ##############################
 
 solr_query <- read_csv(here::here("data", "queries", "query2020-10-12", "fullQuery_semAnnotations2020-10-12_solr.csv"))
-annotations <- read_csv(here::here("data", "queries", "query2020-10-12", "fullQuery_semAnnotations2020-10-12_webscraping.csv"))
+annotations <- read_csv(here::here("data", "queries", "query2020-10-12", "fullQuery_semAnnotations2020-10-12_webscraping_allAttributes.csv"))
 
 ##############################
 # Add `dateUploaded`, and 'author' fields from `solr_query` to `annotations` df

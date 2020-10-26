@@ -43,8 +43,8 @@ source(here::here("code", "07_nonAnnotated_attribute_assessment.R"))
       * Table 2^+^: attribute information for non-resolvable valueURIs
   3. Summary of most commonly used semantic annotations
       * Figure 1: most commonly used attribute-level annotations across the ADC corpus
-      * Figure 2: most commonly used attribute-level annotations used in data packages uploaded pre vs. post-August 2020
-      * Table 3^+^: counts of attribute-level annotations used across the ADC corpus (total, pre-Aug. 2020, post-Aug. 2020)
+      * Figure 2: most common attribute-level annotations used in data packages uploaded pre vs. post-August 2020
+      * Table 3^+^: counts of (i) attribute-level annotations used across the ADC corpus (total, pre-Aug. 2020, post-Aug. 2020), (ii) unique package identifiers each annotation is used in, and (iii) unique authors that used each annotation
   4. Summary of attributes that are not being annotated
       * Figure 3: most common nonannotated attributeNames (unnested, individual tokens)
       * Table 4^+^: most common nonannoated individual attributeName tokens 
