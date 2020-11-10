@@ -37,7 +37,7 @@ adc_mn <- getMNode(cn, 'urn:node:ARCTIC')
 # 1) query all ADC holdings (only the most recent published version) for identifiers, titles, keywords, abstracts, and attribute info
 ##########################################################################################
 
-# solr query
+# solr query (most recent versions)
 semAnnotations_query <- query(adc_mn, 
                               list(q = "documents:* AND obsolete:(*:* NOT obsoletedBy:*)",
                                    fl = "identifier, dateUploaded, datePublished, pubDate, author, title, keywords, abstract, attribute, sem_annotates, sem_annotation, sem_annotated_by, sem_comment",
