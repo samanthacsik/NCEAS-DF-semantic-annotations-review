@@ -47,6 +47,7 @@ vignettes/*.pdf
 # add .xml files
 data/queries/query2020-10-01/xml/*
 data/queries/query2020-10-12/xml/*
+data/queries/query2020-10-12_attributes_from_nonannotated_datapackages/xml/*
 
 
 
