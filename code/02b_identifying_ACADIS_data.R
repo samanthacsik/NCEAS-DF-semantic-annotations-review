@@ -1,16 +1,16 @@
 # title: Identifying ACADIS datasets
 # author: "Sam Csik, adapted from Chris Beltz"
 # date created: "2020-11-09"
-# date edited: "2020-11-09"
+# date edited: "2020-11-10"
 # R version: 3.6.3
-# input: "data/queries/query2020-10-12/fullQuery_semAnnotations2020-10-12_solr.csv"
-# output: NA
+# input: "data/queries/query2020-10-12/fullQuery_semAnnotations2020-10-12_solr.csv" , agg_check_scores (see Import data)
+# output: "data/queries/query2020-10-12/fullQuery_semAnnotations2020-10-12_labeledACADIS.csv"
 
 ##########################################################################################
 # Summary
 ##########################################################################################
 
-
+# After initial analyses, we found that out of ~6100 datapackages in the ADC, only ~1400 of them have attribute information; MJones and MSchildhauer suggested doing a deeper dive into the remaining ~4700 datasets that have no attribute information. The first step is to identify and remove any ACADIS data, which was ingested upon the inception of the ADC. They said there should be ~3500 ACADIS datasets, leaving ~1000ish remaining to be explored in greater depth. Here, I identify those ACADIS datasets using code adapted from Chris Beltz so that they can be filtered out.
 
 ##########################################################################################
 # General setup
@@ -30,14 +30,15 @@ source(here::here("code", "00_functions.R"))
 # solr query from 2020-10-12
 solr_query <- read_csv(here::here("data",  "queries", "query2020-10-12", "fullQuery_semAnnotations2020-10-12_solr.csv"))
 
-# Get updated aggregate check scores via terminal
+# Get updated aggregate check scores via terminal (last downloaded on 2020-11-10)
 # curl -v --GET -H "Accept: text/csv" "https://docker-ucsb-4.dataone.org:30443/quality/scores/?id=urn:node:ARCTIC&suite=FAIR-suite-0.3.1" -o "agg_check_scores2020-11-10.csv"
 
 # read back in data (I moved this to a subdirectory after saving using the above commands)
 agg_check_scores <- read_csv(here::here("data", "aggregate_scores", "agg_check_scores2020-11-10.csv"))
 
 ##########################################################################################
-# 1) clean data -- get PIDs with at least 2 sequenceIds
+# 1) clean data -- get PIDs with at least 2 sequenceIds (i.e. those that have at leat an initial submission and second/final updated submission)
+  # need initial submission to be able to identify those submitted prior to 2016-03-21 (ACADIS datasets) and thier corresponding final PIDs
   # NOTE: a sequenceId is the equivalent of a reserve engineered series_id and uniquely identifies an individual entity across multiple versions/PIDs
 ##########################################################################################
 
@@ -107,6 +108,9 @@ ACADIS_data_initial_sequenceIDs <- sequenceID_firstLast_dateSplit %>%
   mutate(dataSubset = rep("ACADIS")) %>% 
   select(sequenceId, dataSubset) 
 
+# for RMarkdown 
+total_num_ACADIS_datapackages <- length(ACADIS_data_initial_sequenceIDs$sequenceId)
+
 # join dfs to label ACADIS data (for both INITIAL and FINAL sequenceIDs)
 ACADIS_data_labeled <- full_join(sequenceID_firstLast_dateSplit, ACADIS_data_initial_sequenceIDs)
 
@@ -125,8 +129,7 @@ ACADIS_data_finalPIDs <- ACADIS_data_labeled %>%
 ##########################################################################################
 
 solr_query_ACADIS_labeled <- full_join(ACADIS_data_finalPIDs, solr_query) 
-
-write_csv(solr_query_ACADIS_labeled, here::here("data", "queries", "query2020-10-12", "fullQuery_semAnnotations2020-10-12_labeledACADIS.csv"))
+# write_csv(solr_query_ACADIS_labeled, here::here("data", "queries", "query2020-10-12", "fullQuery_semAnnotations2020-10-12_labeledACADIS.csv"))
 
 # NOTE: there are 51 extra identifiers that don't appear in the orinal solr_query after full_joining; these all appear to be ACADIS data and will be filtered out anyway
 test <- solr_query_ACADIS_labeled %>% 
