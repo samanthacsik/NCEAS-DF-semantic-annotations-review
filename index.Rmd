@@ -30,7 +30,9 @@ source(here::here("code", "00_libraries.R"))
 # load previous analyses
 ##############################
 
-source(here::here("code", "02_exploration.R"))
+source(here::here("code", "02a_initial_exploration.R"))
+source(here::here("code", "02b_identifying_ACADIS_data.R"))
+source(here::here("code", "02c_exploration_noAttributes.R"))
 source(here::here("code", "06_semAnnotation_assessment.R"))
 source(here::here("code", "07_nonAnnotated_attribute_assessment.R"))
 ```
@@ -79,7 +81,7 @@ Here, I explore the current ADC corpus to summarize our progress in implementing
 
 **How many datapackages have annotations?**
 
-* As of October 12, 2020, the Arctic Data Center contains **`r num_total_datapackages`** data packages (NOTE: a data package consists of a publically-available metadata record, which may be packaged with one or more data files). Of those, **`r num_datapackages_with_attributes`** contain data file types that have associated attributes (i.e. variables). Currently, **`r num_datapackages_with_annotations`** data packages have at least one semantically-annotated attribute.
+* As of October 12, 2020, the Arctic Data Center contains **`r num_total_datapackages`** data packages (NOTE: a data package consists of a publically-available metadata record, which may be packaged with one or more data files). Of those, **`r num_datapackages_with_attributes`** contain data file types that have associated attributes (i.e. variables). Currently, **`r num_datapackages_with_annotations`** data packages have at least one semantically-annotated attribute. See section 5 for an overview of datasets that do not contain any attribute information.
 
 **How many attributes have been annotated, and when were these added?**
 
@@ -195,9 +197,41 @@ Additionally, I've asked the datateam to add any attributes that they cannot fin
 
 -----
 
-## **5. Raw data & code**
+## **5. Exploration of datapackages that do not contain attribute information**
+
+In Part 2, we see that the ADC corpus consists of **`r num_total_datapackages`** total datapackages, **`r num_datapackages_with_attributes`** of which have attribute information described in their metadata records according to solr query returns on 2020-10-12. Here, we further explore the remaining **`r num_datapackages_without_attributes`** datapackges that the solr query did not return attribute information for.
+
+First, we identified **'r total_num_ACADIS_datapackages'** [ACADIS](https://www.eol.ucar.edu/field_projects/acadis) datapackages, which were ingested by the ADC in March 2016 and therefore were not curated by (i.e. metadata and associated attribute information was not constructed by) the ADC. After accounting for these datapackages, we are left with **`r num_nonACADIS_data_no_attributes`** datapackages for which attribute information is not returned in solr queries. You can explore these datapackages in **Table 5** below:
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.height = 15, fig.width = 20}
+##############################
+# table 5
+##############################
+
+datatable(table5,
+          class = 'cell-border stripe',
+          caption = htmltools::tags$caption(
+            style = 'caption-side: top; text-align: left;', 'Table 4: ', 
+            htmltools::em('ADC datapackages for which attribute infomration is not returned in solr queries. These do not include any ACADIS datapackages (i.e. those uploaded to the ADC prior to 2020-03-21')),
+          filter = 'top', options = list(pageLength = 5, autoWidth = TRUE))
+```
+<span style="color: darkred;">**NOTE:**</span> You can download **Table 5** as a .csv file [here](https://drive.google.com/file/d/1gnDf8VTknPX8st9C9W7VlYNBYJ9jB5o_/view?usp=sharing).
+
+* **The following subsets of data are confirmed to have no attribute informaton:**
+    * `r ks` datapackages by author, Kathleen Stafford, which contain acoustic data
+    * `r kn` datapackages by author, Kim Nielsen, which contain airglow image data
+
+* **The following subsets of data have file types which contain attributes, but that attribute information is not present in the metadata records:**
+    * `r ip` NABOS II datapackages by author, Igor Polyakov, which have .txt and .csv files containing primarily moorning data
+    * `r ds` datapackages by author, Dmitry Streletskiy, which have zip files containing a variety of file formats (image files, .pdf, .xls), some of which (e.g. .xls) have associated attribute information pertaining to thaw depth measurements
+
+-----
+
+## **6. Raw data, code, & other resources**
 
 * Raw data:
     * solr query (2020-10-12) is downloadable [here](https://drive.google.com/file/d/1jQCcfYIDTD8FID40x77ga-2F5MbbPUO1/view?usp=sharing)
     * tidied attribute/annotation information extracted from 2020-10-12 solr query is downloadable [here](https://drive.google.com/file/d/1HE8aD1KJll0xJJc8M7y3LHVBHYm4tixG/view?usp=sharing)
 * GitHub Repository with associated code, analyses, and data (this also includes analyses and data not explicitly covered in this report): [samanthacsik/NCEAS-DF-semantic-annoations-review](https://github.com/samanthacsik/NCEAS-DF-semantic-annotations-review)
+* GitHub Repository for identifying attributes and their corresponding datapackage identifiers for mass annotation efforts [samannthacsik/NCEAS-DF-Semantics-Project](https://github.com/samanthacsik/NCEAS-DF-Semantics-Project)
+* 
