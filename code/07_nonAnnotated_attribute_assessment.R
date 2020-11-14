@@ -117,6 +117,7 @@ attributeNameIndivTokens2 <- attributeNameIndivTokens %>%
       token == "plot" ~ "location",
       token == "location" ~ "location",
       token == "site" ~ "location",
+      token == "transect" ~ "location",
       token == "date" ~ "temporal",
       token == "phase" ~ "temporal",
       token == "5yrs" ~ "temporal",
