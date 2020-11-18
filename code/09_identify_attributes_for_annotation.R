@@ -15,6 +15,7 @@
   # coordinates (latitude, longitude)
   # dates and times
   # site identifiers
+  # transect identifiers
 # This requires some manual assessments of attributeNames to determine which valueURI they should be assigned to
 
 # IMPORTANT CONSIDERATIONS:
@@ -101,12 +102,12 @@ latitude_degree <- latitude_ids %>%
 #--------------------latitude minute component: "http://purl.dataone.org/odo/ECSO_00002137"--------------------
 latitude_minute <- latitude_ids %>% 
   filter(attributeName %in% c("Latitude - Min", "latitude_minute")) %>% 
-  mutate(assigned_valueURI = rep("http://purl.dataone.org/odo/ECSO_00002151"))
+  mutate(assigned_valueURI = rep("http://purl.dataone.org/odo/ECSO_00002137"))
 
-#--------------------latitude second component: "http://purl.dataone.org/odo/ECSO_00002137"--------------------
+#--------------------latitude second component: "	http://purl.dataone.org/odo/ECSO_00002243"--------------------
 latitude_second <- latitude_ids %>% 
   filter(attributeName == "Latitude - Sec") %>% 
-  mutate(assigned_valueURI = rep("http://purl.dataone.org/odo/ECSO_00002137"))
+  mutate(assigned_valueURI = rep("http://purl.dataone.org/odo/ECSO_00002243"))
 
 ##############################
 # c) combine latitude dfs
@@ -369,10 +370,10 @@ base_time_associated_values_unconfirmed_filtered <- dateTime_ids %>%
   filter(attributeName %in% base_time_associated_values_unconfirmed) %>% 
   mutate(assigned_valueURI = rep("http://purl.dataone.org/odo/ECSO_00002054"))
 
-#--------------------miliseconds elapsed: "http://purl.dataone.org/odo/ECSO_00002882"--------------------
-miliseconds_elapsed <- c("Tr. Time usec")
+#--------------------milliseconds elapsed: "http://purl.dataone.org/odo/ECSO_00002882"--------------------
+milliseconds_elapsed <- c("Tr. Time usec")
 
-miliseconds_elapsed_filtered <- dateTime_ids %>% 
+milliseconds_elapsed_filtered <- dateTime_ids %>% 
   filter(attributeName %in% miliseconds_elapsed) %>% 
   mutate(assigned_valueURI = rep("http://purl.dataone.org/odo/ECSO_00002882"))
 
@@ -385,7 +386,7 @@ all <- c(date, julian_day, day_of_month, month_of_year,
          time_confirmed, time_unconfirmed,
          time_step, elapsed_time, elapsed_time_after_treatment, 
          hours_elapsed, minutes_elapsed, 
-         seconds_elapsed, miliseconds_elapsed,
+         seconds_elapsed, milliseconds_elapsed,
          base_time_associated_values_unconfirmed)
 
 remaining_dateTime_attNames <- dateTime_attNames %>% 
@@ -402,7 +403,7 @@ dateTime_annotations <- rbind(date_filtered, julian_day_filtered, day_of_month_f
                               time_confirmed_filtered, time_unconfirmed_filtered, 
                               time_step_filtered, elapsed_time_filtered, elapsed_time_after_treatment_filtered, 
                               hours_elapsed_filtered, minutes_elapsed_filtered, 
-                              seconds_elapsed_filtered, miliseconds_elapsed_filtered,
+                              seconds_elapsed_filtered, milliseconds_elapsed_filtered,
                               base_time_associated_values_unconfirmed_filtered)
 
 ##########################################################################################################################
