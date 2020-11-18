@@ -4,7 +4,7 @@
 # date edited: "2020-11-15"
 # R version: 3.6.3
 # input: "data/queries/query2020-10-12/fullQuery_semAnnotations2020-10-12_attributes.csv" & "data/queries/query2020-10-12_attributes_from_nonannotated_datapackages/attributes_from_nonannotated_datapackages_tidied.csv"
-# output: 
+# output: "data/output/annotate_these_attributes_2020-11-17.csv"
 
 ##########################################################################################
 # Summary
