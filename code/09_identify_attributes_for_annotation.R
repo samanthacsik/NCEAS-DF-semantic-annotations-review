@@ -374,7 +374,7 @@ base_time_associated_values_unconfirmed_filtered <- dateTime_ids %>%
 milliseconds_elapsed <- c("Tr. Time usec")
 
 milliseconds_elapsed_filtered <- dateTime_ids %>% 
-  filter(attributeName %in% miliseconds_elapsed) %>% 
+  filter(attributeName %in% milliseconds_elapsed) %>% 
   mutate(assigned_valueURI = rep("http://purl.dataone.org/odo/ECSO_00002882"))
 
 
@@ -440,15 +440,15 @@ station_attNames <- unique_nonAnnotated_attNames %>%
 # combine
 site_station_attNames <- rbind(site_attNames, station_attNames)
 
-# 451 occurrances
+# 447 occurrances
 site_station_counts <- site_station_attNames %>%
   count(wt = n)
 
-# 110 unique datapackage identifiers
+# 182 unique datapackage identifiers
 site_station_ids <- nonannotated_attributes %>%
   filter(attributeName %in% site_station_attNames$attributeName)
 
-length(unique(site_ids$identifier))
+length(unique(site_station_ids$identifier))
 
 ###############################
 # b) determine appropriate valueURIs -- manually inspected attributeNames, attributeLabels, attributeDefinitions, and downloaded those that needed further investigation
