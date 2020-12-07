@@ -1,3 +1,6 @@
+
+# THIS HAS BEEN BROKEN UP INTO SEPARATE SCRIPTS
+
 # title: Identifying attributes to be annotated
 # author: "Sam Csik"
 # date created: "2020-11-13"
@@ -47,6 +50,7 @@ extracted_attributes_from_nonAnnotated_datapackages <- read_csv(here::here("data
 
 # combine
 nonannotated_attributes <- rbind(extracted_attributes_from_annotated_datapackages, extracted_attributes_from_nonAnnotated_datapackages)
+# write_csv(nonannotated_attributes, here::here("data", "outputs", "nonannotated_attributes_2020-10-12.csv"))
 
 # clean up environment
 rm(extracted_attributes_from_annotated_datapackages, extracted_attributes_from_nonAnnotated_datapackages)
@@ -519,6 +523,94 @@ length(unique(transect_ids$identifier))
 transect_annotations <- transect_ids %>% 
   filter(attributeName %in% transect_attNames$attributeName) %>% 
   mutate(assigned_valueURI = rep("http://purl.dataone.org/odo/ECSO_00002213"))
+
+##########################################################################################################################
+#-----------------------------------------------soil temperature---------------------------------------------------------#
+##########################################################################################################################
+
+##########################################################################################
+# 2) soil temperature attributeNames 
+  # a) identifiy attributeName variants of 'soil temperature'
+  # b) assign appropriate valueURIs
+  # c) combine into single df
+##########################################################################################
+
+##############################
+# a) identify datapackages that use variants of 'soil temperature'  
+##############################
+
+# all soil temperature attributeNames
+soil_temp_attNames <- nonannotated_attributes %>% 
+  filter(str_detect(attributeName, "(?i)soil temp") |
+         str_detect(attributeDefinition, "(?i)soil temp"),
+         !attributeName %in% c("Purpose for Measurement", "doy_st", "year_st", "Air or Soil temperature"))
+  
+
+cryptic_soil_temp <- nonannotated_attributes %>% 
+  filter(identifier == "doi:10.18739/A2D21RH94")
+
+###############################
+# b) determine appropriate valueURIs -- manually inspected attributeNames, attributeLabels, attributeDefinitions, and downloaded those that needed further investigation
+##############################
+
+#--------------------Soil Temperature: "http://purl.dataone.org/odo/ECSO_00001230"--------------------
+
+cryptic_st_filtered <- cryptic_soil_temp %>% 
+  filter(str_detect(attributeDefinition, "(?i)temperature")) %>% 
+  mutate(assigned_valueURI = rep("http://purl.dataone.org/odo/ECSO_00001230"))
+
+TSOIL <- soil_temp_attNames %>% 
+  filter(str_detect(attributeName, "^TSOIL*")) %>% 
+  mutate(assigned_valueURI = rep("http://purl.dataone.org/odo/ECSO_00001230"))
+
+
+
+#--------------------Mean Soil Temperature: "????????????????"--------------------
+
+mean_and_SE_soil_temp <- soil_temp_attNames %>% 
+  filter(str_detect(attributeDefinition, "(?i)mean")) %>% 
+  mutate(assigned_valueURI = rep("TBD"))
+
+
+
+
+
+
+
+#--------------------non-soil temp attributes to remove--------------------
+remove <- soil_temp_attNames %>% 
+  
+
+
+# sanity check
+used <- rbind(TSOIL, remove, mean_and_SE_soil_temp)
+remaining <- soil_temp_attNames %>% 
+  anti_join(used)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ##########################################################################################################################
 #------------------------------------combine all attributes to be annotated----------------------------------------------#
