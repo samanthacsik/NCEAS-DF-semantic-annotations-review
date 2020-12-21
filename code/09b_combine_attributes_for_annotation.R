@@ -39,8 +39,8 @@ source(here::here("code", "assign_URIs_to_nonannotated_attributes", "09_precipit
 ##########################################################################################################################
 
 # geotemporal attributes 
-geotemporal_atts <- rbind(latitude_annotations, longitude_annotations, dateTime_annotations, site_station_annotations, transect_annotations)
-length(unique(geotemporal_atts$identifier)) # 1119 unique identifiers
+spatiotemporal_atts <- rbind(latitude_annotations, longitude_annotations, dateTime_annotations, site_station_annotations, transect_annotations)
+length(unique(spatiotemporal_atts$identifier)) # 1119 unique identifiers
 
 # measurement attributes
 measurement_atts <- rbind(soil_temp_annotations, ice_temp_annotations, water_temp_annotations, dissolved_oxygen_annotations, 
@@ -49,17 +49,20 @@ measurement_atts <- rbind(soil_temp_annotations, ice_temp_annotations, water_tem
 length(unique(measurement_atts$identifier)) # 401 unique identifiers
 
 # all attributes to annotate
-annotate_these_attributes <- rbind(geotemporal_atts, measurement_atts)
+annotate_these_attributes <- rbind(spatiotemporal_atts, measurement_atts)
 length(unique(annotate_these_attributes$identifier)) # 1175 unique identifiers (so 345 overlap)
 
 # make sure there aren't duplicates
-annotated_these_attributes_DUPLICATES <- get_dupes(annotate_these_attributes)
+annotate_these_attributes_DUPLICATES <- get_dupes(annotate_these_attributes)
 annotate_these_attributes_DISTINCT <- distinct(annotate_these_attributes)
 length(unique(annotate_these_attributes_DISTINCT$identifier)) # 1175 total unique identifiers (datasets)
 
 double_check <- annotate_these_attributes_DISTINCT %>% 
   select(-assigned_valueURI)
 double_check2 <- get_dupes(double_check)
+
+# write to csv
+write_csv(annotate_these_attributes_DISTINCT, here::here("data", "outputs", "annotate_these_attributes_2020-12-17.csv"))
 
 # attributes that still have not yet been assigned an annotation URI
 not_yet_assignedURI <- nonannotated_attributes %>% 
@@ -69,7 +72,7 @@ not_yet_assignedURI <- nonannotated_attributes %>%
 previously_nonannotated <- annotate_these_attributes_DISTINCT %>% 
   filter(status == "dp was never annotated")
 
-# By annotated these attributes, we will add an addtional 1129 data packages that have at least 1 annotated attribute, bringing our total from 185 to __
+# By annotated these attributes, we will add an addtional 1135 data packages that have at least 1 annotated attribute, bringing our total from 185 to 1320
 length(unique(previously_nonannotated$identifier))
 
 # write_csv(annotate_these_attributes, here::here("data", "outputs", "annotate_these_attributes_2020-11-17.csv"))
