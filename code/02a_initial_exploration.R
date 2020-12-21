@@ -52,6 +52,10 @@ num_datapackages_with_attributes <- length(attributes_only$attribute)
 # for RMarkdown - 185 data packages with annotations
 num_datapackages_with_annotations <- length(unique(extracted_attributes$identifier))
 
+# double check that I'm not crazy -- 185 datasets with semantic annotations
+datasets_with_annotations <- attributes_only %>% 
+  filter(!is.na(sem_annotation))
+
 ##############################
 # across those annotated packages, how many attributes are annotated vs. not annotated?
 ##############################
@@ -62,6 +66,10 @@ tot_num_attributes <- length(extracted_attributes$attributeName)
 # 12312/14718 attributes are annotated
 annotated_attributes <- extracted_attributes %>% 
   filter(valueURI != "NA")
+
+# 2406 nonannotated attributes 
+test <- extracted_attributes %>% 
+  anti_join(annotated_attributes)
 
 # for RMarkdown
 tot_num_annotated_attributes <- length(annotated_attributes$attributeName)
