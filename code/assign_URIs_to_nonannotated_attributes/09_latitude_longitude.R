@@ -154,3 +154,4 @@ double_check2 <- get_dupes(double_check)
 
 # get distinct rows
 lat_long_annotations <- distinct(lat_long_annotations)
+
