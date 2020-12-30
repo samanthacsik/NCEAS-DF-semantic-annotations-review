@@ -7,6 +7,28 @@
 # input: NA
 # output: NA
 
+##############################
+# https://stackoverflow.com/questions/58400176/r-find-object-by-name-in-deeply-nested-list
+##############################
+
+find_name <- function(haystack, needle) {
+  if (hasName(haystack, needle)) {
+    haystack[[needle]]
+  } else if (is.list(haystack)) {
+    for (obj in haystack) {
+      ret <- Recall(obj, needle)
+      if (!is.null(ret)) return(ret)
+    }
+  } else {
+    NULL
+  }
+}
+
+##############################
+# get attribute info from df and find match in metadata
+##############################
+
+
 
 ##############################
 # build attribute id
@@ -39,10 +61,18 @@ verify_attributeID_isUnique <- function(current_attribute_id){
 }
 
 ##############################
-# create_propertyURI
+# add attribute id to metadata
 ##############################
 
-add_semAnn_propertyURI <- function(dataTable_number, attribute_number){
+add_attributeID <- function(dataTable_number, attribute_number, attributeID){
+  doc$dataset$dataTable[[dataTable_number]]$attributeList$attribute[[attribute_number]]$id <- attributeID
+}
+
+##############################
+# add propertyURI to metadata
+##############################
+
+add_propertyURI <- function(dataTable_number, attribute_number){
   doc$dataset$dataTable[[dataTable_number]]$attributeList$attribute[[attribute_number]]$annotation$propertyURI <- list(label = "contains meausurements of",
                                                                                         propertyURI = "http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType")
 }
@@ -74,6 +104,12 @@ add_semAnn_propertyURI <- function(dataTable_number, attribute_number){
 
 
 
+# Station
+# doc$dataset$dataTable[[1]]$attributeList$attribute[[1]]$id <- "entity_location_attribute_stationID1"
+# doc$dataset$dataTable[[1]]$attributeList$attribute[[1]]$annotation$propertyURI <- list(label = "contains meausurements of",
+#                                                                                        propertyURI = "http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType")
+# doc$dataset$dataTable[[1]]$attributeList$attribute[[1]]$annotation$valueURI <- list(label = "station identifier",
+#                                                                                     valueURI = "http://purl.dataone.org/odo/ECSO_00002393")
 
 
 

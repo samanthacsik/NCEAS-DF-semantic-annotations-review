@@ -13,6 +13,8 @@
 # I found a single datapackage with multiple entities, with a variety of attributes to be semantically annotated. 
 # I've cloned this datapackage to the test node to practice adding annotations to in preparation for a mass annotation effort.
 
+# this one already has annotations and is not a parent/child package: https://search.dataone.org/view/doi:10.18739/A2VM42Z20
+
 ##########################################################################################
 # General Setup
 ##########################################################################################
