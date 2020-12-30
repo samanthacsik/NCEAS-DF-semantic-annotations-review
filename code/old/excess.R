@@ -16,3 +16,41 @@ x <- nonannotated_attributes %>%
                               "-275", "-280", "-285", "-290", "-295", "-300", "-305", "-310", 
                               "-315", "-320", "-325", "-330", "-340", "-350", "-360", "-370", 
                               "-380", "-390", "-400", "-410"))
+
+
+
+
+
+
+
+
+
+
+# from automating semantic annotation creation (attribute IDs)
+# iterate through all entities in the datapackage
+for(i in 1:numberOf_dataTables){
+  
+  message("Processing dataTable ", i, " of ", numberOf_dataTables)
+  
+  # see all attribute names in current dataTable
+  current_attribute_list <- eml_get_simple(doc$dataset$dataTable[[i]]$attributeList, "attributeName")
+  
+  # iterate through attributes to build id and add to hash table
+  for(j in 1:length(current_attribute_list)){
+    
+    # build attribute_id
+    entity_name <- tolower(paste("entity", i, sep = "")) 
+    attribute_name <- tolower(doc$dataset$dataTable[[i]]$attributeList$attribute[[j]]$attributeName)
+    attribute_name_combo <- (paste("attribute", attribute_name, sep = "_")) 
+    current_attribute_id <- paste(entity_name, attribute_name, sep = "_")
+    
+    # search hash table for an id (key) match; if no match, add to table (value = TRUE); if duplicate, add to vector (value = NULL)
+    if (is.null(my_hash[[current_attribute_id]])) {
+      my_hash[[current_attribute_id]] <- TRUE
+      message(current_attribute_id, " has been added")
+    } else {
+      warning("the following id is a duplicate: ", current_attribute_id)
+      duplicate_ids <- current_attribute_id
+    }
+  }
+}
