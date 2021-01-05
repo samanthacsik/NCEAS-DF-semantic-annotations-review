@@ -69,11 +69,11 @@ attributes <- read_csv(here::here("data", "outputs", "annotate_these_attributes_
 ##############################
 
 # IGNORE FOR NOW: get vector of all unique datapackages
-unique_datapackages_id <- unique(attributes$identifier)
+unique_datapackage_ids <- unique(attributes$identifier)
 
 # IGNORE FOR NOW: subset first datapackage from the 'attributes' df
-for(i in 1:length(unique_datapackages)){
-   current_datapackage_id <- unique_datapackages[i]
+for(i in 1:length(unique_datapackage_ids)){
+   current_datapackage_id <- unique_datapackage_ids[i]
    current_datapackage_subset <- attributes %>% 
       filter(identifier == current_datapackge_id)
 }
@@ -106,11 +106,6 @@ doc <- read_eml(getObject(adc_test, "urn:uuid:206cc135-5f0b-4fd5-b162-b7d2243e53
 dataTables_from_metadata <- find_name(haystack = doc, needle = "dataTable") 
 
 ##############################
-# idk 
-##############################
-
-
-##############################
 # create attribute id and ensure that it's unique 
 ##############################
 
@@ -125,17 +120,46 @@ numberOf_dataTables <- length(dataTables)
 
 
 
-for(i in 1:length(dataTables)){
+
+
+
+
+
+
+
+
+# get unique datapackage_ids here
+
+for(i in 1:length(dataTables)){ # this needs to change - for 1:length(unique_datapackge_ids)??
+  
+  # 1) get metadata/information for a particular datapackage
+      # 1.1) subset df for only that datapackge
+      # 1.2) get (create) resource map for that datapackage 
+      # 1.3) get pkg using resource map
+      # 1.4) get metadata pid from pkg
+      # 1.5) read in eml metadata using pid
+      # 1.6) get dataTables from eml file
    
+  # 2) get first dataTable (entityName) from metadata to filter subsetted df
+      # 2.1) save first entityName
+      # 2.2) filter subset based on entityName
+  
+  # 3) annotate attributes
+      # 3.1) get first attribute from df subset of first dataTable
+      # 3.2) find the attribute match in the metadata
+      # 3.3) create attribute id
+      # 3.4) add attribute id
+      # 3.5) create/add propertyURI (should be the same for all attributes)
+      # 3.6) add valueURI from df
+  
+  
    message("Processing dataTable ", i, " of ", numberOf_dataTables)
    current_entityName <- dataTables_from_metadata[[i]]$entityName
    print(current_entityName)
    message("Subsetting the 'attributes' df for info pertaining to ", current_entityName)
    dataTable_subset <- practice_pkg %>% # 'practice_pkg' should be changed to 'current_datapackage_subset'
       filter(practice_identifier == current_entityName) # 'practice_identifier' should be changed to 'identifier'
-   
-   
-   
+  
    message("now moving to next dataTable")
 }
 
