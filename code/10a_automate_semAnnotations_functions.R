@@ -1,34 +1,33 @@
 # title: Custom Functions for automated semantic annotations
 # author: "Sam Csik"
 # date created: "2020-12-29"
-# date edited: "2020-12-29"
-# packages updated: __
-# R version: __
+# date edited: "2021-01-05"
+# R version: 3.6.3
 # input: NA
 # output: NA
 
 ##############################
-# https://stackoverflow.com/questions/58400176/r-find-object-by-name-in-deeply-nested-list
+#  THIS ALL HAS TO CHANGE
 ##############################
 
-find_name <- function(haystack, needle) {
-  if (hasName(haystack, needle)) {
-    haystack[[needle]]
-  } else if (is.list(haystack)) {
-    for (obj in haystack) {
-      ret <- Recall(obj, needle)
-      if (!is.null(ret)) return(ret)
-    }
-  } else {
-    NULL
-  }
+get_datapackage_metadata <- function(current_resource_map){
+  
+  # get pkg using resource map 
+  current_pkg <- getDataPackage(d1c_test, identifier = current_resource_map, lazyLoad = TRUE, quiet = FALSE)
+  # current_pkg <- get_package(adc_test, 
+  #                            current_resource_map,
+  #                            file_names = TRUE)
+  
+  # get metadata pid from pkg --- USE datapack::getDataPackage HERE INSTEAD!!
+  current_metadata_pid  <- selectMember(current_pkg, name = "sysmeta@formatId", value = "eml://ecoinformatics.org/eml-2.1.1")
+  # current_metadata_pid <- current_pkg$metadata
+  
+  # read in eml metadata using pid 
+  doc <- read_eml(getObject(d1c_test@mn, current_metadata_pid)) 
+  message("Imported eml medatadata for datapackage: ", current_datapackage_id)
+  
+  return(doc)
 }
-
-##############################
-# get attribute info from df and find match in metadata
-##############################
-
-
 
 ##############################
 # build attribute id
@@ -52,7 +51,7 @@ verify_attributeID_isUnique <- function(current_attribute_id){
   # search hash table for an id (key) match; if no match, add to table (value = TRUE)
   if (is.null(my_hash[[current_attribute_id]])) {
     my_hash[[current_attribute_id]] <- TRUE
-    message(current_attribute_id, " has been added")
+    message("'", current_attribute_id, "' is unique and has been added to the hash")
   # if duplicate, add to vector (value = NULL)
   } else {
     warning("the following id is a duplicate: ", current_attribute_id)
@@ -78,9 +77,14 @@ add_propertyURI <- function(dataTable_number, attribute_number){
 }
 
 
+##############################
+# add valueURI to metadata
+##############################
 
-
-
+add_valueURI <- function(dataTable_number, attribute_number, current_label, current_valueURI){
+  doc$dataset$dataTable[[dataTable_number]]$attributeList$attribute[[attribute_number]]$annotation$valueURI <- list(label = current_label,
+                                                                                      valueURI = current_valueURI)
+}
 
 
 

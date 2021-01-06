@@ -3,8 +3,8 @@
 # date created: "2021-01-05"
 # date edited: "2021-01-05"
 # R version: 3.6.3
-# input: "data/output/annotate_these_attributes_2020-11-17.csv"
-# output: "data/output/annotate_these_attributes_2020-11-17_webscraped.csv"
+# input: "data/output/annotate_these_attributes_2020-12-17.csv"
+# output: "data/output/annotate_these_attributes_2020-12-17_webscraped.csv"
 
 ##########################################################################################
 # Summary
@@ -72,4 +72,4 @@ for(row in 1:nrow(unique_valueURIs)){
 attributes_to_annotate_webscraped <- full_join(attributes_to_annotate, unique_valueURIs)
 
 # save df
-write_csv(attributes_to_annotate_webscraped, here::here("data", "outputs", "annotate_these_attributes_2020-11-17_webscraped.csv"))
+write_csv(attributes_to_annotate_webscraped, here::here("data", "outputs", "annotate_these_attributes_2020-12-17_webscraped.csv"))

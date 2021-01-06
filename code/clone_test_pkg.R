@@ -1,7 +1,7 @@
 # title: clone practice pkg for testing
 # author: "Sam Csik"
 # date created: "2020-12-21"
-# date edited: "2020-12-21"
+# date edited: "2021-01-05"
 # R version: 3.6.3
 # input: "data/outputs/annotate_these_attributes_2020-12-17.csv"
 # output: 
@@ -14,6 +14,8 @@
 # I've cloned this datapackage to the test node to practice adding annotations to in preparation for a mass annotation effort.
 
 # this one already has annotations and is not a parent/child package: https://search.dataone.org/view/doi:10.18739/A2VM42Z20
+
+# parent to current cloned package: doi:10.18739/A2RJ48V9W
 
 ##########################################################################################
 # General Setup
@@ -31,6 +33,10 @@ attributes <- read_csv(here::here("data", "outputs", "annotate_these_attributes_
 ##########################################################################################
 # Replicate dataset for practice
 ##########################################################################################
+
+##############################
+# clone 1 (is a child package), cloned to test.arcticdata.io on 2020-12-21
+##############################
 
 # find datapackage to replicate/practice on (this one has a variety of semantic annotations across multiple entiites)
 practice_pkg <- attributes %>% 
