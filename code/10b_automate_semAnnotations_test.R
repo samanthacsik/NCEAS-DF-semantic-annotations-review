@@ -13,19 +13,6 @@
 # cloned one dataset to test.arcticdata.io: https://search.dataone.org/view/doi:10.18739/A24B2X46G 
 # this is a child package to parent: https://search.dataone.org/view/doi%3A10.18739%2FA2RJ48V9W
 
-# identifiers in test.arcticdata.io
-# metadata PID: 
-  # urn:uuid:206cc135-5f0b-4fd5-b162-b7d2243e533e
-# data PID: 
-  # urn:uuid:8faa3e67-c493-448b-a6c0-129854a9f1b2
-  # urn:uuid:26b37309-bf62-402f-93d7-b36ba7c8055f 
-  # urn:uuid:c572addb-7a8b-43b6-b27a-cf95e0a9f4f7
-  # urn:uuid:44cf5e73-b3f9-429f-97dc-bb6e93444039
-  # urn:uuid:d74fbdc4-e02b-4a42-82f5-05c210ee92b8
-  # urn:uuid:1c4d6c4e-4eb8-41ab-ba32-ba249284d8e4
-  # urn:uuid:a5319ac6-8619-4173-a658-a8f55758229e
-# resource map:
-  # resource_map_urn:uuid:c84fec1f-33c6-4042-8605-33ab76e20a0f
 
 # for later: https://cran.r-project.org/web/packages/tryCatchLog/vignettes/tryCatchLog-intro.html
 # hashes: https://riptutorial.com/r/example/18339/environments-as-hash-maps
@@ -34,9 +21,8 @@
 # PROBLEMS: 
 # 1) if the metadata already has some semantic annotations, they will be removed upon publishing update. Need to figure out how to extract these, save them, and readd them along with the new semantic annotations
 # 2) publishing an update will remove association between parent and child datapackages
-# 3) publishing an update will remove provenance (datapack package might help with this but not sure how)
-# 4) lter data can't be annotated (or at least most of them? tryCatchLog for these)
-# 5) deal with dataTables that already have sem annotations that may get removed during update of new annotations
+  # tested this on test.arcticdata.io; parent package found here (https://test.arcticdata.io/view/urn%3Auuid%3A44d931d0-19cb-4edf-bb27-63ac6d5823b5); relationship still intact but when you follow link to 'updated version' of child package, hyperlink back to parent disappears
+# 3) lter data can't be annotated (or at least most of them? there are 364 total, filtered out for now)
 
 ##########################################################################################
 # General Setup
@@ -56,8 +42,6 @@ library(tidyverse)
 # options(dataone_test_token = "...")
 
 # set nodes 
-# cn_staging <- CNode('STAGING')
-# adc_test <- getMNode(cn_staging,'urn:node:mnTestARCTIC')
 d1c_test <- dataone::D1Client("STAGING", "urn:node:mnTestARCTIC")
 
 # configure tryCatchLog
@@ -73,9 +57,10 @@ duplicate_ids <- c()
 # import custom functions
 source(here::here("code", "10a_automate_semAnnotations_functions.R"))
 
-# import data
-attributes <- read_csv(here::here("data", "outputs", "annotate_these_attributes_2020-12-17_webscraped.csv"))
-
+# import data (removing lter data for now, only 364 datapackages)
+attributes <- read_csv(here::here("data", "outputs", "annotate_these_attributes_2020-12-17_webscraped.csv")) %>% 
+  filter(!str_detect(identifier, "(?i)https://pasta.lternet.edu") )
+  
 ##########################################################################################
 # add semantic annotations for ONE datapackage (PRACTICE)
 ##########################################################################################
@@ -84,12 +69,14 @@ attributes <- read_csv(here::here("data", "outputs", "annotate_these_attributes_
 # FOR TESTING PURPOSES ONLY
 ##############################
 
-# test package data
+# test package data 
 attributes_filtered <- attributes %>%
-  filter(identifier == "doi:10.18739/A24B2X46G") %>%
+  filter(identifier %in% c("doi:10.18739/A24B2X46G", "doi:10.18739/A2028PC7G", "doi:10.18739/A2RJ48V9W")) %>%
   mutate(
     practice_identifier = case_when(
-      identifier == "doi:10.18739/A24B2X46G" ~ "urn:uuid:c84fec1f-33c6-4042-8605-33ab76e20a0f"
+      identifier == "doi:10.18739/A24B2X46G" ~ "urn:uuid:ef211791-b0f7-4a27-8dc6-dcdc67c278df",
+      identifier == "doi:10.18739/A2028PC7G" ~ "urn:uuid:8ff9aa01-45d9-4cb7-b90e-215862146a94",
+      identifier == "doi:10.18739/A2RJ48V9W" ~ "urn:uuid:44d931d0-19cb-4edf-bb27-63ac6d5823b5"
     )
   ) %>%
   select(-identifier) %>%
@@ -131,7 +118,7 @@ for(dp_num in 1:length(unique_datapackage_ids)){
   current_resource_map <- paste("resource_map_", current_datapackage_id, sep = "")
   message("Generated resource map: ", current_resource_map)
   
-  # 1.3) get metadata !!!!!!!!!!!!!!!!!(might need if else here...if error record and go to next id, else continue to #2)!!!!!!!!!!!!!!!!! 
+  # 1.3) get metadata 
   step1_list <- tryLog(get_datapackage_metadata(current_resource_map),
          write.error.dump.file = TRUE, write.error.dump.folder = "dump_files",
          include.full.call.stack = FALSE)
@@ -198,11 +185,17 @@ for(dp_num in 1:length(unique_datapackage_ids)){
   
   # ----------------------- 4) validate doc -----------------------
   
-  # 4.1) validate doc !!!!!!!!!!!!!!!NEED IF ELSE HERE!!!!!!!!!!!!!!!!!!!!
-  eml_validate(doc) 
+  # 4.1) validate doc !!!!NOT SURE IF THIS TRYLOG IS APPROPRIATE HERE YET!!!!
+  tryLog(eml_validate(doc)) 
   
-  # 4.2) generate new pid for metadata !!!!!!!!!!!!!!!!!!!!!!!NEED TO DEAL WITH UUID VS DOI VS PASTA!!!!!!!!!!!!!!!!!!!!!!!
-  doi <- dataone::generateIdentifier(d1c_test@mn, "DOI")
+  # 4.2) generate new pid (either doi or uuid depending on what the original had) for metadata 
+  if(isTRUE(str_detect(current_metadata_pid, "(?i)doi"))) {
+    new_id <- dataone::generateIdentifier(d1c_test@mn, "DOI")
+    message("Generating a new metadata DOI: ", new_id)
+  } else {
+    new_id <- dataone::generateIdentifier(d1c_test@mn, "UUID")
+    message("Generating a new metadata uuid: ", new_id)
+  } 
   
   # 4.3) write eml path
   eml_path <- paste("/Users/samanthacsik/Repositories/NCEAS-DF-semantic-annotations-review/eml/datapackage", dp_num, ".xml", sep = "") 
@@ -213,10 +206,10 @@ for(dp_num in 1:length(unique_datapackage_ids)){
   # ----------------------- 5) publish update -----------------------
 
   # 5.1) replace original metadata pid with new pid
-  dp <- replaceMember(current_pkg, current_metadata_pid, replacement = eml_path, newId = doi)
+  dp <- replaceMember(current_pkg, current_metadata_pid, replacement = eml_path, newId = new_id)
 
-  # # 5.2)  datapackage
-  newPackageId <- uploadDataPackage(d1c_test, dp, public = FALSE, quiet = FALSE) 
+  # 5.2)  datapackage
+  newPackageId <- uploadDataPackage(d1c_test, dp, public = FALSE, quiet = FALSE)
   message("--------------Datapackage ", dp_num, " complete!--------------")
   
 }
