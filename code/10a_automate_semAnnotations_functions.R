@@ -26,7 +26,10 @@ get_datapackage_metadata <- function(current_resource_map){
   doc <- read_eml(getObject(d1c_test@mn, current_metadata_pid)) 
   message("Imported eml medatadata for datapackage: ", current_datapackage_id)
   
-  return(doc)
+  # create list to return
+  step1_list <- list(current_pkg, current_metadata_pid, doc)
+  
+  return(step1_list)
 }
 
 ##############################
@@ -63,28 +66,28 @@ verify_attributeID_isUnique <- function(current_attribute_id){
 # add attribute id to metadata
 ##############################
 
-add_attributeID <- function(dataTable_number, attribute_number, attributeID){
-  doc$dataset$dataTable[[dataTable_number]]$attributeList$attribute[[attribute_number]]$id <- attributeID
-}
+# add_attributeID <- function(dataTable_number, attribute_number, attributeID){
+#   doc$dataset$dataTable[[dataTable_number]]$attributeList$attribute[[attribute_number]]$id <- attributeID
+# }
 
 ##############################
 # add propertyURI to metadata
 ##############################
 
-add_propertyURI <- function(dataTable_number, attribute_number){
-  doc$dataset$dataTable[[dataTable_number]]$attributeList$attribute[[attribute_number]]$annotation$propertyURI <- list(label = "contains meausurements of",
-                                                                                        propertyURI = "http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType")
-}
+# add_propertyURI <- function(dataTable_number, attribute_number){
+#   doc$dataset$dataTable[[dataTable_number]]$attributeList$attribute[[attribute_number]]$annotation$propertyURI <- list(label = "contains meausurements of",
+#                                                                                         propertyURI = "http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType")
+# }
 
 
 ##############################
 # add valueURI to metadata
 ##############################
 
-add_valueURI <- function(dataTable_number, attribute_number, current_label, current_valueURI){
-  doc$dataset$dataTable[[dataTable_number]]$attributeList$attribute[[attribute_number]]$annotation$valueURI <- list(label = current_label,
-                                                                                      valueURI = current_valueURI)
-}
+# add_valueURI <- function(dataTable_number, attribute_number, current_label, current_valueURI){
+#   doc$dataset$dataTable[[dataTable_number]]$attributeList$attribute[[attribute_number]]$annotation$valueURI <- list(label = current_label,
+#                                                                                       valueURI = current_valueURI)
+# }
 
 
 

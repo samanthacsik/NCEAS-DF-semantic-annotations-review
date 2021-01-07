@@ -131,12 +131,17 @@ for(dp_num in 1:length(unique_datapackage_ids)){
   current_resource_map <- paste("resource_map_", current_datapackage_id, sep = "")
   message("Generated resource map: ", current_resource_map)
   
-  # 1.3) get metadata (might need if else here...if error record and go to next id, else continue to #2)
-  doc <- tryLog(get_datapackage_metadata(current_resource_map),
+  # 1.3) get metadata !!!!!!!!!!!!!!!!!(might need if else here...if error record and go to next id, else continue to #2)!!!!!!!!!!!!!!!!! 
+  step1_list <- tryLog(get_datapackage_metadata(current_resource_map),
          write.error.dump.file = TRUE, write.error.dump.folder = "dump_files",
          include.full.call.stack = FALSE)
   
-  # 1.4) get dataTables from eml file 
+  # 1.4) parse outputs
+  current_pkg <- step1_list[[1]]
+  current_metadata_pid <- step1_list[[2]]
+  doc <- step1_list[[3]]
+  
+  # 1.5) get dataTables from eml file 
   dataTables_from_metadata <- doc$dataset$dataTable
   message("****This datapackage has ", length(dataTables_from_metadata), " dataTables****")
   
@@ -159,7 +164,6 @@ for(dp_num in 1:length(unique_datapackage_ids)){
     for(att_num in 1:length(current_dataTable_subset$attributeName)){
       
       # 3.1) get attribute from dataTable in eml
-      # current_attribute_location_from_eml <- doc$dataset$dataTable[[dt_num]]$attributeList$attribute[[att_num]]
       current_attribute_name_from_eml <- doc$dataset$dataTable[[dt_num]]$attributeList$attribute[[att_num]]$attributeName
       message("--> Found attribute #", att_num, " : '", current_attribute_name_from_eml, "'")
       
@@ -175,19 +179,16 @@ for(dp_num in 1:length(unique_datapackage_ids)){
       verify_attributeID_isUnique(current_attribute_id = current_attribute_id)
       
       # 3.5) add attribute id to metadata
-      # add_attributeID(dataTable_number = dt_num, attribute_number = att_num, attributeID = current_attribute_id) # not updating doc
       doc$dataset$dataTable[[dt_num]]$attributeList$attribute[[att_num]]$id <- current_attribute_id
       message("Added attributeID, '", current_attribute_id, "' to metadata")
       
       # 3.6) create/add property URI to metadata (same for all attributes)
-      # add_propertyURI(dataTable_number = dt_num, attribute_number = att_num) # not updating doc
       doc$dataset$dataTable[[dt_num]]$attributeList$attribute[[att_num]]$annotation$propertyURI <- list(label = "contains meausurements of",
                                                                                                         propertyURI = "http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType")
       
       # 3.7) add value URI to metadata
       current_valueURI <- current_attribute_subset$assigned_valueURI
       current_label <- current_attribute_subset$prefName
-      # add_valueURI(dataTable_number = dt_num, attribute_number = att_num, current_label = current_label, current_valueURI = current_valueURI) # not updating doc
       doc$dataset$dataTable[[dt_num]]$attributeList$attribute[[att_num]]$annotation$valueURI <- list(label = current_label,
                                                                                                      valueURI = current_valueURI)
       message("Added semantic annotation URI, '", current_valueURI, "' to metadata for attribute, '", current_attribute_name_from_eml, "'")
@@ -195,8 +196,29 @@ for(dp_num in 1:length(unique_datapackage_ids)){
     
   }
   
-  # newPackageId <- datapack::uploadDataPackage(d1c_test, dp, public=FALSE, quiet=FALSE)
+  # ----------------------- 4) validate doc -----------------------
+  
+  # 4.1) validate doc !!!!!!!!!!!!!!!NEED IF ELSE HERE!!!!!!!!!!!!!!!!!!!!
+  eml_validate(doc) 
+  
+  # 4.2) generate new pid for metadata !!!!!!!!!!!!!!!!!!!!!!!NEED TO DEAL WITH UUID VS DOI VS PASTA!!!!!!!!!!!!!!!!!!!!!!!
+  doi <- dataone::generateIdentifier(d1c_test@mn, "DOI")
+  
+  # 4.3) write eml path
+  eml_path <- paste("/Users/samanthacsik/Repositories/NCEAS-DF-semantic-annotations-review/eml/datapackage", dp_num, ".xml", sep = "") 
+  
+  # 4.4) write eml
+  write_eml(doc, eml_path) # save your metadata
+
+  # ----------------------- 5) publish update -----------------------
+
+  # 5.1) replace original metadata pid with new pid
+  dp <- replaceMember(current_pkg, current_metadata_pid, replacement = eml_path, newId = doi)
+
+  # # 5.2)  datapackage
+  newPackageId <- uploadDataPackage(d1c_test, dp, public = FALSE, quiet = FALSE) 
   message("--------------Datapackage ", dp_num, " complete!--------------")
+  
 }
 
 
@@ -217,14 +239,3 @@ for(dp_num in 1:length(unique_datapackage_ids)){
 
 
 
-########################################################TESTING##########################################################
-
-test_doc <- doc
-
-test_doc$dataset$dataTable[[1]]$attributeList$attribute[[1]]$id <- "entity1_date"
-
-test_doc$dataset$dataTable[[1]]$attributeList$attribute[[1]]$annotation$propertyURI <- list(label = "contains meausurements of",
-                                                                                       propertyURI = "http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType")
-
-test_doc$dataset$dataTable[[1]]$attributeList$attribute[[1]]$annotation$valueURI <- list(label = "date",
-                                                                                    valueURI = "http://purl.dataone.org/odo/ECSO_00002051")
