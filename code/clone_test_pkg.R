@@ -28,11 +28,27 @@ library(EML)
 library(tidyverse)
 
 # import data
-attributes <- read_csv(here::here("data", "outputs", "annotate_these_attributes_2020-12-17.csv"))
+attributes <- read_csv(here::here("data", "outputs", "annotate_these_attributes_2020-12-17_webscraped.csv"))
 
 ##########################################################################################
 # Replicate dataset for practice
 ##########################################################################################
+
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 
 ##############################
 # clone 1 (is a child package), cloned to test.arcticdata.io on 2020-12-21
@@ -65,28 +81,87 @@ pkg_clone <- datamgmt::clone_package("resource_map_doi:10.18739/A24B2X46G",
 # resource map:
   # resource_map_urn:uuid:c84fec1f-33c6-4042-8605-33ab76e20a0f
 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 
 ##############################
-# clone 2 (parent + child package), cloned to test.arcticdata.io on 2021-01-07
+# clone 2 (parent + child packages), cloned to test.arcticdata.io on 2021-01-07
+  # parent: resource_map_doi:10.18739/A2RJ48V9W (https://search.dataone.org/view/doi%3A10.18739%2FA2RJ48V9W)
+  # child1: resource_map_doi:10.18739/A24B2X46G (https://search.dataone.org/view/doi:10.18739/A24B2X46G)
+  # child2: resource_map_doi:10.18739/A2028PC7G (https://search.dataone.org/view/doi:10.18739/A2028PC7G)
 ##############################
-
-# find datapackages to replicate/practice on
-child_pkg <- attributes %>% 
-  filter(identifier == "doi:10.18739/A24B2X46G")
-
-parent_pkg <- "doi:10.18739/A2RJ48V9W" # not attributes but copying for practice
 
 # define to and from for copy and pasting
 from <- dataone::D1Client("PROD", "urn:node:ARCTIC")
 to <- dataone::D1Client("STAGING", "urn:node:mnTestARCTIC")
 
-# clone package
-child_pkg_clone <- datamgmt::clone_package("resource_map_doi:10.18739/A24B2X46G",
-                                     from = from, to = to, 
-                                     add_access_to = arcticdatautils:::get_token_subject(),
-                                     change_auth_node = TRUE, new_pid = TRUE)
+#---------------------
+# clone packages to test node
+#---------------------
+
+child1_pkg_clone <- datamgmt::clone_package("resource_map_doi:10.18739/A24B2X46G",
+                                            from = from, to = to, 
+                                            add_access_to = arcticdatautils:::get_token_subject(),
+                                            change_auth_node = TRUE, new_pid = TRUE)
+# resource_map_urn:uuid:ef211791-b0f7-4a27-8dc6-dcdc67c278df
+
+child2_pkg_clone <- datamgmt::clone_package("resource_map_doi:10.18739/A2028PC7G",
+                                            from = from, to = to, 
+                                            add_access_to = arcticdatautils:::get_token_subject(),
+                                            change_auth_node = TRUE, new_pid = TRUE)
+# resource_map_urn:uuid:8ff9aa01-45d9-4cb7-b90e-215862146a94
 
 parent_pkg_clone <- datamgmt::clone_package("resource_map_doi:10.18739/A2RJ48V9W",
-                                           from = from, to = to, 
-                                           add_access_to = arcticdatautils:::get_token_subject(),
-                                           change_auth_node = TRUE, new_pid = TRUE)
+                                            from = from, to = to, 
+                                            add_access_to = arcticdatautils:::get_token_subject(),
+                                            change_auth_node = TRUE, new_pid = TRUE)
+# resource_map_urn:uuid:5177de9d-cea7-4b7f-ada3-58407bc53dc2
+
+#---------------------
+# set nodes
+#---------------------
+
+cn_staging <- CNode('STAGING')
+adc_test <- getMNode(cn_staging,'urn:node:mnTestARCTIC')
+
+#---------------------
+# get resource maps
+#---------------------
+
+resource_map_child1_new <- "resource_map_urn:uuid:ef211791-b0f7-4a27-8dc6-dcdc67c278df"
+resource_map_child2_new <- "resource_map_urn:uuid:8ff9aa01-45d9-4cb7-b90e-215862146a94"
+pkg_parent <- get_package(adc_test, 'resource_map_urn:uuid:5177de9d-cea7-4b7f-ada3-58407bc53dc2')
+
+#---------------------
+# nest child packages under parent
+#---------------------
+
+publish_update(adc_test,
+               resource_map_pid = pkg_parent$resource_map,
+               metadata_pid = pkg_parent$metadata,
+               data_pids = pkg_parent$data_pids,  
+               child_pids = c(pkg_parent$child_packages, 
+                              resource_map_child1_new,
+                              resource_map_child2_new))
+#---------------------
+# finalized resource maps
+#---------------------
+
+# https://test.arcticdata.io/view/urn%3Auuid%3A44d931d0-19cb-4edf-bb27-63ac6d5823b5
+
+# parent: resource_map_urn:uuid:44d931d0-19cb-4edf-bb27-63ac6d5823b5 (original: resource_map_doi:10.18739/A2RJ48V9W)
+# child 1: resource_map_urn:uuid:8ff9aa01-45d9-4cb7-b90e-215862146a94 (original: resource_map_doi:10.18739/A2028PC7G)
+# child 2: resource_map_urn:uuid:ef211791-b0f7-4a27-8dc6-dcdc67c278df (original: resource_map_doi:10.18739/A24B2X46G)
