@@ -15,8 +15,6 @@
 
 # this one already has annotations and is not a parent/child package: https://search.dataone.org/view/doi:10.18739/A2VM42Z20
 
-# parent to current cloned package: doi:10.18739/A2RJ48V9W
-
 ##########################################################################################
 # General Setup
 ##########################################################################################
@@ -165,3 +163,37 @@ publish_update(adc_test,
 # parent: resource_map_urn:uuid:44d931d0-19cb-4edf-bb27-63ac6d5823b5 (original: resource_map_doi:10.18739/A2RJ48V9W)
 # child 1: resource_map_urn:uuid:8ff9aa01-45d9-4cb7-b90e-215862146a94 (original: resource_map_doi:10.18739/A2028PC7G)
 # child 2: resource_map_urn:uuid:ef211791-b0f7-4a27-8dc6-dcdc67c278df (original: resource_map_doi:10.18739/A24B2X46G)
+
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+##############################
+# clone 3 (has pre-existing annotations) cloned to test.arcticdata.io on 2020-12-21
+##############################
+
+# find datapackage to replicate/practice on 
+practice_pkg <- attributes %>% 
+  filter(identifier == "doi:10.18739/A2VM42Z20")
+
+# define to and from for copy and pasting
+from <- dataone::D1Client("PROD", "urn:node:ARCTIC")
+to <- dataone::D1Client("STAGING", "urn:node:mnTestARCTIC")
+
+# clone package
+pkg_clone <- datamgmt::clone_package("resource_map_doi:10.18739/A2VM42Z20",
+                                     from = from, to = to, 
+                                     add_access_to = arcticdatautils:::get_token_subject(),
+                                     change_auth_node = TRUE, new_pid = TRUE)
