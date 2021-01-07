@@ -64,3 +64,29 @@ pkg_clone <- datamgmt::clone_package("resource_map_doi:10.18739/A24B2X46G",
   # urn:uuid:a5319ac6-8619-4173-a658-a8f55758229e
 # resource map:
   # resource_map_urn:uuid:c84fec1f-33c6-4042-8605-33ab76e20a0f
+
+
+##############################
+# clone 2 (parent + child package), cloned to test.arcticdata.io on 2021-01-07
+##############################
+
+# find datapackages to replicate/practice on
+child_pkg <- attributes %>% 
+  filter(identifier == "doi:10.18739/A24B2X46G")
+
+parent_pkg <- "doi:10.18739/A2RJ48V9W" # not attributes but copying for practice
+
+# define to and from for copy and pasting
+from <- dataone::D1Client("PROD", "urn:node:ARCTIC")
+to <- dataone::D1Client("STAGING", "urn:node:mnTestARCTIC")
+
+# clone package
+child_pkg_clone <- datamgmt::clone_package("resource_map_doi:10.18739/A24B2X46G",
+                                     from = from, to = to, 
+                                     add_access_to = arcticdatautils:::get_token_subject(),
+                                     change_auth_node = TRUE, new_pid = TRUE)
+
+parent_pkg_clone <- datamgmt::clone_package("resource_map_doi:10.18739/A2RJ48V9W",
+                                           from = from, to = to, 
+                                           add_access_to = arcticdatautils:::get_token_subject(),
+                                           change_auth_node = TRUE, new_pid = TRUE)
