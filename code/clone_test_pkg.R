@@ -49,7 +49,7 @@ attributes <- read_csv(here::here("data", "outputs", "annotate_these_attributes_
 #
 
 ##############################
-# clone 1 (is a child package), cloned to test.arcticdata.io on 2020-12-21
+# clone 1 (is a child package), cloned to test.arcticdata.io on 2020-12-21; eml 2.1.1
 ##############################
 
 # find datapackage to replicate/practice on (this one has a variety of semantic annotations across multiple entiites)
@@ -96,7 +96,7 @@ pkg_clone <- datamgmt::clone_package("resource_map_doi:10.18739/A24B2X46G",
 #
 
 ##############################
-# clone 2 (parent + child packages), cloned to test.arcticdata.io on 2021-01-07
+# clone 2 (parent + child packages), cloned to test.arcticdata.io on 2021-01-07; eml 2.1.1
   # parent: resource_map_doi:10.18739/A2RJ48V9W (https://search.dataone.org/view/doi%3A10.18739%2FA2RJ48V9W)
   # child1: resource_map_doi:10.18739/A24B2X46G (https://search.dataone.org/view/doi:10.18739/A24B2X46G)
   # child2: resource_map_doi:10.18739/A2028PC7G (https://search.dataone.org/view/doi:10.18739/A2028PC7G)
@@ -181,7 +181,7 @@ publish_update(adc_test,
 #
 
 ##############################
-# clone 3 (has pre-existing annotations) cloned to test.arcticdata.io on 2020-12-21
+# clone 3 (has pre-existing annotations) cloned to test.arcticdata.io on 2020-12-21; eml 2.2.0
 ##############################
 
 # find datapackage to replicate/practice on 
@@ -194,6 +194,41 @@ to <- dataone::D1Client("STAGING", "urn:node:mnTestARCTIC")
 
 # clone package
 pkg_clone <- datamgmt::clone_package("resource_map_doi:10.18739/A2VM42Z20",
+                                     from = from, to = to, 
+                                     add_access_to = arcticdatautils:::get_token_subject(),
+                                     change_auth_node = TRUE, new_pid = TRUE)
+# resource_map_urn:uuid:3caf44b7-ffd4-4c4b-b1f2-e9de23d00d13
+
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+##############################
+# clone 4 (same pkg as clone 1; retesting), cloned to test.arcticdata.io on 2021-01-07; eml 2.1.1
+##############################
+
+# find datapackage to replicate/practice on (this one has a variety of semantic annotations across multiple entiites)
+practice_pkg <- attributes %>% 
+  filter(identifier == "doi:10.18739/A24B2X46G")
+
+# define to and from for copy and pasting
+from <- dataone::D1Client("PROD", "urn:node:ARCTIC")
+to <- dataone::D1Client("STAGING", "urn:node:mnTestARCTIC")
+
+# clone package
+pkg_clone <- datamgmt::clone_package("resource_map_doi:10.18739/A24B2X46G",
                                      from = from, to = to, 
                                      add_access_to = arcticdatautils:::get_token_subject(),
                                      change_auth_node = TRUE, new_pid = TRUE)
