@@ -1,28 +1,20 @@
 # title: testing take 2
 # author: "Sam Csik"
 # date created: "2021-01-04"
-# date edited: "2021-01-04"
+# date edited: "2021-01-11"
 # R version: 3.6.3
 # input: "data/outputs/annotate_these_attributes_2020-12-17_webscraped.csv"
-# output: 
+# output: NA 
 
 ##########################################################################################
 # Summary
-##########################################################################################
+##########################################################################################\
 
-# cloned one dataset to test.arcticdata.io: https://search.dataone.org/view/doi:10.18739/A24B2X46G 
-# this is a child package to parent: https://search.dataone.org/view/doi%3A10.18739%2FA2RJ48V9W
-
-
-# for later: https://cran.r-project.org/web/packages/tryCatchLog/vignettes/tryCatchLog-intro.html
-# hashes: https://riptutorial.com/r/example/18339/environments-as-hash-maps
-# datapack: https://cran.r-project.org/web/packages/datapack/vignettes/datapack-overview.html 
-
-# PROBLEMS: 
-# 1) if the metadata already has some semantic annotations, they will be removed upon publishing update. Need to figure out how to extract these, save them, and readd them along with the new semantic annotations
-# 2) publishing an update will remove association between parent and child datapackages
-  # tested this on test.arcticdata.io; parent package found here (https://test.arcticdata.io/view/urn%3Auuid%3A44d931d0-19cb-4edf-bb27-63ac6d5823b5); relationship still intact but when you follow link to 'updated version' of child package, hyperlink back to parent disappears
-# 3) lter data can't be annotated (or at least most of them? there are 364 total, filtered out for now)
+# NOTES FROM TESTING SO FAR:
+  # 1) pre-existing annotations will be preserved upon datapackage update (when using datapack at least)
+  # 2) relationships between child and parent datapackages are NOT preserved upon update
+  # 3) prov is supposedly preserved upon update when using datapack (but haven't tested this yet; need to find example to test on still)
+  # 4) can we make updates to LTER data? Jasmine said no (or at least for some of them); currently filtered out the 364 LTER datapackages for which I'd like to add annotations to 
 
 ##########################################################################################
 # General Setup
@@ -41,8 +33,8 @@ library(tidyverse)
 # get (test) token reminder
 # options(dataone_test_token = "...")
 
-# set nodes 
-d1c_test <- dataone::D1Client("STAGING", "urn:node:mnTestARCTIC")
+# set nodes (will need to change to `dataone::D1Client("PROD", "urn:node:ARCTIC")`) 
+d1c_test <- dataone::D1Client("STAGING", "urn:node:mnTestARCTIC") 
 
 # configure tryCatchLog
 flog.appender(appender.file("error.log")) # choose files to log errors to
@@ -69,30 +61,28 @@ attributes <- read_csv(here::here("data", "outputs", "annotate_these_attributes_
 # FOR TESTING PURPOSES ONLY
 ##############################
 
-# test package data 
-attributes_filtered <- attributes %>%
-  filter(identifier %in% c("doi:10.18739/A24B2X46G", "doi:10.18739/A2028PC7G", "doi:10.18739/A2RJ48V9W")) %>%
-  mutate(
-    practice_identifier = case_when(
-      identifier == "doi:10.18739/A24B2X46G" ~ "urn:uuid:ef211791-b0f7-4a27-8dc6-dcdc67c278df",
-      identifier == "doi:10.18739/A2028PC7G" ~ "urn:uuid:8ff9aa01-45d9-4cb7-b90e-215862146a94",
-      identifier == "doi:10.18739/A2RJ48V9W" ~ "urn:uuid:44d931d0-19cb-4edf-bb27-63ac6d5823b5"
-    )
-  ) %>%
-  select(-identifier) %>%
-  rename(identifier = practice_identifier) %>%
-  mutate(query_datetime_utc = as.character(query_datetime_utc))
-
-# create dummy row
-df <- data.frame(entityName  = c("NA"), attributeName = c("NA"), attributeLabel = c("NA"),
-                 attributeDefinition = c("NA"), attributeUnit = c("NA"), propertyURI = c("NA"),
-                 valueURI = c("NA"), viewURL = c("NA"), query_datetime_utc = c("NA"),
-                 status = c("NA"), assigned_valueURI = c("NA"), prefName = c("NA"), ontoName = c("NA"),
-                 identifier = c("test_id"))
-
-# combine test package data with dummy data
-attributes <- rbind(attributes_filtered, df) %>%
-  filter(identifier != "test_id")
+# test package data
+# attributes_filtered <- attributes %>%
+#   filter(identifier %in% c("doi:10.18739/A2VM42Z20")) %>%
+#   mutate(
+#     practice_identifier = case_when(
+#       identifier == "doi:10.18739/A2VM42Z20" ~ "urn:uuid:3caf44b7-ffd4-4c4b-b1f2-e9de23d00d13"
+#     )
+#   ) %>%
+#   select(-identifier) %>%
+#   rename(identifier = practice_identifier) %>%
+#   mutate(query_datetime_utc = as.character(query_datetime_utc))
+# 
+# # create dummy row
+# df <- data.frame(entityName  = c("NA"), attributeName = c("NA"), attributeLabel = c("NA"),
+#                  attributeDefinition = c("NA"), attributeUnit = c("NA"), propertyURI = c("NA"),
+#                  valueURI = c("NA"), viewURL = c("NA"), query_datetime_utc = c("NA"),
+#                  status = c("NA"), assigned_valueURI = c("NA"), prefName = c("NA"), ontoName = c("NA"),
+#                  identifier = c("test_id"))
+# 
+# # combine test package data with dummy data
+# attributes <- rbind(attributes_filtered, df) %>%
+#   filter(identifier != "test_id")
 
 ##############################
 # get vector of all unique datapackages
@@ -138,64 +128,84 @@ for(dp_num in 1:length(unique_datapackage_ids)){
 
     # 2.1) get current dataTable name from metadata 
     current_dataTable_name_from_eml <- dataTables_from_metadata[[dt_num]]$entityName
+    num_attributes_in_eml_dataTable <- length(dataTables_from_metadata[[dt_num]]$attributeList$attribute)
     
     # 2.2) subset 'current_datapackage_subset' accordingly
     current_dataTable_subset <- tryLog(current_datapackage_subset %>%
       filter(entityName == current_dataTable_name_from_eml))
     message("*****************************************************")
-    message("Working on dataTable ", dt_num, ": ", current_dataTable_name_from_eml)
+    message("Working on dataTable ", dt_num, " (", current_dataTable_name_from_eml, "), which contains ", num_attributes_in_eml_dataTable, " attributes")
+    message("There are ", length(current_dataTable_subset$attributeName), " attributes to be annotated for this dataTable")
     message("*****************************************************")
     
     # ----------------------- 3) annotate attributes in current dataTable -----------------------
 
-    for(att_num in 1:length(current_dataTable_subset$attributeName)){
+    for(att_num in 1:num_attributes_in_eml_dataTable){
       
       # 3.1) get attribute from dataTable in eml
       current_attribute_name_from_eml <- doc$dataset$dataTable[[dt_num]]$attributeList$attribute[[att_num]]$attributeName
       message("--> Found attribute #", att_num, " : '", current_attribute_name_from_eml, "'")
       
-      # 3.2) match attribute from eml with the appropriate row in current_dataTable_subset
+      # 3.2) subset df using current_attribute_name_from_eml 
       current_attribute_subset <- current_dataTable_subset %>% 
         filter(attributeName == current_attribute_name_from_eml)
-      message("The corresponding attribute to #", att_num, " in the df is: '", current_attribute_subset$attributeName, "'")
       
-      # 3.3) create attribute id
-      current_attribute_id <- build_attributeID(dataTable_number = dt_num, attribute_number = att_num)
+      # # 3.3) if eml attribute exists in df, continue, if not move to next attribute in eml
+      if(length(current_attribute_subset$attributeName > 0)) { # USED TO HAVE 'isTRUE' here but not working
+        
+        message("The corresponding attribute to #", att_num, " in the df is: '", current_attribute_subset$attributeName, "'")
+        
+        # 3.4) create attribute id 
+        current_attribute_id <- build_attributeID(dataTable_number = dt_num, attribute_number = att_num)
+        
+        # 3.5) verify that the attribute id is unique across datapackage
+        verify_attributeID_isUnique(current_attribute_id = current_attribute_id)
+        
+        # 3.6) add attribute id to metadata
+        doc$dataset$dataTable[[dt_num]]$attributeList$attribute[[att_num]]$id <- current_attribute_id
+        message("Added attributeID, '", current_attribute_id, "' to metadata")
+        
+        # 3.7) create/add property URI to metadata (same for all attributes)
+        doc$dataset$dataTable[[dt_num]]$attributeList$attribute[[att_num]]$annotation$propertyURI <- list(label = "contains meausurements of",
+                                                                                                          propertyURI = "http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType")
+        
+        # 3.8) add value URI to metadata
+        current_valueURI <- current_attribute_subset$assigned_valueURI
+        current_label <- current_attribute_subset$prefName
+        doc$dataset$dataTable[[dt_num]]$attributeList$attribute[[att_num]]$annotation$valueURI <- list(label = current_label,
+                                                                                                       valueURI = current_valueURI)
+        message("Added semantic annotation URI, '", current_valueURI, "' to metadata for attribute, '", current_attribute_name_from_eml, "'")
+        
+      } else {
+        
+        message("No match was found in the df for the attribute: '", current_attribute_name_from_eml, "'")
+
+        next
+      }
       
-      # 3.4) verify that the attribute id is unique across datapackage
-      verify_attributeID_isUnique(current_attribute_id = current_attribute_id)
-      
-      # 3.5) add attribute id to metadata
-      doc$dataset$dataTable[[dt_num]]$attributeList$attribute[[att_num]]$id <- current_attribute_id
-      message("Added attributeID, '", current_attribute_id, "' to metadata")
-      
-      # 3.6) create/add property URI to metadata (same for all attributes)
-      doc$dataset$dataTable[[dt_num]]$attributeList$attribute[[att_num]]$annotation$propertyURI <- list(label = "contains meausurements of",
-                                                                                                        propertyURI = "http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType")
-      
-      # 3.7) add value URI to metadata
-      current_valueURI <- current_attribute_subset$assigned_valueURI
-      current_label <- current_attribute_subset$prefName
-      doc$dataset$dataTable[[dt_num]]$attributeList$attribute[[att_num]]$annotation$valueURI <- list(label = current_label,
-                                                                                                     valueURI = current_valueURI)
-      message("Added semantic annotation URI, '", current_valueURI, "' to metadata for attribute, '", current_attribute_name_from_eml, "'")
     }
     
   }
   
   # ----------------------- 4) validate doc -----------------------
   
-  # 4.1) validate doc !!!!NOT SURE IF THIS TRYLOG IS APPROPRIATE HERE YET!!!!
-  tryLog(eml_validate(doc)) 
+  # 4.1) validate doc ****NOT SURE IF THIS TRYLOG IS APPROPRIATE HERE YET?****
+  message("validating eml.....")
+  tryLog(eml_validate(doc), 
+         write.error.dump.file = TRUE, write.error.dump.folder = "dump_files",
+         include.full.call.stack = FALSE) 
   
   # 4.2) generate new pid (either doi or uuid depending on what the original had) for metadata 
   if(isTRUE(str_detect(current_metadata_pid, "(?i)doi"))) {
     new_id <- dataone::generateIdentifier(d1c_test@mn, "DOI")
     message("Generating a new metadata DOI: ", new_id)
-  } else {
+  } else if(isTRUE(str_detect(current_metadata_pid, "(?i)urn:uuid"))) {
     new_id <- dataone::generateIdentifier(d1c_test@mn, "UUID")
     message("Generating a new metadata uuid: ", new_id)
-  } 
+  } else {
+    warning("The original metadata ID format, ", current_metadata_pid, " is not recognized. No new ID has been generated.")
+    print("NOTE FOR SAM: need to figure out how to acutally deal with this if it ever comes up")
+  }
   
   # 4.3) write eml path
   eml_path <- paste("/Users/samanthacsik/Repositories/NCEAS-DF-semantic-annotations-review/eml/datapackage", dp_num, ".xml", sep = "") 
