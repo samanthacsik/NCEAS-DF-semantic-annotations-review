@@ -10,10 +10,12 @@
 # Summary
 ##########################################################################################
 
-# I found a single datapackage with multiple entities, with a variety of attributes to be semantically annotated. 
-# I've cloned this datapackage to the test node to practice adding annotations to in preparation for a mass annotation effort.
+# COME BACK TO THESE (GOOD TO TEST BUT TAKING FOREVER TO CLONE; MAYBE CLONE OVERNIGHT...)
+  # netCDF: doi:10.18739/A26W9688B, doi:10.18739/A26W9688B, doi:10.18739/A2BN9X32Q
+  # .nc: doi:10.18739/A27659G5Q
 
-# this one already has annotations and is not a parent/child package: https://search.dataone.org/view/doi:10.18739/A2VM42Z20
+
+# Why do some datapackages have a resource map that doesn't match their DOI? (e.g. https://search.dataone.org/view/doi:10.18739/A2KS6J47F)
 
 ##########################################################################################
 # General Setup
@@ -233,3 +235,90 @@ pkg_clone <- datamgmt::clone_package("resource_map_doi:10.18739/A24B2X46G",
                                      add_access_to = arcticdatautils:::get_token_subject(),
                                      change_auth_node = TRUE, new_pid = TRUE)
 # resource_map_urn:uuid:4fd91ae7-2e03-4fde-b7b7-1bb8e27c7640
+
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+##############################
+# clone 5 (same as clone 3) cloned to test.arcticdata.io on 2021-01-08; eml 2.2.0
+##############################
+
+# find datapackage to replicate/practice on 
+practice_pkg <- attributes %>% 
+  filter(identifier == "doi:10.18739/A2VM42Z20")
+
+# define to and from for copy and pasting
+from <- dataone::D1Client("PROD", "urn:node:ARCTIC")
+to <- dataone::D1Client("STAGING", "urn:node:mnTestARCTIC")
+
+# clone package
+pkg_clone <- datamgmt::clone_package("resource_map_doi:10.18739/A2VM42Z20",
+                                     from = from, to = to, 
+                                     add_access_to = arcticdatautils:::get_token_subject(),
+                                     change_auth_node = TRUE, new_pid = TRUE)
+# resource_map_urn:uuid:3caf44b7-ffd4-4c4b-b1f2-e9de23d00d13
+
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+##############################
+# clone 6
+##############################
+
+# define to and from for copy and pasting
+from <- dataone::D1Client("PROD", "urn:node:ARCTIC")
+to <- dataone::D1Client("STAGING", "urn:node:mnTestARCTIC")
+
+# filter for any too large to clone at the moment
+# clone_these <- attributes %>% 
+#   filter(identifier %in% c("doi:10.18739/A2D21RH94", "doi:10.18739/A2VM42Z20", "doi:10.18739/A24B2X46G")) # x, 2.2.0, 2.1.0
+
+# clone
+# for(i in 1:length(clone_these$identifier)){
+# 
+#   # get resource map
+#   rm <- paste("resource_map_", clone_these$identifier[i], sep = "")
+#   
+#   pkg_clone <- datamgmt::clone_package(rm,
+#                                        from = from, to = to, 
+#                                        add_access_to = arcticdatautils:::get_token_subject(),
+#                                        change_auth_node = TRUE, new_pid = TRUE)
+# }
+
+pkg_clone <- datamgmt::clone_package("resource_map_doi:10.18739/A2D21RH94",
+                                     from = from, to = to, 
+                                     add_access_to = arcticdatautils:::get_token_subject(),
+                                     change_auth_node = TRUE, new_pid = TRUE)
+
+
+# doi:10.18739/A2D21RH94, 
+
+
+
+>>>>>>> 42313308b8c05d84315933b4a283841d2dcd380b
