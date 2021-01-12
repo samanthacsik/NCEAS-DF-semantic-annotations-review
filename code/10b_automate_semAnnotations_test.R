@@ -8,13 +8,33 @@
 
 ##########################################################################################
 # Summary
-##########################################################################################\
+##########################################################################################
 
 # NOTES FROM TESTING SO FAR:
   # 1) pre-existing annotations will be preserved upon datapackage update (when using datapack at least)
   # 2) relationships between child and parent datapackages are NOT preserved upon update
   # 3) prov is supposedly preserved upon update when using datapack (but haven't tested this yet; need to find example to test on still)
-  # 4) can we make updates to LTER data? Jasmine said no (or at least for some of them); currently filtered out the 364 LTER datapackages for which I'd like to add annotations to 
+
+# CONSIDERATIONS:
+  # 1) update subsets of datapackages at a time; how/when to do this in the most non-intrusive way possible to minimize indexing delays
+  # 2) child/parent relationships
+  # 3) can we update LTER data (still need to test this; Jasmine mentioned we might not have access to update LTER datapackages? 364 total)
+  # 4) does a package's doi (or uuid) always match that of it's resource map?
+  # ---- add to solr query isPublic and filter out any that are not
+
+# arcticdatautils::get_package() will return child packages 
+  # get_package() on everything in list and saved child datasets in df
+  # use that list to determine which are children and which are parents
+  # need different workflows for parent and child packages
+    # child first (need to add an extra step which is updating the parent resource map), then parents (current workflow won't work for parent packages)
+  # bryce, chris
+
+# find standalones and update those (easy)
+
+# split out making changes vs updates
+# determine number of data files within a dp and then update those with less than X number of files
+# run this in small subsets based on number of datatables
+# run update loop in tryCatchLog()
 
 ##########################################################################################
 # General Setup
@@ -23,7 +43,7 @@
 # load packages
 library(dataone)
 library(datapack)
-library(arcticdatautils) # to install: `remotes::install_github("nceas/arcticdatautils")` BUT CAN'T USE THIS
+library(arcticdatautils) 
 library(EML)
 library(uuid)
 library(tryCatchLog)
@@ -51,7 +71,7 @@ source(here::here("code", "10a_automate_semAnnotations_functions.R"))
 
 # import data (removing lter data for now, only 364 datapackages)
 attributes <- read_csv(here::here("data", "outputs", "annotate_these_attributes_2020-12-17_webscraped.csv")) %>% 
-  filter(!str_detect(identifier, "(?i)https://pasta.lternet.edu") )
+  filter(!str_detect(identifier, "(?i)https://pasta.lternet.edu"))
   
 ##########################################################################################
 # add semantic annotations for ONE datapackage (PRACTICE)
@@ -61,17 +81,21 @@ attributes <- read_csv(here::here("data", "outputs", "annotate_these_attributes_
 # FOR TESTING PURPOSES ONLY
 ##############################
 
+# available on test.arctic.io for practice
+  # doi:10.18739/A2VM42Z20 --> resource_map_urn:uuid:6ceb928b-f7cd-481f-9390-4403d8ada396 (tested at least once)
+  # doi:10.18739/A2D21RH94 --> resource_map_urn:uuid:258799f9-a37b-4e8a-a7f1-ff365b691d1d (not yet tested; LARGE PACKAGE)
+
 # test package data
-# attributes_filtered <- attributes %>%
-#   filter(identifier %in% c("doi:10.18739/A2VM42Z20")) %>%
-#   mutate(
-#     practice_identifier = case_when(
-#       identifier == "doi:10.18739/A2VM42Z20" ~ "urn:uuid:3caf44b7-ffd4-4c4b-b1f2-e9de23d00d13"
-#     )
-#   ) %>%
-#   select(-identifier) %>%
-#   rename(identifier = practice_identifier) %>%
-#   mutate(query_datetime_utc = as.character(query_datetime_utc))
+attributes <- attributes %>%
+  filter(identifier %in% c("doi:10.18739/A2VM42Z20")) %>%
+  mutate(
+    practice_identifier = case_when(
+      identifier == "doi:10.18739/A2VM42Z20" ~ "urn:uuid:3a7ce49e-55af-4b83-b546-bb44c0ff0384"
+    )
+  ) %>%
+  select(-identifier) %>%
+  rename(identifier = practice_identifier) %>%
+  mutate(query_datetime_utc = as.character(query_datetime_utc))
 # 
 # # create dummy row
 # df <- data.frame(entityName  = c("NA"), attributeName = c("NA"), attributeLabel = c("NA"),
@@ -104,12 +128,12 @@ for(dp_num in 1:length(unique_datapackage_ids)){
     dplyr::filter(identifier == current_datapackage_id) 
   message("Subsetted semantic annotation df for datapackage: ", current_datapackage_id)
   
-  # 1.2) build resource map for that datapackage
-  current_resource_map <- paste("resource_map_", current_datapackage_id, sep = "")
-  message("Generated resource map: ", current_resource_map)
+  # # 1.2) build resource map for that datapackage -- MAYBE DON'T NEED THIS? SEE NOTES IN SCRIPT 10A
+  # current_resource_map <- paste("resource_map_", current_datapackage_id, sep = "")
+  # message("Generated resource map: ", current_resource_map)
   
   # 1.3) get metadata 
-  step1_list <- tryLog(get_datapackage_metadata(current_resource_map),
+  step1_list <- tryLog(get_datapackage_metadata(current_datapackage_id), # this was `current_resource_map`
          write.error.dump.file = TRUE, write.error.dump.folder = "dump_files",
          include.full.call.stack = FALSE)
   
@@ -142,7 +166,7 @@ for(dp_num in 1:length(unique_datapackage_ids)){
 
     for(att_num in 1:num_attributes_in_eml_dataTable){
       
-      # 3.1) get attribute from dataTable in eml
+      # 3.1) get attribute from dataTable in eml ****IF ELSE TO INCLUDE OTHERENTITIES*** - check with `eatocsv` pkg to see how/where it's extracting attribute information
       current_attribute_name_from_eml <- doc$dataset$dataTable[[dt_num]]$attributeList$attribute[[att_num]]$attributeName
       message("--> Found attribute #", att_num, " : '", current_attribute_name_from_eml, "'")
       
@@ -150,8 +174,8 @@ for(dp_num in 1:length(unique_datapackage_ids)){
       current_attribute_subset <- current_dataTable_subset %>% 
         filter(attributeName == current_attribute_name_from_eml)
       
-      # # 3.3) if eml attribute exists in df, continue, if not move to next attribute in eml
-      if(length(current_attribute_subset$attributeName > 0)) { # USED TO HAVE 'isTRUE' here but not working
+      # 3.3) if eml attribute exists in df, continue, if not move to next attribute in eml
+      if(length(current_attribute_subset$attributeName > 0)){ 
         
         message("The corresponding attribute to #", att_num, " in the df is: '", current_attribute_subset$attributeName, "'")
         
@@ -195,7 +219,7 @@ for(dp_num in 1:length(unique_datapackage_ids)){
          write.error.dump.file = TRUE, write.error.dump.folder = "dump_files",
          include.full.call.stack = FALSE) 
   
-  # 4.2) generate new pid (either doi or uuid depending on what the original had) for metadata 
+  # 4.2) generate new pid (either doi or uuid depending on what the original had) for metadata NEED TO DISCUSS WHAT DATASETS WE SHOULD/SHOULD NOT UPDATE
   if(isTRUE(str_detect(current_metadata_pid, "(?i)doi"))) {
     new_id <- dataone::generateIdentifier(d1c_test@mn, "DOI")
     message("Generating a new metadata DOI: ", new_id)
