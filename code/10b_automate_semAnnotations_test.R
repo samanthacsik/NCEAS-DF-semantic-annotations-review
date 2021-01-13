@@ -82,21 +82,20 @@ attributes <- read_csv(here::here("data", "outputs", "annotate_these_attributes_
 ##############################
 
 # available on test.arctic.io for practice
-  # doi:10.18739/A2VM42Z20 --> resource_map_urn:uuid:6ceb928b-f7cd-481f-9390-4403d8ada396 (tested at least once)
   # doi:10.18739/A2D21RH94 --> resource_map_urn:uuid:258799f9-a37b-4e8a-a7f1-ff365b691d1d (not yet tested; LARGE PACKAGE)
 
 # test package data
 attributes <- attributes %>%
-  filter(identifier %in% c("doi:10.18739/A2VM42Z20")) %>%
+  filter(identifier %in% c("doi:10.18739/A2D21RH94")) %>%
   mutate(
     practice_identifier = case_when(
-      identifier == "doi:10.18739/A2VM42Z20" ~ "urn:uuid:3a7ce49e-55af-4b83-b546-bb44c0ff0384"
+      identifier == "doi:10.18739/A2D21RH94" ~ "urn:uuid:73279597-6b32-4f7b-a345-2bc928541800"
     )
   ) %>%
   select(-identifier) %>%
   rename(identifier = practice_identifier) %>%
   mutate(query_datetime_utc = as.character(query_datetime_utc))
-# 
+ 
 # # create dummy row
 # df <- data.frame(entityName  = c("NA"), attributeName = c("NA"), attributeLabel = c("NA"),
 #                  attributeDefinition = c("NA"), attributeUnit = c("NA"), propertyURI = c("NA"),
@@ -128,16 +127,12 @@ for(dp_num in 1:length(unique_datapackage_ids)){
     dplyr::filter(identifier == current_datapackage_id) 
   message("Subsetted semantic annotation df for datapackage: ", current_datapackage_id)
   
-  # # 1.2) build resource map for that datapackage -- MAYBE DON'T NEED THIS? SEE NOTES IN SCRIPT 10A
-  # current_resource_map <- paste("resource_map_", current_datapackage_id, sep = "")
-  # message("Generated resource map: ", current_resource_map)
-  
-  # 1.3) get metadata 
-  step1_list <- tryLog(get_datapackage_metadata(current_datapackage_id), # this was `current_resource_map`
+  # 1.2) get metadata 
+  step1_list <- tryLog(get_datapackage_metadata(current_datapackage_id), 
          write.error.dump.file = TRUE, write.error.dump.folder = "dump_files",
          include.full.call.stack = FALSE)
   
-  # 1.4) parse outputs
+  # 1.3) parse outputs
   current_pkg <- step1_list[[1]]
   current_metadata_pid <- step1_list[[2]]
   doc <- step1_list[[3]]
@@ -247,22 +242,6 @@ for(dp_num in 1:length(unique_datapackage_ids)){
   message("--------------Datapackage ", dp_num, " complete!--------------")
   
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
