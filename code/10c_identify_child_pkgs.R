@@ -39,7 +39,8 @@ process_package <- function(index, unique_datapackage_ids) {
   # should_skip <- index != 786
   message("**** Has Existing Result: ", has_existing_result, " ****")
   # message("**** Should Skip: ", should_skip, " ****")
-  # if the datapackage at index, i, have already been stored in the hash, don't rerun (allows us to pick back up where we left off if time-out occurs)
+  
+  # if the datapackage at index has already been stored in the hash, don't rerun (allows us to pick back up where we left off if error halts processes)
   if(has_existing_result) { # || should_skip
     message("**** Skipping: ", index, " ****")
     return()
@@ -55,16 +56,20 @@ process_package <- function(index, unique_datapackage_ids) {
 
 # add results to hash (used in process_package() above)
 get_result <- function(pkg, parent_rm, parent_metadata_pid) {
+  
   results <- NULL
+  
   # check to see if there are child packages; if so, save information
   if(length(pkg$child_packages) > 0){
     
     message("**** I have this many child packages: ", length(pkg$child_packages), " ****")
-    # create empty df to store data in (this df will get stored in a hash for each iteration of the loop)
+   
+     # create empty df to store data in (this df will get stored in a hash for each iteration of the loop)
     results_df <- data.frame(child_rm = as.character(),
                              parent_rm = as.character(),
                              parent_metadata_pid = as.character(),
                              stringsAsFactors=FALSE)
+   
     # extract rm for each child package and store in vector along with the associated parent rm
     for(j in 1:length(pkg$child_packages)){
       
@@ -78,9 +83,10 @@ get_result <- function(pkg, parent_rm, parent_metadata_pid) {
       row <- nrow(results_df) + 1
       results_df[row, ] <- stuff
     }
+    
     results <- results_df
     
-    # if there are not child datapackages associated with the current unique_datapackage_id, add to results_hash
+    # if there are not child datapackages associated with the current unique_datapackage_id, add to results_hash as such
   } else {
     message("there are NO child packages")
     results <- "NO CHILD PACKAGES"
@@ -90,12 +96,17 @@ get_result <- function(pkg, parent_rm, parent_metadata_pid) {
 
 # combine all results into single 'all_results_df' 
 process_results <- function(result, all_results_df) {
+  
+  # if value in hash is a type list, it means there is child pkg info that needs to be combined in the 'all_results_df'
   should_process <- (typeof(result) == "list")
   message("**** Should Process: ", should_process, " ****")
+  
   if (should_process) {
     all_results_df <- rbind(all_results_df, result)
   }
+  
   return(all_results_df)
+  
 }
 
 ##############################
