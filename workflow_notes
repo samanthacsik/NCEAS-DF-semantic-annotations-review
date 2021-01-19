@@ -164,11 +164,11 @@ PART C: Scripting an automated batch update of ADC datapackages with semantic an
   1.1) began manually identifying child packages by visitng thier landing pages using the 'viewURL' field
   1.2) identified 11 frequently occuring parent packages after exploring the first 85/784 packages; reran a similar workflow that was used in script 10c to extact child packages from these parents and find their matches (if any) in my remaining datapackages list -- 181 matches, bringing total unsorted datapackages down to 603
   1.3) MANUALLY visted the landing pages of the remaining 603 unsorted datapackages; assigned their 'package_type' as one of the following:
-    - child
-    - parent
-    - too long to load (pages that took forever to load...probably really large packages)
+    - child (is a child package; NOT a part of multi-level nesting)
+    - parent (is a parent package; NOT a part of multi-level nesting)
+    - too long to load (datapackages whose landing pages that took forever to load and I stopped waiting around for...probably really large packages)
     - MULTINESTING (packages that had multiple nesting levels e.g. child, parent, grandparent OR were nested within more than one parent package; see https://search.dataone.org/view/doi:10.18739/A20C4SK70 for example)
-    - WEIRD (these consisted primarily of packages that only had an identifier, but no title, authors, etc.)
+    - WEIRD (these consisted primarily of packages that only had an identifier, but no title, authors, etc.; see https://search.dataone.org/view/doi:10.18739/A24F1MK1T for example)
 
 
 
