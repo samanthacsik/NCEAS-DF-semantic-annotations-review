@@ -1,5 +1,4 @@
 # NCEAS-DF-semantic-annotations-review
-THIS README IS NOT UP TO DATE. WILL FIX SOON 2021/01/13 
 
 Overview of currently annotated data packages within the Arctic Data Center (as of 2020-10-12) in preparation for the 2020 NSF site visit, plus workflows to update datapackages with additional semantic annotations.
 
