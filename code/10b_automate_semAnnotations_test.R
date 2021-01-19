@@ -3,8 +3,8 @@
 # date created: "2021-01-04"
 # date edited: "2021-01-11"
 # R version: 3.6.3
-# input: "data/outputs/annotate_these_attributes_2020-12-17_webscraped.csv"
-# output: NA 
+# input: "data/outputs/annotate_these_attributes_2020-12-17_webscraped.csv" NEED TO UPDATE THIS
+# output: no output, but publishes updates to arcticdata.io 
 
 ##########################################################################################
 # Summary
@@ -95,17 +95,6 @@ attributes <- attributes %>%
   select(-identifier) %>%
   rename(identifier = practice_identifier) %>%
   mutate(query_datetime_utc = as.character(query_datetime_utc))
- 
-# # create dummy row
-# df <- data.frame(entityName  = c("NA"), attributeName = c("NA"), attributeLabel = c("NA"),
-#                  attributeDefinition = c("NA"), attributeUnit = c("NA"), propertyURI = c("NA"),
-#                  valueURI = c("NA"), viewURL = c("NA"), query_datetime_utc = c("NA"),
-#                  status = c("NA"), assigned_valueURI = c("NA"), prefName = c("NA"), ontoName = c("NA"),
-#                  identifier = c("test_id"))
-# 
-# # combine test package data with dummy data
-# attributes <- rbind(attributes_filtered, df) %>%
-#   filter(identifier != "test_id")
 
 ##############################
 # get vector of all unique datapackages

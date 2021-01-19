@@ -30,6 +30,10 @@ source(here::here("code", "00_functions.R"))
 # solr query from 2020-10-12
 solr_query <- read_csv(here::here("data",  "queries", "query2020-10-12", "fullQuery_semAnnotations2020-10-12_solr.csv"))
 
+# take note that only 1428 appear to have semantic annotations
+# pkgs_with_annotations <- solr_query %>% filter(!is.na(attribute))
+# length(unique(pkgs_with_annotations$identifier))
+
 # Get updated aggregate check scores via terminal (last downloaded on 2020-11-10)
 # curl -v --GET -H "Accept: text/csv" "https://docker-ucsb-4.dataone.org:30443/quality/scores/?id=urn:node:ARCTIC&suite=FAIR-suite-0.3.1" -o "agg_check_scores2020-11-10.csv"
 
