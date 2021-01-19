@@ -174,11 +174,7 @@ PART C: Scripting an automated batch update of ADC datapackages with semantic an
 
 **Script: 10f_organize_pkgs_for_batch_update.R** 
 ----------------------------
-1) 
+1) separate out datapackages (and their attributes) to be updated by package type (e.g. group child packages together, parent packages together, etc.) -- this will be important for applying the correct workflow during the update process
+--> OUTPUT: "data/outputs/attributes_to_annotate/..."
 
-
-
-
-LTER metadata pids (need to remove from remainder still):
-- urn:uuid:bd090a42-f1f6-4dcf-95d5-5f47544acdec
 
