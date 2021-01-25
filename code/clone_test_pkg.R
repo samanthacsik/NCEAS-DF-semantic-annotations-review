@@ -392,7 +392,9 @@ publish_update(adc_test,
 # https://test.arcticdata.io/view/urn%3Auuid%3A44d931d0-19cb-4edf-bb27-63ac6d5823b5
 
 # parent: resource_map_urn:uuid:994490f4-3fb1-4b74-938b-090500fde2af (original: resource_map_doi:10.18739/A2RJ48V9W)
+  # metadata pid: urn:uuid:994490f4-3fb1-4b74-938b-090500fde2af
 # child 1: resource_map_urn:uuid:2caed8fb-d4eb-4641-8a25-c9302871bc03 (original: resource_map_doi:10.18739/A2028PC7G)
+  # metadata pid: urn:uuid:d1583d76-dc5d-4846-b3cb-69c122cbddc7
 
 #
 #
