@@ -319,6 +319,3 @@ pkg_clone <- datamgmt::clone_package("resource_map_doi:10.18739/A2D21RH94",
 
 # doi:10.18739/A2D21RH94, 
 
-
-
->>>>>>> 42313308b8c05d84315933b4a283841d2dcd380b
