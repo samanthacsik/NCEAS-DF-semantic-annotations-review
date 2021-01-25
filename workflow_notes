@@ -1,0 +1,180 @@
+--------------- Workflow for ADC Semantic Annotation Analysis and Batch Update: ---------------
+* This repository focuses on exploring current semantic annotation efforts across the Arctic Data Center (ADC) corpus and where we can improve by adding semantic annotations, as well as automating a batch update of datapackages with new semantic annotations. It can be broken down into three general sections, detailed below:
+
+--> Part A <-- General exploration of the ADC corpus, the attributes that have already been semantically annotated (as of 2020-10-12), and those that have not been annotated
+
+--> Part B <-- Manually assign semantic annotations to ADC attributes across ~1000 datapackages and organize in preparation for a batch update of datapackages
+
+--> Part C <-- Scripting an automated batch update of ADC datapackages with semantic annotations. This includes sorting datapackges by type (parent, child, standalone, etc.) to ensure that we apply the correct workflow when updating
+
+
+####################################################################################################
+PART A: Exploring current semantially annotated ADC attributes (and non-annoated attributes) to generate update report ("index.Rmd")
+####################################################################################################
+
+
+
+**Script: 01_query_download_metadata.R**
+----------------------------
+1) ran solr query on 2020-10-12 for most recently published versions of all ADC datapackages
+2) use 'eatocsv' package to parse attribute information (and, if present, the associated semantic annotation URIs) and download entityNames for all solr query results
+--> OUTPUT: "data/queries/query2020-10-12/fullQuery_semAnnotations2020-10-12_solr.csv" <--
+--> OUTPUT: "data/queries/query2020-10-12/fullQuery_semAnnotations2020-10-12_attributes.csv" <--
+
+
+
+
+**Script: 02a_initial_exploration.R**
+----------------------------
+1) 6142 total data packages in the ADC (as of 2020-10-12)
+2) 185 datapackages with semantic annotations on attributes (result of incorporating annotations into data curation workflow)
+3) of those 185 datapackages, 12312/14718 attributes are annotated, mostly from ECSO (12155)
+4) only 1428 datapackages appear to have attribute information (MJones & MSchildhauer thinks this seems low)
+
+
+
+**Script: 02b_identifying_ACADIS_data.R**
+----------------------------
+- MJones & MSchildhauer recommended filtered out ACADIS data
+1) used code from CBeltz to identify packages whos submission date was prior to 2016-03-21; these are ACADIS datapackages
+--> OUTPUT: "data/queries/query2020-10-12/fullQuery_semAnnotations2020-10-12_labeledACADIS.csv" <--
+
+
+
+**Script: 02c_exploration_noAttributes.R**
+----------------------------
+1) attempted to explore datapackages that do not have attributes listed in their metadata records to confirm whether or not that's acutally true, or if solr query just isn't returning that attribute information correctly
+- DON'T NEED TO WORRY ABOUT THIS SCRIPT TOO MUCH; ENDED UP DROPPING THIS
+
+
+
+**Script: 03_webscraping.R**
+----------------------------
+1) webscraped ECSO for preferred name and ontology name for all current semantically annotated attributes in ADC
+- used in report "index.Rmd"
+--> "data/queries/query2020-10-12/fullQuery_semAnnotations2020-10-12_webscraping.csv" <--
+
+
+
+**Script: 04_unnest_nonannotated_terms.R**
+----------------------------
+1) unnest titles, keywords, abstracts, attributeNames, attributeLables, attributeDescriptions
+- used in report "index.Rmd"
+--> OUTPUT: "data/unnested_termsn_nonannotated_attributes2020-10-12/..." <--
+
+
+
+**Script: 05_filterStopWords_count_nonannotated_attributes.R**
+----------------------------
+1) filter out stop words from unnested tokens from script 04
+- used in report "index.Rmd"
+--> OUTPUT: "data/filtered_term_counts/nonannotated_attributes2020-10-12/..." <--
+
+
+
+**Script: 06_semAnnotation_assessment.R**
+----------------------------
+1) explores current semantic annotation frequencies across the ADC corpus
+- used in report "index.Rmd"
+
+
+
+**Script: 07_nonAnnotated_attribute_assessment.R**
+----------------------------
+1) explore/visualize most common non-annotated attributes
+- used in report "index.Rmd"
+
+
+
+**Script: 08_extract_attributes_from_nonAnnotated_datapackges.R**
+----------------------------
+1) extract and tidy non-annotated attributes from datapackages that do not yet have any semantic annotations (NOTE: non-annotated attributes from datapackages that already have at least one semantic annotation are available in "fullQuery_semAnnotations2020-10-12_attributes.csv" from script 01_query_download_metadata.R*)
+--> OUTPUT: "data/queries/query2020-10-12_attributes_from_nonannotated_datapackages/attributes_from_nonannotated_datapackages_tidied.csv" <--
+
+
+
+####################################################################################################
+PART B: Finalizing list of attributes to annotate (and which ECSO terms to annotate them with)
+####################################################################################################
+
+
+
+**Script: 09a_list_nonannotated_attributes.R**
+----------------------------
+1) combine all non-annotated attributes (from partially annotated and non-annotated datapackages)
+--> OUTPUT: "data/outputs/nonannotated_attributes_2020-10-12.csv"
+
+
+
+**Script: 09b_list_combine_attributes_for_annotations.R** (ALSO: see code/assign_URIs_to_nonannotated_attributes/...)
+----------------------------
+1) organize and combine all attributes to be annotated -- these come from both ADC datapackages that are currently partially annotated, as well as those that have no annotations. Semantic annotation URIs were manually assessed and assigned in "code/assign_URIs_to_nonannotated_attributes/..."
+- NOTE: I began by targetting cryptic attributeNames and expanded from there
+--> OUTPUT: "data/outputs/annotate_these_attributes_2020-11-17.csv" <-- 
+
+
+
+**Script: 09c_webscrape_for_semAnnotation_prefNames.R** 
+----------------------------
+1) borrowed code from script 03, webscraped ECSO for prefLabels of all semantic annotation URIs that I had manually assigned to ADC attributes
+--> OUTPUT: data/outputs/annotate_these_attributes_2020-12-17_webscraped.csv <--
+
+
+
+####################################################################################################
+PART C: Scripting an automated batch update of ADC datapackages with semantic annotations
+####################################################################################################
+
+
+
+**Script: 10a_automate_semAnnotations_functions.R** 
+----------------------------
+- custom functions used in many of the following scripts for the batch update
+
+
+
+**Script: 10b_automate_semAnnotations_test.R** (UPDATE SCRIPT NAME - THIS WILL WORK FOR STANDALONES AND CHILD PACKAGES) 
+----------------------------
+1) automatically update ADC datapackages with semantic annotations
+- requires df called "attributes" with the following columns: "identifier" (pkg metadata pid), "entityName", "attributeName", "assigned_valueURI", "prefName" (webscraped)
+
+
+
+**Script: 10c_identify_child_pkgs.R** 
+----------------------------
+1) identify as many child packages as possible from my list of 1092 datapackages to update (this won't get them all, only those whose parents are also listed in the 'attributes' df) - CURRENTLY 303 packages total
+  1.1) start with dataframe of all 1092 datapackages (these don't contain LTER data i.e. identifiers 'https://pasta.lternet.edu') that have attributes to semantically annotate
+  1.2) use arcticdatautils::get_package() to download the 1092 datapackages and identify those that have child packages associated with them (will provide the resource maps of associated child packages)
+  1.3) save the resource maps of the child packages (and parent pkg rm + metadata pid)
+  1.4) rerun arcticdatautils::get_package() again using the child resource maps to extract their metadata pids 
+  1.5) use the extracted child metadata pids to match up with 'attributes$identifer'; label these as package_type == "child"
+  
+
+
+**Script: 10d_identify_parent_pkgs.R** 
+----------------------------
+1) identify as many parent packages as possible (this should inlcude all parents) - 5 packages total
+  1.1) data about child packages from script 10c contains not only the child package rm and metadata pid, but also their the parent rm and metadata pid -- take those parent metadata pids and find the corresponding matches in the 'attributes' df
+
+
+
+**Script: 10e_identify_remainder_pkg_types.R** 
+----------------------------
+1) tried to automate sorting of remaining datapackages - 784 packages remaining after scripts 10c & 10d
+  1.1) began manually identifying child packages by visitng thier landing pages using the 'viewURL' field
+  1.2) identified 11 frequently occuring parent packages after exploring the first 85/784 packages; reran a similar workflow that was used in script 10c to extact child packages from these parents and find their matches (if any) in my remaining datapackages list -- 181 matches, bringing total unsorted datapackages down to 603
+  1.3) MANUALLY visted the landing pages of the remaining 603 unsorted datapackages; assigned their 'package_type' as one of the following:
+    - child (is a child package; NOT a part of multi-level nesting)
+    - parent (is a parent package; NOT a part of multi-level nesting)
+    - too long to load (datapackages whose landing pages that took forever to load and I stopped waiting around for...probably really large packages)
+    - MULTINESTING (packages that had multiple nesting levels e.g. child, parent, grandparent OR were nested within more than one parent package; see https://search.dataone.org/view/doi:10.18739/A20C4SK70 for example)
+    - WEIRD (these consisted primarily of packages that only had an identifier, but no title, authors, etc.; see https://search.dataone.org/view/doi:10.18739/A24F1MK1T for example)
+
+
+
+**Script: 10f_organize_pkgs_for_batch_update.R** 
+----------------------------
+1) separate out datapackages (and their attributes) to be updated by package type (e.g. group child packages together, parent packages together, etc.) -- this will be important for applying the correct workflow during the update process
+--> OUTPUT: "data/outputs/attributes_to_annotate/..."
+
+

@@ -234,6 +234,7 @@ pkg_clone <- datamgmt::clone_package("resource_map_doi:10.18739/A24B2X46G",
                                      from = from, to = to, 
                                      add_access_to = arcticdatautils:::get_token_subject(),
                                      change_auth_node = TRUE, new_pid = TRUE)
+# resource_map_urn:uuid:4fd91ae7-2e03-4fde-b7b7-1bb8e27c7640
 
 #
 #
@@ -408,3 +409,4 @@ publish_update(adc_test,
 #
 #
 #
+
