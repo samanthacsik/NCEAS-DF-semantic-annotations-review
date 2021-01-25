@@ -317,6 +317,94 @@ pkg_clone <- datamgmt::clone_package("resource_map_doi:10.18739/A2D21RH94",
 
 
 # doi:10.18739/A2D21RH94, 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+##############################
+# clone 7 (parent + child packages), cloned to test.arcticdata.io on 2021-01-25; eml 2.1.1
+# parent: resource_map_doi:10.18739/A2RJ48V9W (https://search.dataone.org/view/doi%3A10.18739%2FA2RJ48V9W)
+# child1: resource_map_doi:10.18739/A24B2X46G (https://search.dataone.org/view/doi:10.18739/A24B2X46G)
+##############################
+
+# define to and from for copy and pasting
+from <- dataone::D1Client("PROD", "urn:node:ARCTIC")
+to <- dataone::D1Client("STAGING", "urn:node:mnTestARCTIC")
+
+#---------------------
+# clone packages to test node
+#---------------------
+
+child1_pkg_clone <- datamgmt::clone_package("resource_map_doi:10.18739/A24B2X46G",
+                                            from = from, to = to, 
+                                            add_access_to = arcticdatautils:::get_token_subject(),
+                                            change_auth_node = TRUE, new_pid = TRUE)
+# resource_map_urn:uuid:2caed8fb-d4eb-4641-8a25-c9302871bc03
 
 
+parent_pkg_clone <- datamgmt::clone_package("resource_map_doi:10.18739/A2RJ48V9W",
+                                            from = from, to = to, 
+                                            add_access_to = arcticdatautils:::get_token_subject(),
+                                            change_auth_node = TRUE, new_pid = TRUE)
+# resource_map_urn:uuid:199d8478-56bb-471b-bdd9-07a014b8f8fa
 
+#---------------------
+# set nodes
+#---------------------
+
+cn_staging <- CNode('STAGING')
+adc_test <- getMNode(cn_staging,'urn:node:mnTestARCTIC')
+
+#---------------------
+# get resource maps
+#---------------------
+
+resource_map_child1_new <- "resource_map_urn:uuid:2caed8fb-d4eb-4641-8a25-c9302871bc03"
+pkg_parent <- get_package(adc_test, 'resource_map_urn:uuid:199d8478-56bb-471b-bdd9-07a014b8f8fa')
+
+#---------------------
+# nest child packages under parent
+#---------------------
+
+publish_update(adc_test,
+               resource_map_pid = pkg_parent$resource_map,
+               metadata_pid = pkg_parent$metadata,
+               data_pids = pkg_parent$data_pids,  
+               child_pids = c(pkg_parent$child_packages, 
+                              resource_map_child1_new))
+#---------------------
+# finalized resource maps
+#---------------------
+
+# https://test.arcticdata.io/view/urn%3Auuid%3A44d931d0-19cb-4edf-bb27-63ac6d5823b5
+
+# parent: resource_map_urn:uuid:994490f4-3fb1-4b74-938b-090500fde2af (original: resource_map_doi:10.18739/A2RJ48V9W)
+# child 1: resource_map_urn:uuid:2caed8fb-d4eb-4641-8a25-c9302871bc03 (original: resource_map_doi:10.18739/A2028PC7G)
+
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
