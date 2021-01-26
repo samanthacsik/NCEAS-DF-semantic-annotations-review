@@ -54,3 +54,19 @@ for(i in 1:numberOf_dataTables){
     }
   }
 }
+
+# wrapped whole for loop in tryLog and removed these sections from script 10b
+
+# 1.2)
+# step1_list <- tryLog(get_datapackage_metadata(current_datapackage_id), 
+#        write.error.dump.file = TRUE, write.error.dump.folder = "dump_files",
+#        include.full.call.stack = FALSE)
+
+# 2.2)
+# current_dataTable_subset <- tryLog(current_datapackage_subset %>%
+#   filter(entityName == current_dataTable_name_from_eml))
+
+# 4.1)
+# tryLog(eml_validate(doc), 
+#        write.error.dump.file = TRUE, write.error.dump.folder = "dump_files",
+#        include.full.call.stack = FALSE) 
