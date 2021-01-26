@@ -86,3 +86,23 @@ print(paste0(file_prefix, "_attributes.csv created"))
 
 # import data to view
 extracted_attributes <- read_csv(here::here("data", "queries", "query2020-10-12", "fullQuery_semAnnotations2020-10-12_attributes.csv"))
+
+
+##########################################################################################
+##########################################################################################
+##########################################################################################
+##########################################################################################
+
+##########################################################################################
+# UPDATE: want to confirm which datapackages are public for batch update in script 10b; re-query all ADC holdings (only the most recent published version) for "isPublic" field to join with existing dataframes containing attributes and semantic annotations
+##########################################################################################
+
+# solr query (most recent versions)
+semAnnotations_query <- query(adc_mn, 
+                              list(q = "documents:* AND obsolete:(*:* NOT obsoletedBy:*)",
+                                   fl = "identifier, dateUploaded, datePublished, pubDate, isPublic, author, title, keywords, abstract, attribute, sem_annotates, sem_annotation, sem_annotated_by, sem_comment",
+                                   rows = "7500"),
+                              as = "data.frame")
+
+write_csv(semAnnotations_query, here::here("data", "queries", "query2021-01-25_isPublic", paste("fullQuery_semAnnotations_isPublic", Sys.Date(),".csv", sep = "")))
+
