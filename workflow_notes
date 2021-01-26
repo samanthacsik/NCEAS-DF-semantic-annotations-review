@@ -133,7 +133,7 @@ PART C: Scripting an automated batch update of ADC datapackages with semantic an
 
 
 
-**Script: 10b_automate_semAnnotations_test.R** (UPDATE SCRIPT NAME - THIS WILL WORK FOR STANDALONES AND CHILD PACKAGES) 
+**Script: 10b_automate_childORunnested.R** 
 ----------------------------
 1) automatically update ADC datapackages with semantic annotations
 - requires df called "attributes" with the following columns: "identifier" (pkg metadata pid), "entityName", "attributeName", "assigned_valueURI", "prefName" (webscraped)
