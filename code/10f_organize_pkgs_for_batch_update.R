@@ -65,7 +65,7 @@ fix_skipped_pkg_NA <- all_sorted_pkgs %>% filter(is.na(package_type)) %>%
 ##############################
 
 # standalone packages should get updated first
-standalone_pkgs_to_update <- all_sorted_pkgs %>% filter(package_type == "standalone")
+standalone_pkgs_to_update <- all_sorted_pkgs %>% filter(package_type == "standalone") %>% mutate(child_rm = na_if(child_rm, "EC"))
 length(unique(standalone_pkgs_to_update$identifier)) # 249
 # write_csv(standalone_pkgs_to_update, here::here("data", "outputs", "attributes_to_annotate", "standalone_pkgs_to_update.csv"))
 
