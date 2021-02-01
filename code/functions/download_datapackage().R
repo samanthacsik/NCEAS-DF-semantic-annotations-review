@@ -23,6 +23,8 @@ download_datapackage <- function(dp_num, unique_datapackage_ids, attributes){
   
   # add current_pkg to list for storage
   list_of_pkgs_to_publish_update[[dp_num]] <- current_pkg
+  names(list_of_pkgs_to_publish_update)[[dp_num]] <- current_metadata_pid
+
   message("--------------DataPackage ", dp_num, " (", current_datapackage_id, ") has been added to the list--------------")
   
   outputs <- list(doc, current_datapackage_subset, current_datapackage_id)
