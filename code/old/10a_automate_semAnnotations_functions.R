@@ -45,7 +45,7 @@ get_eml_version <- function(pkg){
 get_datapackage_metadata <- function(current_datapackage_id){
   
   # Use arcticdatautils `get_package()` to get rm pid 
-  pkg <- get_package(d1c_test@mn, 
+  pkg <- get_package(d1c_prod@mn, 
                      current_datapackage_id, # this is actually the metadata pid from solr (will throw a warning but that's okay)
                      file_names = TRUE)
   
@@ -53,7 +53,7 @@ get_datapackage_metadata <- function(current_datapackage_id){
   resource_pid <-  pkg$resource_map
   
   # get pkg using resource map 
-  current_pkg <- getDataPackage(d1c_test, identifier = resource_pid, lazyLoad = TRUE, quiet = FALSE)
+  current_pkg <- getDataPackage(d1c_prod, identifier = resource_pid, lazyLoad = TRUE, quiet = FALSE)
   
   # get eml version for use in 'selectMember()'
   format_id_version <- get_eml_version(pkg = current_pkg) 
@@ -71,7 +71,7 @@ get_datapackage_metadata <- function(current_datapackage_id){
   }
   
   # read in eml metadata using pid 
-  doc <- read_eml(getObject(d1c_test@mn, current_metadata_pid)) 
+  doc <- read_eml(getObject(d1c_prod@mn, current_metadata_pid)) 
   message("Imported eml medatadata for datapackage: ", current_datapackage_id)
   
   # create list to return
@@ -100,8 +100,8 @@ build_attributeID <- function(dataTable_number, attribute_number){
 verify_attributeID_isUnique <- function(current_attribute_id){
   
   # search hash table for an id (key) match; if no match, add to table (value = TRUE)
-  if (is.null(my_hash[[current_attribute_id]])) {
-    my_hash[[current_attribute_id]] <- TRUE
+  if (is.null(validate_attributeID_hash[[current_attribute_id]])) {
+    validate_attributeID_hash[[current_attribute_id]] <- TRUE
     # message("'", current_attribute_id, "' is unique and has been added to the hash")
   # if duplicate, add to vector (value = NULL)
   } else {
