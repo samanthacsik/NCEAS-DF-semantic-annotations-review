@@ -10,9 +10,9 @@ get_entities <- function(doc){
   # get dataTables and/or otherEntities from eml file; deal with unpacking issue (STILL NEED TO FIX)
   dataTables_from_metadata <- doc$dataset$dataTable
   if(is.list(dataTables_from_metadata[[1]])){
-    message("****This datapackage has ", length(dataTables_from_metadata), " dataTables****")
+    message("****This datapackage has ", length(dataTables_from_metadata), " dataTable(s)****")
   } else if(is.character(dataTables_from_metadata[[1]])){
-    message("****This datapackage has 1 dataTables****")
+    message("****This datapackage has 1 dataTable(s)****")
     # dummy_dataTable <- eml$dataTable(entityName = "dummy",
     #                                  entityDescription = "dummy placeholder")
     # doc$dataset$dataTable <- list(doc$dataset$dataTable, dummy_otherEntity)
@@ -21,32 +21,30 @@ get_entities <- function(doc){
   
   otherEntities_from_metadata <- doc$dataset$otherEntity
   if(is.list(otherEntities_from_metadata[[1]])){
-    message("****This datapackage has ", length(otherEntities_from_metadata), " otherEntities****")
+    message("****This datapackage has ", length(otherEntities_from_metadata), " otherEntity(ies)****")
   } else if(is.character(otherEntities_from_metadata[[1]])){
-    message("****This datapackage has 1 otherEntities****")
+    message("****This datapackage has 1 otherEntity(ies)****")
     # -------------- delete this after testing! -------------- #
-    dummy_otherEntity <- eml$otherEntity(entityName = "dummy",
-                                         entityDescription = "dummy placeholder")
-    otherEntities_from_metadata <- list(doc$dataset$otherEntity, dummy_otherEntity)
-    message("CREATED DUMMY otherEntity TO CIRCUMVENT UNPACKING ISSUE")
+    # dummy_otherEntity <- eml$otherEntity(entityName = "dummy",
+    #                                      entityDescription = "dummy placeholder")
+    # otherEntities_from_metadata <- list(doc$dataset$otherEntity, dummy_otherEntity)
+    # message("CREATED DUMMY otherEntity TO CIRCUMVENT UNPACKING ISSUE")
     # -------------- delete this after testing! -------------- #
   }
   
   message("*****************************************************")
   
   # combine extracted dataTables and/or otherEntities into a single list
-  if(isTRUE(length(dataTables_from_metadata) > 0 && length(otherEntities_from_metadata) > 0)){
-    all_entities <- list("dataTables" = dataTables_from_metadata, "otherEntities" = otherEntities_from_metadata)
-    message("This package has both dataTables & otherEntities")
-  } else if(isTRUE(length(dataTables_from_metadata) > 0)){
-    all_entities <- list("dataTables" = dataTables_from_metadata)
-    message("This package has just dataTables")
-  } else if(isTRUE(length(otherEntities_from_metadata) > 0)){
-    all_entities <- list("otherEntities" = otherEntities_from_metadata)
-    message("This package has just otherEntities")
-  }
-  
-  return(all_entities)
+  # if(isTRUE(length(dataTables_from_metadata) > 0 && length(otherEntities_from_metadata) > 0)){
+  #   all_entities <- list("dataTables" = dataTables_from_metadata, "otherEntities" = otherEntities_from_metadata)
+  #   message("This package has both dataTables & otherEntities")
+  # } else if(isTRUE(length(dataTables_from_metadata) > 0)){
+  #   all_entities <- list("dataTables" = dataTables_from_metadata)
+  #   message("This package has just dataTables")
+  # } else if(isTRUE(length(otherEntities_from_metadata) > 0)){
+  #   all_entities <- list("otherEntities" = otherEntities_from_metadata)
+  #   message("This package has just otherEntities")
+  # }
   
 }
 
