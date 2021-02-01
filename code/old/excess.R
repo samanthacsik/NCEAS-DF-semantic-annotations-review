@@ -70,3 +70,29 @@ for(i in 1:numberOf_dataTables){
 # tryLog(eml_validate(doc), 
 #        write.error.dump.file = TRUE, write.error.dump.folder = "dump_files",
 #        include.full.call.stack = FALSE) 
+
+
+# from 10b_batch_updates_setup.R
+# subset
+standaloneDOI_csv <- standaloneDOI %>% filter(str_detect(entityName, ".csv"))
+standaloneDOI_text <- standaloneDOI %>% filter(str_detect(entityName, ".txt"))
+standaloneDOI_xlsx <- standaloneDOI %>% filter(str_detect(entityName, ".xlsx"))
+standaloneDOI_nc <- standaloneDOI %>% filter(str_detect(entityName, ".nc"))
+standaloneDOI_cdf <- standaloneDOI %>% filter(str_detect(entityName, ".cdf"))
+standaloneDOI_zip <- standaloneDOI %>% filter(str_detect(entityName, ".zip"))
+standaloneDOI_cnv <- standaloneDOI %>% filter(str_detect(entityName, ".cnv"))
+standaloneDOI_dta <- standaloneDOI %>% filter(str_detect(entityName, ".dta"))
+standaloneDOI_mat <- standaloneDOI %>% filter(str_detect(entityName, ".mat"))
+standaloneDOI_btl <- standaloneDOI %>% filter(str_detect(entityName, ".btl"))
+standaloneDOI_hdf5 <- standaloneDOI %>% filter(str_detect(entityName, ".hdf5"))
+standaloneDOI_dat <- standaloneDOI %>% filter(str_detect(entityName, ".dat"))
+standaloneDOI_tif <- standaloneDOI %>% filter(str_detect(entityName, ".tif"))
+
+extensions <-rbind(standaloneDOI_csv, standaloneDOI_text, standaloneDOI_xlsx, standaloneDOI_nc, standaloneDOI_cdf, standaloneDOI_zip, standaloneDOI_cnv, standaloneDOI_dta, standaloneDOI_mat, standaloneDOI_btl, standaloneDOI_hdf5, standaloneDOI_dat, standaloneDOI_tif)
+3215+810+21+933+2740+50
+
+leftover <- anti_join(standaloneDOI, extensions)
+
+
+# extensions + leftover should = 9337
+
