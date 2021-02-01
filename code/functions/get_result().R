@@ -1,5 +1,5 @@
 ##############################
-# add results to hash (used in process_package() above)
+# add results to hash (used in process_package())
 ##############################
 
 get_result <- function(pkg, parent_rm, parent_metadata_pid) {
