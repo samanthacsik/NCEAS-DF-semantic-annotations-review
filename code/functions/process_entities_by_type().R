@@ -7,26 +7,35 @@
 
 process_entities_by_type <- function(doc, dataTable_or_otherEntity, all_named_entities){
   
+  #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   # FIRST OPTION: if muliple dataTables or otherEntities present
-  if(isTRUE(is.list(all_named_entities[[1]]))){
+  #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+  single_entity <- isTRUE(is.character(all_named_entities[[1]]))
+    
+  if(isFALSE(single_entity)){
     
     for(entity_num in 1:length(all_named_entities)){
       
       doc <- annotate_attributes(doc,
                                  entity_num,
                                  dataTable_or_otherEntity,
-                                 all_named_entities[[entity_num]]) 
+                                 all_named_entities[[entity_num]],
+                                 single_entity) 
     }
     
-    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # SECOND OPTION: if a single, unpacked dataTable or otherEntity present 
-  } else if(isTRUE(is.character(all_named_entities[[1]]))){
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
-    doc <- annotate_attributes_unpacked(doc,
-                                        dataTable_or_otherEntity,
-                                        all_named_entities) 
+  } else if(single_entity){
+    
+    doc <- annotate_attribute(doc,
+                              0,
+                              dataTable_or_otherEntity,
+                              all_named_entities,
+                              single_entity) 
   }
   
   return(doc)
