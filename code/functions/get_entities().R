@@ -1,5 +1,5 @@
 ##############################
-# get entities (dataTables & otherEntities) from doc
+# get entities (dataTables & otherEntities) from doc -- PROVIDES MESSAGING ONLY
 # dp_num: index
 # unique_datapackage_ids: vector of metadata pids
 # attributes: df of attributes to annotate (includes: metadata pid, entityName, attributeName, assigned_valueURI, prefName)
@@ -13,10 +13,6 @@ get_entities <- function(doc){
     message("****This datapackage has ", length(dataTables_from_metadata), " dataTable(s)****")
   } else if(is.character(dataTables_from_metadata[[1]])){
     message("****This datapackage has 1 dataTable(s)****")
-    # dummy_dataTable <- eml$dataTable(entityName = "dummy",
-    #                                  entityDescription = "dummy placeholder")
-    # doc$dataset$dataTable <- list(doc$dataset$dataTable, dummy_otherEntity)
-    # message("CREATED DUMMY dataTable TO CIRCUMVENT UNPACKING ISSUE")
   }
   
   otherEntities_from_metadata <- doc$dataset$otherEntity
@@ -24,12 +20,6 @@ get_entities <- function(doc){
     message("****This datapackage has ", length(otherEntities_from_metadata), " otherEntity(ies)****")
   } else if(is.character(otherEntities_from_metadata[[1]])){
     message("****This datapackage has 1 otherEntity(ies)****")
-    # -------------- delete this after testing! -------------- #
-    # dummy_otherEntity <- eml$otherEntity(entityName = "dummy",
-    #                                      entityDescription = "dummy placeholder")
-    # otherEntities_from_metadata <- list(doc$dataset$otherEntity, dummy_otherEntity)
-    # message("CREATED DUMMY otherEntity TO CIRCUMVENT UNPACKING ISSUE")
-    # -------------- delete this after testing! -------------- #
   }
   
   message("*****************************************************")
