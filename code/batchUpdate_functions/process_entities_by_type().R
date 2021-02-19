@@ -30,11 +30,11 @@ process_entities_by_type <- function(doc, dataTable_or_otherEntity, all_entities
     
   } else if(is_single_entity){
     
-    doc <- annotate_attribute(doc,
-                              0,
-                              dataTable_or_otherEntity,
-                              all_entities_byType, # current_eml_entity
-                              is_single_entity) 
+    doc <- annotate_attributes(doc,
+                               0,
+                               dataTable_or_otherEntity,
+                               all_entities_byType, # current_eml_entity
+                               is_single_entity) 
   }
   
   return(doc)

@@ -1,7 +1,7 @@
 # title: batch update of datapackages with semantic annotations (workflow currently for standalone packages only)
 # author: "Sam Csik"
 # date created: "2021-01-04"
-# date edited: "2021-02-18"
+# date edited: "2021-02-19"
 # R version: 3.6.3
 # input: "code/10b_batch_update_setup.R"
 # output: no output, but publishes updates to arcticdata.io 
@@ -11,6 +11,10 @@
 ##########################################################################################
 
 # This is still a work in progress!
+
+# CURRENT STATE: seems to work with packages that have JUST dataTables or JUST otherEntities, but not both?
+# have not yet continued work on passsing updated/saved docs to second for loop for validation & publishing update
+# is there a way to avoid downloading all package objects and just downloading xlm file? massive packages take FOREVER
 
 # attributes to annotate are found in the following csv file: "data/outputs/attributes_to_annotate/all_attributes_to_annotate_sorted_by_pkgType_2020-01-19.csv"; some minor processing is done in script `10a_batch_update_setup.R`, which is sourced below
 
