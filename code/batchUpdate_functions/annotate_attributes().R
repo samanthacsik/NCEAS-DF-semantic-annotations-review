@@ -36,6 +36,7 @@ annotate_attributes <- function(doc, entity_num, dataTable_or_otherEntity, curre
   
   # if 'single_attribute' == TRUE, then the current entity contains a single, unpacked attribute; if FALSE, then it contains multiple attributes
   is_single_attribute <- isTRUE(is.character(current_eml_entity$attributeList$attribute[[1]]))
+  
   # ---------------------------------------------------------------------------------------------
   # if the current entity contains more than 1 attribute (i.e. `is_single_attribute` == FALSE), annotate the attributes using the following methods
   # ---------------------------------------------------------------------------------------------
@@ -68,12 +69,14 @@ annotate_attributes <- function(doc, entity_num, dataTable_or_otherEntity, curre
         if(is_single_entity){
           
           current_attribute_id <- build_attributeID(entity_num, attribute_num, entity_path, current_eml_entity) 
+          validate_attributeID_hash <- verify_attributeID_isUnique(current_attribute_id)
           doc <- annotate_single_dataTable_multiple_attributes(doc, eml_att_num, current_attribute_id, attributeName_subset)
           
           # otherwise, the current dataTable is one of multiple dataTables, process using the following method:
         } else{
           
           current_attribute_id <- build_attributeID(entity_num, attribute_num, entity_path, current_eml_entity) 
+          validate_attributeID_hash <- verify_attributeID_isUnique(current_attribute_id)
           doc <- annotate_multiple_dataTables_multiple_attributes(doc, entity_num, eml_att_num, current_attribute_id, attributeName_subset)
 
         }
@@ -85,12 +88,14 @@ annotate_attributes <- function(doc, entity_num, dataTable_or_otherEntity, curre
         if(is_single_entity){
           
           current_attribute_id <- build_attributeID(entity_num, attribute_num, entity_path, current_eml_entity) 
+          validate_attributeID_hash <- verify_attributeID_isUnique(current_attribute_id)
           doc <- annotate_single_otherEntity_multiple_attributes(doc, eml_att_num, current_attribute_id, attributeName_subset)
           
           # otherwise, the current otherEntity is one of multiple otherEntities, process using the following method:
         } else{
           
           current_attribute_id <- build_attributeID(entity_num, attribute_num, entity_path, current_eml_entity) 
+          validate_attributeID_hash <- verify_attributeID_isUnique(current_attribute_id)
           doc <- annotate_multiple_otherEntities_multiple_attributes(doc, entity_num, eml_att_num, current_attribute_id, attributeName_subset)
           
         }
@@ -131,12 +136,14 @@ annotate_attributes <- function(doc, entity_num, dataTable_or_otherEntity, curre
       if(is_single_entity){
         
         current_attribute_id <- build_attributeID(entity_num, attribute_num, entity_path, current_eml_entity) 
+        validate_attributeID_hash <- verify_attributeID_isUnique(current_attribute_id)
         doc <- annotate_single_dataTable_single_attribute(doc, current_attribute_id, attributeName_subset)
         
         # otherwise, the current dataTable is one of multiple dataTables, process using the following method:
       } else{
         
         current_attribute_id <- build_attributeID(entity_num, attribute_num, entity_path, current_eml_entity) 
+        validate_attributeID_hash <- verify_attributeID_isUnique(current_attribute_id)
         doc <- annotate_multiple_dataTables_single_attribute(doc, entity_num, current_attribute_id, attributeName_subset)
         
       }
@@ -147,13 +154,15 @@ annotate_attributes <- function(doc, entity_num, dataTable_or_otherEntity, curre
       # if the current otherEntity is the singular otherEntity (therefore unpacked), process using the following method:
       if(is_single_entity){
         
-       current_attribute_id <- build_attributeID(entity_num, attribute_num, entity_path, current_eml_entity) # eml_get(doc$dataset, dataTable_or_otherEntity)
+       current_attribute_id <- build_attributeID(entity_num, attribute_num, entity_path, current_eml_entity) 
+       validate_attributeID_hash <- verify_attributeID_isUnique(current_attribute_id)
        doc <- annotate_single_otherEntity_single_attribute(doc, current_attribut_id, attributeName_subset)
         
        # otherwise, the current otherEntity is one of multiple otherEntities, process using the following method:
       } else{
         
         current_attribute_id <- build_attributeID(entity_num, attribute_num, entity_path, current_eml_entity) 
+        validate_attributeID_hash <- verify_attributeID_isUnique(current_attribute_id)
         doc <- annotate_multiple_otherEntities_single_attribute(doc, entity_num, current_attribute_id, attributeName_subset)
         
       }

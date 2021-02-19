@@ -36,7 +36,7 @@ source(here::here("code", "batchUpdate_functions", "get_eml_version().R"))
 source(here::here("code", "batchUpdate_functions", "download_datapackage().R"))
 source(here::here("code", "batchUpdate_functions", "get_entities().R"))
 source(here::here("code", "batchUpdate_functions", "build_attributeID().R"))
-source(here::here("code", "batchUpdate_functions", "verify_attribute_id_isUnique().R"))
+source(here::here("code", "batchUpdate_functions", "verify_attributeID_isUnique().R"))
 source(here::here("code", "batchUpdate_functions", "process_results().R"))
 source(here::here("code", "batchUpdate_functions", "annotate_attributes().R"))
 source(here::here("code", "batchUpdate_functions", "annotate_single_dataTable_multiple_attributes().R"))
@@ -152,49 +152,49 @@ tryLog(for(dp_num in 1:length(unique_datapackage_ids)){
 # validate docs and publish updates to arctic.io -- DOES NOT WORK YET
 ##########################################################################################
 
-tryLog(for(doc_num in 1:length(list_of_docs_to_publish_update)){
-  
-  # ----------------- validate doc -----------------
-  
-  # validate doc 
-  message("validating eml.....")
-  current_doc <- list_of_docs_to_publish_update[[doc_num]]
-  validated <- eml_validate(current_doc)
-  message("-------------- doc ",  doc_num," passes validation -> ",  validated[1], " --------------")
-  
-  # get metadata pid for current datapackage
-  current_metadata_pid <- current_doc$packageId
-  
-  # generate new pid (either doi or uuid depending on what the original had) for metadata 
-  if(isTRUE(str_detect(current_metadata_pid, "(?i)doi"))) {
-    new_id <- dataone::generateIdentifier(d1c_prod@mn, "DOI")
-    message("Generating a new metadata DOI: ", new_id)
-  } else if(isTRUE(str_detect(current_metadata_pid, "(?i)urn:uuid"))) {
-    new_id <- dataone::generateIdentifier(d1c_prod@mn, "UUID")
-    message("Generating a new metadata uuid: ", new_id)
-  } else {
-    warning("The original metadata ID format, ", current_metadata_pid, " is not recognized. No new ID has been generated.") # not sure yet what to do if this ever happens
-  }
-  
-  # write eml path -- UPDATE WITH NEW FILE PATH FOR EACH RUN
-  eml_path <- paste("/Users/samanthacsik/Repositories/NCEAS-DF-semantic-annotations-review/eml/run1_test/datapackage", doc_num, ".xml", sep = "") 
-  
-  # write eml
-  write_eml(current_doc, eml_path) 
-  
-  # ----------------- publish update -----------------
-  
-  # 6.1) get current_pkg from list based on index that matched doc_num -- NEED TO BUILD THIS IN A WAY TO PREVENT ERRORS 
-  current_pkg <- list_of_pkgs_to_publish_update[[doc_num]]
-  
-  # 6.1) replace original metadata pid with new pid
-  dp <- replaceMember(current_pkg, current_metadata_pid, replacement = eml_path, newId = new_id)
-  
-  # 6.2)  datapackage
-  newPackageId <- uploadDataPackage(d1c_test, dp, public = FALSE, quiet = FALSE)
-  message("--------------Datapackage ", doc_num, " has been updated!--------------")
-  
-})
+# tryLog(for(doc_num in 1:length(list_of_docs_to_publish_update)){
+#   
+#   # ----------------- validate doc -----------------
+#   
+#   # validate doc 
+#   message("validating eml.....")
+#   current_doc <- list_of_docs_to_publish_update[[doc_num]]
+#   validated <- eml_validate(current_doc)
+#   message("-------------- doc ",  doc_num," passes validation -> ",  validated[1], " --------------")
+#   
+#   # get metadata pid for current datapackage
+#   current_metadata_pid <- current_doc$packageId
+#   
+#   # generate new pid (either doi or uuid depending on what the original had) for metadata 
+#   if(isTRUE(str_detect(current_metadata_pid, "(?i)doi"))) {
+#     new_id <- dataone::generateIdentifier(d1c_prod@mn, "DOI")
+#     message("Generating a new metadata DOI: ", new_id)
+#   } else if(isTRUE(str_detect(current_metadata_pid, "(?i)urn:uuid"))) {
+#     new_id <- dataone::generateIdentifier(d1c_prod@mn, "UUID")
+#     message("Generating a new metadata uuid: ", new_id)
+#   } else {
+#     warning("The original metadata ID format, ", current_metadata_pid, " is not recognized. No new ID has been generated.") # not sure yet what to do if this ever happens
+#   }
+#   
+#   # write eml path -- UPDATE WITH NEW FILE PATH FOR EACH RUN
+#   eml_path <- paste("/Users/samanthacsik/Repositories/NCEAS-DF-semantic-annotations-review/eml/run1_test/datapackage", doc_num, ".xml", sep = "") 
+#   
+#   # write eml
+#   write_eml(current_doc, eml_path) 
+#   
+#   # ----------------- publish update -----------------
+#   
+#   # 6.1) get current_pkg from list based on index that matched doc_num -- NEED TO BUILD THIS IN A WAY TO PREVENT ERRORS 
+#   current_pkg <- list_of_pkgs_to_publish_update[[doc_num]]
+#   
+#   # 6.1) replace original metadata pid with new pid
+#   dp <- replaceMember(current_pkg, current_metadata_pid, replacement = eml_path, newId = new_id)
+#   
+#   # 6.2)  datapackage
+#   newPackageId <- uploadDataPackage(d1c_test, dp, public = FALSE, quiet = FALSE)
+#   message("--------------Datapackage ", doc_num, " has been updated!--------------")
+#   
+# })
 
 
 
