@@ -1,7 +1,7 @@
 # title: batch update of datapackages with semantic annotations (workflow currently for standalone packages only)
 # author: "Sam Csik"
 # date created: "2021-01-04"
-# date edited: "2021-01-27"
+# date edited: "2021-02-18"
 # R version: 3.6.3
 # input: "code/10b_batch_update_setup.R"
 # output: no output, but publishes updates to arcticdata.io 
@@ -10,7 +10,11 @@
 # Summary - READ BEFORE RUNNING
 ##########################################################################################
 
-# README
+# This is still a work in progress!
+
+# attributes to annotate are found in the following csv file: "data/outputs/attributes_to_annotate/all_attributes_to_annotate_sorted_by_pkgType_2020-01-19.csv"; some minor processing is done in script `10a_batch_update_setup.R`, which is sourced below
+
+# README please
   # Things to do prior to running an update:
     # check over script '10b_batch_update_setup.R' to ensure that you're working with the correct subset of data
     # be sure to assign data subset to an object called 'attributes' 
@@ -23,21 +27,27 @@
 # General Setup
 ##########################################################################################
 
-# load functions
-source(here::here("code", "functions", "get_datapackage_metadata().R"))
-source(here::here("code", "functions", "get_eml_version().R"))
-source(here::here("code", "functions", "download_datapackage().R"))
-source(here::here("code", "functions", "get_entities().R"))
-source(here::here("code", "functions", "build_attribute_id().R"))
-source(here::here("code", "functions", "verify_attribute_id_isUnique().R"))
-source(here::here("code", "functions", "get_result().R"))
-source(here::here("code", "functions", "process_results().R"))
-source(here::here("code", "functions", "annotate_attributes().R"))
-source(here::here("code", "functions", "process_entities_and_annotate().R"))
-source(here::here("code", "functions", "process_dT_and_oE_and_annotate().R"))
-
 # load data/setup
 source(here::here("code", "10a_batch_update_setup.R"))
+
+# load functions
+source(here::here("code", "batchUpdate_functions", "get_datapackage_metadata().R"))
+source(here::here("code", "batchUpdate_functions", "get_eml_version().R"))
+source(here::here("code", "batchUpdate_functions", "download_datapackage().R"))
+source(here::here("code", "batchUpdate_functions", "get_entities().R"))
+source(here::here("code", "batchUpdate_functions", "build_attributeID().R"))
+source(here::here("code", "batchUpdate_functions", "verify_attribute_id_isUnique().R"))
+source(here::here("code", "batchUpdate_functions", "process_results().R"))
+source(here::here("code", "batchUpdate_functions", "annotate_attributes().R"))
+source(here::here("code", "batchUpdate_functions", "annotate_single_dataTable_multiple_attributes().R"))
+source(here::here("code", "batchUpdate_functions", "annotate_multiple_dataTables_multiple_attributes().R"))
+source(here::here("code", "batchUpdate_functions", "annotate_single_dataTable_single_attribute().R"))
+source(here::here("code", "batchUpdate_functions", "annotate_multiple_dataTables_single_attribute().R"))
+source(here::here("code", "batchUpdate_functions", "annotate_single_otherEntity_multiple_attributes().R"))
+source(here::here("code", "batchUpdate_functions", "annotate_multiple_otherEntities_multiple_attributes().R"))
+source(here::here("code", "batchUpdate_functions", "annotate_single_otherEntity_single_attribute().R"))
+source(here::here("code", "batchUpdate_functions", "annotate_multiple_otherEntities_single_attribute().R"))
+source(here::here("code", "batchUpdate_functions", "process_entities_by_type().R"))
 
 ##########################################################################################
 # update eml documents with semantic annotations
@@ -56,52 +66,45 @@ unique_datapackage_ids <- unique(attributes$identifier)
 list_of_docs_to_publish_update <- list()
 list_of_pkgs_to_publish_update <- list()
 
-# ----------------------- 1) get metadata/info for a particular datapackage -----------------------
+# ----------------- get metadata/info for a particular datapackage -----------------
 
 tryLog(for(dp_num in 1:length(unique_datapackage_ids)){
   
-  # 1.1) download datapackage
+  # download datapackage & parse
   outputs <- download_datapackage(dp_num, unique_datapackage_ids, attributes)
   doc <- outputs[[1]]
   current_datapackage_subset <- outputs[[2]]
   current_datapackage_id <- outputs[[3]]
   
-  # 1.2) extract dataTables and otherEntities
-  all_entities <- get_entities(doc)
+  # report how many dataTables and otherEntities are present in the current datapackage (informational only)
+  get_entities(doc)
   
-  # create new list of dataTables
-  # create new list of otherEntities
+  # ----------------- get a dataTables and/or otherEntities from metadata; find matching data in df & annotate attributes -----------------
   
-  # iterate over dataTables, process them
-  # iterate over otherEntities, process them
+  has_dataTables <- isFALSE(is.null(doc$dataset$dataTable))
+  message("Has dataTables: ", has_dataTables)
+  has_otherEntities <- isFALSE(is.null(doc$dataset$otherEntity))
+  message("Has otherEntities: ", has_otherEntities)
   
-  # ----------------------- 2) get a dataTables and/or otherEntities from metadata; 3) find matching data in df & annotate attributes -----------------------
+  # process any dataTables
+  if(has_dataTables){
+    doc <- process_entities_by_type(doc, "dataTable", doc$dataset$dataTable)
+  } 
   
-  # for pkgs that have both dataTables & otherEntities
-  if(isTRUE(length(all_entities) == 2)){
-    message("Processing both dataTables & otherEntities")
-    # doc <- process_dT_and_oE_and_annotate()
-    
-    # for pkgs with just dataTables 
-  } else if(isTRUE(names(all_entities) == "dataTables")){
-    entity_path <- doc$dataset$dataTable
-    all_entities_path <- all_entities$dataTables
-    doc <- process_entities_and_annotate(all_entities)
-    
-    # for pkgs with just otherEntities 
-  } else if(isTRUE(names(all_entities) == "otherEntities")){
-    entity_path <- doc$dataset$otherEntity
-    all_entities_path <- all_entities$otherEntities
-    doc <- process_entities_and_annotate(all_entities)
+  # process any otherEntities
+  if(has_otherEntities){
+    doc <- process_entities_by_type(doc, "otherEntity", doc$dataset$otherEntity)
   }
   
-  # ----------------------- 4) add modified doc to list so that it can be manually reviewed (if necessary) -----------------------
+  # ----------------- add modified doc to list so that it can be manually reviewed (if necessary) -----------------
   
-  # 4.1) add modified pkg 'doc' to list for storage
+  # add modified 'doc' to list for storage
   list_of_docs_to_publish_update[[dp_num]] <- doc
+  names(list_of_docs_to_publish_update)[[dp_num]] <- current_datapackage_id
   message("-------------- doc ", dp_num, " (", current_datapackage_id, ") has been added to the list --------------")
   
 }, write.error.dump.file = TRUE, write.error.dump.folder = "dump_files", include.full.call.stack = FALSE) 
+
 
 
 
@@ -146,40 +149,40 @@ tryLog(for(dp_num in 1:length(unique_datapackage_ids)){
 
 
 ##########################################################################################
-# validate docs and publish updates to arctic.io
+# validate docs and publish updates to arctic.io -- DOES NOT WORK YET
 ##########################################################################################
 
 tryLog(for(doc_num in 1:length(list_of_docs_to_publish_update)){
   
-  # ----------------------- 5) validate doc -----------------------
+  # ----------------- validate doc -----------------
   
-  # 5.1) validate doc 
+  # validate doc 
   message("validating eml.....")
   current_doc <- list_of_docs_to_publish_update[[doc_num]]
   validated <- eml_validate(current_doc)
   message("-------------- doc ",  doc_num," passes validation -> ",  validated[1], " --------------")
   
-  # 5.2) get metadata pid for current datapackage
+  # get metadata pid for current datapackage
   current_metadata_pid <- current_doc$packageId
   
-  # 5.2) generate new pid (either doi or uuid depending on what the original had) for metadata 
+  # generate new pid (either doi or uuid depending on what the original had) for metadata 
   if(isTRUE(str_detect(current_metadata_pid, "(?i)doi"))) {
-    new_id <- dataone::generateIdentifier(d1c_test@mn, "DOI")
+    new_id <- dataone::generateIdentifier(d1c_prod@mn, "DOI")
     message("Generating a new metadata DOI: ", new_id)
   } else if(isTRUE(str_detect(current_metadata_pid, "(?i)urn:uuid"))) {
-    new_id <- dataone::generateIdentifier(d1c_test@mn, "UUID")
+    new_id <- dataone::generateIdentifier(d1c_prod@mn, "UUID")
     message("Generating a new metadata uuid: ", new_id)
   } else {
     warning("The original metadata ID format, ", current_metadata_pid, " is not recognized. No new ID has been generated.") # not sure yet what to do if this ever happens
   }
   
-  # 5.3) write eml path -- UPDATE WITH NEW FILE PATH FOR EACH RUN
+  # write eml path -- UPDATE WITH NEW FILE PATH FOR EACH RUN
   eml_path <- paste("/Users/samanthacsik/Repositories/NCEAS-DF-semantic-annotations-review/eml/run1_test/datapackage", doc_num, ".xml", sep = "") 
   
-  # 5.4) write eml
-  write_eml(current_doc, eml_path) # save your metadata
+  # write eml
+  write_eml(current_doc, eml_path) 
   
-  # ----------------------- 6) publish update -----------------------
+  # ----------------- publish update -----------------
   
   # 6.1) get current_pkg from list based on index that matched doc_num -- NEED TO BUILD THIS IN A WAY TO PREVENT ERRORS 
   current_pkg <- list_of_pkgs_to_publish_update[[doc_num]]
