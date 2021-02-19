@@ -21,6 +21,7 @@ Scripts are numbered in the order of analyses.
 NCEAS-DF-semantic-annotations-review
   |_code
     |_assign_URIs_to_nonannotated_attributes
+    |_batchUpdate_functions
     |_old
   |_data
     |_aggregate_scores
