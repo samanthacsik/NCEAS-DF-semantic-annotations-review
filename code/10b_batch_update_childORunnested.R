@@ -85,6 +85,7 @@ tryLog(for(dp_num in 1:length(unique_datapackage_ids)){
   message("Has dataTables: ", has_dataTables)
   has_otherEntities <- isFALSE(is.null(doc$dataset$otherEntity))
   message("Has otherEntities: ", has_otherEntities)
+  message("*****************************************************")
   
   # process any dataTables
   if(has_dataTables){

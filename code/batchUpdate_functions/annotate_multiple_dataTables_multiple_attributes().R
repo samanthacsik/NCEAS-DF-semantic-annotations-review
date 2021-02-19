@@ -1,4 +1,4 @@
-annotate_multiple_dataTables <- function(doc, entity_num, eml_att_num, current_attribute_id, attributeName_subset){
+annotate_multiple_dataTables_multiple_attributes <- function(doc, entity_num, eml_att_num, current_attribute_id, attributeName_subset){
   
   # add attribute id to metadata
   doc$dataset$dataTable[[entity_num]]$attributeList$attribute[[eml_att_num]]$id <- current_attribute_id
