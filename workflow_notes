@@ -135,9 +135,10 @@ PART C: Scripting an automated batch update of ADC datapackages with semantic an
 
 **Script: 10b_batch_update_childORunnested.R** 
 ----------------------------
+**NOTE: THIS IS STILL A WORK IN PROGRESSS**
 1) automatically update ADC datapackages with semantic annotations
 - requires df called "attributes" with the following columns: "identifier" (pkg metadata pid), "entityName", "attributeName", "assigned_valueURI", "prefName" (webscraped)
-NOTE: this is still a work in progress
+NOTE: I ended up breaking this monster of a for loop into a whole bunch of functions; each has its own script and all can be found in code/batchUpdate_functions
 
 
 **Script: 10c_identify_child_pkgs.R** 
