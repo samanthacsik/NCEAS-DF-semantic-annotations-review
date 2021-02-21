@@ -12,9 +12,19 @@
 
 # This is still a work in progress!
 
-# CURRENT STATE: seems to work with packages that have JUST dataTables or JUST otherEntities, but not both?
+# CURRENT STATE: first for loop (downloading, adding annotations to xml doc) seems to be working on practice datapackages
+  # apparently going to run into issues with validation... :(
 # have not yet continued work on passsing updated/saved docs to second for loop for validation & publishing update
 # is there a way to avoid downloading all package objects and just downloading xlm file? massive packages take FOREVER
+
+# NOTES:
+  # doi shoulder -- e.g. 10.##; probably fine
+  # be sure to let data team know about minting new DOIs or UUIDs
+  # parent signifies what its children are (look at datapack); start with leaf node child pkg, update first, then update parent; parent rm points to child rm by identifier
+    # arcticdatautils has some code for inspiration (publish_update())
+  # get_eml() for when you run into unpacked package?
+
+# Convert to package; benefit of R package is keeping things clean; write tests
 
 # attributes to annotate are found in the following csv file: "data/outputs/attributes_to_annotate/all_attributes_to_annotate_sorted_by_pkgType_2020-01-19.csv"; some minor processing is done in script `10a_batch_update_setup.R`, which is sourced below
 
@@ -79,6 +89,9 @@ tryLog(for(dp_num in 1:length(unique_datapackage_ids)){
   doc <- outputs[[1]]
   current_datapackage_subset <- outputs[[2]]
   current_datapackage_id <- outputs[[3]]
+  
+  # TRY VALIDATING HERE -- IF IT'S NOT VALID, SAVE SOMEWHERE AND SKIP FOR NOW (datamgmt, )
+  # ERROR: custom unit element not defined
   
   # report how many dataTables and otherEntities are present in the current datapackage (informational only)
   get_entities(doc)
@@ -157,49 +170,49 @@ tryLog(for(dp_num in 1:length(unique_datapackage_ids)){
 # validate docs and publish updates to arctic.io -- DOES NOT WORK YET
 ##########################################################################################
 
-# tryLog(for(doc_num in 1:length(list_of_docs_to_publish_update)){
-#   
-#   # ----------------- validate doc -----------------
-#   
-#   # validate doc 
-#   message("validating eml.....")
-#   current_doc <- list_of_docs_to_publish_update[[doc_num]]
-#   validated <- eml_validate(current_doc)
-#   message("-------------- doc ",  doc_num," passes validation -> ",  validated[1], " --------------")
-#   
-#   # get metadata pid for current datapackage
-#   current_metadata_pid <- current_doc$packageId
-#   
-#   # generate new pid (either doi or uuid depending on what the original had) for metadata 
-#   if(isTRUE(str_detect(current_metadata_pid, "(?i)doi"))) {
-#     new_id <- dataone::generateIdentifier(d1c_prod@mn, "DOI")
-#     message("Generating a new metadata DOI: ", new_id)
-#   } else if(isTRUE(str_detect(current_metadata_pid, "(?i)urn:uuid"))) {
-#     new_id <- dataone::generateIdentifier(d1c_prod@mn, "UUID")
-#     message("Generating a new metadata uuid: ", new_id)
-#   } else {
-#     warning("The original metadata ID format, ", current_metadata_pid, " is not recognized. No new ID has been generated.") # not sure yet what to do if this ever happens
-#   }
-#   
-#   # write eml path -- UPDATE WITH NEW FILE PATH FOR EACH RUN
-#   eml_path <- paste("/Users/samanthacsik/Repositories/NCEAS-DF-semantic-annotations-review/eml/run1_test/datapackage", doc_num, ".xml", sep = "") 
-#   
-#   # write eml
-#   write_eml(current_doc, eml_path) 
-#   
-#   # ----------------- publish update -----------------
-#   
-#   # 6.1) get current_pkg from list based on index that matched doc_num -- NEED TO BUILD THIS IN A WAY TO PREVENT ERRORS 
-#   current_pkg <- list_of_pkgs_to_publish_update[[doc_num]]
-#   
-#   # 6.1) replace original metadata pid with new pid
-#   dp <- replaceMember(current_pkg, current_metadata_pid, replacement = eml_path, newId = new_id)
-#   
-#   # 6.2)  datapackage
-#   newPackageId <- uploadDataPackage(d1c_test, dp, public = FALSE, quiet = FALSE)
-#   message("--------------Datapackage ", doc_num, " has been updated!--------------")
-#   
-# })
+tryLog(for(doc_num in 1:length(list_of_docs_to_publish_update)){
+
+  # ----------------- validate doc -----------------
+
+  # validate doc
+  message("validating eml.....")
+  current_doc <- list_of_docs_to_publish_update[[doc_num]]
+  validated <- eml_validate(current_doc)
+  message("-------------- doc ",  doc_num," passes validation -> ",  validated[1], " --------------")
+
+  # get metadata pid for current datapackage
+  current_metadata_pid <- current_doc$packageId
+
+  # generate new pid (either doi or uuid depending on what the original had) for metadata
+  if(isTRUE(str_detect(current_metadata_pid, "(?i)doi"))) {
+    new_id <- dataone::generateIdentifier(d1c_prod@mn, "DOI")
+    message("Generating a new metadata DOI: ", new_id)
+  } else if(isTRUE(str_detect(current_metadata_pid, "(?i)urn:uuid"))) {
+    new_id <- dataone::generateIdentifier(d1c_prod@mn, "UUID")
+    message("Generating a new metadata uuid: ", new_id)
+  } else {
+    warning("The original metadata ID format, ", current_metadata_pid, " is not recognized. No new ID has been generated.") # not sure yet what to do if this ever happens
+  }
+
+  # write eml path -- UPDATE WITH NEW FILE PATH FOR EACH RUN
+  eml_path <- paste("/Users/samanthacsik/Repositories/NCEAS-DF-semantic-annotations-review/eml/run1_test/datapackage", doc_num, ".xml", sep = "")
+
+  # write eml
+  write_eml(current_doc, eml_path)
+
+  # ----------------- publish update -----------------
+
+  # 6.1) get current_pkg from list based on index that matched doc_num -- NEED TO BUILD THIS IN A WAY TO PREVENT ERRORS
+  current_pkg <- list_of_pkgs_to_publish_update[[doc_num]]
+
+  # 6.1) replace original metadata pid with new pid
+  dp <- replaceMember(current_pkg, current_metadata_pid, replacement = eml_path, newId = new_id)
+
+  # 6.2)  datapackage
+  newPackageId <- uploadDataPackage(d1c_test, dp, public = FALSE, quiet = FALSE)
+  message("--------------Datapackage ", doc_num, " has been updated!--------------")
+
+})
 
 
 

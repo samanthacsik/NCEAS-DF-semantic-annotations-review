@@ -133,7 +133,7 @@ PART C: Scripting an automated batch update of ADC datapackages with semantic an
 
 
 
-**Script: 10b_batch_update_childORunnested.R** 
+**Script: 10b_batch_update_childORunnested.R** (also, see PART D below for additional notes)
 ----------------------------
 **NOTE: THIS IS STILL A WORK IN PROGRESSS**
 1) automatically update ADC datapackages with semantic annotations
@@ -179,3 +179,48 @@ NOTE: I ended up breaking this monster of a for loop into a whole bunch of funct
 --> OUTPUT: "data/outputs/attributes_to_annotate/..."
 
 
+
+
+####################################################################################################
+PART D: Batch Update General Workflow
+####################################################################################################
+
+***FIRST FOR LOOP:***
+
+- REQUIRES: df (called 'attributes') of metadata_pids ("identifiers"), entityName, attributeName, assigned_valueURI (i.e. the term URI I've manually assigned to a particular attribute to be used as the annotation), prefName (i.e. webscraped prefLabels from ECSO corresponding to the term URI), package_type (not required but can be used to filter subsets of datapackages, includes: standalone, child, parent, WIERD, MULTINESTING, too long to load)
+
+1) using a metadata_pid ("identifier), download datapackage contents, extract eml file ("doc"), and subset the corresponding attribute information from the 'attributes' df
+  - Uses the following custom functions:
+    -> download_datapackage()
+    -> get_datapackage_metadata()
+    
+2) INFORMATIONAL ONLY: report the number of dataTables and otherEntities that are present in the current eml doc
+  - Uses the following custom functions:
+    -> get_entities()
+    
+3) process dataTables and otherEntities by:
+  (a) iterating across any eml dataTables and adding annotations where appropriate
+    (a.1) subset corresponding data from 'attributes' df based on eml entityName
+    (a.2) if that eml dataTable contains attributes with matches in the 'attributes' df subset, add annotations to eml doc (this includes generating/adding a unique attribute ID, and the containsMeasurementsOfType property URI)
+      (a.2.1) build unique attribute ids using the following format: "entity[CURRENT_ENTITY_INDEX_NUMBER]_attribute_[CURRENT_ATTRIBUTENAME]"
+  (b) iterating across any eml otherEntities and adding annotations where appropriate
+    (a.1) subset corresponding data from 'attributes' df based on eml entityName
+    (a.2) if that eml otherEntity contains attributes with matches in the 'attributes' df subset, add annotations to eml doc (this includes generating/adding a unique attribute ID, and the containsMeasurementsOfType property URI)
+    NOTE: these methods involve determining whether there are single (unpacked) or multiple dataTables/otherEntities present as well as single (unpacked) or multiple attributes present within a given dataTable/otherEntity; processes them accordingly
+  - Uses the following custom functions: 
+    -> process_entities_by_type()
+    -> annotate_attributes()
+    -> build_attributeID()
+    -> annotate_multiple_dataTables_multiple_attributes()
+    -> annotate_multiple_dataTables_single_attribute()
+    -> annotate_multiple_otherEntities_multiple_attributes()
+    -> annotate_multiple_dataTables_single_attribute()
+    -> annotate_single_dataTable_multiple_attributes()
+    -> annotate_single_dataTables_single_attribute()
+    -> annotate_single_otherEntity_multiple_attributes()
+    -> annotate_single_otherEntity_single_attribute()
+    
+4) save processed datapackage to a list called 'list_of_docs_to_publish_update'
+
+
+***SECOND FOR LOOP:***
