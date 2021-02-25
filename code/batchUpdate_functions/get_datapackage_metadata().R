@@ -2,11 +2,11 @@
 #  load metadata as 'doc'
 ##############################
 
-get_datapackage_metadata <- function(current_datapackage_id){
+get_datapackage_metadata <- function(identifier){ 
   
-  # Use arcticdatautils `get_package()` to get rm pid 
+  # Use arcticdatautils `get_package()` to get rm pid to use with datapack::getDataPackage
   pkg <- get_package(d1c_prod@mn, 
-                     current_datapackage_id, # this is actually the metadata pid from solr (will throw a warning but that's okay)
+                     identifier, # this is actually the metadata pid from solr (will throw a warning but that's okay)
                      file_names = TRUE)
   
   # extract resource map
@@ -32,7 +32,7 @@ get_datapackage_metadata <- function(current_datapackage_id){
   
   # read in eml metadata using pid 
   doc <- read_eml(getObject(d1c_prod@mn, current_metadata_pid)) 
-  message("Imported eml medatadata for datapackage: ", current_datapackage_id)
+  message("Imported eml medatadata for datapackage: ", current_metadata_pid) 
   
   # create list to return
   step1_list <- list(current_pkg, current_metadata_pid, doc)

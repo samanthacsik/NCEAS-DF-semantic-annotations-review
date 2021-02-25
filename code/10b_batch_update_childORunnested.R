@@ -77,26 +77,47 @@ unique_datapackage_ids <- unique(attributes$identifier)
 # annotate datapackages -- CURRENTLY WRAPPING WHOLE LOOP IN TRYLOG() BUT NOT SURE IF THIS IS THE WAY TO GO JUST YET
 ##############################
 
-list_of_docs_to_publish_update <- list()
-list_of_pkgs_to_publish_update <- list()
+list_of_pkgs_to_publish_update <- list() # packages (needed for 2nd for loop)
+list_of_docs_to_publish_update <- list() # modified docs that passed validation
+list_of_docs_failed_validation <- list() # docs that failed validation (either before or after modifications)
 
-# ----------------- get metadata/info for a particular datapackage -----------------
+# -------------------------------------------------------------------------------------------------------------
+# ----------------- get metadata/info for a particular datapackage and run initial validation -----------------
+# -------------------------------------------------------------------------------------------------------------
 
 tryLog(for(dp_num in 1:length(unique_datapackage_ids)){
   
   # download datapackage & parse
   outputs <- download_datapackage(dp_num, unique_datapackage_ids, attributes)
   doc <- outputs[[1]]
-  current_datapackage_subset <- outputs[[2]]
-  current_datapackage_id <- outputs[[3]]
+  current_pkg <- outputs[[2]]
+  current_datapackage_subset <- outputs[[3]]
+  current_metadata_pid <- outputs[[4]] 
   
-  # TRY VALIDATING HERE -- IF IT'S NOT VALID, SAVE SOMEWHERE AND SKIP FOR NOW (datamgmt, )
-  # ERROR: custom unit element not defined
+  # initial validation
+  initial_validation <- eml_validate(doc)
+  
+  # GATE to stop non-valid docs from processing
+  if(isFALSE(initial_validation[1])){
+    message("-------------- doc ", dp_num, " passes INTIAL validation -> ",  initial_validation[1], " --------------")
+    list_of_docs_failed_validation[[dp_num]] <- doc
+    names(list_of_docs_failed_validation)[[dp_num]] <- current_metadata_pid
+    message("--------------Skipping to next doc...--------------")
+    next
+  }
+  
+  # for packages that passed initial validation, add current_pkg to list for storage
+  message("-------------- doc ", dp_num, " (", current_metadata_pid, ") passes INITIAL validation -> ",  initial_validation[1], " --------------")
+  list_of_pkgs_to_publish_update[[dp_num]] <- current_pkg
+  names(list_of_pkgs_to_publish_update)[[dp_num]] <- current_metadata_pid
+  message("--------------DataPackage ", dp_num, " (", current_metadata_pid, ") has been added to the list--------------")
   
   # report how many dataTables and otherEntities are present in the current datapackage (informational only)
   get_entities(doc)
   
+  # ---------------------------------------------------------------------------------------------------------------------------------------
   # ----------------- get a dataTables and/or otherEntities from metadata; find matching data in df & annotate attributes -----------------
+  # ---------------------------------------------------------------------------------------------------------------------------------------
   
   has_dataTables <- isFALSE(is.null(doc$dataset$dataTable))
   message("Has dataTables: ", has_dataTables)
@@ -114,13 +135,27 @@ tryLog(for(dp_num in 1:length(unique_datapackage_ids)){
     doc <- process_entities_by_type(doc, "otherEntity", doc$dataset$otherEntity)
   }
   
-  # ----------------- add modified doc to list so that it can be manually reviewed (if necessary) -----------------
+  # ----------------------------------------------------------------------------------------------------------------------------------------
+  # ----------------- validate modified doc and add to appropriate list so that it can be manually reviewed (if necessary) -----------------
+  # ----------------------------------------------------------------------------------------------------------------------------------------
   
-  # add modified 'doc' to list for storage
-  list_of_docs_to_publish_update[[dp_num]] <- doc
-  names(list_of_docs_to_publish_update)[[dp_num]] <- current_datapackage_id
-  message("-------------- doc ", dp_num, " (", current_datapackage_id, ") has been added to the list --------------")
+  # validate doc
+  final_validation <- eml_validate(doc)
   
+  # if doc passes validation, add to 'list_of_docs_to_publish_update()'
+  if(isTRUE(final_validation[1])){
+    list_of_docs_to_publish_update[[dp_num]] <- doc
+    names(list_of_docs_to_publish_update)[[dp_num]] <- current_metadata_pid # was current_datapackage_id
+    message("-------------- doc ", dp_num, " (", current_metadata_pid, ") passes FINAL validation -> ",  final_validation[1], " --------------") 
+  }
+  
+  # if doc fails validation, add to 'list_of_docs_failed_validation()'
+  if(isFALSE(final_validation[1])){
+    list_of_docs_failed_validation[[dp_num]] <- doc
+    names(list_of_docs_failed_validation)[[dp_num]] <- current_metadata_pid # was current_datapackage_id
+    message("-------------- doc ", dp_num, " (", current_metadata_pid, ") passes FINAL validation -> ",  final_validation[1], " --------------") 
+  }
+   
 }, write.error.dump.file = TRUE, write.error.dump.folder = "dump_files", include.full.call.stack = FALSE) 
 
 
@@ -174,11 +209,11 @@ tryLog(for(doc_num in 1:length(list_of_docs_to_publish_update)){
 
   # ----------------- validate doc -----------------
 
-  # validate doc
-  message("validating eml.....")
-  current_doc <- list_of_docs_to_publish_update[[doc_num]]
-  validated <- eml_validate(current_doc)
-  message("-------------- doc ",  doc_num," passes validation -> ",  validated[1], " --------------")
+  # # validate doc
+  # message("validating eml.....")
+  # current_doc <- list_of_docs_to_publish_update[[doc_num]]
+  # validated <- eml_validate(current_doc)
+  # message("-------------- doc ",  doc_num," passes validation -> ",  validated[1], " --------------")
 
   # get metadata pid for current datapackage
   current_metadata_pid <- current_doc$packageId

@@ -1,11 +1,15 @@
-##############################
-# annotate attributes 
-  # doc: eml metadata 
-  # entity_num: index of entity (see for loop in 'process_entites_by_type()')
-  # dataTable_or_otherEntity: character string, "dataTable" or "otherEntity"
-  # current_eml_entity: the en=tity from doc at index 'entity_num' (i.e. all_entities_byType[[entity_num]])
-  # is_single_entity: 
-##############################
+#' Add semantic annotations to EML metadata
+#'
+#' @param doc eml metadata 
+#' @param entity_num index of entity (see for loop in 'process_entites_by_type()')
+#' @param dataTable_or_otherEntity character string; "dataTable" or "otherEntity"
+#' @param current_eml_entity the entity from doc at index 'entity_num' (i.e. all_entities_byType[[entity_num]])
+#' @param is_single_entity TRUE or FALSE
+#'
+#' @return doc
+#' @export
+#'
+#' @examples
 
 annotate_attributes <- function(doc, entity_num, dataTable_or_otherEntity, current_eml_entity, is_single_entity){
   

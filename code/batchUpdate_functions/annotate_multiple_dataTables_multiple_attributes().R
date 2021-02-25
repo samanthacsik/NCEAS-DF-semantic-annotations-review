@@ -1,3 +1,16 @@
+#' Add semantic annotations to data packages with multiple dataTables containing multiple attributes
+#'
+#' @param doc a __ object; EML metadata
+#' @param entity_num double; index of current entity
+#' @param eml_att_num double; index of current attribute
+#' @param current_attribute_id character string; attribute ID of current attribute
+#' @param attributeName_subset a data frame; contains the 'indentifer', 'entityName', 'attributeName', 'assigned_valueURI', and 'prefName' 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+
 annotate_multiple_dataTables_multiple_attributes <- function(doc, entity_num, eml_att_num, current_attribute_id, attributeName_subset){
   
   # add attribute id to metadata
