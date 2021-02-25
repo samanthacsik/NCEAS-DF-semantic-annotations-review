@@ -1,12 +1,13 @@
+# ALL GOOD
 ##############################
 #  load metadata as 'doc'
 ##############################
 
-get_datapackage_metadata <- function(identifier){ 
+get_datapackage_metadata <- function(pkg_identifier){ 
   
   # Use arcticdatautils `get_package()` to get rm pid to use with datapack::getDataPackage
   pkg <- get_package(d1c_prod@mn, 
-                     identifier, # this is actually the metadata pid from solr (will throw a warning but that's okay)
+                     pkg_identifier, # this is actually the metadata pid from solr (will throw a warning but that's okay)
                      file_names = TRUE)
   
   # extract resource map

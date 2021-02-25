@@ -87,8 +87,11 @@ list_of_docs_failed_validation <- list() # docs that failed validation (either b
 
 tryLog(for(dp_num in 1:length(unique_datapackage_ids)){
   
+  # get a package_id from unique_datapackage_ids vector
+  pkg_identifier <- unique_datapackage_ids[[dp_num]]
+  
   # download datapackage & parse
-  outputs <- download_datapackage(dp_num, unique_datapackage_ids, attributes)
+  outputs <- download_datapackage(pkg_identifier, attributes)
   doc <- outputs[[1]]
   current_pkg <- outputs[[2]]
   current_datapackage_subset <- outputs[[3]]
@@ -144,16 +147,18 @@ tryLog(for(dp_num in 1:length(unique_datapackage_ids)){
   
   # if doc passes validation, add to 'list_of_docs_to_publish_update()'
   if(isTRUE(final_validation[1])){
-    list_of_docs_to_publish_update[[dp_num]] <- doc
-    names(list_of_docs_to_publish_update)[[dp_num]] <- current_metadata_pid # was current_datapackage_id
     message("-------------- doc ", dp_num, " (", current_metadata_pid, ") passes FINAL validation -> ",  final_validation[1], " --------------") 
+    list_of_docs_to_publish_update[[dp_num]] <- doc
+    names(list_of_docs_to_publish_update)[[dp_num]] <- current_metadata_pid 
+    message("-------------- doc ", dp_num, " (", current_metadata_pid, ") has been added to the list--------------")
   }
   
   # if doc fails validation, add to 'list_of_docs_failed_validation()'
   if(isFALSE(final_validation[1])){
-    list_of_docs_failed_validation[[dp_num]] <- doc
-    names(list_of_docs_failed_validation)[[dp_num]] <- current_metadata_pid # was current_datapackage_id
     message("-------------- doc ", dp_num, " (", current_metadata_pid, ") passes FINAL validation -> ",  final_validation[1], " --------------") 
+    list_of_docs_failed_validation[[dp_num]] <- doc
+    names(list_of_docs_failed_validation)[[dp_num]] <- current_metadata_pid 
+    message("-------------- doc ", dp_num, " (", current_metadata_pid, ") has been added to the list--------------")
   }
    
 }, write.error.dump.file = TRUE, write.error.dump.folder = "dump_files", include.full.call.stack = FALSE) 
@@ -197,23 +202,15 @@ tryLog(for(dp_num in 1:length(unique_datapackage_ids)){
 
 
 
-
-
-
-
 ##########################################################################################
 # validate docs and publish updates to arctic.io -- DOES NOT WORK YET
 ##########################################################################################
 
 tryLog(for(doc_num in 1:length(list_of_docs_to_publish_update)){
 
-  # ----------------- validate doc -----------------
-
-  # # validate doc
-  # message("validating eml.....")
-  # current_doc <- list_of_docs_to_publish_update[[doc_num]]
-  # validated <- eml_validate(current_doc)
-  # message("-------------- doc ",  doc_num," passes validation -> ",  validated[1], " --------------")
+  # ----------------------------------------------------
+  # ----------------- generate new pid -----------------
+  # ----------------------------------------------------
 
   # get metadata pid for current datapackage
   current_metadata_pid <- current_doc$packageId
@@ -235,7 +232,9 @@ tryLog(for(doc_num in 1:length(list_of_docs_to_publish_update)){
   # write eml
   write_eml(current_doc, eml_path)
 
+  # --------------------------------------------------
   # ----------------- publish update -----------------
+  # --------------------------------------------------
 
   # 6.1) get current_pkg from list based on index that matched doc_num -- NEED TO BUILD THIS IN A WAY TO PREVENT ERRORS
   current_pkg <- list_of_pkgs_to_publish_update[[doc_num]]
@@ -244,7 +243,7 @@ tryLog(for(doc_num in 1:length(list_of_docs_to_publish_update)){
   dp <- replaceMember(current_pkg, current_metadata_pid, replacement = eml_path, newId = new_id)
 
   # 6.2)  datapackage
-  newPackageId <- uploadDataPackage(d1c_test, dp, public = FALSE, quiet = FALSE)
+  # newPackageId <- uploadDataPackage(d1c_test, dp, public = FALSE, quiet = FALSE)
   message("--------------Datapackage ", doc_num, " has been updated!--------------")
 
 })

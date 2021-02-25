@@ -1,20 +1,19 @@
+# ALL GOOD
 ##############################
 # download datapackage
-  # dp_num: index
-  # unique_datapackage_ids: vector of metadata pids
+  # pkg_identifier:
   # attributes: df of attributes to annotate (includes: metadata pid, entityName, attributeName, assigned_valueURI, prefName)
 ##############################
 
-download_datapackage <- function(dp_num, unique_datapackage_ids, attributes){
+download_datapackage <- function(pkg_identifier, attributes){
   
   # subset 'attributes' df for current datapackage; NOTE: current_datapackage_id should == current_metadata_pid generated in 'get_datapackage_metadata()'
-  identifier <- unique_datapackage_ids[dp_num] 
   current_datapackage_subset <- attributes %>% 
-    dplyr::filter(identifier == identifier) 
-  message("Subsetted semantic annotation df for datapackage: ", identifier) 
+    dplyr::filter(identifier == pkg_identifier) 
+  message("Subsetted semantic annotation df for datapackage: ", pkg_identifier) 
   
   # get metadata 
-  step1_list <- get_datapackage_metadata(identifier) 
+  step1_list <- get_datapackage_metadata(pkg_identifier) 
   
   # parse outputs
   current_pkg <- step1_list[[1]]
