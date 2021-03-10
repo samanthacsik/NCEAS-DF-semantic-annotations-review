@@ -1,11 +1,15 @@
-# ALL GOOD
-##############################
-# download datapackage
-  # pkg_identifier:
-  # attributes: df of attributes to annotate (includes: metadata pid, entityName, attributeName, assigned_valueURI, prefName)
-##############################
+#' Download datapackage and EML; filter solr query attributes df for corresponding data
+#'
+#' @param pkg_identifier a character string; package metadata pid, which is called 'identifier' in solr query
+#' @param attributes df of attributes to annotate (includes: metadata pid, entityName, attributeName, assigned_valueURI, prefName)
+#'
+#' @return a list, 'outputs,' containing 4 objects; metadata doc, pkg, datapackage subset, metadata pid
+#' @export
+#'
+#' @examples
 
-download_datapackage <- function(pkg_identifier, attributes){
+
+download_pkg_filter_data <- function(pkg_identifier, attributes){
   
   # subset 'attributes' df for current datapackage; NOTE: current_datapackage_id should == current_metadata_pid generated in 'get_datapackage_metadata()'
   current_datapackage_subset <- attributes %>% 
