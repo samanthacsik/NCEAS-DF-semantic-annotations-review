@@ -64,7 +64,7 @@ annotate_attributes <- function(doc, entity_num, dataTable_or_otherEntity, curre
       if(length(attributeName_subset$attributeName) == 0){
         next
       }
-      
+  
       # if current attribute makes it past the above GATE, it means there's a match; add 1 to 'annotation_counter'
       annotation_counter <- annotation_counter + 1
       
@@ -128,7 +128,7 @@ annotate_attributes <- function(doc, entity_num, dataTable_or_otherEntity, curre
     
     # GATE: if the single eml entity does not have a match in the df, move to the next entity in the datapackage
     if(length(attributeName_subset$attributeName) == 0){
-      message("The eml attribute ", attributeName_eml, " does not have a match in the df. Moving to next the entity in the datapackage.")
+      message("The current entity contains ONE unpacked attribute, ", attributeName_eml, ", which does not have a match in the df. Moving to the next entity in the datapackage")
       return(doc)
     }
     
