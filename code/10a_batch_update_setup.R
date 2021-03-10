@@ -95,9 +95,6 @@ attributes <- left_join(attributes, isPublic) %>% # 14 (NA), 17 (FALSE), 1061 (T
 
 length(unique(attributes$identifier)) # 1061 datapackages where isPublic == TRUE
 
-# write_csv(attributes_weird, here::here("data", "queries", "query2021-01-25_isPublic", "WIERD.csv"))
-# attributes_weird <- attributes %>% filter(package_type == "WEIRD")
-
 ##############################
 # clean up global environment
 ##############################
@@ -113,6 +110,16 @@ rm(isPublic, status)
 
 ### tested and works ###
 # attributes <- attributes %>% filter(identifier == "doi:10.18739/A2TM7216N") # has otherEntity to annotate 
-# attributes <- attributes %>% filter(identifier == "doi:10.18739/A29882N5H") # has just dataTables
+# attributes <- attributes %>% filter(identifier == "doi:10.18739/A29882N5H") # has just dataTables (FAILS INITIAL VALIDATION)
 # attributes <- attributes %>% filter(identifier == "doi:10.18739/A2M61BQ8M") # has dT to annotate + 1 unpacked oE (no attributes)
 # attributes <- attributes %>% filter(identifier %in% c("doi:10.18739/A2M61BQ8M", "doi:10.18739/A29882N5H", "doi:10.18739/A2TM7216N"))
+
+### child package subset ##
+# attributes <- attributes %>% 
+#   filter(package_type == "child") %>% 
+#   filter(parent_rm == "resource_map_doi:10.18739/A2WH2DF8T") # very large
+
+attributes <- attributes %>% 
+  filter(package_type == "child",
+         parent_rm == "resource_map_doi:10.18739/A2CR5ND3R")
+
