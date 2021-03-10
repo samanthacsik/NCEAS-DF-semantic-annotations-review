@@ -2,10 +2,26 @@
 # process & annotate dataTables
   # doc: eml metadata
   # dataTable_or_otherEntity: character string, "dataTable" or "otherEntity"
-  # all_entities_byType (previously called `all_named_entities`): a path to the appropriate entity location in the doc (doc$dataset$dataTable, or doc$dataset$otherEntity)
+  # all_entities_byType: a path to the appropriate entity location in the doc (doc$dataset$dataTable, or doc$dataset$otherEntity); default is doc$dataset$dataTable
 ##############################
 
-process_entities_by_type <- function(doc, dataTable_or_otherEntity, all_entities_byType){
+#' Process and annotate all dataTables and/or otherEntities in an eml metadata document
+#'
+#' @param doc an EML metadata document
+#' @param dataTable_or_otherEntity a character string; either "dataTable" or "otherEntity" specifying which entity type to process
+#'
+#' @return doc
+#' @export
+#'
+#' @examples
+
+process_entities_by_type <- function(doc, dataTable_or_otherEntity = "dataTable"){ 
+  
+  all_entities_byType <- doc$dataset$dataTable
+  
+  if(dataTable_or_otherEntity == "otherEntity"){
+    all_entities_byType <- doc$dataset$otherEntity
+  }
   
   is_single_entity <- isTRUE(is.character(all_entities_byType[[1]]))
   
@@ -20,7 +36,7 @@ process_entities_by_type <- function(doc, dataTable_or_otherEntity, all_entities
       doc <- annotate_attributes(doc,
                                  entity_num,
                                  dataTable_or_otherEntity,
-                                 all_entities_byType[[entity_num]], # current_eml_entity
+                                 all_entities_byType[[entity_num]],
                                  is_single_entity) 
     }
     
@@ -31,9 +47,9 @@ process_entities_by_type <- function(doc, dataTable_or_otherEntity, all_entities
   } else if(is_single_entity){
     
     doc <- annotate_attributes(doc,
-                               0,
+                               1,
                                dataTable_or_otherEntity,
-                               all_entities_byType, # current_eml_entity
+                               all_entities_byType, 
                                is_single_entity) 
   }
   

@@ -1,8 +1,12 @@
-# ALL GOOD
-##############################
-#  load metadata as 'doc'
-##############################
-
+#' Downloads data package and reads in EML file
+#'
+#' @param pkg_identifier a character string; pkg metadata pid, which is called 'identifier' in solr query
+#'
+#' @return a list, 'step1_list' containing 3 objects; current_pkg, current_metadata_pid, doc
+#' @export
+#'
+#' @examples
+#' 
 get_datapackage_metadata <- function(pkg_identifier){ 
   
   # Use arcticdatautils `get_package()` to get rm pid to use with datapack::getDataPackage
@@ -19,7 +23,7 @@ get_datapackage_metadata <- function(pkg_identifier){
   # get eml version for use in 'selectMember()'
   format_id_version <- get_eml_version(pkg = current_pkg) 
   
-  # get metadata pid from pkg (this is redundant but leaving in anyways)
+  # get metadata pid from pkg (didn't end up needing this but leaving in anyways)
   if(isTRUE(str_detect(format_id_version, "2.1.1"))) {
     current_metadata_pid  <- selectMember(current_pkg, name = "sysmeta@formatId", value = "eml://ecoinformatics.org/eml-2.1.1")
     message("eml version 2.1.1")
