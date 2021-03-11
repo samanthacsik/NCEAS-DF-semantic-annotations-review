@@ -119,7 +119,18 @@ rm(isPublic, status)
 #   filter(package_type == "child") %>% 
 #   filter(parent_rm == "resource_map_doi:10.18739/A2WH2DF8T") # very large
 
-attributes <- attributes %>% 
-  filter(package_type == "child",
-         parent_rm == "resource_map_doi:10.18739/A2CR5ND3R")
+# attributes <- attributes %>% 
+#   filter(package_type == "child",
+#          parent_rm == "resource_map_doi:10.18739/A2CR5ND3R")
 
+### random selection of standalone packages ###
+
+attributes <- attributes %>%
+  filter(package_type == "standalone",
+         identifier %in% c("doi:10.18739/A2M32NB0W", "doi:10.18739/A2DB7VQ74",
+                            "doi:10.18739/A2251FK3B", "doi:10.18739/A22B8VC2H",
+                            "urn:uuid:4a48d82c-5484-442f-85a7-8893a3231ae2"))
+
+
+# Weird ones:
+# 1) "doi:10.18739/A2251FK3B" : doc$packageId = doi:10.18739/A2J09W41K?? don't know why this doesn't match it's identifier

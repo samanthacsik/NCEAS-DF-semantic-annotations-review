@@ -96,3 +96,8 @@ leftover <- anti_join(standaloneDOI, extensions)
 
 # extensions + leftover should = 9337
 
+#----------------------------------------------------------------------------------------------------------------------
+# originally came after packages passing their initial validation and before 'get_entities()'
+# list_of_pkgs_to_publish_update[[dp_num]] <- current_pkg
+# names(list_of_pkgs_to_publish_update)[[dp_num]] <- current_metadata_pid
+# message("--------------DataPackage ", dp_num, " (", current_metadata_pid, ") has been added to the PUBLISH_UPDATE list--------------")

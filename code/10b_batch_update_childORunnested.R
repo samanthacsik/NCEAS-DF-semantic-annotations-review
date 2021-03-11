@@ -50,7 +50,8 @@ source(here::here("code", "batchUpdate_functions", "get_entities().R"))
 source(here::here("code", "batchUpdate_functions", "build_attributeID().R"))
 source(here::here("code", "batchUpdate_functions", "verify_attributeID_isUnique().R"))
 source(here::here("code", "batchUpdate_functions", "process_results().R"))
-source(here::here("code", "batchUpdate_functions", "annotate_attributes().R"))
+source(here::here("code", "batchUpdate_functions", "annotate_attributes_packedEntity().R"))
+source(here::here("code", "batchUpdate_functions", "annotate_attributes_unpackedEntity().R"))
 source(here::here("code", "batchUpdate_functions", "annotate_eml_attributes().R"))
 source(here::here("code", "batchUpdate_functions", "annotate_single_dataTable_multiple_attributes().R"))
 source(here::here("code", "batchUpdate_functions", "annotate_multiple_dataTables_multiple_attributes().R"))
@@ -76,10 +77,10 @@ unique_datapackage_ids <- unique(attributes$identifier)
 # annotate datapackages -- CURRENTLY WRAPPING WHOLE LOOP IN TRYLOG() BUT NOT SURE IF THIS IS THE WAY TO GO JUST YET
 ##############################
 
-list_of_pkgs_to_publish_update <- list() # packages (needed for 2nd for loop)
+list_of_pkgs_to_publish_update <- list() # packages that will be updated (needed for 2nd for loop)
 list_of_docs_to_publish_update <- list() # modified docs that passed validation
 list_of_pkgs_failed_INITIAL_validation <- list() # packages that failed initial validation (before modifications)
-list_of_pkgs_failed_FINAL_validation <- list() # packages that failed validation (after modifications)
+list_of_pkgs_failed_FINAL_validation <- list() # packages that failed final validation (after modifications)
 list_of_docs_failed_FINAL_validation <- list() # docs that failed final validation (after modifications)
 
 # -------------------------------------------------------------------------------------------------------------
@@ -110,11 +111,20 @@ tryLog(for(dp_num in 1:length(unique_datapackage_ids)){
     next
   }
   
-  # for packages that passed initial validation, add current_pkg to list for storage
+  # for packages that passed initial validation, print message
   message("-------------- doc ", dp_num, " (", current_metadata_pid, ") passes INITIAL validation -> ",  initial_validation[1], " --------------")
-  # list_of_pkgs_to_publish_update[[dp_num]] <- current_pkg
-  # names(list_of_pkgs_to_publish_update)[[dp_num]] <- current_metadata_pid
-  # message("--------------DataPackage ", dp_num, " (", current_metadata_pid, ") has been added to the PUBLISH_UPDATE list--------------")
+  
+  # GATE: ensure that the current metadata pid matches the packageId; if not, update the packageId with the current metadata pid
+  if(current_metadata_pid != doc$packageId){
+    message("!!!!!!!!!!!")
+    message("doc_name (", current_metadata_pid, ") does not match packageId (", doc$packageId, ")")
+    message("!!!!!!!!!!!")
+    doc$packageId <- current_metadata_pid
+    message("Updating packageId with the correct metadata pid...")
+    message("!!!!!!!!!!!")
+    message("packageId is now: ", doc$packageId)
+    message("!!!!!!!!!!!")
+  }
   
   # report how many dataTables and otherEntities are present in the current datapackage (informational only)
   get_entities(doc)
@@ -180,17 +190,17 @@ tryLog(for(dp_num in 1:length(unique_datapackage_ids)){
 ##########################################################################################
 
 # clean up global environment...
-rm(current_datapackage_subset, current_pkg, doc, outputs, current_metadata_pid, dp_num, duplicate_ids, final_validation, has_dataTables, has_otherEntities, initial_validation, pkg_identifier, unique_datapackage_ids, validate_attributeID_hash)
+rm(current_datapackage_subset, current_pkg, doc, outputs, current_metadata_pid, dp_num, duplicate_ids, final_validation, initial_validation, pkg_identifier, unique_datapackage_ids, validate_attributeID_hash)
 
-#
+# !!!!!!!!!
 # BE SURE TO MANUALLY INSPECT LISTS BELOW AND ASSESS BLANK ELEMENTS -- MAKE SURE LISTS MATCH
-#
+# !!!!!!!!!
 
-# clean up lists (remove first empty (NA) element)
-# publish_update_docs <- list_of_docs_to_publish_update[-2]
-# publish_update_pkgs <- list_of_pkgs_to_publish_update[-2]
+# clean up lists (manually inspect and remove empty (NA) element(s))
+publish_update_docs <- list_of_docs_to_publish_update
+publish_update_pkgs <- list_of_pkgs_to_publish_update
 
-# get ready to publish updates...
+
 
 
 
@@ -220,15 +230,23 @@ rm(current_datapackage_subset, current_pkg, doc, outputs, current_metadata_pid, 
 
 
 ##########################################################################################
-# STEP 3: publish updates to arctic.io -- DOES NOT WORK YET
+# STEP 3: publish updates to arctic.io 
 ##########################################################################################
 
 ##############################
-# create empty df to store old and new pids in (in case needed for reference) -- NOT UPDATING YET
+# create empty df to store old and new pids in (in case needed for reference) 
 ##############################
 
 old_new_metadataPIDs <- data.frame(old_metadataPID = as.character(),
                                    new_metadataPID = as.character())
+
+##############################
+# create empty lists for docs/pkgs that don't match
+##############################
+
+nonmatching_docs <- list()
+nonmatching_pkgs <- list()
+id_not_in_dp <- list()
 
 ##############################
 # publish updates
@@ -242,10 +260,8 @@ tryLog(for(doc_num in 1:length(publish_update_docs)){
   
   # get doc from list
   doc <- publish_update_docs[[doc_num]]
-  
-  # get metadata pid
-  metadata_pid <- doc$packageId
-  message("Grabbing doc ", doc_num, ": ", metadata_pid)
+  doc_name <- names(publish_update_docs)[[doc_num]]
+  message("Grabbing doc ", doc_num, ": ", doc_name)
   
   # -----------------------------------------------------------------------------------
   # ----------- extract DataPackage instance from publish_update_pkgs() list-----------
@@ -253,17 +269,20 @@ tryLog(for(doc_num in 1:length(publish_update_docs)){
   
   # get DataPackage instance from list based on index that matched doc_num 
   dp <- publish_update_pkgs[[doc_num]]
+  pkg_name <- names(publish_update_pkgs)[[doc_num]]
   
-  # get name of list and make sure it matches that from other list
-  pkg_id <- names(publish_update_pkgs)[[doc_num]]
-  
-  # GATE: make sure metadata pids from both lists match; if not, throw and error and stop
-  if(metadata_pid != pkg_id){
-    stop("The doc metadata_pid matches the publish_update_pkgs list index name: ", metadata_pid == pkg_id)
+  # GATE: make sure doc and pkg names from both lists match; if not, throw a warning, save to lists, and move to next doc/pkg pair
+  if(doc_name != pkg_name){
+    warning("The doc name matches the pkg name: ", doc_name == pkg_name, " |  Saving to lists and moving to next doc/pkg pair.")
+    nonmatching_docs[[doc_num]] <- doc
+    names(nonmatching_docs)[[doc_num]] <- doc_name
+    nonmatching_pkgs[[doc_num]] <- dp
+    names(nonmatching_docs)[[doc_num]] <- pkg_name
+    next
   } 
   
   # print message if doc and package match
-  message("The doc's metadata_pid matches the publish_update_pkg list index name: ", metadata_pid == pkg_id)
+  message("The doc name matches the pkg name: ", doc_name == pkg_name)
   
   # -----------------------------------------------------------------------------------
   # ------------- get package_type from 'attributes' df using metadata_pid ------------
@@ -271,7 +290,7 @@ tryLog(for(doc_num in 1:length(publish_update_docs)){
   
   # filter attributes df using metadata_pid
   atts_filtered <- attributes %>% 
-    filter(identifier == metadata_pid)
+    filter(identifier == doc_name)
   
   # get package_type
   package_type <- atts_filtered[[1, 12]]
@@ -282,18 +301,18 @@ tryLog(for(doc_num in 1:length(publish_update_docs)){
 
   # generate new pid (either doi or urn:uuid depending on what the original had) for metadata and write eml path (using old & new pids in eml file name)
   # !!!!!UPDATE WITH NEW FILE PATH FOR EACH RUN!!!!!
-  if(isTRUE(str_detect(metadata_pid, "(?i)doi"))) {
+  if(isTRUE(str_detect(doc_name, "(?i)doi"))) {
     new_id <- dataone::generateIdentifier(d1c_prod@mn, "DOI")
     message("Generating a new metadata DOI: ", new_id)
-    original_doi_short <- str_split(metadata_pid, "/")[[1]][2]
+    original_doi_short <- str_split(doc_name, "/")[[1]][2]
     new_doi_short <- str_split(new_id, "/")[[1]][2]
     eml_name <- paste("doc", doc_num, "_old_", original_doi_short, "_new_", new_doi_short, ".xml", sep = "")
     eml_path <- paste("/Users/samanthacsik/Repositories/NCEAS-DF-semantic-annotations-review/eml/run1_test/", eml_name, sep = "")
     message("eml path: ", eml_path)
-  } else if(isTRUE(str_detect(metadata_pid, "(?i)urn:uuid"))) {
+  } else if(isTRUE(str_detect(doc_name, "(?i)urn:uuid"))) {
     new_id <- dataone::generateIdentifier(d1c_prod@mn, "UUID")
     message("Generating a new metadata uuid: ", new_id)
-    original_urn_short <- str_split(metadata_pid, "-")[[1]][5] 
+    original_urn_short <- str_split(doc_name, "-")[[1]][5] 
     new_urn_short <- str_split(new_id, "-")[[1]][5]
     eml_name <- paste("doc", doc_num, "_old_", original_urn_short, "_new_", new_urn_short, ".xml", sep = "")
     eml_path <- paste("/Users/samanthacsik/Repositories/NCEAS-DF-semantic-annotations-review/eml/run1_test/", eml_name, sep = "")
@@ -308,7 +327,7 @@ tryLog(for(doc_num in 1:length(publish_update_docs)){
   # ----------------- save old + new pids to df for reference -----------------
   # ---------------------------------------------------------------------------
   
-  CURRENT_old_new_metadataPIDs <- data.frame(old_metadataPID = metadata_pid,
+  CURRENT_old_new_metadataPIDs <- data.frame(old_metadataPID = doc_name,
                                              new_metadataPID = new_id)
   
   old_new_metadataPIDs <- rbind(old_new_metadataPIDs, CURRENT_old_new_metadataPIDs)
@@ -316,38 +335,31 @@ tryLog(for(doc_num in 1:length(publish_update_docs)){
   # ---------------------------------------------------------------
   # ------------------------ publish update -----------------------
   # ---------------------------------------------------------------
-    
-    message("Publishing update for the following data package: ", metadata_pid)
-    
-    # replace original metadata with new metadata
-    dp <- replaceMember(dp, metadata_pid, replacement = eml_path, newId = new_id)
-    
-    # publish update
-    # newPackageId <- uploadDataPackage(d1c_test, dp, public = FALSE, quiet = FALSE)
-    message(" Old metadata PID: " , metadata_pid, " | New metadata PID: ", new_id)
-    message("-------------- Datapackage ", doc_num, " has been updated! --------------")
-    
-  # -------------------------------------------------------------------------------------
-  # ----------------- publish update & update resource maps (child) ---------------------
-  # -------------------------------------------------------------------------------------
-    # will probably end up removing this section, but keeping for now as a mental note...
   
-  # if(package_type == "child"){
-  #   
-  #   message("Publishing update for the following NESTED (child) data package: ", metadata_pid)
-  #   
-    # replace original metadata with new metadata
-    # dp <- replaceMember(dp, metadata_pid, replacement = eml_path, newId = new_id)
-    # 
-    # # publish update
-    # # newPackageId <- uploadDataPackage(d1c_test, dp, public = FALSE, quiet = FALSE)
-    # message("Old metadata PID: " , metadata_pid, " | New metadata PID: ", new_id)
-    # message("--------------Datapackage ", doc_num, " has been updated!--------------")
-    # 
-    # update_resource_map(d1c_prod@mn, metadata_pid = ids$metdata, resource_map_pid = ids$resource_map, data_pids = ids$data, child_pkgs = new_children)
+  # get DataObject names in current dp  
+  message("Getting DataObject names from current package...")
+  pkg_objects <- names(dp@objects)
+  
+  # check to make sure that the doc_name has a matching DataObject name in the current package; if so, replaceMember   
+  if(isTRUE(str_subset(pkg_objects, pkg_name) == pkg_name)){
     
-  # }
+    dp <- replaceMember(dp, doc_name, replacement = eml_path, newId = new_id) 
+    message("replaceMember() complete!")
 
+    # if no match is found, add to the 'id_not_in_dp()' list and move to next DataPackage
+  } else{
+    message("DataObject for id ", doc_name, " was not found in the DataPackage. Adding to list and skipping to next DataPackage.")
+    id_not_in_dp[[doc_num]] <- dp
+    names(id_not_in_dp)[[doc_num]] <- doc_name
+    next
+  }
+    
+  # publish update
+  message("Publishing update for the following data package: ", doc_name)
+  # newPackageId <- uploadDataPackage(d1c_test, dp, public = FALSE, quiet = FALSE)
+  message("Old metadata PID: " , doc_name, " | New metadata PID: ", new_id)
+  message("-------------- Datapackage ", doc_num, " has been updated! --------------")
+    
 })
 
 

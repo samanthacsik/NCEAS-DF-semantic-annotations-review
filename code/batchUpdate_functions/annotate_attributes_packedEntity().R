@@ -11,7 +11,7 @@
 #'
 #' @examples
 
-annotate_attributes <- function(doc, entity_num, dataTable_or_otherEntity, current_eml_entity, is_single_entity){
+annotate_attributes_packedEntity <- function(doc, entity_num, dataTable_or_otherEntity, current_eml_entity, is_single_entity){
   
   # ---------------------------------------------------------------------------------------------
   # Setup; get entity-specific data
@@ -45,8 +45,20 @@ annotate_attributes <- function(doc, entity_num, dataTable_or_otherEntity, curre
   # set entity_path (to either "dataTables" or "otherEntities")
   entity_path <- eml_get(doc$dataset, dataTable_or_otherEntity)
   
+  
+  
+  
+  
+  # ---------------------------
+  # room to breathe
+  # ---------------------------
+  
+  
+  
+  
+  
   # ---------------------------------------------------------------------------------------------
-  # if the current entity contains more than 1 attribute (i.e. `is_single_attribute` == FALSE), annotate the attributes using the following methods
+  # if the current (packed) entity contains more than 1 attribute (i.e. `is_single_attribute` == FALSE), annotate the attributes using the following methods
   # ---------------------------------------------------------------------------------------------
   
   if(isFALSE(is_single_attribute)){
@@ -68,24 +80,47 @@ annotate_attributes <- function(doc, entity_num, dataTable_or_otherEntity, curre
       # if current attribute makes it past the above GATE, it means there's a match; add 1 to 'annotation_counter'
       annotation_counter <- annotation_counter + 1
       
-      # if the current entity is a 'dataTable' process with the following methods
+      
+      
+      
+      
+      # ---------------------------
+      # room to breathe
+      # ---------------------------
+      
+      
+      
+      
+      # if the current (packed) entity is a 'dataTable' process with the following methods
       if(dataTable_or_otherEntity == "dataTable"){
         
         # if the current dataTable is the singular dataTable (therefore unpacked), process using the following method:
         if(is_single_entity){
           
-          current_attribute_id <- build_attributeID(entity_num, eml_att_num, entity_path, current_eml_entity) 
-          validate_attributeID_hash <- verify_attributeID_isUnique(current_attribute_id)
-          doc <- annotate_single_dataTable_multiple_attributes(doc, eml_att_num, current_attribute_id, attributeName_subset)
+          # current_attribute_id <- build_attributeID(entity_num, eml_att_num, entity_path, current_eml_entity) 
+          # validate_attributeID_hash <- verify_attributeID_isUnique(current_attribute_id)
+          # doc <- annotate_single_dataTable_multiple_attributes(doc, eml_att_num, current_attribute_id, attributeName_subset)
+          
+          stop("The dataTable you are trying to process is a single entity (i.e. it is UNPACKED). Double check which version of build_attributeID() you are using.")
           
           # otherwise, the current dataTable is one of multiple dataTables, process using the following method:
         } else{
     
-          current_attribute_id <- build_attributeID(entity_num, eml_att_num, entity_path, current_eml_entity) 
+          current_attribute_id <- build_attributeID_packedEntity(entity_num, eml_att_num, entity_path, current_eml_entity) 
           validate_attributeID_hash <- verify_attributeID_isUnique(current_attribute_id)
           doc <- annotate_multiple_dataTables_multiple_attributes(doc, entity_num, eml_att_num, current_attribute_id, attributeName_subset)
 
         }
+        
+        
+        
+        
+        # ---------------------------
+        # room to breathe
+        # ---------------------------
+        
+        
+        
       
         # if the current entity is an 'otherEntity' process with the following methods
       } else if(dataTable_or_otherEntity == "otherEntity"){
@@ -93,22 +128,34 @@ annotate_attributes <- function(doc, entity_num, dataTable_or_otherEntity, curre
         # if the current otherEntity is the singular otherEntity (therefore unpacked), process using the following method:
         if(is_single_entity){
           
-          current_attribute_id <- build_attributeID(entity_num, eml_att_num, entity_path, current_eml_entity) 
-          validate_attributeID_hash <- verify_attributeID_isUnique(current_attribute_id)
-          doc <- annotate_single_otherEntity_multiple_attributes(doc, eml_att_num, current_attribute_id, attributeName_subset)
+          # current_attribute_id <- build_attributeID(entity_num, eml_att_num, entity_path, current_eml_entity) 
+          # validate_attributeID_hash <- verify_attributeID_isUnique(current_attribute_id)
+          # doc <- annotate_single_otherEntity_multiple_attributes(doc, eml_att_num, current_attribute_id, attributeName_subset)
+          
+          stop("The otherEntity you are trying to process is a single entity (i.e. it is UNPACKED). Double check which version of build_attributeID() you are using.")
           
           # otherwise, the current otherEntity is one of multiple otherEntities, process using the following method:
         } else{
           
-          current_attribute_id <- build_attributeID(entity_num, eml_att_num, entity_path, current_eml_entity) 
+          current_attribute_id <- build_attributeID_packedEntity(entity_num, eml_att_num, entity_path, current_eml_entity) 
           validate_attributeID_hash <- verify_attributeID_isUnique(current_attribute_id)
           doc <- annotate_multiple_otherEntities_multiple_attributes(doc, entity_num, eml_att_num, current_attribute_id, attributeName_subset)
           
         }
         
+        
+        
+        
+        # ---------------------------
+        # room to breathe
+        # ---------------------------
+        
+        
+        
+        
         # if the current entity is not a 'dataTable' or 'otherEntity' give warning
       } else{
-        warning("DON'T KNOW WHAT THIS ENTITY TYPE IS")
+        stop("The current entity you are trying to process is not a dataTable or an otherEntity")
       }
     }
   }
@@ -135,24 +182,49 @@ annotate_attributes <- function(doc, entity_num, dataTable_or_otherEntity, curre
     # if attribute makes it past the above GATE, it means there's a match; add 1 to 'annotation_counter'
     annotation_counter <- annotation_counter + 1
     
+    
+    
+    
+    
+    # ---------------------------
+    # room to breathe
+    # ---------------------------
+    
+    
+    
+    
+    
     # if the current entity is a 'dataTable' process with the following methods
     if(dataTable_or_otherEntity == "dataTable"){
       
       # if the current dataTable is the singular dataTable (therefore unpacked), process using the following method:
       if(is_single_entity){
         
-        current_attribute_id <- build_attributeID(entity_num, eml_att_num, entity_path, current_eml_entity) 
-        validate_attributeID_hash <- verify_attributeID_isUnique(current_attribute_id)
-        doc <- annotate_single_dataTable_single_attribute(doc, current_attribute_id, attributeName_subset)
+        # current_attribute_id <- build_attributeID(entity_num, eml_att_num, entity_path, current_eml_entity) 
+        # validate_attributeID_hash <- verify_attributeID_isUnique(current_attribute_id)
+        # doc <- annotate_single_dataTable_single_attribute(doc, current_attribute_id, attributeName_subset)
+        
+        stop("The dataTable you are trying to process is a single entity (i.e. it is UNPACKED). Double check which version of build_attributeID() you are using.")
         
         # otherwise, the current dataTable is one of multiple dataTables, process using the following method:
       } else{
         
-        current_attribute_id <- build_attributeID(entity_num, eml_att_num, entity_path, current_eml_entity) 
+        current_attribute_id <- build_attributeID_packedEntity(entity_num, eml_att_num, entity_path, current_eml_entity) 
         validate_attributeID_hash <- verify_attributeID_isUnique(current_attribute_id)
         doc <- annotate_multiple_dataTables_single_attribute(doc, entity_num, current_attribute_id, attributeName_subset)
         
       }
+      
+      
+      
+      
+      # ---------------------------
+      # room to breathe
+      # ---------------------------
+      
+      
+      
+      
       
       # if the current entity is an 'otherEntity' process with the following methods
     } else if(dataTable_or_otherEntity == "otherEntity"){
@@ -160,22 +232,34 @@ annotate_attributes <- function(doc, entity_num, dataTable_or_otherEntity, curre
       # if the current otherEntity is the singular otherEntity (therefore unpacked), process using the following method:
       if(is_single_entity){
         
-       current_attribute_id <- build_attributeID(entity_num, eml_att_num, entity_path, current_eml_entity) 
-       validate_attributeID_hash <- verify_attributeID_isUnique(current_attribute_id)
-       doc <- annotate_single_otherEntity_single_attribute(doc, current_attribut_id, attributeName_subset)
+       # current_attribute_id <- build_attributeID(entity_num, eml_att_num, entity_path, current_eml_entity) 
+       # validate_attributeID_hash <- verify_attributeID_isUnique(current_attribute_id)
+       # doc <- annotate_single_otherEntity_single_attribute(doc, current_attribut_id, attributeName_subset)
+        
+        stop("The otherEntity you are trying to process is a single entity (i.e. it is UNPACKED). Double check which version of build_attributeID() you are using.")  
         
        # otherwise, the current otherEntity is one of multiple otherEntities, process using the following method:
       } else{
         
-        current_attribute_id <- build_attributeID(entity_num, eml_att_num, entity_path, current_eml_entity) 
+        current_attribute_id <- build_attributeID_packedEntity(entity_num, eml_att_num, entity_path, current_eml_entity) 
         validate_attributeID_hash <- verify_attributeID_isUnique(current_attribute_id)
         doc <- annotate_multiple_otherEntities_single_attribute(doc, entity_num, current_attribute_id, attributeName_subset)
         
       }
       
+      
+      
+      
+      # ---------------------------
+      # room to breathe
+      # ---------------------------
+      
+      
+      
+      
       # if the current entity is not a 'dataTable' or 'otherEntity' give warning
     } else{
-      warning("DON'T KNOW WHAT THIS IS")
+      stop("The current entity you are trying to process is not a dataTable or an otherEntity")
     }
   }
   

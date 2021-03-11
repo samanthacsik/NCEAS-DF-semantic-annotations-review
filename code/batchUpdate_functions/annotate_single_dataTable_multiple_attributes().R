@@ -1,6 +1,6 @@
 annotate_single_dataTable_multiple_attributes <- function(doc, eml_att_num, current_attribute_id, attributeName_subset){
  
-   # add attribute id to metadata
+  # add attribute id to metadata
   doc$dataset$dataTable$attributeList$attribute[[eml_att_num]]$id <- current_attribute_id
   # message("Added attributeID, '", current_attribute_id, "' to metadata")
   

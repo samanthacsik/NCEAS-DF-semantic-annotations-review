@@ -33,11 +33,11 @@ process_entities_by_type <- function(doc, dataTable_or_otherEntity = "dataTable"
     
     for(entity_num in 1:length(all_entities_byType)){
       
-      doc <- annotate_attributes(doc,
-                                 entity_num,
-                                 dataTable_or_otherEntity,
-                                 all_entities_byType[[entity_num]],
-                                 is_single_entity) 
+      doc <- annotate_attributes_packedEntity(doc,
+                                              entity_num,
+                                              dataTable_or_otherEntity,
+                                              all_entities_byType[[entity_num]], # current_eml_entity
+                                              is_single_entity) 
     }
     
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -46,12 +46,16 @@ process_entities_by_type <- function(doc, dataTable_or_otherEntity = "dataTable"
     
   } else if(is_single_entity){
     
-    doc <- annotate_attributes(doc,
-                               1,
-                               dataTable_or_otherEntity,
-                               all_entities_byType, 
-                               is_single_entity) 
+    doc <- annotate_attributes_unpackedEntity(doc,
+                                              dataTable_or_otherEntity,
+                                              all_entities_byType, 
+                                              is_single_entity) 
   }
   
   return(doc)
 }
+
+#-----------------
+# entity_num = 1
+# this is still an issue because it points to the first index of an unpacked dataTable (which is just a character string entityName and not the whole entity)
+# can't use doc$dataset$dataTable bc it needs to be flexible
