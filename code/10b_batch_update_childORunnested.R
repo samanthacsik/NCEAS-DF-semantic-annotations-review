@@ -1,7 +1,7 @@
 # title: batch update of datapackages with semantic annotations (workflow currently for standalone packages only)
 # author: "Sam Csik"
 # date created: "2021-01-04"
-# date edited: "2021-03-09"
+# date edited: "2021-03-11"
 # R version: 3.6.3
 # input: "code/10b_batch_update_setup.R"
 # output: no output, but publishes updates to arcticdata.io 
@@ -10,30 +10,17 @@
 # Summary - READ BEFORE RUNNING
 ##########################################################################################
 
-# Where can I find a list of attributes that need to be annotated?
-  # data/outputs/attributes_to_annotate/all_attributes_to_annotate_sorted_by_pkgType_2020-01-19.csv
+# Pre-update steps:
+#------------------
+# 1) filter 'attributes' df for a subset of packages to be updated (do this in script 10a_batch_update_setup.R)
+# 2) update file path for writing EML (naming scheme: eml/run#_pkgTypeIDtype_date, e.g. run1_standaloneDOI_2021Mar11)
 
-# Things to do prior to running an update:
-  # check over script '10b_batch_update_setup.R' to ensure that you're working with the correct subset of data
-  # be sure to assign data subset to an object called 'attributes' 
-  # update file path for writing eml for each update run in section 5.3; eml/run#_pkgType (e.g. run1_standaloneDOI)
+# Post-update steps: 
+#-------------------
+# 1) save old_new_metadataPIDs df to a .csv file with the same name schema as above (e.g. run1_standaloneDOI_2021Mar11) 
+# 2) note any updated package as "complete" in the attributes df (do this in script 10a_batch_update_setup.R)
 
-# After running an update: 
-    # add any updated packages to this google sheet (for tracking purposes): 
-      # https://docs.google.com/spreadsheets/d/1J4xE4FFWMQYSoEY9qq98kbBsvAxLyMU2WLCueIqaf0s/edit?usp=sharing
-
-##########################################################################################
-# Things to Consider
-##########################################################################################
-
-# Is there a way to avoid downloading all package objects and just downloading xlm file? massive packages take FOREVER
-
-# NOTES:
-  # doi shoulder -- e.g. 10.##; probably fine
-  # be sure to let data team know about minting new DOIs or UUIDs
-  # parent signifies what its children are (look at datapack); start with leaf node child pkg, update first, then update parent; parent rm points to child rm by identifier
-  # arcticdatautils has some code for inspiration (publish_update())
-  # Convert to package; benefit of R package is keeping things clean; write tests
+# Rinse, repeat
 
 ##########################################################################################
 # General Setup
@@ -183,6 +170,15 @@ tryLog(for(dp_num in 1:length(unique_datapackage_ids)){
 
 
 # some space to breathe...
+
+
+
+
+
+
+
+
+
 
 
 ##########################################################################################
@@ -363,6 +359,14 @@ tryLog(for(doc_num in 1:length(publish_update_docs)){
 })
 
 
+# ---------------------------------------------------------------
+# ------------- save old/new metadata PIDs to a .csv ------------
+# ---------------------------------------------------------------
+
+# write_csv(old_new_metadataPIDs, here::here("data", "updated_pkgs", "run1_standaloneDOIs_2021Mar11.csv"))
+
+
+
 
 
 
@@ -373,6 +377,17 @@ tryLog(for(doc_num in 1:length(publish_update_docs)){
 
 
 # more space to breathe
+
+
+
+
+
+
+
+
+
+
+
 
 
 #-----------------------------------------------
