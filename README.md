@@ -52,7 +52,7 @@ For a summary of each script and the outputs generated, see [workflow_notes](htt
 
 *The following dataset contains all attributes (and corresponding infomation) that are to be semantically annotated using the batch-update workflow (scripts 10a.1-10b)*
 
-#### `data/outputs/attributes_to_annotate/script10a2_attributes_to_annotate/attributes_to_annotate_2021Mar12.csv` (Generated in script 10f_organize_pkgs_for_batch_update.R)
+#### `data/outputs/attributes_to_annotate/script10a2_attributes_to_annotate/attributes_to_annotate_2021Mar12.csv` 
 * `identifier`: unique persistent identifier assigned to each ADC data package (in most cases, this is a DOI)
 * `entityName`: The name of an entity (e.g. dataTable, spatialVector, etc.)
 * `attributeName`: The name of an attribute, as listed in a .csv file
