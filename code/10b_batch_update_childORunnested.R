@@ -18,9 +18,9 @@
 
 # I also source in all the functions that I've written. Each function has it's own script (with one or two exceptions). Those can be found in "code/batchUpdate_functions/*" -- NOTE: I haven't quite gotten around to fully documenting them all yet...but that's on my TODO list
 
-# You'll need to update the file path in lines 336 and 344 (haven't figured out how to make this more flexible yet)
+# You'll need to update the file path in lines 329 and 337 (haven't figured out how to make this more flexible yet)
 
-# Line 384 is commented out so that you won't actually publish any updates to arctic.io (I haven't actually tested running that yet, but I don't have any reason (yet) to believe that it won't work)
+# Line 377 is commented out so that you won't actually publish any updates to arctic.io (I haven't actually tested running that yet, but I don't have any reason (yet) to believe that it won't work)
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
@@ -37,13 +37,6 @@
 # 2) note any updated package as "complete" in the attributes df (do this in script 10a_batch_update_setup.R)
 
 # Rinse, repeat
-
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-
-# What 
-#-------------------
-
-
 
 ##########################################################################################
 # General Setup
