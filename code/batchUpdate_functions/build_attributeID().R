@@ -1,4 +1,4 @@
-#' Build a unique attribute ID for datasets with mulitple (packed) entities
+#' Build a unique attribute ID for datasets with multiple (packed) entities
 #'
 #' @param entity_num index of entity
 #' @param eml_att_num index of eml attribute 

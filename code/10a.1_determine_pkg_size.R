@@ -13,7 +13,7 @@
 # Extract number of datasets associated with each datapackage so that we can divide up batch update runs appropriately (e.g. really large datapackges can be run individually while small datapackages can be processed in the same run)
 # package_types: standalone, child, parent, WEIRD, MULTINESTING, too long to load
 
-# Packages have been assessed in the following groupings (see .csv files in data/pkg_sizes/*): standaloneDOI, standaloneUUID, childDOI, childUUID, parentDOI, WEIRDDOI, WEIRDUUID, 
+# Packages have been grouped according to the following (see .csv files in data/pkg_sizes/*): standaloneDOI, standaloneUUID, childDOI, childUUID, parentDOI, WEIRDDOI, WEIRDUUID, 
 
 ##########################################################################################
 # General setup
@@ -39,7 +39,7 @@ attributes <- read_csv(here::here("data", "outputs", "attributes_to_annotate", "
                        col_types = cols(.default = col_character()))
 
 ##############################
-# subset -- CHANGE THIS DEPENDING ON WHAT YOU WHICH SUBSET YOU WANT PACKAGE SIZES FOR
+# subset -- CHANGE THIS DEPENDING ON WHICH SUBSET YOU WANT PACKAGE SIZES FOR
 ##############################
 
 attributes <- attributes %>% 

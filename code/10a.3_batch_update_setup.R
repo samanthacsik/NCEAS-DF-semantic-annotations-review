@@ -1,7 +1,7 @@
 # title: Data organization and setup for batch update of datapackages with semantic annotations
 # author: "Sam Csik"
 # date created: "2021-01-27"
-# date edited: "2021-02-18"
+# date edited: "2021-03-15"
 # R version: 3.6.3
 # input: data/outputs/attributes_to_annotate/script10a2_attributes_to_annotate/attributes_to_annotate_2021Mar12.csv"
 # output: subsetted attributes df for use in script 10b_batch_update_childORunnested.R
@@ -10,7 +10,9 @@
 # Summary
 ##########################################################################################
 
+# load necessary packages, get token, set mn, etc.
 # wrangle/filter attribute data to batch update subsets at a time
+# packages are sorted by type (e.g. standalone, child, parent, etc), identifier type (DOI vs. UUID) and size (small <= 20 datasets; medium 21 - 100 datasets; large 101 - 300 datasets; xl > 300 datasets)
 
 ##########################################################################################
 # General Setup
@@ -47,7 +49,7 @@ d1c_prod <- dataone::D1Client("PROD", "urn:node:ARCTIC")
 flog.appender(appender.file("error.log")) # choose files to log errors to
 flog.threshold(ERROR) # set level of error logging (options: TRACE, DEBUG, INFO, WARM, ERROR, FATAL)
 
-# create hash to store attribute ids (to determine uniqueness; see `verify_attribute_id_isUnique()`) 
+# create hash to store all auto-generated attribute ids (to ensure uniqueness; see `verify_attribute_id_isUnique()`) 
 validate_attributeID_hash <- new.env(hash = TRUE)
 
 # create empty vector to store duplicate attribute ids
@@ -62,7 +64,7 @@ attributes <- read_csv(here::here("data", "outputs", "attributes_to_annotate", "
   mutate(num_datasets = as.numeric(num_datasets))
 
 ##########################################################################################
-# Data Subsets (these are all PUBLIC datasets, 1061 total)
+# Data Subsets (these are all PUBLIC datasets, no LTER data, no ACADIS data, 1061 total)
 ##########################################################################################
 
 # ----------------------

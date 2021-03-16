@@ -12,15 +12,20 @@
 
 # Pre-update steps:
 #------------------
-# 1) filter 'attributes' df for a subset of packages to be updated (do this in script 10a_batch_update_setup.R)
-# 2) update file path for writing EML (naming scheme: eml/run#_pkgTypeIDtype_date, e.g. run1_standaloneDOI_2021Mar11)
+# 1) filter 'attributes' df for a subset of packages to be updated (do this in script 10a.3_batch_update_setup.R)
+# 2) update file path for writing EML (naming convention: eml/run#_pkgTypeIDtype_sizeClass_date, e.g. run1_standaloneDOI_small_2021Mar11)
 
 # Post-update steps: 
 #-------------------
-# 1) save old_new_metadataPIDs df to a .csv file with the same name schema as above (e.g. run1_standaloneDOI_2021Mar11) 
+# 1) save 'old_new_metadataPIDs' df to a .csv file with the same naming convention as above (e.g. run1_standaloneDOI_small_2021Mar11) 
 # 2) note any updated package as "complete" in the attributes df (do this in script 10a_batch_update_setup.R)
 
 # Rinse, repeat
+
+# What 
+#-------------------
+
+
 
 ##########################################################################################
 # General Setup
@@ -61,14 +66,15 @@ source(here::here("code", "batchUpdate_functions", "process_entities_by_type().R
 unique_datapackage_ids <- unique(attributes$identifier)
 
 ##############################
-# annotate datapackages -- CURRENTLY WRAPPING WHOLE LOOP IN TRYLOG() BUT NOT SURE IF THIS IS THE WAY TO GO JUST YET
+# create empty lists for sorting pkgs and docs into 
 ##############################
 
-list_of_pkgs_to_publish_update <- list() # packages that will be updated (needed for 2nd for loop)
 list_of_docs_to_publish_update <- list() # modified docs that passed validation
-list_of_pkgs_failed_INITIAL_validation <- list() # packages that failed initial validation (before modifications)
-list_of_pkgs_failed_FINAL_validation <- list() # packages that failed final validation (after modifications)
+list_of_pkgs_to_publish_update <- list() # corresponding packages that will be updated (needed for 2nd for loop)
+list_of_docs_failed_INITIAL_validation <- list() # docs that failed initial validation (before modifications)
+list_of_pkgs_failed_INITIAL_validation <- list() # corresponding pkgs that failed initial validation (before modifications)
 list_of_docs_failed_FINAL_validation <- list() # docs that failed final validation (after modifications)
+list_of_pkgs_failed_FINAL_validation <- list() # corresponding packages that failed final validation (after modifications)
 
 # -------------------------------------------------------------------------------------------------------------
 # ----------------- get metadata/info for a particular datapackage and run initial validation -----------------
@@ -92,8 +98,10 @@ tryLog(for(dp_num in 1:length(unique_datapackage_ids)){
   # GATE to stop non-valid docs from processing
   if(isFALSE(initial_validation[1])){
     message("-------------- doc ", dp_num, " passes INTIAL validation -> ",  initial_validation[1], " --------------")
-    list_of_docs_failed_validation[[dp_num]] <- doc
+    list_of_docs_failed_INITIAL_validation[[dp_num]] <- doc
+    list_of_pkgs_failed_INITIAL_validation[[dp_num]] <- current_pkg
     names(list_of_docs_failed_INITIAL_validation)[[dp_num]] <- current_metadata_pid
+    names(list_of_pkgs_failed_INITIAL_validation)[[dp_num]] <- current_metadata_pid
     message("--------------Skipping to next doc...--------------")
     next
   }
@@ -189,10 +197,10 @@ tryLog(for(dp_num in 1:length(unique_datapackage_ids)){
 rm(current_datapackage_subset, current_pkg, doc, outputs, current_metadata_pid, dp_num, duplicate_ids, final_validation, initial_validation, pkg_identifier, unique_datapackage_ids, validate_attributeID_hash)
 
 # !!!!!!!!!
-# BE SURE TO MANUALLY INSPECT LISTS BELOW AND ASSESS BLANK ELEMENTS -- MAKE SURE LISTS MATCH
+# BE SURE TO MANUALLY INSPECT LISTS BELOW AND ASSESS BLANK ELEMENTS -- MAKE SURE LISTS MATCH (though there is check for this built into step 3 below)
 # !!!!!!!!!
 
-# clean up lists (manually inspect and remove empty (NA) element(s))
+# clean up lists (manually inspect and remove empty (NA) element(s), if necessary...if all docs passed initial/final validation then you won't need to worry about removing NAs)
 publish_update_docs <- list_of_docs_to_publish_update
 publish_update_pkgs <- list_of_pkgs_to_publish_update
 
@@ -230,7 +238,7 @@ publish_update_pkgs <- list_of_pkgs_to_publish_update
 ##########################################################################################
 
 ##############################
-# create empty df to store old and new pids in (in case needed for reference) 
+# create empty df to store old and new pids in (in case they are needed for later reference) 
 ##############################
 
 old_new_metadataPIDs <- data.frame(old_metadataPID = as.character(),
@@ -242,7 +250,7 @@ old_new_metadataPIDs <- data.frame(old_metadataPID = as.character(),
 
 nonmatching_docs <- list()
 nonmatching_pkgs <- list()
-id_not_in_dp <- list()
+id_not_in_dp <- list() 
 
 ##############################
 # publish updates
@@ -266,6 +274,10 @@ tryLog(for(doc_num in 1:length(publish_update_docs)){
   # get DataPackage instance from list based on index that matched doc_num 
   dp <- publish_update_pkgs[[doc_num]]
   pkg_name <- names(publish_update_pkgs)[[doc_num]]
+  
+  # -----------------------------------------------------------------------------------
+  # -------------------------- make sure doc and pkg matches --------------------------
+  # -----------------------------------------------------------------------------------
   
   # GATE: make sure doc and pkg names from both lists match; if not, throw a warning, save to lists, and move to next doc/pkg pair
   if(doc_name != pkg_name){
@@ -323,10 +335,10 @@ tryLog(for(doc_num in 1:length(publish_update_docs)){
   # ----------------- save old + new pids to df for reference -----------------
   # ---------------------------------------------------------------------------
   
-  CURRENT_old_new_metadataPIDs <- data.frame(old_metadataPID = doc_name,
-                                             new_metadataPID = new_id)
+  pids <- data.frame(old_metadataPID = doc_name,
+                     new_metadataPID = new_id)
   
-  old_new_metadataPIDs <- rbind(old_new_metadataPIDs, CURRENT_old_new_metadataPIDs)
+  old_new_metadataPIDs <- rbind(old_new_metadataPIDs, pids)
 
   # ---------------------------------------------------------------
   # ------------------------ publish update -----------------------
@@ -338,7 +350,6 @@ tryLog(for(doc_num in 1:length(publish_update_docs)){
   
   # check to make sure that the doc_name has a matching DataObject name in the current package; if so, replaceMember   
   if(isTRUE(str_subset(pkg_objects, pkg_name) == pkg_name)){
-    
     dp <- replaceMember(dp, doc_name, replacement = eml_path, newId = new_id) 
     message("replaceMember() complete!")
 
@@ -363,6 +374,7 @@ tryLog(for(doc_num in 1:length(publish_update_docs)){
 # ------------- save old/new metadata PIDs to a .csv ------------
 # ---------------------------------------------------------------
 
+# Be sure to update file name before saving!!
 # write_csv(old_new_metadataPIDs, here::here("data", "updated_pkgs", "run1_standaloneDOIs_2021Mar11.csv"))
 
 
