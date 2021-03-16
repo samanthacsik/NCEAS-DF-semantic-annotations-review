@@ -1,4 +1,4 @@
-# title: 
+# title: Wrangle attribute data for batch update
 # author: "Sam Csik"
 # date created: "2021-03-12"
 # date edited: "2021-03-12"

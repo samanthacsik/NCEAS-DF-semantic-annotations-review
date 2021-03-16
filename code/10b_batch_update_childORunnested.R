@@ -1,14 +1,30 @@
 # title: batch update of datapackages with semantic annotations (workflow currently for standalone packages only)
 # author: "Sam Csik"
 # date created: "2021-01-04"
-# date edited: "2021-03-11"
+# date edited: "2021-03-16"
 # R version: 3.6.3
-# input: "code/10b_batch_update_setup.R"
+# input: "code/10a.3_batch_update_setup.R"
 # output: no output, but publishes updates to arcticdata.io 
 
 ##########################################################################################
 # Summary - READ BEFORE RUNNING
 ##########################################################################################
+
+# This script contains code for automating a batch update of ADC datapackages with semantic annotations. I (Sam Csik) manually assessed non-annotated attributes within the ADC corpus and determined term URIs that I felt would best semantically describe 27000+ attributes across 1061 unique datapackages. These attributes, and the corresponding URIs I've assigned to them can be found in file, "data/outputs/attributes_to_annotate/script10a2_attributes_to_annotate/attributes_to_annotate_2021Mar12.csv" -- this file will be imported and stored as an object called 'attributes'
+
+# Feel free to ignore scripts 10a.1_determine_pkg_sizes.R and 10a.2_batch_update_data_wrangling.R -- I use these to get the attribute and datapackage info into the right format for working with
+
+# Below, I source in script 10a.3_batch_update_setup.R -- this is where you can subset the 'attributes' df for a few packages at a time for testing purposes. See lines 80-84 as an example. Just be sure to that whatever subset you're working with is still called 'attributes'
+
+# I also source in all the functions that I've written. Each function has it's own script (with one or two exceptions). Those can be found in "code/batchUpdate_functions/*" -- NOTE: I haven't quite gotten around to fully documenting them all yet...but that's on my TODO list
+
+# You'll need to update the file path in lines 336 and 344 (haven't figured out how to make this more flexible yet)
+
+# Line 384 is commented out so that you won't actually publish any updates to arctic.io (I haven't actually tested running that yet, but I don't have any reason (yet) to believe that it won't work)
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+# Bryce -- you don't really need to worry so much about these steps for testing purposes -- mostly thinking about how I can stay organized re: which pkgs have been updated vs. those that still need to be once when we actually start this process for real. You should feel free to play around with step 1 under 'Pre-update steps,' however.
 
 # Pre-update steps:
 #------------------
@@ -22,6 +38,8 @@
 
 # Rinse, repeat
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
 # What 
 #-------------------
 
@@ -32,7 +50,7 @@
 ##########################################################################################
 
 # load data/setup
-source(here::here("code", "10a_batch_update_setup.R"))
+source(here::here("code", "10a.3_batch_update_setup.R"))
 
 # load functions
 source(here::here("code", "batchUpdate_functions", "get_datapackage_metadata().R"))
@@ -419,21 +437,21 @@ tryLog(for(doc_num in 1:length(publish_update_docs)){
 
 
 # for testing (one parent metadata pid, which has four associated child packages that were updated)
-parent_metadata_pid <- attributes[[1,15]]
-child_metadata_pid <- attributes[[1,1]]
-
-# 1) get the resource map of the parent
-parent_ids <- get_package(d1c_prod@mn, 
-                   parent_metadata_pid, 
-                   file_names = TRUE)
-parent_rm <- parent_ids$resource_map
-
-# 2) get original resource map of child
-child_ids <- get_package(d1c_prod@mn,
-                   child_metadata_pid,
-                   file_names = TRUE)
-
-original_child_rm <- child_ids$resource_map
+# parent_metadata_pid <- attributes[[1,15]]
+# child_metadata_pid <- attributes[[1,1]]
+# 
+# # 1) get the resource map of the parent
+# parent_ids <- get_package(d1c_prod@mn, 
+#                    parent_metadata_pid, 
+#                    file_names = TRUE)
+# parent_rm <- parent_ids$resource_map
+# 
+# # 2) get original resource map of child
+# child_ids <- get_package(d1c_prod@mn,
+#                    child_metadata_pid,
+#                    file_names = TRUE)
+# 
+# original_child_rm <- child_ids$resource_map
 
 
 
