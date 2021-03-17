@@ -253,7 +253,9 @@ publish_update_pkgs <- list_of_pkgs_to_publish_update
 ##############################
 
 old_new_metadataPIDs <- data.frame(old_metadataPID = as.character(),
-                                   new_metadataPID = as.character())
+                                   old_resource_map = as.character(),
+                                   new_metadataPID = as.character(),
+                                   new_resource_map = as.character())
 
 ##############################
 # create empty lists for docs/pkgs that don't match
@@ -285,6 +287,7 @@ tryLog(for(doc_num in 1:length(publish_update_docs)){
   # get DataPackage instance from list based on index that matched doc_num 
   dp <- publish_update_pkgs[[doc_num]]
   pkg_name <- names(publish_update_pkgs)[[doc_num]]
+  original_rm <- dp@resmapId
   
   # -----------------------------------------------------------------------------------
   # -------------------------- make sure doc and pkg matches --------------------------
@@ -307,12 +310,12 @@ tryLog(for(doc_num in 1:length(publish_update_docs)){
   # ------------- get package_type from 'attributes' df using metadata_pid ------------
   # -----------------------------------------------------------------------------------
   
-  # filter attributes df using metadata_pid
-  atts_filtered <- attributes %>% 
-    filter(identifier == doc_name)
-  
-  # get package_type
-  package_type <- atts_filtered[[1, 12]]
+  # # filter attributes df using metadata_pid
+  # atts_filtered <- attributes %>% 
+  #   filter(identifier == doc_name)
+  # 
+  # # get package_type
+  # package_type <- atts_filtered[[1, 12]]
   
   # ---------------------------------------------------------------------
   # ----------------- generate new pid and write to eml -----------------
@@ -342,15 +345,6 @@ tryLog(for(doc_num in 1:length(publish_update_docs)){
   # write eml
   write_eml(doc, eml_path)
   
-  # ---------------------------------------------------------------------------
-  # ----------------- save old + new pids to df for reference -----------------
-  # ---------------------------------------------------------------------------
-  
-  pids <- data.frame(old_metadataPID = doc_name,
-                     new_metadataPID = new_id)
-  
-  old_new_metadataPIDs <- rbind(old_new_metadataPIDs, pids)
-
   # ---------------------------------------------------------------
   # ------------------------ publish update -----------------------
   # ---------------------------------------------------------------
@@ -374,12 +368,22 @@ tryLog(for(doc_num in 1:length(publish_update_docs)){
     
   # publish update
   message("Publishing update for the following data package: ", doc_name)
-  # newPackageId <- uploadDataPackage(d1c_test, dp, public = FALSE, quiet = FALSE)
+  # new_rm <- uploadDataPackage(d1c_test, dp, public = FALSE, quiet = FALSE)
   message("Old metadata PID: " , doc_name, " | New metadata PID: ", new_id)
   message("-------------- Datapackage ", doc_num, " has been updated! --------------")
-    
+  
+  # ---------------------------------------------------------------------------
+  # ----------------- save old + new pids to df for reference -----------------
+  # ---------------------------------------------------------------------------
+  
+  pids <- data.frame(old_metadataPID = doc_name,
+                     old_resource_map = original_rm,
+                     new_metadataPID = new_id, 
+                     new_resource_map = new_rm)
+  
+  old_new_metadataPIDs <- rbind(old_new_metadataPIDs, pids)
+  
 })
-
 
 # ---------------------------------------------------------------
 # ------------- save old/new metadata PIDs to a .csv ------------
