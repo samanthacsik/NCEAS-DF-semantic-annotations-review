@@ -29,11 +29,12 @@
 # Pre-update steps:
 #------------------
 # 1) filter 'attributes' df for a subset of packages to be updated (do this in script 10a.3_batch_update_setup.R)
+# 2) rename subset as 'attributes' (do this in THIS script, 10b_batch_update_childORunnested.R)
 # 2) update file path for writing EML (naming convention: eml/run#_pkgTypeIDtype_sizeClass_date, e.g. run1_standaloneDOI_small_2021Mar11)
 
 # Post-update steps: 
 #-------------------
-# 1) save 'old_new_metadataPIDs' df to a .csv file with the same naming convention as above (e.g. run1_standaloneDOI_small_2021Mar11) 
+# 1) save 'old_new_PIDs' df to a .csv file with the same naming convention as above (e.g. run1_standaloneDOI_small_2021Mar11) 
 # 2) note any updated package as "complete" in the attributes df (do this in script 10a_batch_update_setup.R)
 
 # Rinse, repeat
@@ -69,6 +70,12 @@ source(here::here("code", "batchUpdate_functions", "process_entities_by_type().R
 ##########################################################################################
 # STEP 1: update eml documents with semantic annotations
 ##########################################################################################
+
+##############################
+# ensure subset of data is named 'attributes'
+##############################
+
+attributes <- run2_standaloneDOI_small
 
 ##############################
 # get vector of all unique datapackages
@@ -252,10 +259,10 @@ publish_update_pkgs <- list_of_pkgs_to_publish_update
 # create empty df to store old and new pids in (in case they are needed for later reference) 
 ##############################
 
-old_new_metadataPIDs <- data.frame(old_metadataPID = as.character(),
-                                   old_resource_map = as.character(),
-                                   new_metadataPID = as.character(),
-                                   new_resource_map = as.character())
+old_new_PIDs <- data.frame(old_metadataPID = as.character(),
+                           old_resource_map = as.character(),
+                           new_metadataPID = as.character(),
+                           new_resource_map = as.character())
 
 ##############################
 # create empty lists for docs/pkgs that don't match
@@ -329,7 +336,7 @@ tryLog(for(doc_num in 1:length(publish_update_docs)){
     original_doi_short <- str_split(doc_name, "/")[[1]][2]
     new_doi_short <- str_split(new_id, "/")[[1]][2]
     eml_name <- paste("doc", doc_num, "_old_", original_doi_short, "_new_", new_doi_short, ".xml", sep = "")
-    eml_path <- paste("/Users/samanthacsik/Repositories/NCEAS-DF-semantic-annotations-review/eml/run1_test/", eml_name, sep = "")
+    eml_path <- paste("/Users/samanthacsik/Repositories/NCEAS-DF-semantic-annotations-review/eml/run2_standaloneDOI_small_2021Mar17/", eml_name, sep = "")
     message("eml path: ", eml_path)
   } else if(isTRUE(str_detect(doc_name, "(?i)urn:uuid"))) {
     new_id <- dataone::generateIdentifier(d1c_prod@mn, "UUID")
@@ -337,7 +344,7 @@ tryLog(for(doc_num in 1:length(publish_update_docs)){
     original_urn_short <- str_split(doc_name, "-")[[1]][5] 
     new_urn_short <- str_split(new_id, "-")[[1]][5]
     eml_name <- paste("doc", doc_num, "_old_", original_urn_short, "_new_", new_urn_short, ".xml", sep = "")
-    eml_path <- paste("/Users/samanthacsik/Repositories/NCEAS-DF-semantic-annotations-review/eml/run1_test/", eml_name, sep = "")
+    eml_path <- paste("/Users/samanthacsik/Repositories/NCEAS-DF-semantic-annotations-review/eml/run2_standaloneDOI_small_2021Mar17/", eml_name, sep = "")
   } else {
     stop("The original metadata ID format, ", metadata_pid, " is not recognized. No new ID has been generated.")
   }
@@ -355,7 +362,9 @@ tryLog(for(doc_num in 1:length(publish_update_docs)){
   
   # check to make sure that the doc_name has a matching DataObject name in the current package; if so, replaceMember   
   if(isTRUE(str_subset(pkg_objects, pkg_name) == pkg_name)){
-    dp <- replaceMember(dp, doc_name, replacement = eml_path, newId = new_id) 
+    dp <- replaceMember(dp, doc_name, replacement = eml_path, newId = new_id, formatId = "https://eml.ecoinformatics.org/eml-2.2.0") 
+    double_check_sysmeta_formatId <- getSystemMetadata(d1c_prod@mn, new_id)
+    message("formatId is 2.2.0: ", double_check_sysmeta@formatId == "https://eml.ecoinformatics.org/eml-2.2.0")
     message("replaceMember() complete!")
 
     # if no match is found, add to the 'id_not_in_dp()' list and move to next DataPackage
@@ -368,7 +377,7 @@ tryLog(for(doc_num in 1:length(publish_update_docs)){
     
   # publish update
   message("Publishing update for the following data package: ", doc_name)
-  # new_rm <- uploadDataPackage(d1c_test, dp, public = FALSE, quiet = FALSE)
+  new_rm <- uploadDataPackage(d1c_prod, dp, public = TRUE, quiet = FALSE)
   message("Old metadata PID: " , doc_name, " | New metadata PID: ", new_id)
   message("-------------- Datapackage ", doc_num, " has been updated! --------------")
   
@@ -381,7 +390,9 @@ tryLog(for(doc_num in 1:length(publish_update_docs)){
                      new_metadataPID = new_id, 
                      new_resource_map = new_rm)
   
-  old_new_metadataPIDs <- rbind(old_new_metadataPIDs, pids)
+  old_new_PIDs <- rbind(old_new_PIDs, pids)
+  
+  message("______ PIDS SAVED ______")
   
 })
 
@@ -390,7 +401,7 @@ tryLog(for(doc_num in 1:length(publish_update_docs)){
 # ---------------------------------------------------------------
 
 # Be sure to update file name before saving!!
-# write_csv(old_new_metadataPIDs, here::here("data", "updated_pkgs", "run1_standaloneDOIs_2021Mar11.csv"))
+# write_csv(old_new_PIDs, here::here("data", "updated_pkgs", "run2_standaloneDOI_small_2021Mar17.csv"))
 
 
 
